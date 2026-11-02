@@ -1,0 +1,2455 @@
+{
+  "situs": {
+    "ringkasan_keputusan": "Artikel di /blog/{slug} (sesuai BASE='/blog' di build.py); kategori di /kategori/{slug} memakai 6 slug yang sudah ada di build.py; penulis di /penulis/fajar; glosarium (baru) di /glosarium. URL lama /materi/lxx-... dialihkan permanen ke artikel setara begitu artikel terbit (fungsi redirects() di build.py sudah melakukannya).",
+    "pemetaan_ke_frontmatter": {
+      "id": "id",
+      "slug": "slug",
+      "h1": "judul",
+      "seo_title": "seo_title",
+      "meta_description": "deskripsi",
+      "kategori_slug": "kategori",
+      "kata_kunci_utama + kata_kunci_turunan": "kata_kunci",
+      "faq": "faq: [{q, a}] (jawaban ditulis penulis)",
+      "sumber_disarankan": "sumber: [{judul, url, catatan}]",
+      "intinya (dari input)": "intinya",
+      "link_internal": "tulis di isi sebagai [anchor](Lxx); build.py mengubahnya menjadi URL artikel, atau teks biasa bila target belum terbit"
+    },
+    "metodologi_riset": "Riset kualitatif lewat WebSearch (Google/Bing Indonesia, November 2026): judul dan domain hasil teratas, variasi istilah, dan pola pertanyaan. Tidak ada data volume pencarian; prioritas dinilai dari intent, relevansi pembaca, dan kekuatan pesaing. Pertanyaan FAQ disusun dari pola judul SERP dan pertanyaan yang lazim; cek ulang di People Also Ask dan Google Search Console setelah 4-8 minggu terindeks.",
+    "temuan_riset_utama": [
+      "SERP Indonesia untuk hampir semua topik didominasi blog vendor software (ERP/POS/akuntansi) dan PDF skripsi/repositori kampus. Celahnya: penjelasan netral dari praktisi, contoh berlabel jelas, kesalahan umum, dan checklist yang bisa langsung dipakai - tanpa ajakan membeli software.",
+      "Istilah ongkir terpecah: 'berat volume' (lazim di kurir domestik dan naskah), 'berat volumetrik' (DHL Indonesia), dan 'berat dimensi/dimensional' (FedEx Indonesia). Pembaginya juga beda (6000 menurut IATA untuk kargo udara, 5000 di sebagian layanan ekspres). Pakai 'berat volume' sebagai istilah utama dan sebut sinonimnya di 100 kata pertama.",
+      "Beberapa kueri pendek bermakna ganda: 'outbound adalah' didominasi outbound marketing/sales, 'FIFO adalah' bercampur makna komputasi dan akuntansi. Targetkan frasa berkonteks ('inbound dan outbound gudang', 'FIFO dan FEFO', 'FIFO gudang') dan jelaskan bedanya dengan FIFO akuntansi.",
+      "Istilah teknis tetap dicari dalam bahasa Inggris dengan pola 'X adalah' / 'perbedaan X dan Y': 'SKU adalah', 'safety stock adalah', 'cross docking adalah' (lebih sering tanpa tanda hubung), 'putaway/put away'. Padanan Indonesia (stok pengaman, rantai pasok) dipakai sebagai kata kunci turunan, bukan utama."
+    ],
+    "struktur_url": {
+      "keputusan": "/blog/{slug}",
+      "contoh": "https://ngertilogistik.web.id/blog/fifo-vs-fefo",
+      "catatan_l06": "Slug L06 memakai 'berat-volume' karena URL /blog/berat-volume sudah dipakai build.py dan vercel.json; jangan diubah.",
+      "alasan": [
+        "Situs punya beberapa jenis halaman (/tentang, /kategori, /penulis, /glosarium, feed.xml). Prefix /blog mencegah tabrakan slug artikel dengan halaman sistem, dan sudah menjadi BASE di build.py sehingga tidak ada pekerjaan migrasi.",
+        "Google Search Console dan analytics bisa memfilter performa artikel dengan satu prefix URL, dan sitemap artikel bisa dipisah - penting untuk memantau 120 artikel bertahap.",
+        "Panjang URL tetap pendek (slug maksimal ±5 kata, tanpa tanggal dan tanpa kode Lxx) sehingga evergreen dan bisa diperbarui tanpa mengubah URL. Pengaruh prefix terhadap ranking sangat kecil, jadi kemudahan pengelolaan lebih menentukan.",
+        "Kategori tidak dimasukkan ke URL artikel (/blog/kategori/slug) agar artikel bisa pindah kategori tanpa redirect."
+      ],
+      "aturan_slug": "huruf kecil, tanda hubung, tanpa stopword yang tidak perlu, tanpa kode Lxx, tanpa tahun, ≤5 kata; slug dikunci setelah terbit.",
+      "kanonikal": "Satu URL per topik. vercel.json sudah memakai cleanUrls: true dan trailingSlash: false - canonical selalu tanpa .html dan tanpa garis miring akhir, misalnya https://ngertilogistik.web.id/blog/safety-stock.",
+      "migrasi_materi": "Satu topik = satu URL. build.py sudah menulis redirect /materi/lxx-... ke artikel (permanent: true, 308) saat artikel terbit dan ke /blog (302) untuk yang belum. Pertahankan pola ini; field redirect_301_dari di tiap brief mencatat URL lama yang akan dialihkan. Catatan: mengalihkan 100 topik yang belum terbit ke /blog bisa dianggap soft 404 oleh Google; karena domain belum terindeks dampaknya kecil, tapi jangan cantumkan URL /materi di sitemap dan jangan menautkannya dari mana pun.",
+      "halaman_lain": {
+        "beranda": "/",
+        "indeks_blog": "/blog",
+        "kategori": "/kategori/{slug}",
+        "penulis": "/penulis/fajar",
+        "glosarium": "/glosarium",
+        "tentang": "/tentang"
+      }
+    },
+    "kategori": [
+      {
+        "pilar": "Kamus 60 Detik",
+        "nama_kategori": "Kamus Logistik",
+        "label_pilar": "Kamus 60 Detik",
+        "slug": "kamus-logistik",
+        "h1": "Kamus Logistik: Istilah Gudang dan Pengiriman Dijelaskan Singkat",
+        "seo_title": "Kamus Logistik: Arti Istilah Gudang & Pengiriman",
+        "meta_description": "Kamus logistik berbahasa Indonesia: arti SKU, FIFO, FEFO, lead time, safety stock, cross docking, dan istilah lain, dijelaskan singkat oleh praktisi.",
+        "deskripsi": "Istilah logistik yang sering terdengar di gudang dan pengiriman, dijelaskan singkat dengan contoh. Cocok untuk pelajar, staf baru, dan pelaku UMKM."
+      },
+      {
+        "pilar": "Isi Gudang",
+        "nama_kategori": "Manajemen Gudang",
+        "label_pilar": "Isi Gudang",
+        "slug": "manajemen-gudang",
+        "h1": "Isi Gudang: Belajar Manajemen Gudang dari Dalam",
+        "seo_title": "Manajemen Gudang: Proses, Stok, dan Penyimpanan",
+        "meta_description": "Belajar manajemen gudang dari dalam: penerimaan barang, putaway, picking, packing, akurasi stok, dan cycle count. Penjelasan praktis untuk staf gudang.",
+        "deskripsi": "Apa yang sebenarnya terjadi di dalam gudang: dari barang datang, disimpan, diambil, dikemas, sampai dikirim, termasuk cara menjaga stok tetap akurat."
+      },
+      {
+        "pilar": "Kirim Tanpa Drama",
+        "nama_kategori": "Pengiriman Barang",
+        "label_pilar": "Kirim Tanpa Drama",
+        "slug": "pengiriman-barang",
+        "h1": "Kirim Tanpa Drama: Panduan Pengiriman Barang dan Ongkir",
+        "seo_title": "Pengiriman Barang: Ongkir, Moda, dan Status Paket",
+        "meta_description": "Panduan pengiriman barang untuk UMKM dan pembeli online: cara menghitung berat volume, memilih moda darat, laut, atau udara, dan arti status paket.",
+        "deskripsi": "Ongkir, kemasan, moda transportasi, dan status paket dijelaskan supaya kiriman Anda sampai dengan aman dan tanpa kejutan biaya."
+      },
+      {
+        "pilar": "Salah Kaprah",
+        "nama_kategori": "Salah Kaprah Logistik",
+        "label_pilar": "Salah Kaprah",
+        "slug": "salah-kaprah-logistik",
+        "h1": "Salah Kaprah Logistik: Anggapan Keliru yang Sering Terdengar",
+        "seo_title": "Salah Kaprah Logistik: Mitos yang Perlu Diluruskan",
+        "meta_description": "Logistik itu kurir? Stok banyak pasti aman? Kumpulan salah kaprah logistik yang sering terdengar, diluruskan dengan penjelasan sederhana dan contoh.",
+        "deskripsi": "Anggapan keliru soal logistik, gudang, dan pengiriman yang sering terdengar, lengkap dengan penjelasan kenapa keliru dan apa yang benar."
+      },
+      {
+        "pilar": "Karier & Skill",
+        "nama_kategori": "Karier Logistik",
+        "label_pilar": "Karier & Skill",
+        "slug": "karier-logistik",
+        "h1": "Karier & Skill Logistik: Peran, Istilah, dan Keterampilan",
+        "seo_title": "Karier Logistik: Peran, Skill, dan Istilah Gudang",
+        "meta_description": "Mengenal karier di logistik dan gudang: tugas tiap peran, istilah wajib staf baru, dan skill yang dibutuhkan. Ditulis oleh praktisi logistik ±10 tahun.",
+        "deskripsi": "Peran-peran di gudang dan logistik, istilah yang wajib dikuasai staf baru, dan keterampilan yang membantu Anda berkembang."
+      },
+      {
+        "pilar": "Perkenalan",
+        "nama_kategori": "Dasar Logistik",
+        "label_pilar": "Perkenalan",
+        "slug": "dasar-logistik",
+        "h1": "Dasar Logistik: Mulai Belajar dari Nol",
+        "seo_title": "Dasar Logistik: Mulai Belajar Logistik dari Nol",
+        "meta_description": "Baru mengenal logistik? Mulai dari sini: apa itu logistik, kenalan dengan penulis, dan urutan materi yang disarankan untuk belajar logistik dari nol.",
+        "deskripsi": "Titik awal untuk pembaca baru: pengertian logistik, siapa penulisnya, dan urutan materi yang disarankan."
+      }
+    ],
+    "aturan_halaman_kategori": "Title ≤60 karakter: '{Topik SEO}: {manfaat}' (lihat tiap kategori); H1 boleh memuat nama pilar. Tampilkan deskripsi 80-150 kata unik di atas daftar artikel (bukan hanya daftar), daftar artikel terbaru, dan 3 artikel 'mulai dari sini' yang disematkan manual. Paginasi /kategori/{slug}/2 dengan canonical ke dirinya sendiri (bukan ke halaman 1). Kategori dengan <3 artikel boleh tetap indexable karena punya deskripsi unik; jangan buat halaman tag terpisah untuk sementara.",
+    "aturan_beranda": {
+      "seo_title": "Ngerti Logistik: Belajar Logistik dari Nol, Gratis",
+      "meta_description": "Belajar logistik dari nol bersama praktisi: istilah gudang, ongkir dan pengiriman, salah kaprah, dan karier logistik. Singkat, gratis, mudah dipahami.",
+      "catatan": "H1 beranda memuat 'belajar logistik'. Tampilkan 6 kategori dengan deskripsi singkat, artikel terbaru, dan blok penulis (foto + 2 kalimat E-E-A-T, tautan ke /penulis/fajar). Beranda adalah satu-satunya halaman yang title-nya diawali nama merek."
+    },
+    "aturan_artikel": "Title ≤60 karakter, kata kunci di depan; tambahkan ' | Ngerti Logistik' hanya bila total ≤60 karakter (di batch L01-L20 tidak ada yang muat, jadi build.py jangan menambahkannya otomatis bila melebihi). Meta description 140-155 karakter. Satu H1 per halaman. Tampilkan tanggal terbit dan 'diperbarui' bila konten diubah. Gambar sampul .webp dengan width/height, alt deskriptif. Blok 'Sumber' di akhir artikel dengan tautan keluar (rel tanpa nofollow untuk sumber otoritatif).",
+    "schema_org": {
+      "WebSite": {
+        "di": "beranda",
+        "properti": [
+          "@id: https://ngertilogistik.web.id/#website",
+          "name",
+          "url",
+          "inLanguage: id-ID",
+          "publisher -> #org"
+        ],
+        "catatan": "Tidak perlu SearchAction kecuali ada halaman hasil pencarian yang bisa diakses lewat URL."
+      },
+      "Organization": {
+        "di": "semua halaman lewat @id (build.py memakai #org)",
+        "properti": [
+          "@id: https://ngertilogistik.web.id/#org",
+          "name: Ngerti Logistik",
+          "url",
+          "logo (ImageObject, logo-256.png)",
+          "sameAs: TikTok @ngertilogistik dan akun resmi lain"
+        ],
+        "catatan": "Ini proyek edukasi pribadi; jangan isi alamat, legalName, atau data perusahaan tempat Fajar bekerja."
+      },
+      "Person": {
+        "di": "/penulis/fajar dan direferensikan sebagai author di artikel",
+        "properti": [
+          "@id: https://ngertilogistik.web.id/penulis/fajar#person",
+          "name: Fajar",
+          "alternateName: Zar",
+          "jobTitle: Praktisi logistik (build.py) atau Logistics Manager - keduanya aman selama tanpa nama perusahaan",
+          "description: praktisi logistik ±10 tahun di industri teknologi, FMCG, dan manufaktur",
+          "knowsAbout: [logistik, pergudangan, manajemen persediaan, pengiriman]",
+          "url",
+          "image",
+          "sameAs: TikTok/LinkedIn pribadi bila ada"
+        ],
+        "larangan": "Jangan memakai worksFor atau alumniOf yang menyebut atau menyiratkan perusahaan tempat bekerja."
+      },
+      "BlogPosting": {
+        "di": "setiap artikel",
+        "properti": [
+          "headline (=H1, ≤110 karakter)",
+          "description (=meta description)",
+          "image (1200x630)",
+          "datePublished, dateModified (ISO 8601; tambahkan jam dan +07:00 bila memungkinkan)",
+          "author -> Person @id",
+          "publisher -> Organization @id",
+          "mainEntityOfPage",
+          "inLanguage: id-ID",
+          "articleSection",
+          "keywords",
+          "isPartOf -> WebSite @id"
+        ],
+        "catatan": "build.py sudah membuat BlogPosting + BreadcrumbList + FAQPage + Person + Organization dalam satu @graph. Yang perlu ditambah: node WebSite (dan isPartOf), sameAs/image pada Person. Bila video TikTok disematkan di halaman, tambahkan VideoObject; jika hanya tautan keluar, jangan."
+      },
+      "FAQPage": {
+        "di": "artikel yang menampilkan bagian FAQ",
+        "catatan": "Hanya markup untuk tanya-jawab yang terlihat di halaman. Google kini membatasi rich result FAQ untuk situs pemerintah/kesehatan, jadi anggap ini nilai tambah semantik (dan untuk mesin jawaban AI), bukan jaminan tampilan."
+      },
+      "BreadcrumbList": {
+        "di": "artikel dan kategori",
+        "pola": "Beranda > {Nama kategori} > {Judul artikel}",
+        "catatan": "Breadcrumb di HTML harus sama dengan markup; tautan kategori ke /kategori/{slug}, bukan /?p=P1#materi seperti sekarang."
+      },
+      "DefinedTermSet/DefinedTerm": {
+        "di": "/glosarium (opsional)",
+        "catatan": "Tiap istilah sebagai DefinedTerm dengan url ke artikel pembahasnya."
+      }
+    },
+    "halaman_penulis": {
+      "url": "/penulis/fajar",
+      "isi": [
+        "Foto asli dan nama panggilan (Fajar/Zar)",
+        "Pengalaman: ±10 tahun di logistik, industri teknologi, FMCG, dan manufaktur; kini logistics manager yang mengurus gudang, stok, dan pengiriman",
+        "Bidang yang dikuasai (knowsAbout) dan alasan membuat Ngerti Logistik (edukasi gratis, tanpa monetisasi)",
+        "Kebijakan editorial singkat: angka bersumber, contoh diberi label CONTOH, tanggal pembaruan",
+        "Daftar semua artikel karya Fajar",
+        "Tautan ke TikTok @ngertilogistik"
+      ],
+      "larangan": "Jangan menyebut nama, logo, lokasi spesifik, atau ciri yang mengidentifikasi perusahaan tempat Fajar bekerja, termasuk di foto (seragam, ID card, papan nama gudang).",
+      "byline": "Setiap artikel menampilkan byline 'Fajar, praktisi logistik' yang menaut ke /penulis/fajar, plus kotak penulis singkat di akhir artikel."
+    },
+    "glosarium_dan_tag": {
+      "glosarium": "Buat /glosarium berisi istilah A-Z (mulai dari 10 istilah L20 + istilah L02-L19). Setiap istilah: definisi 1-2 kalimat + tautan ke artikel. Halaman ini menjadi hub tautan internal dan kandidat sitelinks.",
+      "tag": "Belum perlu halaman tag. Dengan 6 kategori dan 20 artikel, halaman tag akan tipis dan menduplikasi kategori. Pertimbangkan lagi setelah >60 artikel, dan hanya untuk tag dengan ≥5 artikel."
+    },
+    "link_internal_aturan": "2-4 tautan kontekstual per artikel ke sesama L01-L20, anchor deskriptif sesuai brief, ditulis sebagai [anchor](Lxx). build.py sudah menambahkan 3 artikel terkait dan navigasi sebelumnya/berikutnya. Topik L21+ yang disinggung boleh ditulis [anchor](L21) juga: build.py menampilkannya sebagai teks biasa dan otomatis menjadi tautan begitu artikel itu terbit - ini cara aman untuk 'menyiapkan' tautan tanpa link mati.",
+    "sitemap": "Satu sitemap.xml sudah cukup untuk <500 URL. Perbaikan: <lastmod> beranda, /blog, /tentang, /penulis, dan kategori saat ini diisi tanggal build - ganti dengan tanggal 'diperbarui' artikel terbaru di halaman tersebut (lastmod palsu membuat Google mengabaikan sinyal lastmod). Artikel sudah memakai tanggal 'diperbarui' (benar). Tambahkan /glosarium setelah dibuat. Jangan cantumkan URL redirect/noindex. Pisahkan menjadi sitemap index (pages + blog) bila nanti >500 URL.",
+    "rss": "build.py sudah membuat /feed.xml (RSS 2.0, 30 artikel terbaru, guid = URL, pubDate, category, description). Tambahkan <link rel='alternate' type='application/rss+xml' href='/feed.xml'> di <head> semua halaman bila belum ada, dan guid isPermaLink='true'.",
+    "robots": "robots.txt saat ini sudah benar (Allow: / + Sitemap). Pertahankan; jangan blokir /img atau CSS/JS. Halaman 404 kembalikan status 404 sungguhan. Gunakan meta robots noindex hanya untuk halaman utilitas (mis. hasil pencarian internal jika kelak ada).",
+    "core_web_vitals": [
+      "Situs statis di Vercel sudah ringan; jaga LCP <2,5 dtk. Gambar og 1200x630 berformat PNG: bila dipakai juga sebagai gambar kartu/sampul di halaman, sajikan versi .webp yang dikompres dengan srcset; gambar di atas lipatan jangan loading='lazy', beri fetchpriority='high'.",
+      "Font sudah di-self-host (public/fonts, 9 file woff2: Jakarta 4 bobot, mono 2, serif 3). Kurangi ke ≤4 file yang benar-benar dipakai, gunakan font-display: swap, preload hanya font teks utama, dan pakai size-adjust/fallback metrik agar tidak ada CLS.",
+      "Embed video TikTok memuat skrip berat: pakai facade (gambar sampul + tombol putar) yang baru memuat embed saat diklik, supaya INP dan LCP tidak rusak.",
+      "CLS <0,1: semua gambar/iframe punya dimensi atau aspect-ratio; jangan menyisipkan banner di atas konten setelah load.",
+      "INP <200 ms: JS minimal (filter/kalkulator kecil saja), tanpa library besar; aktifkan cache panjang untuk CSS/JS berversi (header Cache-Control di vercel.json sudah ada untuk /img, tambahkan untuk /style.css dan /app.js dengan nama file ber-hash).",
+      "Pantau dengan laporan Core Web Vitals di Search Console dan PageSpeed Insights; data lapangan baru muncul setelah ada trafik cukup."
+    ],
+    "google_search_console_setelah_domain_aktif": [
+      "Tambahkan properti Domain (verifikasi TXT DNS untuk ngertilogistik.web.id) agar semua subdomain dan protokol tercakup; opsional properti URL-prefix https://ngertilogistik.web.id/ untuk laporan per prefix.",
+      "Pastikan redirect www -> non-www (atau sebaliknya) dan http -> https sudah 301 di Vercel; pilih satu versi kanonikal.",
+      "Kirim /sitemap.xml (sitemap index) di menu Sitemaps; pantau jumlah URL 'Ditemukan' vs 'Terindeks'.",
+      "Gunakan URL Inspection lalu 'Minta pengindeksan' untuk beranda, /blog, 6 halaman kategori, dan artikel prioritas (L01, L06, L09, L18) saat terbit.",
+      "Pantau laporan Pengindeksan Halaman (terutama 'Duplikat, Google memilih kanonikal berbeda' antara /materi dan /blog) dan pastikan redirect 301 terbaca.",
+      "Cek laporan Enhancements: Breadcrumbs dan validasi structured data; uji juga dengan Rich Results Test.",
+      "Buat filter halaman berawalan /blog/ di laporan Performa; setelah 4-8 minggu, gunakan kueri nyata untuk memperbarui kata kunci turunan dan FAQ di brief ini.",
+      "Hubungkan dengan Bing Webmaster Tools (impor dari GSC) karena sebagian mesin jawaban AI memakai indeks Bing.",
+      "Tambahkan pengguna kedua (pemilik cadangan) dan aktifkan notifikasi email untuk masalah keamanan dan tindakan manual."
+    ],
+    "catatan_build_py": "Diperiksa 2 November 2026: build.py baru sudah memakai /blog, /kategori, /penulis/fajar, BlogPosting/BreadcrumbList/FAQPage, og:type article, feed.xml, robots.txt, redirect /materi. Sisa saran: (1) tambah node WebSite; (2) lastmod halaman non-artikel jangan pakai tanggal build; (3) tautan sumber memakai rel='noopener nofollow' - untuk sumber otoritatif (WHO, BPS, peraturan) nofollow boleh dihapus, tidak wajib; (4) KATEGORI di build.py bisa diperkaya dengan seo_title dan meta_description per kategori dari bagian 'kategori' brief ini; (5) dek di bawah H1 memakai 'deskripsi' (= meta description) - boleh, asalkan kalimatnya tetap natural dibaca.",
+    "sumber_tidak_bisa_dibuka": [
+      "https://www.ibm.com/id-id/think/topics/lead-time (izin akses tidak terjawab saat riset; tidak dipakai di brief)"
+    ]
+  },
+  "artikel": [
+    {
+      "id": "L01",
+      "pilar": "Perkenalan",
+      "kategori_slug": "dasar-logistik",
+      "slug": "apa-itu-logistik",
+      "kata_kunci_utama": "apa itu logistik",
+      "kata_kunci_turunan": [
+        "logistik adalah",
+        "pengertian logistik",
+        "arti logistik menurut KBBI",
+        "contoh logistik dalam kehidupan sehari-hari",
+        "kegiatan logistik",
+        "fungsi logistik",
+        "belajar logistik dari nol"
+      ],
+      "search_intent": "informasional (definisi dasar); sekunder: navigasional untuk mengenal penulis",
+      "prioritas": "tinggi - artikel pilar dan pintu masuk situs; persaingan berat (portal berita, vendor software, repositori kampus), maka menangkan lewat penjelasan paling sederhana + contoh sehari-hari + E-E-A-T praktisi",
+      "seo_title": "Apa Itu Logistik? Pengertian dan Contoh Sehari-hari",
+      "h1": "Apa Itu Logistik? Penjelasan Sederhana dari Praktisi",
+      "meta_description": "Apa itu logistik? Pahami pengertian logistik lewat perjalanan sekotak masker dari pabrik ke toko, plus kegiatan utamanya. Dijelaskan praktisi logistik.",
+      "outline": [
+        {
+          "h2": "Apa itu logistik? Jawaban singkatnya",
+          "catatan": "Definisi 40-50 kata untuk featured snippet: logistik mengatur aliran dan penyimpanan barang beserta informasinya dari titik asal ke pemakai, tepat jumlah, waktu, dan tempat."
+        },
+        {
+          "h2": "Pengertian logistik menurut kamus dan menurut dunia bisnis",
+          "h3": [
+            "Arti logistik di KBBI (dan kenapa terdengar seperti istilah militer)",
+            "Definisi logistik menurut CSCMP"
+          ]
+        },
+        {
+          "h2": "Contoh logistik sehari-hari: perjalanan sekotak masker",
+          "h3": [
+            "Dari pabrik ke gudang",
+            "Dicatat, dikemas, lalu diantar ke toko",
+            "Kalau satu langkah meleset"
+          ]
+        },
+        {
+          "h2": "Kegiatan utama dalam logistik",
+          "h3": [
+            "Transportasi",
+            "Pergudangan",
+            "Pengelolaan stok",
+            "Kemasan dan penanganan barang",
+            "Informasi dan dokumen",
+            "Retur (alur balik)"
+          ]
+        },
+        {
+          "h2": "Kesalahan umum saat memahami logistik",
+          "catatan": "Logistik = kurir; logistik = gudang saja; logistik cuma urusan perusahaan besar."
+        },
+        {
+          "h2": "Kenalan dengan Fajar dan cara belajar di Ngerti Logistik",
+          "catatan": "Bio singkat ±80 kata, tautkan ke /penulis/fajar. Hanya industri dan peran, tanpa nama perusahaan."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa itu logistik dengan kata sederhana?",
+        "Apa arti logistik menurut KBBI?",
+        "Apa saja contoh kegiatan logistik?",
+        "Apakah logistik sama dengan pengiriman barang?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L02",
+          "url": "/blog/logistik-vs-supply-chain",
+          "anchor": "beda logistik dan supply chain"
+        },
+        {
+          "target_id": "L05",
+          "url": "/blog/ruang-lingkup-logistik",
+          "anchor": "logistik bukan cuma kurir"
+        },
+        {
+          "target_id": "L04",
+          "url": "/blog/alur-proses-gudang",
+          "anchor": "5 langkah barang di gudang"
+        },
+        {
+          "target_id": "L20",
+          "url": "/blog/istilah-gudang-untuk-pemula",
+          "anchor": "istilah gudang untuk pemula"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "KBBI VI Daring (Badan Bahasa, Kemendikdasmen) - entri 'logistik'",
+          "url": "https://kbbi.kemendikdasmen.go.id/entri/logistik",
+          "kutip": "Arti 1: 'pengadaan, perawatan, distribusi, dan penyediaan (untuk mengganti) perlengkapan, perbekalan, dan ketenagaan'; arti 2-4 bernuansa militer. Bagus untuk menjelaskan kenapa kata logistik terdengar 'militer'."
+        },
+        {
+          "nama": "CSCMP - Supply Chain Management Definitions and Glossary",
+          "url": "https://cscmp.org/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx",
+          "kutip": "Definisi resmi: logistics management adalah 'that part of supply chain management that plans, implements, and controls the efficient, effective forward and reverse flow and storage of goods, services and related information...'; SCM mencakup sourcing & procurement, conversion, dan semua kegiatan logistik, serta integrasi supply-demand antarperusahaan. Halaman ini juga menautkan PDF glosarium CSCMP (glossary-2013.pdf) untuk istilah lain - buka PDF-nya dulu sebelum mengutip entri istilah tertentu."
+        },
+        {
+          "nama": "NC State University, Supply Chain Resource Cooperative - 'Logistics Management'",
+          "url": "https://scm.ncsu.edu/scm-articles/article/logistics-management",
+          "kutip": "Definisi akademik (mengacu Martin Christopher): logistik = proses mengelola pengadaan, perpindahan, dan penyimpanan material, komponen, dan barang jadi 'and the related information flows'."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Sudut unik: banyak pesaing menyalin definisi buku teks; tampilkan kontras KBBI (bernuansa militer) vs definisi bisnis, lalu turunkan ke contoh masker yang dialami pembaca setiap hari. Artikel ini juga berfungsi sebagai halaman 'mulai dari sini': akhiri dengan peta belajar ke 4-5 artikel L01-L20. Jangan menulis klaim pasar (nilai industri, jumlah pekerja) tanpa sumber.",
+      "url": "https://ngertilogistik.web.id/blog/apa-itu-logistik",
+      "redirect_301_dari": "/materi/l01-apa-itu-logistik-kenalan-dengan-fajar"
+    },
+    {
+      "id": "L02",
+      "pilar": "Kamus 60 Detik",
+      "kategori_slug": "kamus-logistik",
+      "slug": "logistik-vs-supply-chain",
+      "kata_kunci_utama": "perbedaan logistik dan supply chain",
+      "kata_kunci_turunan": [
+        "logistik vs supply chain",
+        "supply chain adalah",
+        "supply chain management adalah",
+        "rantai pasok adalah",
+        "apakah logistik bagian dari supply chain",
+        "contoh supply chain dan logistik"
+      ],
+      "search_intent": "informasional (perbandingan)",
+      "prioritas": "tinggi - pertanyaan klasik mahasiswa; SERP Indonesia banyak membahas 'supply chain vs supply chain management', sedikit yang tajam membandingkan logistik vs supply chain dengan definisi resmi",
+      "seo_title": "Perbedaan Logistik dan Supply Chain, Plus Contohnya",
+      "h1": "Logistik vs Supply Chain: Apa Bedanya?",
+      "meta_description": "Apa perbedaan logistik dan supply chain? Simak definisi CSCMP, tabel perbandingan, dan analogi sederhana supaya tidak tertukar lagi. Baca penjelasannya.",
+      "outline": [
+        {
+          "h2": "Perbedaan logistik dan supply chain dalam satu kalimat",
+          "catatan": "Snippet: supply chain = seluruh rantai dari bahan baku sampai pembeli; logistik = bagian yang mengalirkan dan menyimpan barang beserta informasinya."
+        },
+        {
+          "h2": "Apa itu supply chain (rantai pasok)?",
+          "h3": [
+            "Definisi CSCMP",
+            "Siapa saja yang terlibat"
+          ]
+        },
+        {
+          "h2": "Apa itu logistik?",
+          "h3": [
+            "Definisi CSCMP untuk logistics management",
+            "Kegiatan yang termasuk logistik"
+          ]
+        },
+        {
+          "h2": "Tabel perbandingan logistik vs supply chain",
+          "catatan": "Kolom: cakupan, kegiatan utama, contoh keputusan, contoh peran."
+        },
+        {
+          "h2": "Analogi gampang: peta perjalanan vs menjalankan perjalanan"
+        },
+        {
+          "h2": "Contoh: rantai pasok sekotak masker",
+          "catatan": "Tandai mana keputusan supply chain (pilih pemasok, rencana produksi) dan mana kerja logistik (angkut, simpan, kemas)."
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Menyamakan keduanya; menganggap supply chain = pembelian saja; menganggap logistik hanya transportasi."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apakah logistik bagian dari supply chain?",
+        "Apa bahasa Indonesia dari supply chain?",
+        "Lebih luas mana, logistik atau supply chain?",
+        "Apa contoh kegiatan supply chain yang bukan logistik?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L01",
+          "url": "/blog/apa-itu-logistik",
+          "anchor": "pengertian logistik"
+        },
+        {
+          "target_id": "L05",
+          "url": "/blog/ruang-lingkup-logistik",
+          "anchor": "ruang lingkup logistik"
+        },
+        {
+          "target_id": "L07",
+          "url": "/blog/inbound-vs-outbound",
+          "anchor": "inbound dan outbound"
+        },
+        {
+          "target_id": "L12",
+          "url": "/blog/moda-transportasi-pengiriman-barang",
+          "anchor": "memilih moda pengiriman"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "CSCMP - Supply Chain Management Definitions and Glossary",
+          "url": "https://cscmp.org/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx",
+          "kutip": "Definisi resmi: logistics management adalah 'that part of supply chain management that plans, implements, and controls the efficient, effective forward and reverse flow and storage of goods, services and related information...'; SCM mencakup sourcing & procurement, conversion, dan semua kegiatan logistik, serta integrasi supply-demand antarperusahaan. Halaman ini juga menautkan PDF glosarium CSCMP (glossary-2013.pdf) untuk istilah lain - buka PDF-nya dulu sebelum mengutip entri istilah tertentu."
+        },
+        {
+          "nama": "NC State University, Supply Chain Resource Cooperative - 'Logistics Management'",
+          "url": "https://scm.ncsu.edu/scm-articles/article/logistics-management",
+          "kutip": "Definisi akademik (mengacu Martin Christopher): logistik = proses mengelola pengadaan, perpindahan, dan penyimpanan material, komponen, dan barang jadi 'and the related information flows'."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Kutip definisi CSCMP dalam bahasa Inggris aslinya (pendek) lalu parafrasekan; sebut CSCMP sebagai asosiasi profesional, seperti di naskah video. Sudut unik: tabel 'contoh keputusan' (memilih pemasok = SCM, memilih rute truk = logistik) yang jarang ada di pesaing. Hindari membahas 'supply chain vs supply chain management' panjang lebar; cukup satu paragraf.",
+      "url": "https://ngertilogistik.web.id/blog/logistik-vs-supply-chain",
+      "redirect_301_dari": "/materi/l02-logistik-vs-supply-chain-apa-bedanya"
+    },
+    {
+      "id": "L03",
+      "pilar": "Kamus 60 Detik",
+      "kategori_slug": "kamus-logistik",
+      "slug": "apa-itu-sku",
+      "kata_kunci_utama": "SKU adalah",
+      "kata_kunci_turunan": [
+        "apa itu SKU",
+        "stock keeping unit",
+        "contoh kode SKU",
+        "cara membuat kode SKU",
+        "perbedaan SKU dan barcode",
+        "SKU dan GTIN",
+        "SKU di gudang"
+      ],
+      "search_intent": "informasional (definisi + how-to ringan)",
+      "prioritas": "tinggi - dicari staf gudang baru dan penjual marketplace; SERP didominasi vendor software POS/akuntansi",
+      "seo_title": "SKU Adalah: Arti Stock Keeping Unit dan Contohnya",
+      "h1": "SKU Itu Apa? Arti Stock Keeping Unit dan Contohnya di Gudang",
+      "meta_description": "SKU adalah kode untuk setiap varian barang yang dihitung terpisah. Pelajari arti stock keeping unit, contoh kode SKU, dan bedanya dengan barcode di sini.",
+      "outline": [
+        {
+          "h2": "SKU adalah kode untuk setiap varian barang",
+          "catatan": "Snippet: SKU (stock keeping unit) = satu varian yang dihitung, disimpan, dan dijual terpisah."
+        },
+        {
+          "h2": "Kenapa satu barang bisa punya banyak SKU?",
+          "h3": [
+            "Beda isi kemasan",
+            "Beda warna atau ukuran",
+            "Beda kemasan jual (satuan vs karton)"
+          ]
+        },
+        {
+          "h2": "Contoh SKU: masker isi 50 vs isi 20",
+          "catatan": "Tabel CONTOH: nama barang, varian, kode SKU, satuan."
+        },
+        {
+          "h2": "SKU vs barcode (GTIN): apa bedanya?",
+          "catatan": "SKU = kode internal; GTIN = nomor global standar GS1 di barcode. Keduanya memegang prinsip satu varian satu kode."
+        },
+        {
+          "h2": "Cara membuat kode SKU sederhana",
+          "h3": [
+            "Aturan dasar: unik, konsisten, tanpa spasi",
+            "Pola kode yang mudah dibaca",
+            "Jangan memakai ulang kode lama"
+          ]
+        },
+        {
+          "h2": "Kenapa stok harus dihitung per SKU"
+        },
+        {
+          "h2": "Kesalahan umum soal SKU",
+          "catatan": "Mencampur dua varian dalam satu kode; kode di label beda dengan di sistem; satu varian punya dua kode."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa kepanjangan SKU?",
+        "Apa bedanya SKU dan barcode?",
+        "Bagaimana cara membuat kode SKU?",
+        "Apakah warna berbeda harus beda SKU?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L20",
+          "url": "/blog/istilah-gudang-untuk-pemula",
+          "anchor": "istilah gudang lainnya"
+        },
+        {
+          "target_id": "L14",
+          "url": "/blog/selisih-stok-gudang",
+          "anchor": "selisih stok di sistem dan rak"
+        },
+        {
+          "target_id": "L04",
+          "url": "/blog/alur-proses-gudang",
+          "anchor": "alur proses gudang"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "GS1 Support - 'How many GS1 GTINs do I need when I have a product with many sizes and colours?'",
+          "url": "https://support.gs1.org/support/solutions/articles/43000734083-how-many-gs1-gtins-do-i-need-when-i-have-a-product-with-many-sizes-and-colours-",
+          "kutip": "'Each product variation needs its own GS1 GTIN' - tiap ukuran, warna, dan kombinasinya butuh nomor sendiri. Dipakai untuk membedakan GTIN (nomor barcode global, standar GS1) dengan SKU (kode internal perusahaan) yang logikanya sama: satu varian, satu kode."
+        },
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Tidak ada standar universal format SKU - jangan menulis seolah ada. Sudut unik untuk UMKM marketplace: varian di toko online = SKU, dan kesalahan varian tertukar = komplain pembeli. Semua contoh kode diberi label CONTOH. Hindari merekomendasikan aplikasi tertentu.",
+      "url": "https://ngertilogistik.web.id/blog/apa-itu-sku",
+      "redirect_301_dari": "/materi/l03-sku-itu-apa"
+    },
+    {
+      "id": "L04",
+      "pilar": "Isi Gudang",
+      "kategori_slug": "manajemen-gudang",
+      "slug": "alur-proses-gudang",
+      "kata_kunci_utama": "alur proses gudang",
+      "kata_kunci_turunan": [
+        "proses kerja gudang",
+        "aktivitas gudang",
+        "kegiatan di gudang",
+        "alur barang masuk dan keluar gudang",
+        "receiving putaway picking packing shipping",
+        "fungsi gudang"
+      ],
+      "search_intent": "informasional (proses / langkah-langkah)",
+      "prioritas": "tinggi - hub untuk seluruh pilar Isi Gudang; SERP diisi vendor WMS dan skripsi, jarang yang menjelaskan apa yang dicatat di tiap langkah",
+      "seo_title": "Alur Proses Gudang: 5 Langkah dari Terima sampai Kirim",
+      "h1": "5 Langkah Barang di Gudang: Terima, Simpan, Ambil, Kemas, Kirim",
+      "meta_description": "Alur proses gudang ada 5 langkah: terima, simpan, ambil, kemas, kirim. Pahami apa yang dicek dan dicatat di setiap langkah agar barang tidak hilang di rak.",
+      "outline": [
+        {
+          "h2": "Alur proses gudang dalam 5 langkah",
+          "catatan": "Snippet berbentuk daftar bernomor: penerimaan, penyimpanan (putaway), pengambilan (picking), pengemasan (packing), pengiriman (shipping)."
+        },
+        {
+          "h2": "Langkah 1: Penerimaan (receiving)"
+        },
+        {
+          "h2": "Langkah 2: Penyimpanan (putaway)"
+        },
+        {
+          "h2": "Langkah 3: Pengambilan barang (picking)"
+        },
+        {
+          "h2": "Langkah 4: Pengemasan (packing)"
+        },
+        {
+          "h2": "Langkah 5: Pengiriman (shipping)"
+        },
+        {
+          "h2": "Apa yang dicatat di setiap langkah",
+          "catatan": "Tabel: langkah, dokumen/data, siapa yang mencatat, risiko kalau tidak dicatat."
+        },
+        {
+          "h2": "Contoh: perjalanan satu pesanan di gudang",
+          "catatan": "Narasi CONTOH dari pesanan masuk sampai serah ke kurir."
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Lokasi rak tidak dicatat; packing tanpa cek ulang pesanan; status kirim tidak diperbarui."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa saja kegiatan utama di gudang?",
+        "Bagaimana urutan proses kerja di gudang?",
+        "Apa itu receiving, putaway, picking, dan packing?",
+        "Apa fungsi utama gudang?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L08",
+          "url": "/blog/penerimaan-barang-gudang",
+          "anchor": "cek saat penerimaan barang"
+        },
+        {
+          "target_id": "L16",
+          "url": "/blog/putaway-gudang",
+          "anchor": "putaway"
+        },
+        {
+          "target_id": "L07",
+          "url": "/blog/inbound-vs-outbound",
+          "anchor": "inbound dan outbound"
+        },
+        {
+          "target_id": "L14",
+          "url": "/blog/selisih-stok-gudang",
+          "anchor": "selisih stok"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        },
+        {
+          "nama": "WHO TRS 1025 Annex 7 - Good storage and distribution practices for medical products (2020)",
+          "url": "https://www.who.int/publications/m/item/trs-1025-annex-7",
+          "kutip": "Glosarium FEFO: prosedur yang memastikan stok dengan tanggal kedaluwarsa paling awal didistribusikan/dipakai lebih dulu. Bagian 12.10-12.12: setiap kiriman masuk dicek terhadap dokumen (PO, label, nomor batch, tanggal kedaluwarsa) serta kemungkinan kontaminasi, tampering, dan kerusakan; 13.4: stok dicek berkala untuk barang mendekati kedaluwarsa; 18.6: kiriman diperiksa kerusakan, segel, label, kelengkapan pesanan. PDF tersedia di halaman tersebut."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Sertakan diagram alur sederhana (SVG ringan, ada teks alt). Sebut bahwa gudang nyata punya langkah tambahan (inspeksi, replenishment, sortasi, loading) mengacu daftar aktivitas Supply Chain Indonesia, tapi 5 langkah ini kerangka dasarnya. Ini artikel hub: tautkan ke semua artikel Isi Gudang yang sudah terbit.",
+      "url": "https://ngertilogistik.web.id/blog/alur-proses-gudang",
+      "redirect_301_dari": "/materi/l04-5-langkah-barang-di-gudang"
+    },
+    {
+      "id": "L05",
+      "pilar": "Salah Kaprah",
+      "kategori_slug": "salah-kaprah-logistik",
+      "slug": "ruang-lingkup-logistik",
+      "kata_kunci_utama": "ruang lingkup logistik",
+      "kata_kunci_turunan": [
+        "kegiatan logistik",
+        "perbedaan logistik dan ekspedisi",
+        "apakah kurir termasuk logistik",
+        "aktivitas logistik apa saja",
+        "kerja di logistik ngapain",
+        "logistik dan kurir"
+      ],
+      "search_intent": "informasional (meluruskan miskonsepsi)",
+      "prioritas": "sedang - volume kemungkinan lebih kecil dari L01, tetapi sudut 'salah kaprah' kuat untuk dibagikan dan menangkap kueri 'logistik vs ekspedisi'",
+      "seo_title": "Ruang Lingkup Logistik: Bukan Cuma Kurir Paket",
+      "h1": "Salah Kaprah: Logistik Itu Kurir? Ini Ruang Lingkup Sebenarnya",
+      "meta_description": "Logistik itu kurir? Belum tentu. Kenali ruang lingkup logistik: transportasi, gudang, stok, kemasan, informasi, dan retur, plus beda logistik & ekspedisi.",
+      "outline": [
+        {
+          "h2": "Logistik itu kurir? Jawabannya: kurir hanya satu bagian",
+          "catatan": "Snippet: kurir = transportasi; ruang lingkup logistik juga gudang, stok, kemasan, informasi, dan retur."
+        },
+        {
+          "h2": "Kenapa banyak orang menyamakan logistik dengan kurir"
+        },
+        {
+          "h2": "Ruang lingkup logistik",
+          "h3": [
+            "Transportasi",
+            "Gudang",
+            "Stok dan perencanaan pembelian ulang",
+            "Kemasan",
+            "Informasi dan pencatatan",
+            "Retur"
+          ]
+        },
+        {
+          "h2": "Di balik satu paket: siapa saja yang bekerja?",
+          "catatan": "Urutan peran dari gudang sampai retur; tautkan ke L10."
+        },
+        {
+          "h2": "Logistik vs ekspedisi vs kurir",
+          "catatan": "Tabel singkat: cakupan, contoh kegiatan, contoh pekerjaan."
+        },
+        {
+          "h2": "Kalau satu bagian kacau, kurir tercepat pun tidak menolong",
+          "catatan": "Contoh CONTOH: stok sistem salah sehingga pesanan diterima padahal barang tidak ada."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apakah logistik sama dengan ekspedisi?",
+        "Apakah kurir termasuk logistik?",
+        "Apa saja kegiatan logistik selain pengiriman?",
+        "Kerja di bidang logistik itu ngapain saja?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L01",
+          "url": "/blog/apa-itu-logistik",
+          "anchor": "apa itu logistik"
+        },
+        {
+          "target_id": "L02",
+          "url": "/blog/logistik-vs-supply-chain",
+          "anchor": "logistik vs supply chain"
+        },
+        {
+          "target_id": "L04",
+          "url": "/blog/alur-proses-gudang",
+          "anchor": "kegiatan di dalam gudang"
+        },
+        {
+          "target_id": "L10",
+          "url": "/blog/tugas-staf-gudang",
+          "anchor": "peran-peran di gudang"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "CSCMP - Supply Chain Management Definitions and Glossary",
+          "url": "https://cscmp.org/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx",
+          "kutip": "Definisi resmi: logistics management adalah 'that part of supply chain management that plans, implements, and controls the efficient, effective forward and reverse flow and storage of goods, services and related information...'; SCM mencakup sourcing & procurement, conversion, dan semua kegiatan logistik, serta integrasi supply-demand antarperusahaan. Halaman ini juga menautkan PDF glosarium CSCMP (glossary-2013.pdf) untuk istilah lain - buka PDF-nya dulu sebelum mengutip entri istilah tertentu."
+        },
+        {
+          "nama": "KBBI VI Daring (Badan Bahasa, Kemendikdasmen) - entri 'logistik'",
+          "url": "https://kbbi.kemendikdasmen.go.id/entri/logistik",
+          "kutip": "Arti 1: 'pengadaan, perawatan, distribusi, dan penyediaan (untuk mengganti) perlengkapan, perbekalan, dan ketenagaan'; arti 2-4 bernuansa militer. Bagus untuk menjelaskan kenapa kata logistik terdengar 'militer'."
+        },
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Nada: meluruskan tanpa merendahkan profesi kurir. Jangan menyebut merek ekspedisi. Pastikan berbeda dari L01 (L01 = definisi, L05 = ruang lingkup dan miskonsepsi) untuk menghindari kanibalisasi: kata kunci 'apa itu logistik' jangan dipakai di title/H1 artikel ini.",
+      "url": "https://ngertilogistik.web.id/blog/ruang-lingkup-logistik",
+      "redirect_301_dari": "/materi/l05-salah-kaprah-logistik-kurir"
+    },
+    {
+      "id": "L06",
+      "pilar": "Kirim Tanpa Drama",
+      "kategori_slug": "pengiriman-barang",
+      "slug": "berat-volume",
+      "kata_kunci_utama": "cara menghitung berat volume",
+      "kata_kunci_turunan": [
+        "berat volume paket",
+        "berat volumetrik",
+        "rumus berat volume",
+        "berat dimensi",
+        "kenapa ongkir mahal padahal barang ringan",
+        "pembagi 6000 dan 5000",
+        "berat aktual vs berat volume"
+      ],
+      "search_intent": "informasional (how-to/kalkulasi) dengan motif praktis menghemat ongkir",
+      "prioritas": "sangat tinggi - relevan langsung bagi UMKM; masalah nyata ('bayar angin'); SERP campur aduk istilah dan pembagi",
+      "seo_title": "Cara Menghitung Berat Volume Paket agar Ongkir Hemat",
+      "h1": "Kenapa Ongkir Barang Ringan Bisa Mahal? Kenali Berat Volume",
+      "meta_description": "Barang ringan tapi ongkir mahal? Pelajari cara menghitung berat volume (P×L×T dibagi 6000 atau 5000), contoh hitungnya, dan trik memilih kotak yang pas.",
+      "outline": [
+        {
+          "h2": "Jawaban singkat: yang ditagih adalah yang lebih besar",
+          "catatan": "Snippet: ongkir dihitung dari berat aktual atau berat volume (P x L x T dalam cm dibagi angka pembagi), mana yang lebih besar."
+        },
+        {
+          "h2": "Berat aktual vs berat volume (volumetrik/dimensi)",
+          "catatan": "Sebut tiga istilah sinonim di 100 kata pertama."
+        },
+        {
+          "h2": "Rumus berat volume dan angka pembaginya",
+          "h3": [
+            "Pembagi 6000: standar IATA untuk kargo udara",
+            "Pembagi 5000: dipakai sebagian layanan ekspres",
+            "Selalu cek pembagi di situs resmi kurir"
+          ]
+        },
+        {
+          "h2": "Contoh menghitung berat volume",
+          "catatan": "CONTOH: kotak 40x30x30 cm isi 1 kg: 36.000/6.000 = 6 kg; dengan pembagi 5.000 = 7,2 kg. Tampilkan sebagai tabel langkah."
+        },
+        {
+          "h2": "Cara menekan berat volume tanpa mengorbankan keamanan barang",
+          "h3": [
+            "Pilih kotak yang pas",
+            "Ukur sisi terluar setelah dikemas",
+            "Hindari kemasan menggembung",
+            "Bandingkan layanan dan pembaginya"
+          ]
+        },
+        {
+          "h2": "Kesalahan umum saat menghitung ongkir",
+          "catatan": "Mengukur sisi dalam; lupa tebal bubble wrap; mengira semua kurir memakai pembagi sama; mengabaikan aturan pembulatan berat."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Bagaimana cara menghitung berat volume paket?",
+        "Kenapa pembagi berat volume ada yang 6000 dan 5000?",
+        "Ongkir dihitung dari berat asli atau berat volume?",
+        "Apa bedanya berat volumetrik dan berat dimensi?",
+        "Bagaimana agar paket tidak kena berat volume?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L12",
+          "url": "/blog/moda-transportasi-pengiriman-barang",
+          "anchor": "memilih darat, laut, atau udara"
+        },
+        {
+          "target_id": "L18",
+          "url": "/blog/paket-transit-lama",
+          "anchor": "paket lama di status transit"
+        },
+        {
+          "target_id": "L17",
+          "url": "/blog/7r-logistik-pengiriman-tepat",
+          "anchor": "pengiriman yang tepat, bukan cuma cepat"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "ASEAN - Common Standard Curricula, Air Freight Chapter 5 'Calculation of Air Freight' (materi pelatih)",
+          "url": "https://asean.org/wp-content/uploads/2023/02/Air-Freight-C5.-Calculation-of-Air-Freight-PPT-Trainer-V2.pdf",
+          "kutip": "Mengacu IATA TACT 3.9.4 Volume Weight: volume (cm3) dibagi 6.000 = kg; 'The chargeable weight is the actual gross weight or volume weight, whichever is higher.' Sumber kuat untuk klaim 'standar IATA memakai pembagi 6000' di naskah."
+        },
+        {
+          "nama": "DHL Indonesia - 'Memahami biaya pengiriman: berat aktual vs berat volumetrik'",
+          "url": "https://www.dhl.com/discover/id-id/logistics-advice/logistics-insights/decoding-shipping-costs-actual-weight-vs-volumetric-weight",
+          "kutip": "Memakai istilah 'berat aktual', 'berat volumetrik' / 'berat dimensi', 'faktor dim'; DHL Express memakai faktor dim 5000 (P x L x T / 5000); yang ditagih adalah yang lebih tinggi. Sumber untuk klaim 'ada layanan yang memakai 5000' (sebut sebagai contoh satu layanan ekspres, bukan semua kurir)."
+        },
+        {
+          "nama": "FedEx Indonesia - FAQ 'Apa itu berat dimensional?'",
+          "url": "https://www.fedex.com/id-id/customer-support/faq/sending/shipping-documents/what-is-dimensional-weight.html",
+          "kutip": "Definisi Indonesia: 'Berat dimensi adalah jumlah ruang yang ditempati paket sehubungan dengan berat aktualnya.' Berguna untuk menunjukkan sinonim istilah (berat dimensi/dimensional)."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Pakai 'berat volume' sebagai istilah utama (sama dengan naskah dan lazim di kurir domestik), sebut 'berat volumetrik' dan 'berat dimensi' sebagai sinonim. Klaim 'IATA 6000' rujuk materi ASEAN yang mengutip IATA TACT 3.9.4. Jangan menyebut pembagi kurir domestik tertentu kecuali mengutip halaman resminya yang sudah dibuka; aturan pembagi dan pembulatan bisa berubah. Pertimbangkan kalkulator kecil (JS ringan, tanpa library) sebagai nilai tambah; pastikan tidak mengganggu INP.",
+      "url": "https://ngertilogistik.web.id/blog/berat-volume",
+      "redirect_301_dari": "/materi/l06-kenapa-ongkir-barang-ringan-bisa-mahal"
+    },
+    {
+      "id": "L07",
+      "pilar": "Kamus 60 Detik",
+      "kategori_slug": "kamus-logistik",
+      "slug": "inbound-vs-outbound",
+      "kata_kunci_utama": "inbound dan outbound gudang",
+      "kata_kunci_turunan": [
+        "inbound adalah",
+        "outbound logistik",
+        "perbedaan inbound dan outbound",
+        "inbound logistics",
+        "outbound logistics",
+        "staf inbound gudang",
+        "contoh inbound outbound"
+      ],
+      "search_intent": "informasional (definisi + perbandingan)",
+      "prioritas": "tinggi - istilah wajib staf gudang; kueri 'outbound adalah' tanpa konteks didominasi outbound marketing/sales, jadi targetkan frasa berkonteks gudang/logistik",
+      "seo_title": "Inbound dan Outbound di Gudang: Arti dan Bedanya",
+      "h1": "Inbound vs Outbound: Dua Arah Barang di Gudang",
+      "meta_description": "Inbound adalah barang masuk, outbound adalah barang keluar gudang. Pahami kegiatan masing-masing, contoh nyata, dan kenapa keduanya harus seimbang di sini.",
+      "outline": [
+        {
+          "h2": "Inbound dan outbound dalam satu kalimat",
+          "catatan": "Snippet: inbound = barang masuk gudang dari pemasok/pabrik; outbound = barang keluar dari gudang ke pelanggan/toko."
+        },
+        {
+          "h2": "Inbound: kegiatan barang masuk",
+          "h3": [
+            "Bongkar muat",
+            "Cek jumlah, kondisi, dan dokumen",
+            "Simpan ke rak"
+          ]
+        },
+        {
+          "h2": "Outbound: kegiatan barang keluar",
+          "h3": [
+            "Ambil barang sesuai pesanan",
+            "Kemas dan muat",
+            "Kirim dan perbarui status"
+          ]
+        },
+        {
+          "h2": "Tabel perbedaan inbound dan outbound"
+        },
+        {
+          "h2": "Kenapa inbound dan outbound harus seimbang",
+          "catatan": "CONTOH angka sederhana: masuk 100 palet/hari, keluar 60 = gudang penuh dalam X hari."
+        },
+        {
+          "h2": "Pintu dan area terpisah: kenapa banyak gudang memisahkannya"
+        },
+        {
+          "h2": "Inbound/outbound logistics dalam rantai pasok",
+          "catatan": "Satu paragraf: makna lebih luas di level perusahaan; bedakan dari 'outbound' dalam marketing."
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Menumpuk barang inbound di dok tanpa putaway; jadwal truk masuk dan keluar bentrok."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa itu inbound dan outbound di gudang?",
+        "Apa contoh kegiatan inbound?",
+        "Apa tugas staf outbound gudang?",
+        "Apa bedanya inbound logistics dan outbound logistics?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L08",
+          "url": "/blog/penerimaan-barang-gudang",
+          "anchor": "pemeriksaan saat penerimaan barang"
+        },
+        {
+          "target_id": "L16",
+          "url": "/blog/putaway-gudang",
+          "anchor": "putaway"
+        },
+        {
+          "target_id": "L04",
+          "url": "/blog/alur-proses-gudang",
+          "anchor": "alur proses gudang"
+        },
+        {
+          "target_id": "L15",
+          "url": "/blog/cross-docking",
+          "anchor": "cross-docking"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        },
+        {
+          "nama": "CSCMP - Supply Chain Management Definitions and Glossary",
+          "url": "https://cscmp.org/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx",
+          "kutip": "Definisi resmi: logistics management adalah 'that part of supply chain management that plans, implements, and controls the efficient, effective forward and reverse flow and storage of goods, services and related information...'; SCM mencakup sourcing & procurement, conversion, dan semua kegiatan logistik, serta integrasi supply-demand antarperusahaan. Halaman ini juga menautkan PDF glosarium CSCMP (glossary-2013.pdf) untuk istilah lain - buka PDF-nya dulu sebelum mengutip entri istilah tertentu."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Wajib menulis 'outbound' selalu dengan konteks (outbound gudang/logistik) di title, H1, dan paragraf awal agar tidak bersaing dengan makna marketing atau kegiatan alam. Sudut unik: dimensi keseimbangan inbound-outbound dari sudut praktisi (kapasitas dok, jadwal truk).",
+      "url": "https://ngertilogistik.web.id/blog/inbound-vs-outbound",
+      "redirect_301_dari": "/materi/l07-inbound-vs-outbound"
+    },
+    {
+      "id": "L08",
+      "pilar": "Isi Gudang",
+      "kategori_slug": "manajemen-gudang",
+      "slug": "penerimaan-barang-gudang",
+      "kata_kunci_utama": "penerimaan barang gudang",
+      "kata_kunci_turunan": [
+        "SOP penerimaan barang",
+        "cara cek barang datang dari supplier",
+        "receiving gudang",
+        "checklist penerimaan barang",
+        "surat jalan dan PO",
+        "barang datang rusak dari supplier",
+        "goods receipt"
+      ],
+      "search_intent": "informasional (how-to / SOP); sebagian pencari mencari templat SOP",
+      "prioritas": "tinggi - kebutuhan praktis staf dan UMKM; SERP banyak templat SOP generik, jarang menekankan 'catat selisih sebelum tanda tangan'",
+      "seo_title": "Penerimaan Barang Gudang: Checklist Sebelum Tanda Tangan",
+      "h1": "Penerimaan Barang: 4 Hal yang Wajib Dicek Sebelum Tanda Tangan",
+      "meta_description": "Barang datang dari supplier? Cek 4 hal ini sebelum tanda tangan: dokumen, jumlah, kondisi, serta batch dan kedaluwarsa. Lengkap dengan contoh checklist.",
+      "outline": [
+        {
+          "h2": "Jawaban singkat: cek 4 hal sebelum tanda tangan",
+          "catatan": "Snippet daftar: dokumen, jumlah, kondisi, batch & kedaluwarsa; catat selisih sebelum tanda tangan."
+        },
+        {
+          "h2": "1. Cek dokumen: surat jalan vs pesanan pembelian (PO)"
+        },
+        {
+          "h2": "2. Cek jumlah: hitung karton atau unit, bukan hanya label"
+        },
+        {
+          "h2": "3. Cek kondisi: penyok, basah, segel rusak, lalu foto"
+        },
+        {
+          "h2": "4. Cek nomor batch dan tanggal kedaluwarsa"
+        },
+        {
+          "h2": "Kalau ada selisih atau kerusakan: catat sebelum tanda tangan",
+          "h3": [
+            "Apa arti tanda tangan Anda",
+            "Cara mencatat selisih di dokumen",
+            "Kenapa klaim belakangan jauh lebih sulit"
+          ]
+        },
+        {
+          "h2": "Setelah barang diterima: GR lalu putaway"
+        },
+        {
+          "h2": "Contoh checklist penerimaan barang",
+          "catatan": "Tabel CONTOH yang bisa disalin; boleh disediakan versi unduhan PDF/Sheets."
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Tanda tangan dulu cek belakangan; hanya percaya label; tidak memotret bukti; ED tidak dicatat."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa saja yang harus dicek saat barang datang?",
+        "Apa yang dilakukan jika barang dari supplier kurang atau rusak?",
+        "Apa bedanya surat jalan dan PO?",
+        "Apa itu goods receipt (GR) di gudang?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L16",
+          "url": "/blog/putaway-gudang",
+          "anchor": "putaway setelah barang diterima"
+        },
+        {
+          "target_id": "L09",
+          "url": "/blog/fifo-vs-fefo",
+          "anchor": "FIFO dan FEFO"
+        },
+        {
+          "target_id": "L07",
+          "url": "/blog/inbound-vs-outbound",
+          "anchor": "kegiatan inbound"
+        },
+        {
+          "target_id": "L20",
+          "url": "/blog/istilah-gudang-untuk-pemula",
+          "anchor": "istilah PO, GR, dan DO"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "WHO TRS 1025 Annex 7 - Good storage and distribution practices for medical products (2020)",
+          "url": "https://www.who.int/publications/m/item/trs-1025-annex-7",
+          "kutip": "Glosarium FEFO: prosedur yang memastikan stok dengan tanggal kedaluwarsa paling awal didistribusikan/dipakai lebih dulu. Bagian 12.10-12.12: setiap kiriman masuk dicek terhadap dokumen (PO, label, nomor batch, tanggal kedaluwarsa) serta kemungkinan kontaminasi, tampering, dan kerusakan; 13.4: stok dicek berkala untuk barang mendekati kedaluwarsa; 18.6: kiriman diperiksa kerusakan, segel, label, kelengkapan pesanan. PDF tersedia di halaman tersebut."
+        },
+        {
+          "nama": "Peraturan BPOM No. 9 Tahun 2019 tentang Pedoman Teknis Cara Distribusi Obat yang Baik (CDOB) - via JDIH BPK",
+          "url": "https://peraturan.bpk.go.id/Download/175439/Peraturan%20Kepala%20BPOM%20Nomor%209%20Tahun%202019.pdf",
+          "kutip": "Butir 4.24: rotasi stok 'mengikuti kaidah First Expired First Out (FEFO)'; 4.36: picking berdasarkan FEFO; 4.12-4.17: tujuan & isi pemeriksaan penerimaan (pemasok, kerusakan, nomor batch dan tanggal kedaluwarsa dicatat, produk mendekati kedaluwarsa tidak diterima). Cek apakah ada perubahan (mis. Per BPOM 6/2020) sebelum menyebut 'aturan terbaru'."
+        },
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Sudut unik dari praktisi: 'tanda tangan = barang diterima sesuai catatan'. Jelaskan WHO/BPOM sebagai rujukan praktik baik (khusus produk kesehatan) lalu generalisasi untuk barang umum, beri catatan bahwa aturan kontrak dengan pemasok bisa berbeda. Jangan memberi saran hukum soal klaim.",
+      "url": "https://ngertilogistik.web.id/blog/penerimaan-barang-gudang",
+      "redirect_301_dari": "/materi/l08-penerimaan-barang-cek-apa-saja"
+    },
+    {
+      "id": "L09",
+      "pilar": "Kamus 60 Detik",
+      "kategori_slug": "kamus-logistik",
+      "slug": "fifo-vs-fefo",
+      "kata_kunci_utama": "FIFO dan FEFO",
+      "kata_kunci_turunan": [
+        "perbedaan FIFO dan FEFO",
+        "FEFO adalah",
+        "FIFO gudang",
+        "first expired first out",
+        "contoh FEFO",
+        "metode FIFO FEFO LIFO gudang"
+      ],
+      "search_intent": "informasional (perbandingan)",
+      "prioritas": "sangat tinggi - istilah wajib; 'FIFO adalah' bercampur makna komputasi dan akuntansi, sehingga artikel harus jelas tentang FIFO fisik di gudang",
+      "seo_title": "FIFO vs FEFO di Gudang: Perbedaan, Contoh, Kapan Dipakai",
+      "h1": "FIFO vs FEFO: Barang Mana yang Harus Keluar Duluan?",
+      "meta_description": "FIFO dan FEFO menentukan barang mana yang keluar duluan dari gudang. Pelajari bedanya, contoh batch, dan kapan FEFO wajib dipakai untuk obat dan makanan.",
+      "outline": [
+        {
+          "h2": "Perbedaan FIFO dan FEFO dalam satu kalimat",
+          "catatan": "Snippet: FIFO = yang pertama masuk keluar dulu; FEFO = yang paling cepat kedaluwarsa keluar dulu."
+        },
+        {
+          "h2": "FIFO (first in, first out)",
+          "h3": [
+            "Cara kerja",
+            "Cocok untuk barang apa"
+          ]
+        },
+        {
+          "h2": "FEFO (first expired, first out)",
+          "h3": [
+            "Cara kerja",
+            "Cocok untuk barang apa"
+          ]
+        },
+        {
+          "h2": "Contoh: batch A dan batch B",
+          "catatan": "CONTOH tabel: tanggal terima, tanggal kedaluwarsa, mana yang keluar dulu menurut FIFO vs FEFO."
+        },
+        {
+          "h2": "FIFO di gudang vs FIFO di akuntansi: jangan tertukar",
+          "catatan": "Satu paragraf: metode penilaian persediaan di laporan keuangan berbeda dengan urutan fisik barang keluar."
+        },
+        {
+          "h2": "Syarat agar FEFO benar-benar jalan",
+          "h3": [
+            "Tanggal kedaluwarsa dicatat sejak penerimaan",
+            "Label dan lokasi per batch",
+            "Picking mengikuti sistem, bukan yang paling depan"
+          ]
+        },
+        {
+          "h2": "Kapan FEFO wajib: obat dan produk kesehatan",
+          "catatan": "Rujuk CDOB BPOM dan WHO."
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Barang baru ditaruh di depan; ED tidak tercatat; mencampur batch di satu lokasi."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa perbedaan FIFO dan FEFO?",
+        "Kapan harus memakai FEFO?",
+        "Apakah FIFO di gudang sama dengan FIFO di akuntansi?",
+        "Apa itu LIFO di gudang?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L08",
+          "url": "/blog/penerimaan-barang-gudang",
+          "anchor": "mencatat batch saat penerimaan"
+        },
+        {
+          "target_id": "L16",
+          "url": "/blog/putaway-gudang",
+          "anchor": "putaway per batch"
+        },
+        {
+          "target_id": "L14",
+          "url": "/blog/selisih-stok-gudang",
+          "anchor": "selisih stok"
+        },
+        {
+          "target_id": "L20",
+          "url": "/blog/istilah-gudang-untuk-pemula",
+          "anchor": "istilah gudang lain"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "WHO TRS 1025 Annex 7 - Good storage and distribution practices for medical products (2020)",
+          "url": "https://www.who.int/publications/m/item/trs-1025-annex-7",
+          "kutip": "Glosarium FEFO: prosedur yang memastikan stok dengan tanggal kedaluwarsa paling awal didistribusikan/dipakai lebih dulu. Bagian 12.10-12.12: setiap kiriman masuk dicek terhadap dokumen (PO, label, nomor batch, tanggal kedaluwarsa) serta kemungkinan kontaminasi, tampering, dan kerusakan; 13.4: stok dicek berkala untuk barang mendekati kedaluwarsa; 18.6: kiriman diperiksa kerusakan, segel, label, kelengkapan pesanan. PDF tersedia di halaman tersebut."
+        },
+        {
+          "nama": "Peraturan BPOM No. 9 Tahun 2019 tentang Pedoman Teknis Cara Distribusi Obat yang Baik (CDOB) - via JDIH BPK",
+          "url": "https://peraturan.bpk.go.id/Download/175439/Peraturan%20Kepala%20BPOM%20Nomor%209%20Tahun%202019.pdf",
+          "kutip": "Butir 4.24: rotasi stok 'mengikuti kaidah First Expired First Out (FEFO)'; 4.36: picking berdasarkan FEFO; 4.12-4.17: tujuan & isi pemeriksaan penerimaan (pemasok, kerusakan, nomor batch dan tanggal kedaluwarsa dicatat, produk mendekati kedaluwarsa tidak diterima). Cek apakah ada perubahan (mis. Per BPOM 6/2020) sebelum menyebut 'aturan terbaru'."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Jangan memperdalam LIFO (cukup satu kalimat di FAQ). Jangan menautkan ke artikel 'Salah kaprah: semua barang harus FIFO' (L78) karena belum terbit; cukup siapkan kalimat yang nanti bisa diberi tautan. Kutip definisi FEFO dari glosarium WHO dan butir 4.24 CDOB BPOM.",
+      "url": "https://ngertilogistik.web.id/blog/fifo-vs-fefo",
+      "redirect_301_dari": "/materi/l09-fifo-vs-fefo"
+    },
+    {
+      "id": "L10",
+      "pilar": "Karier & Skill",
+      "kategori_slug": "karier-logistik",
+      "slug": "tugas-staf-gudang",
+      "kata_kunci_utama": "tugas staf gudang",
+      "kata_kunci_turunan": [
+        "job desk staff gudang",
+        "checker gudang adalah",
+        "tugas picker dan packer",
+        "tugas admin gudang",
+        "operator forklift wajib SIO",
+        "posisi kerja di gudang",
+        "struktur organisasi gudang"
+      ],
+      "search_intent": "informasional (karier); sebagian pencari sedang melamar kerja",
+      "prioritas": "tinggi - volume pencarian karier biasanya kuat; SERP didominasi portal lowongan dan vendor, jarang menunjukkan bagaimana peran saling bergantung",
+      "seo_title": "Tugas Staf Gudang: Checker, Picker, Packer, dan Admin",
+      "h1": "Satu Gudang, Banyak Peran: Mengenal Tugas Staf Gudang",
+      "meta_description": "Kenali tugas staf gudang: checker, operator forklift, picker, packer, admin, dan supervisor. Lihat skill dasar dan cara peran ini saling bergantung.",
+      "outline": [
+        {
+          "h2": "Siapa saja yang bekerja di gudang?",
+          "catatan": "Snippet daftar 6 peran dengan satu frasa tugas."
+        },
+        {
+          "h2": "Peta peran mengikuti alur barang",
+          "catatan": "Diagram: penerimaan-simpan-ambil-kemas-kirim, tiap peran ditempel di langkahnya."
+        },
+        {
+          "h2": "Tugas tiap peran",
+          "h3": [
+            "Checker penerimaan",
+            "Operator forklift (wajib Lisensi K3/SIO)",
+            "Picker",
+            "Packer",
+            "Admin gudang",
+            "Supervisor gudang"
+          ]
+        },
+        {
+          "h2": "Bagaimana peran-peran ini saling bergantung",
+          "catatan": "CONTOH rantai kesalahan: checker salah hitung, admin input salah, picker tidak menemukan barang."
+        },
+        {
+          "h2": "Skill dasar yang dicari di tiap peran",
+          "catatan": "Tabel: peran, skill teknis, skill non-teknis."
+        },
+        {
+          "h2": "Tips untuk staf gudang baru"
+        },
+        {
+          "h2": "Kesalahan umum staf baru"
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa saja tugas staf gudang?",
+        "Apa bedanya checker dan admin gudang?",
+        "Apakah operator forklift wajib punya SIO?",
+        "Skill apa yang dibutuhkan untuk kerja di gudang?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L04",
+          "url": "/blog/alur-proses-gudang",
+          "anchor": "alur proses gudang"
+        },
+        {
+          "target_id": "L08",
+          "url": "/blog/penerimaan-barang-gudang",
+          "anchor": "tugas checker saat penerimaan"
+        },
+        {
+          "target_id": "L20",
+          "url": "/blog/istilah-gudang-untuk-pemula",
+          "anchor": "istilah gudang untuk staf baru"
+        },
+        {
+          "target_id": "L14",
+          "url": "/blog/selisih-stok-gudang",
+          "anchor": "menjaga stok sistem sama dengan stok fisik"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "Permenakertrans No. PER.09/MEN/VII/2010 tentang Operator dan Petugas Pesawat Angkat dan Angkut",
+          "url": "https://www.peraturan.go.id/files/bn340-2010.pdf",
+          "kutip": "Pasal 3 & 5: pengusaha dilarang mempekerjakan operator pesawat angkat-angkut tanpa Lisensi K3 dan buku kerja; Pasal 11-14: forklift termasuk, operator forklift dibagi Kelas I dan II. Catatan: regulasi K3 pesawat angkat-angkut diperbarui oleh Permenaker 8/2020 - cek status berlaku sebelum mengutip."
+        },
+        {
+          "nama": "Permenaker No. 8 Tahun 2020 tentang K3 Pesawat Angkat dan Pesawat Angkut (Berita Negara 2020 No. 609)",
+          "url": "https://peraturan.go.id/files/bn609-2020.pdf",
+          "kutip": "Pasal 1 angka 18: Lisensi K3 = kartu tanda kewenangan bagi Teknisi, Operator, atau Juru Ikat; Pasal 75-85 mengatur forklift. Di lapangan, Lisensi K3 operator sering disebut SIO. Pasal kualifikasi operator ada di bagian akhir dokumen - baca pasalnya langsung sebelum mengutip nomor pasal."
+        },
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Jangan menulis angka gaji (tidak bersumber dan cepat usang). Tentang SIO: jelaskan bahwa istilah resminya Lisensi K3; dasar hukumnya Permenakertrans 9/2010 yang kemudian diperbarui Permenaker 8/2020 - verifikasi pasal kualifikasi operator di Permenaker 8/2020 sebelum menyebut nomor pasal. Nama jabatan berbeda-beda antarperusahaan; sebut ini variasi umum. Contoh pengalaman pribadi boleh, tanpa nama atau ciri perusahaan.",
+      "url": "https://ngertilogistik.web.id/blog/tugas-staf-gudang",
+      "redirect_301_dari": "/materi/l10-satu-gudang-banyak-peran"
+    },
+    {
+      "id": "L11",
+      "pilar": "Salah Kaprah",
+      "kategori_slug": "salah-kaprah-logistik",
+      "slug": "dampak-overstock",
+      "kata_kunci_utama": "dampak overstock",
+      "kata_kunci_turunan": [
+        "stok berlebih",
+        "overstock adalah",
+        "risiko kelebihan stok",
+        "biaya penyimpanan persediaan",
+        "stok menumpuk di gudang",
+        "stok ideal",
+        "dead stock"
+      ],
+      "search_intent": "informasional (masalah dan solusi)",
+      "prioritas": "sedang-tinggi - relevan bagi UMKM; SERP berisi vendor yang mengarahkan ke software, celah untuk penjelasan netral dengan contoh hitung modal tertahan",
+      "seo_title": "Dampak Overstock: Kenapa Stok Banyak Belum Tentu Aman",
+      "h1": "Salah Kaprah: Stok Banyak = Aman? Ini 4 Risiko Overstock",
+      "meta_description": "Stok menumpuk belum tentu aman. Kenali 4 dampak overstock: modal tertahan, biaya ruang, barang rusak atau kedaluwarsa, dan masalah perencanaan tertutup.",
+      "outline": [
+        {
+          "h2": "Jawaban singkat: yang aman adalah stok yang cukup",
+          "catatan": "Snippet: overstock menahan uang, makan tempat, berisiko rusak/kedaluwarsa/usang, dan menutupi kesalahan perencanaan."
+        },
+        {
+          "h2": "Kenapa banyak orang merasa stok banyak = aman"
+        },
+        {
+          "h2": "4 dampak overstock",
+          "h3": [
+            "Uang tertahan di rak",
+            "Butuh tempat dan biaya ikut naik",
+            "Risiko rusak, kedaluwarsa, atau model ganti",
+            "Masalah perencanaan jadi tidak terlihat"
+          ]
+        },
+        {
+          "h2": "Contoh hitung modal yang tertahan",
+          "catatan": "CONTOH: 500 unit x Rp20.000 = Rp10 juta diam 3 bulan; tunjukkan apa artinya bagi UMKM."
+        },
+        {
+          "h2": "Tanda-tanda gudang Anda kelebihan stok",
+          "catatan": "Barang lama tidak bergerak, rak penuh, sering cuci gudang."
+        },
+        {
+          "h2": "Stok yang pas itu seperti apa?",
+          "catatan": "Kebutuhan berdasarkan lead time + safety stock secukupnya; tautkan L19 dan L13."
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Beli banyak karena diskon tanpa hitung; tidak memantau umur stok; menyamaratakan semua SKU."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa dampak overstock bagi usaha?",
+        "Apa penyebab overstock?",
+        "Bagaimana cara mengatasi stok berlebih?",
+        "Berapa jumlah stok yang ideal?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L19",
+          "url": "/blog/safety-stock",
+          "anchor": "safety stock"
+        },
+        {
+          "target_id": "L13",
+          "url": "/blog/lead-time-vs-transit-time",
+          "anchor": "lead time"
+        },
+        {
+          "target_id": "L09",
+          "url": "/blog/fifo-vs-fefo",
+          "anchor": "FEFO untuk barang berkedaluwarsa"
+        },
+        {
+          "target_id": "L03",
+          "url": "/blog/apa-itu-sku",
+          "anchor": "menghitung stok per SKU"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "IBM Think (Bahasa Indonesia) - 'Apa itu stok pengaman?'",
+          "url": "https://www.ibm.com/id-id/think/topics/safety-stock",
+          "kutip": "Definisi: 'Stok pengaman adalah inventaris tambahan dari barang yang disimpan untuk mengurangi risiko kehabisan stok barang.' Memuat rumus rata-rata-maks: (penggunaan harian maks x waktu tunggu maks) - (penggunaan harian rata-rata x waktu tunggu rata-rata), serta rumus berbasis Z-skor; menyebut stok pengaman berlebih berarti biaya penyimpanan tinggi dan risiko barang basi."
+        },
+        {
+          "nama": "Wijaya & Febrianti (2024), 'Evaluasi Kebijakan Cycle Count Inventory Menggunakan Metode Cycle Counting', Jurnal Manajemen IKM IPB 19(1)",
+          "url": "https://journal.ipb.ac.id/index.php/jurnalmpi/article/view/56445/28309",
+          "kutip": "Definisi: 'Cycle counting adalah sebuah teknik audit akurasi persediaan'; penyebab Inventory Record Inaccuracy dikelompokkan: shrinkage, spoilage/supply error, misplaced inventory, transaction error; menyebut barang ada di gudang tapi tidak ditemukan di lokasinya (misplaced). Stratifikasi fast/slow/non-moving/dead stock."
+        },
+        {
+          "nama": "CSCMP - Supply Chain Management Definitions and Glossary",
+          "url": "https://cscmp.org/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx",
+          "kutip": "Definisi resmi: logistics management adalah 'that part of supply chain management that plans, implements, and controls the efficient, effective forward and reverse flow and storage of goods, services and related information...'; SCM mencakup sourcing & procurement, conversion, dan semua kegiatan logistik, serta integrasi supply-demand antarperusahaan. Halaman ini juga menautkan PDF glosarium CSCMP (glossary-2013.pdf) untuk istilah lain - buka PDF-nya dulu sebelum mengutip entri istilah tertentu."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Jangan menyebut persentase biaya simpan 'umum' (mis. 20-30% per tahun) kecuali dari sumber yang dibuka. Artikel 'Dead stock & slow moving' (L39) dan 'Carrying cost' (L106) belum terbit; jangan ditautkan. Contoh angka wajib label CONTOH.",
+      "url": "https://ngertilogistik.web.id/blog/dampak-overstock",
+      "redirect_301_dari": "/materi/l11-salah-kaprah-stok-banyak-aman"
+    },
+    {
+      "id": "L12",
+      "pilar": "Kirim Tanpa Drama",
+      "kategori_slug": "pengiriman-barang",
+      "slug": "moda-transportasi-pengiriman-barang",
+      "kata_kunci_utama": "moda transportasi pengiriman barang",
+      "kata_kunci_turunan": [
+        "kirim barang lewat darat laut udara",
+        "kelebihan dan kekurangan transportasi laut",
+        "kargo udara vs kargo laut",
+        "kirim barang antar pulau",
+        "angkutan multimoda",
+        "kirim barang lewat kereta api"
+      ],
+      "search_intent": "informasional-komersial (membandingkan pilihan sebelum mengirim)",
+      "prioritas": "sedang-tinggi - relevan untuk UMKM antarpulau; SERP berisi skripsi dan situs forwarder yang menjual jasa",
+      "seo_title": "Darat, Laut, atau Udara? Cara Memilih Moda Pengiriman",
+      "h1": "Darat, Laut, atau Udara? Cara Memilih Moda Pengiriman Barang",
+      "meta_description": "Kirim barang lewat darat, laut, atau udara? Bandingkan kecepatan, kapasitas, dan biaya tiap moda, kapan memakai multimoda, plus contoh skenario untuk UMKM.",
+      "outline": [
+        {
+          "h2": "Jawaban singkat: tergantung 3 pertanyaan",
+          "catatan": "Snippet daftar: seberapa cepat, seberapa besar/berat, berapa biaya yang masuk akal."
+        },
+        {
+          "h2": "Perbandingan moda pengiriman",
+          "catatan": "Tabel: kecepatan, kapasitas, biaya per kg relatif, jangkauan, cocok untuk."
+        },
+        {
+          "h2": "Udara: paling cepat, biasanya paling mahal"
+        },
+        {
+          "h2": "Laut: paling lambat, muat paling banyak"
+        },
+        {
+          "h2": "Darat: truk dan kereta api",
+          "catatan": "Naskah video belum menyebut kereta api; tambahkan sebagai opsi darat untuk jarak jauh di Jawa/Sumatra."
+        },
+        {
+          "h2": "Multimoda: ketika ketiganya digabung",
+          "catatan": "Definisi PP 8/2011; contoh truk-kapal-truk."
+        },
+        {
+          "h2": "Gambaran skala di Indonesia",
+          "catatan": "Angka BPS: tonase laut vs udara vs kereta dalam satu bulan; sebut bulan data."
+        },
+        {
+          "h2": "Contoh skenario UMKM",
+          "catatan": "CONTOH 3 skenario: barang kecil mendesak; 1 ton barang antar pulau; barang rutin dalam satu pulau."
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Memilih hanya dari tarif; lupa berat volume di udara; tidak memperhitungkan waktu tunggu di pelabuhan."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Lebih murah kirim barang lewat laut atau udara?",
+        "Barang apa yang sebaiknya dikirim lewat udara?",
+        "Apa itu angkutan multimoda?",
+        "Kapan sebaiknya kirim barang lewat kereta api?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L06",
+          "url": "/blog/berat-volume",
+          "anchor": "berat volume pada kargo udara"
+        },
+        {
+          "target_id": "L13",
+          "url": "/blog/lead-time-vs-transit-time",
+          "anchor": "lead time pengiriman"
+        },
+        {
+          "target_id": "L18",
+          "url": "/blog/paket-transit-lama",
+          "anchor": "kenapa paket lama transit"
+        },
+        {
+          "target_id": "L17",
+          "url": "/blog/7r-logistik-pengiriman-tepat",
+          "anchor": "tepat waktu sesuai janji"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "BPS - Berita Resmi Statistik transportasi (rilis 5 Januari 2026, data November 2025)",
+          "url": "https://www.bps.go.id/en/pressrelease/2026/01/05/2529/barang-yang-diangkut-menggunakan-angkutan-laut-pada-november-2025-naik-3-58-persen-.html",
+          "kutip": "November 2025: barang angkutan laut domestik 47,2 juta ton; angkutan udara domestik 52,6 ribu ton; kereta api 6,5 juta ton. Pas untuk menggambarkan skala: laut memindahkan jauh lebih banyak tonase, udara sangat kecil tonasenya. Saat menulis, cek rilis BPS terbaru dan sebut bulan datanya."
+        },
+        {
+          "nama": "PP No. 8 Tahun 2011 tentang Angkutan Multimoda (teks via pasal.id; JDIH BPK: peraturan.bpk.go.id/Details/5130/pp-no-8-tahun-2011)",
+          "url": "https://pasal.id/en/peraturan/pp/pp-no-8-tahun-2011",
+          "kutip": "Pasal 1: 'Angkutan Multimoda adalah angkutan barang dengan menggunakan paling sedikit 2 (dua) moda angkutan yang berbeda' atas dasar satu kontrak, dari tempat barang diterima sampai diserahkan ke penerima."
+        },
+        {
+          "nama": "ASEAN - Common Standard Curricula, Air Freight Chapter 5 'Calculation of Air Freight' (materi pelatih)",
+          "url": "https://asean.org/wp-content/uploads/2023/02/Air-Freight-C5.-Calculation-of-Air-Freight-PPT-Trainer-V2.pdf",
+          "kutip": "Mengacu IATA TACT 3.9.4 Volume Weight: volume (cm3) dibagi 6.000 = kg; 'The chargeable weight is the actual gross weight or volume weight, whichever is higher.' Sumber kuat untuk klaim 'standar IATA memakai pembagi 6000' di naskah."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Jangan menulis tarif rupiah per kg atau estimasi hari per rute tanpa sumber; gunakan perbandingan relatif (lebih cepat/lebih murah per kg). Jangan menyebut merek forwarder/maskapai. Artikel FCL vs LCL, kontainer, dan antar pulau (L60, L69, L88) belum terbit; jangan ditautkan.",
+      "url": "https://ngertilogistik.web.id/blog/moda-transportasi-pengiriman-barang",
+      "redirect_301_dari": "/materi/l12-darat-laut-atau-udara"
+    },
+    {
+      "id": "L13",
+      "pilar": "Kamus 60 Detik",
+      "kategori_slug": "kamus-logistik",
+      "slug": "lead-time-vs-transit-time",
+      "kata_kunci_utama": "lead time adalah",
+      "kata_kunci_turunan": [
+        "perbedaan lead time dan transit time",
+        "transit time adalah",
+        "cara menghitung lead time",
+        "komponen lead time",
+        "lead time pemasok",
+        "lead time pengiriman"
+      ],
+      "search_intent": "informasional (definisi + perbandingan + kalkulasi)",
+      "prioritas": "tinggi - konsep dasar perencanaan stok; SERP Indonesia membahas lead time secara umum (manufaktur/vendor) dan jarang membandingkannya langsung dengan transit time",
+      "seo_title": "Lead Time vs Transit Time: Bedanya dan Cara Menghitung",
+      "h1": "Lead Time vs Transit Time: Jangan Sampai Stok Habis karena Salah Hitung",
+      "meta_description": "Lead time dan transit time sering tertukar, padahal bedanya bisa bikin stok habis. Pahami komponen lead time, contoh hitung, dan cara mengukurnya sendiri.",
+      "outline": [
+        {
+          "h2": "Lead time vs transit time dalam satu kalimat",
+          "catatan": "Snippet: transit time = waktu barang di perjalanan; lead time = dari pesanan dibuat sampai barang siap dipakai."
+        },
+        {
+          "h2": "Apa itu transit time?"
+        },
+        {
+          "h2": "Apa itu lead time?",
+          "h3": [
+            "Waktu proses pesanan",
+            "Waktu produksi atau penyiapan",
+            "Waktu pengiriman (transit)",
+            "Waktu penerimaan dan pengecekan"
+          ]
+        },
+        {
+          "h2": "Contoh: kirim 3 hari, tapi lead time 10 hari",
+          "catatan": "CONTOH garis waktu (timeline) visual."
+        },
+        {
+          "h2": "Kenapa pesan ulang harus memakai lead time",
+          "catatan": "Kaitkan ke safety stock (L19)."
+        },
+        {
+          "h2": "Cara mengukur lead time pemasok sendiri",
+          "h3": [
+            "Catat tanggal PO dan tanggal barang siap pakai",
+            "Hitung rata-rata dan yang terlama",
+            "Perbarui berkala"
+          ]
+        },
+        {
+          "h2": "Pertanyaan yang perlu diajukan ke pemasok"
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Memakai janji transit time sebagai lead time; tidak menghitung waktu cek di gudang; memakai satu angka untuk semua pemasok."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa perbedaan lead time dan transit time?",
+        "Bagaimana cara menghitung lead time?",
+        "Apa saja komponen lead time?",
+        "Apa arti lead time dalam pengiriman barang?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L19",
+          "url": "/blog/safety-stock",
+          "anchor": "safety stock"
+        },
+        {
+          "target_id": "L11",
+          "url": "/blog/dampak-overstock",
+          "anchor": "risiko stok berlebih"
+        },
+        {
+          "target_id": "L08",
+          "url": "/blog/penerimaan-barang-gudang",
+          "anchor": "waktu penerimaan barang"
+        },
+        {
+          "target_id": "L18",
+          "url": "/blog/paket-transit-lama",
+          "anchor": "transit di hub kurir"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "CSCMP - Supply Chain Management Definitions and Glossary",
+          "url": "https://cscmp.org/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx",
+          "kutip": "Definisi resmi: logistics management adalah 'that part of supply chain management that plans, implements, and controls the efficient, effective forward and reverse flow and storage of goods, services and related information...'; SCM mencakup sourcing & procurement, conversion, dan semua kegiatan logistik, serta integrasi supply-demand antarperusahaan. Halaman ini juga menautkan PDF glosarium CSCMP (glossary-2013.pdf) untuk istilah lain - buka PDF-nya dulu sebelum mengutip entri istilah tertentu."
+        },
+        {
+          "nama": "IBM Think (Bahasa Indonesia) - 'Apa itu stok pengaman?'",
+          "url": "https://www.ibm.com/id-id/think/topics/safety-stock",
+          "kutip": "Definisi: 'Stok pengaman adalah inventaris tambahan dari barang yang disimpan untuk mengurangi risiko kehabisan stok barang.' Memuat rumus rata-rata-maks: (penggunaan harian maks x waktu tunggu maks) - (penggunaan harian rata-rata x waktu tunggu rata-rata), serta rumus berbasis Z-skor; menyebut stok pengaman berlebih berarti biaya penyimpanan tinggi dan risiko barang basi."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Untuk definisi resmi lead time, buka PDF glosarium CSCMP (ditautkan dari halaman CSCMP) dan kutip entrinya; jika tidak ditemukan, cukup parafrasekan tanpa atribusi resmi. Artikel 'Lead time pemasok & cara mengukurnya' (L77) dan 'Order cycle time' (L110) akan terbit kemudian: tulis bagian 'cara mengukur' secara ringkas agar tidak kanibal, dan jangan ditautkan dulu.",
+      "url": "https://ngertilogistik.web.id/blog/lead-time-vs-transit-time",
+      "redirect_301_dari": "/materi/l13-lead-time-vs-transit-time"
+    },
+    {
+      "id": "L14",
+      "pilar": "Isi Gudang",
+      "kategori_slug": "manajemen-gudang",
+      "slug": "selisih-stok-gudang",
+      "kata_kunci_utama": "selisih stok gudang",
+      "kata_kunci_turunan": [
+        "stok fisik dan sistem berbeda",
+        "penyebab selisih stok",
+        "cycle count adalah",
+        "akurasi stok gudang",
+        "inventory discrepancy",
+        "phantom inventory",
+        "cara mengatasi selisih stok"
+      ],
+      "search_intent": "informasional (diagnosis masalah + solusi)",
+      "prioritas": "tinggi - masalah sehari-hari staf dan pemilik usaha; sudut 'kebanyakan karena pencatatan, bukan hilang' kuat",
+      "seo_title": "Selisih Stok Gudang: Penyebab dan Cara Mengatasinya",
+      "h1": "Stok di Sistem Beda dengan di Rak? Ini Penyebab Selisih Stok",
+      "meta_description": "Stok di sistem beda dengan di rak? Kenali 4 penyebab selisih stok gudang, cara menelusurinya, dan cara memulai cycle count agar akurasi stok terjaga.",
+      "outline": [
+        {
+          "h2": "Jawaban singkat: kebanyakan selisih berasal dari pencatatan",
+          "catatan": "Snippet: penyebab umum = pindah lokasi tanpa dicatat, rusak/retur tidak diinput, salah ambil varian, barang keluar-masuk tanpa scan."
+        },
+        {
+          "h2": "4 penyebab selisih stok yang paling sering",
+          "h3": [
+            "Barang dipindah lokasi tanpa dicatat",
+            "Barang rusak atau retur tidak diinput",
+            "Salah ambil saat picking",
+            "Barang masuk atau keluar tanpa di-scan"
+          ]
+        },
+        {
+          "h2": "Dampaknya: pesanan diterima padahal barang tidak ada"
+        },
+        {
+          "h2": "Cara menelusuri selisih langkah demi langkah",
+          "catatan": "Checklist: cek lokasi sekitar, cek varian mirip, cek transaksi terakhir, cek retur/rusak."
+        },
+        {
+          "h2": "Cara mencegah: scan saat itu juga"
+        },
+        {
+          "h2": "Cycle count: hitung sebagian setiap hari",
+          "h3": [
+            "Apa itu cycle count",
+            "Cara memulai cycle count sederhana",
+            "Barang mana yang dihitung lebih sering"
+          ]
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Langsung menyesuaikan angka tanpa mencari penyebab; menghitung saat barang sedang bergerak; menyalahkan orang, bukan proses."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Kenapa stok di sistem berbeda dengan stok fisik?",
+        "Apa itu cycle count?",
+        "Apa bedanya cycle count dan stock opname?",
+        "Bagaimana cara mengatasi selisih stok gudang?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L16",
+          "url": "/blog/putaway-gudang",
+          "anchor": "mencatat lokasi saat putaway"
+        },
+        {
+          "target_id": "L03",
+          "url": "/blog/apa-itu-sku",
+          "anchor": "SKU dan varian"
+        },
+        {
+          "target_id": "L04",
+          "url": "/blog/alur-proses-gudang",
+          "anchor": "alur proses gudang"
+        },
+        {
+          "target_id": "L20",
+          "url": "/blog/istilah-gudang-untuk-pemula",
+          "anchor": "istilah cycle count"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "Wijaya & Febrianti (2024), 'Evaluasi Kebijakan Cycle Count Inventory Menggunakan Metode Cycle Counting', Jurnal Manajemen IKM IPB 19(1)",
+          "url": "https://journal.ipb.ac.id/index.php/jurnalmpi/article/view/56445/28309",
+          "kutip": "Definisi: 'Cycle counting adalah sebuah teknik audit akurasi persediaan'; penyebab Inventory Record Inaccuracy dikelompokkan: shrinkage, spoilage/supply error, misplaced inventory, transaction error; menyebut barang ada di gudang tapi tidak ditemukan di lokasinya (misplaced). Stratifikasi fast/slow/non-moving/dead stock."
+        },
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        },
+        {
+          "nama": "WHO TRS 1025 Annex 7 - Good storage and distribution practices for medical products (2020)",
+          "url": "https://www.who.int/publications/m/item/trs-1025-annex-7",
+          "kutip": "Glosarium FEFO: prosedur yang memastikan stok dengan tanggal kedaluwarsa paling awal didistribusikan/dipakai lebih dulu. Bagian 12.10-12.12: setiap kiriman masuk dicek terhadap dokumen (PO, label, nomor batch, tanggal kedaluwarsa) serta kemungkinan kontaminasi, tampering, dan kerusakan; 13.4: stok dicek berkala untuk barang mendekati kedaluwarsa; 18.6: kiriman diperiksa kerusakan, segel, label, kelengkapan pesanan. PDF tersedia di halaman tersebut."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Jangan mengklaim persentase akurasi 'standar industri' tanpa sumber; angka 98,83% di jurnal IPB adalah hasil studi kasus, bukan patokan. FAQ 'cycle count vs stock opname' cukup jawaban singkat; artikel khusus (L23) belum terbit, jangan ditautkan. Hindari menyalahkan pihak tertentu; fokus pada disiplin pencatatan.",
+      "url": "https://ngertilogistik.web.id/blog/selisih-stok-gudang",
+      "redirect_301_dari": "/materi/l14-stok-di-sistem-beda-dengan-di-rak"
+    },
+    {
+      "id": "L15",
+      "pilar": "Kamus 60 Detik",
+      "kategori_slug": "kamus-logistik",
+      "slug": "cross-docking",
+      "kata_kunci_utama": "cross docking adalah",
+      "kata_kunci_turunan": [
+        "cross docking",
+        "cara kerja cross docking",
+        "contoh cross docking",
+        "kelebihan dan kekurangan cross docking",
+        "gudang transit",
+        "cross dock warehouse"
+      ],
+      "search_intent": "informasional (definisi)",
+      "prioritas": "sedang - dicari mahasiswa dan staf pusat distribusi; persaingan lebih ringan dari istilah dasar",
+      "seo_title": "Cross Docking Adalah: Cara Kerja, Contoh, dan Syaratnya",
+      "h1": "Cross-Docking: Barang Masuk Gudang, Langsung Keluar Lagi",
+      "meta_description": "Cross docking adalah cara memindahkan barang dari truk masuk ke truk keluar tanpa disimpan. Pelajari cara kerja, contoh, kelebihan, dan syarat suksesnya.",
+      "outline": [
+        {
+          "h2": "Cross docking adalah...",
+          "catatan": "Snippet: barang dibongkar, dipilah sesuai tujuan, lalu langsung dimuat ke kendaraan lain tanpa disimpan di rak."
+        },
+        {
+          "h2": "Cara kerja cross docking langkah demi langkah",
+          "catatan": "Diagram dok masuk -> area pilah -> dok keluar."
+        },
+        {
+          "h2": "Contoh cross docking",
+          "catatan": "CONTOH: 3 pemasok mengirim ke pusat distribusi, barang dipilah untuk 5 toko dalam hitungan jam."
+        },
+        {
+          "h2": "Kelebihan cross docking"
+        },
+        {
+          "h2": "Syarat dan risikonya",
+          "h3": [
+            "Jadwal truk masuk dan keluar harus pas",
+            "Data pesanan harus jelas sebelum truk datang",
+            "Kalau truk tujuan telat, dok jadi penuh"
+          ]
+        },
+        {
+          "h2": "Barang apa yang cocok untuk cross docking?"
+        },
+        {
+          "h2": "Cross docking vs gudang penyimpanan biasa",
+          "catatan": "Tabel perbandingan."
+        },
+        {
+          "h2": "Kesalahan umum"
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa itu cross docking?",
+        "Apa contoh cross docking?",
+        "Apa kelebihan dan kekurangan cross docking?",
+        "Barang apa yang cocok untuk cross docking?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L07",
+          "url": "/blog/inbound-vs-outbound",
+          "anchor": "inbound dan outbound"
+        },
+        {
+          "target_id": "L04",
+          "url": "/blog/alur-proses-gudang",
+          "anchor": "proses gudang biasa"
+        },
+        {
+          "target_id": "L16",
+          "url": "/blog/putaway-gudang",
+          "anchor": "putaway"
+        },
+        {
+          "target_id": "L13",
+          "url": "/blog/lead-time-vs-transit-time",
+          "anchor": "jadwal dan lead time"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "Supply Chain Indonesia - 'Insight: Jenis Gudang' (A. M. Faizulhaq)",
+          "url": "https://supplychainindonesia.com/download/Insight_Jenis_Gudang.pdf",
+          "kutip": "Cross-docking warehouse: 'Gudang yang berfungsi sebagai tempat transit, di mana barang diterima dan segera dipindahkan ke armada tujuan tanpa disimpan'; cocok untuk barang mudah rusak seperti buah dan sayur. Juga mendefinisikan consolidation, break bulk, fulfillment center, reverse logistics center."
+        },
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Ejaan di SERP Indonesia umumnya 'cross docking' tanpa tanda hubung: pakai itu di title, meta, dan paragraf pertama; 'cross-docking' boleh di H1/isi. Jangan mengklaim persentase penghematan biaya tanpa sumber. Contoh pemakaian boleh umum (ritel, barang segar) tanpa menyebut perusahaan.",
+      "url": "https://ngertilogistik.web.id/blog/cross-docking",
+      "redirect_301_dari": "/materi/l15-cross-docking"
+    },
+    {
+      "id": "L16",
+      "pilar": "Isi Gudang",
+      "kategori_slug": "manajemen-gudang",
+      "slug": "putaway-gudang",
+      "kata_kunci_utama": "putaway adalah",
+      "kata_kunci_turunan": [
+        "put away gudang",
+        "proses putaway",
+        "strategi putaway",
+        "penempatan barang di gudang",
+        "lokasi rak gudang",
+        "putaway dan picking"
+      ],
+      "search_intent": "informasional (definisi + proses)",
+      "prioritas": "sedang - istilah teknis dengan persaingan lebih ringan; tetap penting untuk klaster gudang",
+      "seo_title": "Putaway Adalah: Cara Menyimpan Barang ke Lokasi Rak",
+      "h1": "Putaway: Barang Sudah Diterima, Lalu Disimpan di Mana?",
+      "meta_description": "Putaway adalah proses memindahkan barang dari area penerimaan ke lokasi rak lalu mencatatnya. Pelajari aturan penempatan dan kesalahan yang sering terjadi.",
+      "outline": [
+        {
+          "h2": "Putaway adalah...",
+          "catatan": "Snippet: memindahkan barang dari area penerimaan ke lokasi rak, lalu mencatat lokasinya di sistem."
+        },
+        {
+          "h2": "Posisi putaway dalam alur gudang"
+        },
+        {
+          "h2": "Alamat lokasi: lorong, rak, tingkat, posisi",
+          "catatan": "CONTOH kode lokasi, mis. A-03-2-B, dengan penjelasan tiap bagian."
+        },
+        {
+          "h2": "Aturan dasar menaruh barang",
+          "h3": [
+            "Barang yang sering diambil di lokasi dekat dan mudah dijangkau",
+            "Berat di bawah, ringan di atas",
+            "Pisahkan per SKU dan per batch",
+            "Ikuti aturan FEFO untuk barang berkedaluwarsa"
+          ]
+        },
+        {
+          "h2": "Langkah putaway yang benar",
+          "catatan": "Ambil dari area terima -> taruh -> scan lokasi -> konfirmasi di sistem."
+        },
+        {
+          "h2": "Kalau lokasi tidak dicatat: barang ada tapi tidak ketemu"
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Taruh di 'tempat kosong mana saja'; mencampur dua SKU di satu lokasi; konfirmasi sistem belakangan."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa itu putaway di gudang?",
+        "Apa bedanya putaway dan picking?",
+        "Bagaimana cara menentukan lokasi barang di gudang?",
+        "Apa yang terjadi kalau lokasi barang tidak dicatat?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L08",
+          "url": "/blog/penerimaan-barang-gudang",
+          "anchor": "penerimaan barang"
+        },
+        {
+          "target_id": "L04",
+          "url": "/blog/alur-proses-gudang",
+          "anchor": "5 langkah barang di gudang"
+        },
+        {
+          "target_id": "L14",
+          "url": "/blog/selisih-stok-gudang",
+          "anchor": "selisih stok"
+        },
+        {
+          "target_id": "L09",
+          "url": "/blog/fifo-vs-fefo",
+          "anchor": "FEFO"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        },
+        {
+          "nama": "Peraturan BPOM No. 9 Tahun 2019 tentang Pedoman Teknis Cara Distribusi Obat yang Baik (CDOB) - via JDIH BPK",
+          "url": "https://peraturan.bpk.go.id/Download/175439/Peraturan%20Kepala%20BPOM%20Nomor%209%20Tahun%202019.pdf",
+          "kutip": "Butir 4.24: rotasi stok 'mengikuti kaidah First Expired First Out (FEFO)'; 4.36: picking berdasarkan FEFO; 4.12-4.17: tujuan & isi pemeriksaan penerimaan (pemasok, kerusakan, nomor batch dan tanggal kedaluwarsa dicatat, produk mendekati kedaluwarsa tidak diterima). Cek apakah ada perubahan (mis. Per BPOM 6/2020) sebelum menyebut 'aturan terbaru'."
+        },
+        {
+          "nama": "WHO TRS 1025 Annex 7 - Good storage and distribution practices for medical products (2020)",
+          "url": "https://www.who.int/publications/m/item/trs-1025-annex-7",
+          "kutip": "Glosarium FEFO: prosedur yang memastikan stok dengan tanggal kedaluwarsa paling awal didistribusikan/dipakai lebih dulu. Bagian 12.10-12.12: setiap kiriman masuk dicek terhadap dokumen (PO, label, nomor batch, tanggal kedaluwarsa) serta kemungkinan kontaminasi, tampering, dan kerusakan; 13.4: stok dicek berkala untuk barang mendekati kedaluwarsa; 18.6: kiriman diperiksa kerusakan, segel, label, kelengkapan pesanan. PDF tersedia di halaman tersebut."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Pakai 'putaway' (satu kata) sebagai istilah utama, sebut 'put away' sekali sebagai variasi ejaan. Artikel 'Kode lokasi rak (bin location)' (L32) dan 'Layout gudang' (L42) belum terbit; bahas sekilas saja dan jangan ditautkan. Sudut unik: 'yang paling penting bukan di mana barang ditaruh, tapi bahwa lokasinya dicatat'.",
+      "url": "https://ngertilogistik.web.id/blog/putaway-gudang",
+      "redirect_301_dari": "/materi/l16-putaway-barang-disimpan-di-mana"
+    },
+    {
+      "id": "L17",
+      "pilar": "Salah Kaprah",
+      "kategori_slug": "salah-kaprah-logistik",
+      "slug": "7r-logistik-pengiriman-tepat",
+      "kata_kunci_utama": "7R logistik",
+      "kata_kunci_turunan": [
+        "seven rights of logistics",
+        "prinsip 7 tepat logistik",
+        "pengiriman tepat waktu",
+        "kualitas pengiriman barang",
+        "barang yang diterima tidak sesuai pesanan",
+        "pengiriman cepat vs tepat"
+      ],
+      "search_intent": "informasional (konsep + meluruskan miskonsepsi)",
+      "prioritas": "sedang - '7R logistik' dicari mahasiswa (SERP banyak repositori kampus); sudut salah kaprah menarik bagi UMKM",
+      "seo_title": "7R Logistik: Pengiriman Bagus Itu Tepat, Bukan Cepat",
+      "h1": "Salah Kaprah: Cepat Sampai = Pengiriman Bagus? Kenali 7R Logistik",
+      "meta_description": "Paket cepat sampai belum tentu pengiriman bagus. Kenali 7R logistik: tepat barang, jumlah, kondisi, waktu, dan lainnya, plus cara mencegah salah kirim.",
+      "outline": [
+        {
+          "h2": "Jawaban singkat: pengiriman bagus itu tepat",
+          "catatan": "Snippet: tepat barang, tepat jumlah, tepat kondisi, tepat waktu sesuai janji; cepat itu bonus."
+        },
+        {
+          "h2": "Cerita yang sering terjadi: datang sehari, isinya salah",
+          "catatan": "Label CONTOH."
+        },
+        {
+          "h2": "4 'tepat' yang paling penting",
+          "h3": [
+            "Tepat barang",
+            "Tepat jumlah",
+            "Tepat kondisi",
+            "Tepat waktu (sesuai janji, bukan secepat mungkin)"
+          ]
+        },
+        {
+          "h2": "Dari 4 tepat ke 7R logistik",
+          "catatan": "Tabel 7R: product, quantity, condition, place, time, customer, price, dengan padanan Indonesia dan contoh."
+        },
+        {
+          "h2": "Biaya pengiriman yang tidak tepat",
+          "catatan": "Retur, kirim ulang, pelanggan kecewa; sebut UU Pos Pasal 28 bahwa ketidaksesuaian barang termasuk dasar ganti rugi."
+        },
+        {
+          "h2": "Cara memastikan pengiriman tepat",
+          "h3": [
+            "Cek ulang saat picking",
+            "Foto isi sebelum ditutup",
+            "Label dan alamat jelas",
+            "Janjikan waktu yang realistis"
+          ]
+        },
+        {
+          "h2": "Kesalahan umum"
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa itu 7R dalam logistik?",
+        "Apa saja ciri pengiriman yang baik?",
+        "Apakah pengiriman cepat selalu lebih baik?",
+        "Apa yang dilakukan jika barang yang diterima tidak sesuai pesanan?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L05",
+          "url": "/blog/ruang-lingkup-logistik",
+          "anchor": "logistik bukan cuma kurir"
+        },
+        {
+          "target_id": "L06",
+          "url": "/blog/berat-volume",
+          "anchor": "kemasan dan berat volume"
+        },
+        {
+          "target_id": "L18",
+          "url": "/blog/paket-transit-lama",
+          "anchor": "paket lama transit"
+        },
+        {
+          "target_id": "L04",
+          "url": "/blog/alur-proses-gudang",
+          "anchor": "proses picking dan packing"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "Hidayat dkk. (2025), 'Penilaian Customer Satisfaction Index atas Penerapan Seven Rights of Logistics', Jurnal Logistik UNJ 18(01)",
+          "url": "https://journal.unj.ac.id/unj/index.php/logistik/article/download/52607/19447/177627",
+          "kutip": "Tujuh R: right product, right quantity, right condition, right place, right time, right customer, right price; '7R merupakan konsep untuk melakukan kegiatan logistik' dan dicapai bersamaan untuk kepuasan pelanggan. (Studi kasus layanan kurir di Tanjung Priok - cukup kutip konsepnya, tidak perlu menyebut merek.)"
+        },
+        {
+          "nama": "UU No. 38 Tahun 2009 tentang Pos (teks via pasal.id; naskah resmi di peraturan.go.id)",
+          "url": "https://pasal.id/peraturan/uu/uu-no-38-tahun-2009",
+          "kutip": "Pasal 28: ganti rugi dapat diberikan atas kehilangan kiriman, kerusakan isi paket, keterlambatan kiriman, atau ketidaksesuaian barang yang dikirim dan diterima; Pasal 31(1): penyelenggara pos wajib memberi ganti rugi atas kerugian akibat kelalaian/kesalahannya. Tulis sebagai informasi umum, bukan nasihat hukum."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Variasi 7R berbeda antarbuku (mis. 'right cost' vs 'right price'); sebutkan bahwa daftarnya bisa sedikit berbeda dan kutip versi jurnal UNJ. OTIF (L41) belum terbit: sebut istilahnya sekali tanpa tautan. Jangan mengulas merek kurir. Penjelasan hukum = informasi umum, bukan nasihat hukum.",
+      "url": "https://ngertilogistik.web.id/blog/7r-logistik-pengiriman-tepat",
+      "redirect_301_dari": "/materi/l17-salah-kaprah-cepat-sampai-pengiriman-bagus"
+    },
+    {
+      "id": "L18",
+      "pilar": "Kirim Tanpa Drama",
+      "kategori_slug": "pengiriman-barang",
+      "slug": "paket-transit-lama",
+      "kata_kunci_utama": "paket transit lama",
+      "kata_kunci_turunan": [
+        "arti status transit",
+        "kenapa paket lama di transit",
+        "paket tertahan di hub",
+        "status paket tidak update",
+        "hub sortir adalah",
+        "paket terlambat ganti rugi"
+      ],
+      "search_intent": "informasional (pemecahan masalah, sering bernada cemas)",
+      "prioritas": "sangat tinggi - kueri masalah sehari-hari konsumen dan penjual online; SERP didominasi situs pelacak global dan artikel per merek kurir",
+      "seo_title": "Paket Transit Lama? Arti Status Transit dan Penyebabnya",
+      "h1": "Kenapa Paket \"Transit\" Lama? Ini yang Terjadi di Balik Status Itu",
+      "meta_description": "Status paket transit berhari-hari? Pahami arti transit, apa yang terjadi di hub sortir, penyebab paket lama, dan kapan perlu menghubungi kurir dengan resi.",
+      "outline": [
+        {
+          "h2": "Arti status transit: paket sedang pindah antar-hub",
+          "catatan": "Snippet: transit = paket berpindah dari satu hub ke hub berikutnya; di tiap hub paket disortir dan menunggu jadwal angkut."
+        },
+        {
+          "h2": "Apa itu hub dan kenapa paket jarang jalan langsung"
+        },
+        {
+          "h2": "Perjalanan paket dari penjual sampai ke Anda",
+          "catatan": "Diagram: penjemputan -> hub asal -> hub transit -> hub tujuan -> kurir antar."
+        },
+        {
+          "h2": "Kenapa paket bisa lama di status transit",
+          "h3": [
+            "Antre sortir di hub",
+            "Menunggu jadwal truk, kapal, atau pesawat berikutnya",
+            "Jarak jauh dan antar pulau",
+            "Musim ramai",
+            "Status belum diperbarui (scan tertunda)"
+          ]
+        },
+        {
+          "h2": "Kapan perlu khawatir dan apa yang dilakukan",
+          "h3": [
+            "Bandingkan dengan estimasi layanan",
+            "Hubungi kurir dengan nomor resi",
+            "Simpan bukti dan riwayat pelacakan",
+            "Hak ganti rugi menurut UU Pos"
+          ]
+        },
+        {
+          "h2": "Tips untuk penjual online",
+          "catatan": "Beri ekspektasi realistis ke pembeli; kirim sebelum batas waktu penjemputan."
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Langsung menganggap hilang; membatalkan pesanan terburu-buru; tidak menyimpan nomor resi."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa arti status transit pada paket?",
+        "Berapa lama paket biasanya di status transit?",
+        "Kenapa status paket tidak update berhari-hari?",
+        "Apakah paket yang lama transit bisa hilang?",
+        "Bisakah minta ganti rugi kalau paket terlambat?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L12",
+          "url": "/blog/moda-transportasi-pengiriman-barang",
+          "anchor": "moda darat, laut, dan udara"
+        },
+        {
+          "target_id": "L13",
+          "url": "/blog/lead-time-vs-transit-time",
+          "anchor": "transit time"
+        },
+        {
+          "target_id": "L17",
+          "url": "/blog/7r-logistik-pengiriman-tepat",
+          "anchor": "tepat waktu sesuai janji"
+        },
+        {
+          "target_id": "L06",
+          "url": "/blog/berat-volume",
+          "anchor": "ongkir dan berat volume"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "UU No. 38 Tahun 2009 tentang Pos (teks via pasal.id; naskah resmi di peraturan.go.id)",
+          "url": "https://pasal.id/peraturan/uu/uu-no-38-tahun-2009",
+          "kutip": "Pasal 28: ganti rugi dapat diberikan atas kehilangan kiriman, kerusakan isi paket, keterlambatan kiriman, atau ketidaksesuaian barang yang dikirim dan diterima; Pasal 31(1): penyelenggara pos wajib memberi ganti rugi atas kerugian akibat kelalaian/kesalahannya. Tulis sebagai informasi umum, bukan nasihat hukum."
+        },
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        },
+        {
+          "nama": "PP No. 8 Tahun 2011 tentang Angkutan Multimoda (teks via pasal.id; JDIH BPK: peraturan.bpk.go.id/Details/5130/pp-no-8-tahun-2011)",
+          "url": "https://pasal.id/en/peraturan/pp/pp-no-8-tahun-2011",
+          "kutip": "Pasal 1: 'Angkutan Multimoda adalah angkutan barang dengan menggunakan paling sedikit 2 (dua) moda angkutan yang berbeda' atas dasar satu kontrak, dari tempat barang diterima sampai diserahkan ke penerima."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Jangan menyebut durasi transit 'normal' dalam hari (berbeda per layanan dan rute); jawab FAQ durasi dengan 'tergantung estimasi layanan' dan arahkan cek estimasi di resi. Jangan menyebut atau membandingkan merek kurir. Soal ganti rugi: UU Pos Pasal 28 menyebut keterlambatan sebagai salah satu dasar, besaran dan syarat mengikuti ketentuan penyelenggara; tulis 'bukan nasihat hukum'. SCI_GUDANG dipakai untuk menjelaskan aktivitas sortasi. Artikel 'cara baca resi' (L50) dan 'cut-off time' (L63) belum terbit, jangan ditautkan.",
+      "url": "https://ngertilogistik.web.id/blog/paket-transit-lama",
+      "redirect_301_dari": "/materi/l18-kenapa-paket-transit-lama"
+    },
+    {
+      "id": "L19",
+      "pilar": "Kamus 60 Detik",
+      "kategori_slug": "kamus-logistik",
+      "slug": "safety-stock",
+      "kata_kunci_utama": "safety stock adalah",
+      "kata_kunci_turunan": [
+        "stok pengaman",
+        "rumus safety stock",
+        "cara menghitung safety stock",
+        "contoh safety stock",
+        "safety stock dan reorder point",
+        "buffer stock"
+      ],
+      "search_intent": "informasional (definisi + kalkulasi)",
+      "prioritas": "tinggi - istilah perencanaan stok yang banyak dicari; SERP berisi vendor dengan banyak rumus, celah untuk penjelasan yang mulai dari intuisi",
+      "seo_title": "Safety Stock Adalah: Arti Stok Pengaman dan Cara Hitung",
+      "h1": "Safety Stock (Stok Pengaman): Cadangan Supaya Stok Tidak Habis",
+      "meta_description": "Safety stock adalah stok cadangan saat permintaan naik atau pasokan telat. Pelajari faktor penentunya, rumus sederhana, dan contoh hitungnya untuk gudang.",
+      "outline": [
+        {
+          "h2": "Safety stock adalah...",
+          "catatan": "Snippet: cadangan untuk berjaga-jaga kalau permintaan atau pasokan meleset dari rencana."
+        },
+        {
+          "h2": "Kenapa gudang butuh safety stock",
+          "h3": [
+            "Permintaan melonjak (promo, musim ramai)",
+            "Pasokan terlambat"
+          ]
+        },
+        {
+          "h2": "Apa yang menentukan besarnya safety stock",
+          "catatan": "Naik-turunnya permintaan, lama dan ketidakpastian lead time, target layanan."
+        },
+        {
+          "h2": "Rumus sederhana dan contoh hitungnya",
+          "h3": [
+            "Rumus rata-rata-maksimum",
+            "Contoh hitung langkah demi langkah"
+          ],
+          "catatan": "CONTOH: maks 15 unit/hari x lead time maks 12 hari = 180; rata-rata 10 x 10 = 100; safety stock = 80 unit."
+        },
+        {
+          "h2": "Sekilas rumus statistik (untuk yang ingin lebih dalam)",
+          "catatan": "Satu paragraf tentang Z x deviasi standar; tidak wajib dipahami pemula."
+        },
+        {
+          "h2": "Terlalu kecil vs terlalu besar"
+        },
+        {
+          "h2": "Safety stock bukan stok nganggur",
+          "catatan": "Kapan boleh dipakai, kapan ditinjau ulang."
+        },
+        {
+          "h2": "Kesalahan umum",
+          "catatan": "Memakai transit time bukan lead time; menyamaratakan semua SKU; tidak pernah ditinjau."
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa itu safety stock?",
+        "Bagaimana cara menghitung safety stock?",
+        "Apa bedanya safety stock dan reorder point?",
+        "Apakah safety stock sama dengan buffer stock?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L13",
+          "url": "/blog/lead-time-vs-transit-time",
+          "anchor": "lead time"
+        },
+        {
+          "target_id": "L11",
+          "url": "/blog/dampak-overstock",
+          "anchor": "dampak overstock"
+        },
+        {
+          "target_id": "L03",
+          "url": "/blog/apa-itu-sku",
+          "anchor": "stok per SKU"
+        },
+        {
+          "target_id": "L14",
+          "url": "/blog/selisih-stok-gudang",
+          "anchor": "akurasi stok"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "IBM Think (Bahasa Indonesia) - 'Apa itu stok pengaman?'",
+          "url": "https://www.ibm.com/id-id/think/topics/safety-stock",
+          "kutip": "Definisi: 'Stok pengaman adalah inventaris tambahan dari barang yang disimpan untuk mengurangi risiko kehabisan stok barang.' Memuat rumus rata-rata-maks: (penggunaan harian maks x waktu tunggu maks) - (penggunaan harian rata-rata x waktu tunggu rata-rata), serta rumus berbasis Z-skor; menyebut stok pengaman berlebih berarti biaya penyimpanan tinggi dan risiko barang basi."
+        },
+        {
+          "nama": "CSCMP - Supply Chain Management Definitions and Glossary",
+          "url": "https://cscmp.org/CSCMP/Educate/SCM_Definitions_and_Glossary_of_Terms.aspx",
+          "kutip": "Definisi resmi: logistics management adalah 'that part of supply chain management that plans, implements, and controls the efficient, effective forward and reverse flow and storage of goods, services and related information...'; SCM mencakup sourcing & procurement, conversion, dan semua kegiatan logistik, serta integrasi supply-demand antarperusahaan. Halaman ini juga menautkan PDF glosarium CSCMP (glossary-2013.pdf) untuk istilah lain - buka PDF-nya dulu sebelum mengutip entri istilah tertentu."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Rumus rata-rata-maks dikutip dari IBM; contoh angka wajib label CONTOH dan dicek ulang aritmetikanya. 'Safety stock vs buffer stock' (L89) dan 'Reorder point' (L21) belum terbit: jawab FAQ singkat, jangan tautkan. Gunakan 'safety stock' sebagai kata kunci utama dan 'stok pengaman' sebagai padanan di H1 dan paragraf pertama.",
+      "url": "https://ngertilogistik.web.id/blog/safety-stock",
+      "redirect_301_dari": "/materi/l19-safety-stock-stok-pengaman"
+    },
+    {
+      "id": "L20",
+      "pilar": "Karier & Skill",
+      "kategori_slug": "karier-logistik",
+      "slug": "istilah-gudang-untuk-pemula",
+      "kata_kunci_utama": "istilah gudang",
+      "kata_kunci_turunan": [
+        "istilah dalam gudang",
+        "istilah logistik untuk pemula",
+        "arti PO GR DO",
+        "goods receipt adalah",
+        "delivery order adalah",
+        "istilah warehouse",
+        "picking dan packing artinya"
+      ],
+      "search_intent": "informasional (daftar/glosarium)",
+      "prioritas": "tinggi - format daftar mudah meraih snippet; menjadi hub glosarium internal",
+      "seo_title": "10 Istilah Gudang Wajib untuk Staf Baru, Plus Artinya",
+      "h1": "10 Istilah Gudang yang Wajib Dipahami Staf Baru",
+      "meta_description": "Baru kerja di gudang? Pahami 10 istilah gudang paling sering dipakai: SKU, PO, GR, putaway, picking, packing, DO, cycle count, FIFO, dan FEFO.",
+      "outline": [
+        {
+          "h2": "10 istilah gudang yang paling sering dipakai",
+          "catatan": "Snippet daftar bernomor 10 istilah + arti 3-6 kata."
+        },
+        {
+          "h2": "Tabel istilah, kepanjangan, arti, dan contoh kalimat"
+        },
+        {
+          "h2": "Istilah barang dan dokumen",
+          "h3": [
+            "SKU",
+            "PO (purchase order)",
+            "GR (goods receipt)",
+            "DO (delivery order)"
+          ]
+        },
+        {
+          "h2": "Istilah gerakan barang",
+          "h3": [
+            "Putaway",
+            "Picking",
+            "Packing"
+          ]
+        },
+        {
+          "h2": "Istilah kontrol stok",
+          "h3": [
+            "Cycle count",
+            "FIFO",
+            "FEFO"
+          ]
+        },
+        {
+          "h2": "Urutan istilah dalam satu alur: dari PO sampai DO",
+          "catatan": "Diagram mini: PO -> GR -> putaway -> picking -> packing -> DO."
+        },
+        {
+          "h2": "Istilah yang sering tertukar",
+          "catatan": "DO vs surat jalan (penamaan berbeda antarperusahaan); FIFO gudang vs FIFO akuntansi."
+        },
+        {
+          "h2": "Tips belajar istilah untuk staf baru"
+        },
+        {
+          "h2": "Ringkasan",
+          "catatan": "3-5 poin bullet; ulangi definisi inti dalam satu kalimat; ajak lanjut ke 1 artikel terkait."
+        },
+        {
+          "h2": "Pertanyaan yang sering diajukan",
+          "catatan": "Jawab tiap pertanyaan 40-60 kata; markup FAQPage hanya untuk Q&A yang tampil di halaman."
+        }
+      ],
+      "faq": [
+        "Apa itu PO, GR, dan DO di gudang?",
+        "Apa bedanya delivery order dan surat jalan?",
+        "Istilah apa saja yang harus diketahui staf gudang baru?",
+        "Apa arti picking dan packing?"
+      ],
+      "link_internal": [
+        {
+          "target_id": "L03",
+          "url": "/blog/apa-itu-sku",
+          "anchor": "SKU"
+        },
+        {
+          "target_id": "L16",
+          "url": "/blog/putaway-gudang",
+          "anchor": "putaway"
+        },
+        {
+          "target_id": "L09",
+          "url": "/blog/fifo-vs-fefo",
+          "anchor": "FIFO dan FEFO"
+        },
+        {
+          "target_id": "L14",
+          "url": "/blog/selisih-stok-gudang",
+          "anchor": "cycle count"
+        }
+      ],
+      "sumber_disarankan": [
+        {
+          "nama": "Setijadi, 'Fungsi dan Aktivitas Pergudangan' (Supply Chain Indonesia, 2015; arsip e-book Universitas Pertahanan)",
+          "url": "https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/LOGISTIK/SCM/5._Fungsi_dan_Aktivitas_Pergudangan_2015.pdf",
+          "kutip": "Daftar aktivitas gudang: receiving, inspeksi, put away, storage, replenishment, order picking, packing, sortation, loading, shipping, cross docking. Definisi: 'Put Away adalah proses penempatan barang pada lokasi penyimpanan'; 'Picking adalah aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan'; receiving = menerima seluruh barang yang masuk dan mencocokkan jumlah/kualitas dengan dokumen pesanan."
+        },
+        {
+          "nama": "WHO TRS 1025 Annex 7 - Good storage and distribution practices for medical products (2020)",
+          "url": "https://www.who.int/publications/m/item/trs-1025-annex-7",
+          "kutip": "Glosarium FEFO: prosedur yang memastikan stok dengan tanggal kedaluwarsa paling awal didistribusikan/dipakai lebih dulu. Bagian 12.10-12.12: setiap kiriman masuk dicek terhadap dokumen (PO, label, nomor batch, tanggal kedaluwarsa) serta kemungkinan kontaminasi, tampering, dan kerusakan; 13.4: stok dicek berkala untuk barang mendekati kedaluwarsa; 18.6: kiriman diperiksa kerusakan, segel, label, kelengkapan pesanan. PDF tersedia di halaman tersebut."
+        },
+        {
+          "nama": "GS1 Support - 'How many GS1 GTINs do I need when I have a product with many sizes and colours?'",
+          "url": "https://support.gs1.org/support/solutions/articles/43000734083-how-many-gs1-gtins-do-i-need-when-i-have-a-product-with-many-sizes-and-colours-",
+          "kutip": "'Each product variation needs its own GS1 GTIN' - tiap ukuran, warna, dan kombinasinya butuh nomor sendiri. Dipakai untuk membedakan GTIN (nomor barcode global, standar GS1) dengan SKU (kode internal perusahaan) yang logikanya sama: satu varian, satu kode."
+        }
+      ],
+      "catatan_penulis": "Aturan umum: jangan menyebut atau menyiratkan nama perusahaan tempat Fajar bekerja (sebut industri saja: teknologi, FMCG, manufaktur). Semua angka faktual wajib bersumber dan sumbernya disebut di kalimat atau di bagian 'Sumber'. Contoh angka buatan wajib diberi label CONTOH. Paragraf pertama setelah H1 menjawab langsung (40-60 kata) dan mengandung kata kunci utama. Sematkan video 60 detik terkait (lazy-load, facade) dan sebut bahwa artikel ini versi lengkapnya. Halaman ini jadi sumber utama halaman /glosarium: tiap istilah diberi anchor id (#sku, #putaway, ...) agar bisa ditautkan. Akui bahwa penamaan dokumen (DO, surat jalan, GRN) berbeda antarperusahaan dan sistem. Tautkan istilah ke artikel L01-L20 yang membahasnya; istilah yang artikelnya belum terbit cukup dijelaskan di tempat.",
+      "url": "https://ngertilogistik.web.id/blog/istilah-gudang-untuk-pemula",
+      "redirect_301_dari": "/materi/l20-istilah-wajib-untuk-staf-gudang-baru"
+    }
+  ]
+}
