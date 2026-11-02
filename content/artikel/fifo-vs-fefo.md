@@ -98,6 +98,16 @@ Untuk distribusi obat di Indonesia, pedoman CDOB BPOM (Peraturan BPOM 9/2019) me
 
 Pedoman WHO TRS 1025 Annex 7 juga meminta, di butir 13.4, semua stok dicek berkala untuk menemukan barang yang mendekati tanggal kedaluwarsa. Untuk barang umum seperti makanan ringan atau kosmetik, ketentuan ini bukan aturan langsung, tapi prinsipnya tetap berguna.
 
+## Cara memilih: FIFO atau FEFO?
+
+Kalau Anda bingung metode mana yang dipakai di gudang Anda, jawab tiga pertanyaan ini:
+
+1. **Apakah barangnya punya tanggal kedaluwarsa?** Kalau ya, mulailah dari FEFO.
+2. **Apakah ada aturan atau standar yang berlaku untuk barang itu?** Untuk distribusi obat, pedoman CDOB BPOM sudah menyebut FEFO.
+3. **Apakah datanya tersedia?** FEFO hanya bisa jalan kalau tanggal kedaluwarsa tercatat per batch. Kalau belum, perbaiki pencatatan dulu.
+
+Untuk barang tanpa tanggal kedaluwarsa, FIFO biasanya cukup dan lebih mudah dijalankan. Yang penting, metode yang dipilih tertulis di prosedur gudang dan dipahami semua orang, dari checker sampai picker.
+
 ## Kesalahan umum
 
 - **Barang baru ditaruh di depan.** Stok lama terdorong ke belakang dan terlupa.

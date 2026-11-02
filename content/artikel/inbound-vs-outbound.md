@@ -105,6 +105,18 @@ Di level perusahaan, istilahnya lebih luas. CSCMP (Council of Supply Chain Manag
 - **Mencatat belakangan.** Barang sudah ada di rak tapi belum masuk sistem, sehingga picker mengira stok kosong.
 - **Hanya memantau outbound.** Pesanan keluar diperhatikan, tapi barang masuk dibiarkan menumpuk. Padahal inbound yang rapi memudahkan outbound, karena barang mudah ditemukan.
 
+## Daftar periksa harian sederhana
+
+Kalau Anda baru memegang area inbound atau outbound, pertanyaan berikut bisa dipakai setiap akhir shift:
+
+- Apakah semua barang yang datang hari ini sudah diperiksa, dicatat, dan disimpan ke rak?
+- Apakah masih ada palet di area penerimaan? Kalau ada, kenapa belum disimpan?
+- Apakah semua pesanan yang dijadwalkan keluar hari ini sudah berangkat?
+- Apakah stok di sistem sudah bertambah dan berkurang sesuai barang yang masuk dan keluar?
+- Apakah jadwal truk besok sudah diatur supaya bongkar dan muat tidak bentrok?
+
+Lima pertanyaan ini sederhana, tapi cukup untuk menangkap masalah sebelum menumpuk.
+
 ## Ringkasan
 
 - Inbound adalah barang masuk ke gudang; outbound adalah barang keluar dari gudang.

@@ -1,0 +1,142 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Safety Stock Adalah: Arti Stok Pengaman dan Cara Hitung</title><meta name="description" content="Safety stock adalah stok cadangan saat permintaan naik atau pasokan telat. Pelajari faktor penentunya, rumus sederhana, dan contoh hitungnya untuk gudang.">
+<link rel="canonical" href="https://ngertilogistik.web.id/blog/safety-stock"><meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:locale" content="id_ID"><meta property="og:type" content="article"><meta property="og:site_name" content="Ngerti Logistik">
+<meta property="og:title" content="Safety Stock Adalah: Arti Stok Pengaman dan Cara Hitung"><meta property="og:description" content="Safety stock adalah stok cadangan saat permintaan naik atau pasokan telat. Pelajari faktor penentunya, rumus sederhana, dan contoh hitungnya untuk gudang.">
+<meta property="og:url" content="https://ngertilogistik.web.id/blog/safety-stock"><meta property="og:image" content="https://ngertilogistik.web.id/img/og/safety-stock.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Ngerti Logistik" href="/feed.xml">
+<link rel="preload" href="/fonts/jakarta-800.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/serif-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css"><meta property="article:published_time" content="2026-11-02"><meta property="article:modified_time" content="2026-11-02"><meta property="article:section" content="Kamus Logistik"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "@id": "https://ngertilogistik.web.id/blog/safety-stock#artikel", "headline": "Safety Stock (Stok Pengaman): Cadangan Supaya Stok Tidak Habis", "description": "Safety stock adalah stok cadangan saat permintaan naik atau pasokan telat. Pelajari faktor penentunya, rumus sederhana, dan contoh hitungnya untuk gudang.", "image": "https://ngertilogistik.web.id/img/og/safety-stock.png", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "inLanguage": "id-ID", "mainEntityOfPage": "https://ngertilogistik.web.id/blog/safety-stock", "author": {"@id": "https://ngertilogistik.web.id/penulis/fajar#person"}, "publisher": {"@id": "https://ngertilogistik.web.id/#org"}, "articleSection": "Kamus Logistik", "keywords": "safety stock adalah, stok pengaman, rumus safety stock, cara menghitung safety stock, contoh safety stock, safety stock dan reorder point, buffer stock", "wordCount": 1075, "isAccessibleForFree": true}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://ngertilogistik.web.id/"}, {"@type": "ListItem", "position": 2, "name": "Kamus Logistik", "item": "https://ngertilogistik.web.id/kategori/kamus-logistik"}, {"@type": "ListItem", "position": 3, "name": "Safety Stock (Stok Pengaman): Cadangan Supaya Stok Tidak Habis", "item": "https://ngertilogistik.web.id/blog/safety-stock"}]}, {"@type": "Person", "@id": "https://ngertilogistik.web.id/penulis/fajar#person", "name": "Fajar", "jobTitle": "Praktisi logistik", "url": "https://ngertilogistik.web.id/penulis/fajar", "description": "Praktisi logistik dengan sekitar sepuluh tahun pengalaman di industri teknologi, FMCG, dan manufaktur. Menulis Ngerti Logistik supaya urusan gudang dan pengiriman bisa dipahami siapa saja."}, {"@type": "Organization", "@id": "https://ngertilogistik.web.id/#org", "name": "Ngerti Logistik", "url": "https://ngertilogistik.web.id", "logo": {"@type": "ImageObject", "url": "https://ngertilogistik.web.id/img/logo-256.png", "width": 256, "height": 256}, "sameAs": ["https://www.tiktok.com/@ngertilogistik"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Apa itu safety stock?", "acceptedAnswer": {"@type": "Answer", "text": "Safety stock atau stok pengaman adalah persediaan tambahan yang disimpan untuk mengurangi risiko kehabisan barang. Cadangan ini dipakai saat permintaan naik di luar perkiraan atau saat pasokan datang terlambat. Tanpa safety stock, stok bisa habis sebelum kiriman baru tiba."}}, {"@type": "Question", "name": "Bagaimana cara menghitung safety stock?", "acceptedAnswer": {"@type": "Answer", "text": "Cara paling sederhana memakai rumus rata-rata-maksimum: (pemakaian harian maksimum x lead time maksimum) dikurangi (pemakaian harian rata-rata x lead time rata-rata). Datanya diambil dari catatan pemakaian dan riwayat kedatangan barang per SKU. Ada juga rumus statistik dengan Z-skor untuk perhitungan yang lebih rinci."}}, {"@type": "Question", "name": "Apa bedanya safety stock dan reorder point?", "acceptedAnswer": {"@type": "Answer", "text": "Safety stock adalah jumlah cadangan, sedangkan reorder point adalah batas stok yang menandakan kapan harus memesan ulang. Keduanya berhubungan karena perhitungan reorder point memakai jumlah safety stock bersama variabel lain, seperti pemakaian selama lead time. Reorder point akan dibahas di artikel tersendiri."}}, {"@type": "Question", "name": "Apakah safety stock sama dengan buffer stock?", "acceptedAnswer": {"@type": "Answer", "text": "Dalam banyak pemakaian sehari-hari, keduanya dianggap mirip. Artikel IBM berbahasa Indonesia, misalnya, menyebut stok pengaman sebagai persediaan penyangga. Sebagian literatur membedakan keduanya berdasarkan tujuan dan cara hitungnya, jadi pastikan Anda memakai definisi yang sama dengan tim Anda."}}]}]}</script></head><body><a class="skip" href="#isi">Langsung ke isi</a>
+<header class="nav"><div class="wrap nav-in">
+<a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="34" height="34"><span>Ngerti <b>Logistik</b></span></a>
+<nav aria-label="Utama"><a href="/blog">Artikel</a><details class="dd"><summary>Kategori</summary><div><a href="/kategori/kamus-logistik">Kamus Logistik</a><a href="/kategori/manajemen-gudang">Manajemen Gudang</a><a href="/kategori/pengiriman-barang">Pengiriman Barang</a><a href="/kategori/salah-kaprah-logistik">Salah Kaprah Logistik</a><a href="/kategori/karier-logistik">Karier Logistik</a><a href="/kategori/dasar-logistik">Dasar Logistik</a></div></details><a href="/tentang">Tentang</a>
+<a class="btn-sm" href="https://www.tiktok.com/@ngertilogistik" target="_blank" rel="noopener">Follow</a></nav></div></header>
+<main id="isi" class="post-page"><div class="wrap">
+<nav class="crumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><a href="/kategori/kamus-logistik">Kamus Logistik</a></nav>
+<header class="ph"><span class="eyebrow">Kamus Logistik</span><h1>Safety Stock (Stok Pengaman): Cadangan Supaya Stok Tidak Habis</h1>
+<p class="dek">Safety stock adalah stok cadangan saat permintaan naik atau pasokan telat. Pelajari faktor penentunya, rumus sederhana, dan contoh hitungnya untuk gudang.</p>
+<div class="byline"><img src="/img/logo-256.png" alt="" width="40" height="40"><div><a href="/penulis/fajar">Fajar</a><span>Praktisi logistik</span></div>
+<div class="bm"><time datetime="2026-11-02">2 November 2026</time> · 5 menit baca</div></div>
+</header>
+<div class="post-grid">
+<aside class="toc-side"><nav class="toc" aria-label="Daftar isi"><b>Daftar isi</b><ol><li class="l2"><a href="#safety-stock-adalah">Safety stock adalah...</a></li><li class="l2"><a href="#kenapa-gudang-butuh-safety-stock">Kenapa gudang butuh safety stock</a></li><li class="l3"><a href="#permintaan-melonjak-promo-musim-ramai">Permintaan melonjak (promo, musim ramai)</a></li><li class="l3"><a href="#pasokan-terlambat">Pasokan terlambat</a></li><li class="l2"><a href="#apa-yang-menentukan-besarnya-safety-stock">Apa yang menentukan besarnya safety stock</a></li><li class="l2"><a href="#rumus-sederhana-dan-contoh-hitungnya">Rumus sederhana dan contoh hitungnya</a></li><li class="l3"><a href="#rumus-rata-rata-maksimum">Rumus rata-rata-maksimum</a></li><li class="l3"><a href="#contoh-hitung-langkah-demi-langkah">Contoh hitung langkah demi langkah</a></li><li class="l2"><a href="#sekilas-rumus-statistik-untuk-yang-ingin-lebih-dalam">Sekilas rumus statistik (untuk yang ingin lebih dalam)</a></li><li class="l2"><a href="#terlalu-kecil-vs-terlalu-besar">Terlalu kecil vs terlalu besar</a></li><li class="l2"><a href="#safety-stock-bukan-stok-nganggur">Safety stock bukan stok nganggur</a></li><li class="l2"><a href="#kesalahan-umum">Kesalahan umum</a></li><li class="l2"><a href="#ringkasan">Ringkasan</a></li></ol></nav></aside>
+<article class="prose">
+<div class="key"><span>Intinya</span><p>Safety stock = <strong>cadangan untuk permintaan atau pasokan yang meleset</strong> dari rencana. Bukan stok nganggur, tapi asuransi supaya pelanggan tetap terlayani.</p></div>
+<details class="toc-mob"><summary>Daftar isi</summary><ol><li class="l2"><a href="#safety-stock-adalah">Safety stock adalah...</a></li><li class="l2"><a href="#kenapa-gudang-butuh-safety-stock">Kenapa gudang butuh safety stock</a></li><li class="l3"><a href="#permintaan-melonjak-promo-musim-ramai">Permintaan melonjak (promo, musim ramai)</a></li><li class="l3"><a href="#pasokan-terlambat">Pasokan terlambat</a></li><li class="l2"><a href="#apa-yang-menentukan-besarnya-safety-stock">Apa yang menentukan besarnya safety stock</a></li><li class="l2"><a href="#rumus-sederhana-dan-contoh-hitungnya">Rumus sederhana dan contoh hitungnya</a></li><li class="l3"><a href="#rumus-rata-rata-maksimum">Rumus rata-rata-maksimum</a></li><li class="l3"><a href="#contoh-hitung-langkah-demi-langkah">Contoh hitung langkah demi langkah</a></li><li class="l2"><a href="#sekilas-rumus-statistik-untuk-yang-ingin-lebih-dalam">Sekilas rumus statistik (untuk yang ingin lebih dalam)</a></li><li class="l2"><a href="#terlalu-kecil-vs-terlalu-besar">Terlalu kecil vs terlalu besar</a></li><li class="l2"><a href="#safety-stock-bukan-stok-nganggur">Safety stock bukan stok nganggur</a></li><li class="l2"><a href="#kesalahan-umum">Kesalahan umum</a></li><li class="l2"><a href="#ringkasan">Ringkasan</a></li></ol></details>
+<p>Safety stock adalah stok cadangan yang sengaja disimpan untuk berjaga-jaga kalau permintaan atau pasokan meleset dari rencana. Dalam bahasa Indonesia, safety stock disebut stok pengaman. Cadangan ini menjaga agar barang tidak habis sebelum kiriman berikutnya datang.</p>
+<p>Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang safety stock.</p>
+<h2 id="safety-stock-adalah">Safety stock adalah...</h2>
+<p>IBM, dalam artikel berbahasa Indonesia, mendefinisikan stok pengaman sebagai "inventaris tambahan dari barang yang disimpan untuk mengurangi risiko kehabisan stok barang". Artikel yang sama menyebutnya sebagai persediaan penyangga yang disimpan selain stok siklus.</p>
+<p>Bayangkan stok di gudang terbagi dua:</p>
+<ul>
+<li><strong>Stok siklus (stok jalan):</strong> stok yang memang dipakai sehari-hari dan habis sebelum barang baru datang.</li>
+<li><strong>Safety stock:</strong> lapisan cadangan di bawahnya, yang baru tersentuh kalau ada kejutan.</li>
+</ul>
+<p>Kalau semuanya berjalan sesuai rencana, safety stock nyaris tidak terpakai. Ia bekerja justru ketika rencana meleset.</p>
+<h2 id="kenapa-gudang-butuh-safety-stock">Kenapa gudang butuh safety stock</h2>
+<p>IBM menyebut beberapa penyebab bisnis membutuhkan stok pengaman, di antaranya peningkatan permintaan, gangguan rantai pasokan, dan kesalahan perkiraan. Dua yang paling sering terasa di gudang adalah berikut.</p>
+<h3 id="permintaan-melonjak-promo-musim-ramai">Permintaan melonjak (promo, musim ramai)</h3>
+<p>Pembeli tiba-tiba memesan jauh lebih banyak dari biasanya karena promo, musim ramai, atau tren. Tanpa cadangan, stok habis lebih cepat dari jadwal pemesanan ulang.</p>
+<h3 id="pasokan-terlambat">Pasokan terlambat</h3>
+<p>Truk pemasok datang terlambat, produksi pemasok tertunda, atau pengiriman tertahan di jalan. Selama menunggu, gudang tetap harus melayani pesanan. Safety stock yang menutup celah itu.</p>
+<h2 id="apa-yang-menentukan-besarnya-safety-stock">Apa yang menentukan besarnya safety stock</h2>
+<p>Besarnya safety stock tidak ditebak. Ada tiga faktor utama:</p>
+<ol>
+<li><strong>Naik-turunnya permintaan.</strong> Makin tidak stabil pemakaian harian, makin besar cadangan yang dibutuhkan.</li>
+<li><strong>Lama dan ketidakpastian lead time.</strong> <a href="/blog/lead-time-vs-transit-time">Lead time</a> adalah waktu dari memesan sampai barang siap dipakai. Makin panjang dan makin sering meleset, makin besar cadangannya.</li>
+<li><strong>Target layanan.</strong> Seberapa jarang Anda mau kehabisan stok. Target yang lebih tinggi membutuhkan cadangan yang lebih besar.</li>
+</ol>
+<p>Karena faktor-faktor ini berbeda untuk tiap barang, safety stock sebaiknya dihitung <a href="/blog/apa-itu-sku">per SKU</a>, bukan disamaratakan.</p>
+<h2 id="rumus-sederhana-dan-contoh-hitungnya">Rumus sederhana dan contoh hitungnya</h2>
+<h3 id="rumus-rata-rata-maksimum">Rumus rata-rata-maksimum</h3>
+<p>Rumus yang paling mudah dipahami pemula adalah rumus rata-rata-maksimum, seperti yang dimuat IBM:</p>
+<p><strong>Safety stock = (pemakaian harian maksimum x lead time maksimum) − (pemakaian harian rata-rata x lead time rata-rata)</strong></p>
+<p>Logikanya sederhana. Bagian pertama adalah kebutuhan pada skenario terburuk: pemakaian sedang tinggi dan barang datang paling lambat. Bagian kedua adalah kebutuhan pada kondisi normal. Selisihnya adalah cadangan yang perlu disiapkan.</p>
+<p>Perlu dicatat, IBM menyebut rumus ini memperhitungkan variasi waktu tunggu, tetapi tidak memperhitungkan variasi permintaan secara statistik. Untuk awal belajar, rumus ini sudah cukup memberi gambaran.</p>
+<h3 id="contoh-hitung-langkah-demi-langkah">Contoh hitung langkah demi langkah</h3>
+<p>Angka di bawah ini adalah ilustrasi, bukan data nyata.</p>
+<blockquote class="contoh"><p><strong>CONTOH</strong> Sebuah SKU punya data berikut: pemakaian harian rata-rata 10 unit, pemakaian harian tertinggi 15 unit, lead time rata-rata 10 hari, dan lead time terlama 12 hari.</p>
+<ol>
+<li>Skenario terburuk: 15 unit x 12 hari = 180 unit.</li>
+<li>Kondisi normal: 10 unit x 10 hari = 100 unit.</li>
+<li>Safety stock: 180 − 100 = <strong>80 unit</strong>.</li>
+</ol>
+</blockquote>
+<p>Artinya, gudang menyimpan 80 unit di atas kebutuhan normal selama lead time, untuk berjaga-jaga kalau pemakaian sedang tinggi dan barang datang terlambat.</p>
+<h2 id="sekilas-rumus-statistik-untuk-yang-ingin-lebih-dalam">Sekilas rumus statistik (untuk yang ingin lebih dalam)</h2>
+<p>Bagian ini tidak wajib dipahami pemula. Perusahaan yang datanya sudah rapi sering memakai rumus berbasis statistik. Salah satu versi yang dimuat IBM adalah Z-skor x deviasi standar lead time x permintaan rata-rata. Z-skor mewakili target layanan, sedangkan deviasi standar mengukur seberapa jauh data biasanya menyimpang dari rata-rata. Ada beberapa variasi rumus statistik, dan pilihannya tergantung variabel mana yang paling tidak pasti.</p>
+<h2 id="terlalu-kecil-vs-terlalu-besar">Terlalu kecil vs terlalu besar</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Kondisi</th>
+<th>Akibat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Terlalu kecil</td>
+<td>Stok mudah habis saat ada lonjakan atau keterlambatan. Pesanan tertunda dan pelanggan kecewa.</td>
+</tr>
+<tr>
+<td>Terlalu besar</td>
+<td>Uang tertahan di gudang, biaya simpan naik, dan barang berisiko rusak atau kedaluwarsa.</td>
+</tr>
+</tbody>
+</table></div>
+<p>IBM mencatat bahwa stok pengaman yang terlalu banyak meningkatkan biaya, dan di ritel kelebihan persediaan bisa berujung pada penurunan harga atau likuidasi stok. Penjelasan lebih lengkap ada di artikel <a href="/blog/dampak-overstock">dampak overstock</a>.</p>
+<h2 id="safety-stock-bukan-stok-nganggur">Safety stock bukan stok nganggur</h2>
+<p>Ada anggapan bahwa safety stock adalah barang yang "diam saja" di gudang. Sebenarnya safety stock adalah asuransi. Ia memang tidak terpakai setiap hari, tapi melindungi pelanggan saat kondisi meleset.</p>
+<p>Beberapa prinsip penggunaannya:</p>
+<ul>
+<li><strong>Boleh dipakai saat dibutuhkan.</strong> Itulah gunanya. Kalau permintaan melonjak atau pasokan telat, pakai cadangannya.</li>
+<li><strong>Segera isi ulang.</strong> Setelah terpakai, pastikan pesanan berikutnya mengembalikan cadangan ke tingkat semula.</li>
+<li><strong>Tetap dirotasi.</strong> Untuk barang berkedaluwarsa, safety stock tetap ikut aturan keluar-masuk, supaya cadangan tidak membusuk di rak.</li>
+<li><strong>Tinjau ulang berkala.</strong> Pola permintaan dan lead time berubah. Angka yang tepat tahun lalu belum tentu tepat sekarang.</li>
+</ul>
+<p>Safety stock juga hanya berguna kalau catatan stoknya benar. Tanpa <a href="/blog/selisih-stok-gudang">akurasi stok</a>, Anda bisa merasa punya cadangan padahal barangnya tidak ada.</p>
+<h2 id="kesalahan-umum">Kesalahan umum</h2>
+<ul>
+<li><strong>Memakai transit time, bukan lead time.</strong> Transit time hanya waktu perjalanan. Lead time mencakup juga proses pesan, produksi pemasok, dan penerimaan di gudang.</li>
+<li><strong>Menyamaratakan semua SKU.</strong> Barang laris dan barang lambat butuh cadangan yang berbeda.</li>
+<li><strong>Tidak pernah ditinjau.</strong> Angka dihitung sekali, lalu dibiarkan bertahun-tahun.</li>
+<li><strong>Menganggap safety stock tidak boleh disentuh.</strong> Akibatnya pelanggan kehabisan barang padahal cadangannya ada.</li>
+</ul>
+<h2 id="ringkasan">Ringkasan</h2>
+<ul>
+<li>Safety stock adalah stok cadangan untuk berjaga-jaga saat permintaan naik atau pasokan terlambat.</li>
+<li>Besarnya ditentukan oleh naik-turunnya permintaan, lama dan ketidakpastian lead time, serta target layanan.</li>
+<li>Rumus sederhana: (pemakaian maksimum x lead time maksimum) − (pemakaian rata-rata x lead time rata-rata).</li>
+<li>Terlalu kecil membuat stok mudah habis; terlalu besar membuat uang tertahan.</li>
+<li>Lanjutkan ke artikel <a href="/blog/lead-time-vs-transit-time">lead time</a> karena angka ini menjadi bahan utama perhitungan safety stock.</li>
+</ul>
+<section class="faq" id="faq"><h2>Pertanyaan yang sering ditanyakan</h2><details><summary>Apa itu safety stock?</summary><div><p>Safety stock atau stok pengaman adalah persediaan tambahan yang disimpan untuk mengurangi risiko kehabisan barang. Cadangan ini dipakai saat permintaan naik di luar perkiraan atau saat pasokan datang terlambat. Tanpa safety stock, stok bisa habis sebelum kiriman baru tiba.</p></div></details><details><summary>Bagaimana cara menghitung safety stock?</summary><div><p>Cara paling sederhana memakai rumus rata-rata-maksimum: (pemakaian harian maksimum x lead time maksimum) dikurangi (pemakaian harian rata-rata x lead time rata-rata). Datanya diambil dari catatan pemakaian dan riwayat kedatangan barang per SKU. Ada juga rumus statistik dengan Z-skor untuk perhitungan yang lebih rinci.</p></div></details><details><summary>Apa bedanya safety stock dan reorder point?</summary><div><p>Safety stock adalah jumlah cadangan, sedangkan reorder point adalah batas stok yang menandakan kapan harus memesan ulang. Keduanya berhubungan karena perhitungan reorder point memakai jumlah safety stock bersama variabel lain, seperti pemakaian selama lead time. Reorder point akan dibahas di artikel tersendiri.</p></div></details><details><summary>Apakah safety stock sama dengan buffer stock?</summary><div><p>Dalam banyak pemakaian sehari-hari, keduanya dianggap mirip. Artikel IBM berbahasa Indonesia, misalnya, menyebut stok pengaman sebagai persediaan penyangga. Sebagian literatur membedakan keduanya berdasarkan tujuan dan cara hitungnya, jadi pastikan Anda memakai definisi yang sama dengan tim Anda.</p></div></details></section>
+<section class="src" id="sumber"><h2>Sumber</h2><ol><li><a href="https://www.ibm.com/id-id/think/topics/safety-stock" target="_blank" rel="noopener nofollow">IBM Think, Apa itu stok pengaman?</a> <span>Definisi &#x27;Stok pengaman adalah inventaris tambahan dari barang yang disimpan untuk mengurangi risiko kehabisan stok barang&#x27;; &#x27;persediaan penyangga yang disimpan selain stok siklus&#x27;; rumus rata-rata-maks (pemakaian harian maks x waktu tunggu maks) - (pemakaian harian rata-rata x waktu tunggu rata-rata) yang tidak memperhitungkan variabilitas permintaan; rumus Z-skor x σLT x Davg; ROP memakai jumlah stok pengaman dan variabel lain; stok pengaman berlebih meningkatkan biaya dan bisa berujung penurunan harga atau likuidasi; penyebab kebutuhan: peningkatan permintaan, gangguan rantai pasokan, kesalahan perkiraan.</span></li></ol></section>
+<a class="watch" href="https://www.tiktok.com/@ngertilogistik" target="_blank" rel="noopener"><span class="play">▶</span><span><b>Lebih suka versi video 60 detik?</b><small>Tonton di TikTok @ngertilogistik</small></span></a>
+<div class="author-box"><img src="/img/logo-256.png" alt="" width="64" height="64"><div><small>Ditulis oleh</small><a href="/penulis/fajar"><b>Fajar</b></a><p>Praktisi logistik dengan sekitar sepuluh tahun pengalaman di industri teknologi, FMCG, dan manufaktur. Menulis Ngerti Logistik supaya urusan gudang dan pengiriman bisa dipahami siapa saja.</p></div></div>
+<div class="pn"><a class="pn-l" href="/blog/paket-transit-lama"><small>← Sebelumnya</small><span>Kenapa Paket &quot;Transit&quot; Lama? Ini yang Terjadi di Balik Status Itu</span></a><a class="pn-r" href="/blog/istilah-gudang-untuk-pemula"><small>Berikutnya →</small><span>10 Istilah Gudang yang Wajib Dipahami Staf Baru</span></a></div>
+</article></div></div>
+<section class="rel"><div class="wrap"><h2>Baca juga</h2><div class="posts g3"><article class="post"><a href="/blog/cross-docking">
+<div class="pimg"><img src="/img/og/cross-docking.png" alt="" loading="lazy" width="1200" height="630"></div>
+<div class="pbody"><span class="kick">Kamus Logistik</span><h3>Cross-Docking: Barang Masuk Gudang, Langsung Keluar Lagi</h3>
+<p>Cross docking adalah cara memindahkan barang dari truk masuk ke truk keluar tanpa disimpan. Pelajari cara kerja, contoh, kelebihan, dan syarat suksesnya.</p><span class="meta">2 November 2026 · 5 menit baca</span></div></a></article><article class="post"><a href="/blog/lead-time-vs-transit-time">
+<div class="pimg"><img src="/img/og/lead-time-vs-transit-time.png" alt="" loading="lazy" width="1200" height="630"></div>
+<div class="pbody"><span class="kick">Kamus Logistik</span><h3>Lead Time vs Transit Time: Jangan Sampai Stok Habis karena Salah Hitung</h3>
+<p>Lead time dan transit time sering tertukar, padahal bedanya bisa bikin stok habis. Pahami komponen lead time, contoh hitung, dan cara mengukurnya sendiri.</p><span class="meta">2 November 2026 · 6 menit baca</span></div></a></article><article class="post"><a href="/blog/fifo-vs-fefo">
+<div class="pimg"><img src="/img/og/fifo-vs-fefo.png" alt="" loading="lazy" width="1200" height="630"></div>
+<div class="pbody"><span class="kick">Kamus Logistik</span><h3>FIFO vs FEFO: Barang Mana yang Harus Keluar Duluan?</h3>
+<p>FIFO dan FEFO menentukan barang mana yang keluar duluan dari gudang. Pelajari bedanya, contoh batch, dan kapan FEFO wajib dipakai untuk obat dan makanan.</p><span class="meta">2 November 2026 · 5 menit baca</span></div></a></article></div></div></section>
+</main><section class="cta"><div class="wrap cta-in"><div>
+<h2>Mau belajar logistik <em>lebih dalam?</em></h2><p>Follow Ngerti Logistik di TikTok, Instagram Reels, dan Facebook Reels. Penjelasan singkat setiap minggu.</p></div>
+<a class="btn" href="https://www.tiktok.com/@ngertilogistik" target="_blank" rel="noopener">Follow @ngertilogistik</a></div></section><footer class="foot"><div class="wrap foot-in">
+<div><a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="30" height="30"><span>Ngerti <b>Logistik</b></span></a>
+<p>Blog edukasi logistik berbahasa Indonesia. Gudang, pengiriman, dan supply chain dijelaskan dengan bahasa sehari-hari. Gratis, tanpa iklan.</p></div>
+<div class="foot-links"><b>Kategori</b><a href="/kategori/kamus-logistik">Kamus Logistik</a><a href="/kategori/manajemen-gudang">Manajemen Gudang</a><a href="/kategori/pengiriman-barang">Pengiriman Barang</a><a href="/kategori/salah-kaprah-logistik">Salah Kaprah Logistik</a><a href="/kategori/karier-logistik">Karier Logistik</a><a href="/kategori/dasar-logistik">Dasar Logistik</a></div>
+<div class="foot-links"><b>Ngerti Logistik</b><a href="/tentang">Tentang</a><a href="/penulis/fajar">Penulis</a><a href="/feed.xml">RSS</a><a href="https://www.tiktok.com/@ngertilogistik" target="_blank" rel="noopener">TikTok @ngertilogistik</a></div>
+</div><div class="wrap fine">© 2026 Ngerti Logistik. Angka yang ditandai CONTOH adalah ilustrasi, bukan data nyata. Fakta lain disertai sumber di akhir artikel.</div></footer>
+</body></html>

@@ -16,28 +16,28 @@
  "redirects": [
   {
    "source": "/materi/l01-apa-itu-logistik-kenalan-dengan-fajar",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/apa-itu-logistik",
+   "permanent": true
   },
   {
    "source": "/materi/l02-logistik-vs-supply-chain-apa-bedanya",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/logistik-vs-supply-chain",
+   "permanent": true
   },
   {
    "source": "/materi/l03-sku-itu-apa",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/apa-itu-sku",
+   "permanent": true
   },
   {
    "source": "/materi/l04-5-langkah-barang-di-gudang",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/alur-proses-gudang",
+   "permanent": true
   },
   {
    "source": "/materi/l05-salah-kaprah-logistik-kurir",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/ruang-lingkup-logistik",
+   "permanent": true
   },
   {
    "source": "/materi/l06-kenapa-ongkir-barang-ringan-bisa-mahal",
@@ -46,73 +46,73 @@
   },
   {
    "source": "/materi/l07-inbound-vs-outbound",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/inbound-vs-outbound",
+   "permanent": true
   },
   {
    "source": "/materi/l08-penerimaan-barang-cek-apa-saja",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/penerimaan-barang-gudang",
+   "permanent": true
   },
   {
    "source": "/materi/l09-fifo-vs-fefo",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/fifo-vs-fefo",
+   "permanent": true
   },
   {
    "source": "/materi/l10-satu-gudang-banyak-peran",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/tugas-staf-gudang",
+   "permanent": true
   },
   {
    "source": "/materi/l11-salah-kaprah-stok-banyak-aman",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/dampak-overstock",
+   "permanent": true
   },
   {
    "source": "/materi/l12-darat-laut-atau-udara",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/moda-transportasi-pengiriman-barang",
+   "permanent": true
   },
   {
    "source": "/materi/l13-lead-time-vs-transit-time",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/lead-time-vs-transit-time",
+   "permanent": true
   },
   {
    "source": "/materi/l14-stok-di-sistem-beda-dengan-di-rak",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/selisih-stok-gudang",
+   "permanent": true
   },
   {
    "source": "/materi/l15-cross-docking",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/cross-docking",
+   "permanent": true
   },
   {
    "source": "/materi/l16-putaway-barang-disimpan-di-mana",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/putaway-gudang",
+   "permanent": true
   },
   {
    "source": "/materi/l17-salah-kaprah-cepat-sampai-pengiriman-bagus",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/7r-logistik-pengiriman-tepat",
+   "permanent": true
   },
   {
    "source": "/materi/l18-kenapa-paket-transit-lama",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/paket-transit-lama",
+   "permanent": true
   },
   {
    "source": "/materi/l19-safety-stock-stok-pengaman",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/safety-stock",
+   "permanent": true
   },
   {
    "source": "/materi/l20-istilah-wajib-untuk-staf-gudang-baru",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/istilah-gudang-untuk-pemula",
+   "permanent": true
   },
   {
    "source": "/materi/l21-reorder-point-kapan-harus-pesan-lagi",

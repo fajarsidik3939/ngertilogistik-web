@@ -114,10 +114,10 @@ Kebutuhan skill ini adalah gambaran umum. Setiap perusahaan bisa punya syarat ta
 
 ## Kesalahan umum staf baru
 
-- Mengambil barang dari lokasi yang "kelihatannya sama" tanpa cek kode.
-- Menunda pencatatan karena merasa sibuk.
-- Berdiri atau berjalan di jalur forklift.
-- Diam saat menemukan selisih karena takut disalahkan.
+- **Mengambil barang dari lokasi yang "kelihatannya sama" tanpa cek kode.** Banyak barang punya kemasan mirip tapi ukuran atau varian berbeda. Selalu cocokkan kode barang, bukan hanya gambar di kardus.
+- **Menunda pencatatan karena merasa sibuk.** Catatan yang tertunda sering terlupa, lalu stok di sistem tidak lagi sama dengan stok di rak.
+- **Berdiri atau berjalan di jalur forklift.** Operator forklift punya titik buta, apalagi saat membawa palet tinggi. Gunakan jalur pejalan kaki yang ditandai.
+- **Diam saat menemukan selisih karena takut disalahkan.** Selisih yang dilaporkan cepat lebih mudah ditelusuri. Selisih yang disembunyikan biasanya membesar dan merepotkan semua orang.
 
 ## Ringkasan
 
