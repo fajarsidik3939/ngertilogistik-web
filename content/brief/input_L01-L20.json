@@ -1,0 +1,182 @@
+[
+ {
+  "id": "L01",
+  "judul_cover": "Apa itu logistik?",
+  "topik": "Apa itu logistik? + Kenalan dengan Fajar",
+  "pilar": "Perkenalan",
+  "intinya": "Logistik = barang + informasi sampai ke pemakai, tepat jumlah, waktu, tempat.",
+  "naskah_video": "Pagi ini, Anda membeli sekotak masker. Kotak itu sudah menempuh perjalanan panjang. Dibuat di pabrik, disimpan di gudang, dicatat, dikemas, lalu diantar truk ke toko. Yang mengatur seluruh perjalanan itu namanya logistik. Logistik memastikan barang dan informasinya sampai ke pemakai: tepat jumlah, waktu, dan tempat. Satu langkah meleset, barang bisa telat, hilang, atau rusak. Kenalkan, saya Fajar, panggil saja Zar. Sepuluh tahun di logistik: teknologi, FMCG, dan manufaktur. Sekarang, saya logistics manager. Setiap hari saya mengurus gudang, stok, dan pengiriman. Di Ngerti Logistik, saya bagikan ilmunya, satu konsep per video. Untuk staf gudang, admin, mahasiswa, atau Anda yang sering kirim barang.",
+  "slug_lama": null
+ },
+ {
+  "id": "L02",
+  "judul_cover": "Logistik vs supply chain",
+  "topik": "Logistik vs supply chain: apa bedanya?",
+  "pilar": "Kamus 60 Detik",
+  "intinya": "Supply chain = seluruh rantai; logistik = bagian yang mengalirkan & menyimpan barang + informasinya.",
+  "naskah_video": "Logistik dan supply chain sering dianggap sama. Padahal beda. Supply chain adalah seluruh rantai: dari bahan baku, pabrik, distributor, sampai ke pembeli. Supply chain juga mencakup memilih pemasok, merencanakan produksi, dan kerja sama antar perusahaan. Logistik adalah salah satu bagian di dalamnya. Tugasnya mengatur aliran dan penyimpanan barang serta informasinya, dari titik asal ke titik pakai. Mulai dari transportasi, gudang, kemasan, sampai pengelolaan stok. Gampangnya begini: supply chain itu peta perjalanannya, logistik yang menjalankan perjalanannya. Jadi, semua logistik bagian dari supply chain, tapi supply chain lebih dari sekadar logistik. Definisi ini mengacu pada glosarium CSCMP, asosiasi profesional supply chain.",
+  "slug_lama": null
+ },
+ {
+  "id": "L03",
+  "judul_cover": "SKU itu apa?",
+  "topik": "SKU itu apa?",
+  "pilar": "Kamus 60 Detik",
+  "intinya": "Satu SKU = satu varian yang dihitung, disimpan, dan dijual terpisah.",
+  "naskah_video": "Masker yang sama bisa punya dua kode berbeda di gudang. Kenapa? Karena kodenya bukan untuk jenis barang, tapi untuk setiap varian yang disimpan. Namanya SKU, stock keeping unit. Contoh: masker isi lima puluh dan masker isi dua puluh. Barangnya sama, kemasannya beda, jadi SKU-nya beda. Warna, ukuran, dan isi kemasan yang berbeda biasanya juga jadi SKU berbeda. Kenapa penting? Stok dihitung per SKU. Kalau dua varian dicampur dalam satu kode, sistem bilang ada, padahal pembeli dapat barang yang salah. Jadi, satu SKU berarti satu varian yang bisa dihitung, disimpan, dan dijual terpisah. Mulai sekarang, setiap kali melihat kode di rak, Anda tahu itu bukan sekadar nomor.",
+  "slug_lama": null
+ },
+ {
+  "id": "L04",
+  "judul_cover": "5 langkah barang di gudang",
+  "topik": "5 langkah barang di gudang",
+  "pilar": "Isi Gudang",
+  "intinya": "Terima → simpan → ambil → kemas → kirim.",
+  "naskah_video": "Gudang bukan tempat barang menumpuk. Ada lima langkah yang selalu terjadi. Satu, penerimaan. Barang datang dicek jumlah, kondisi, dan dokumennya. Dua, penyimpanan. Barang ditaruh di lokasi rak yang tercatat di sistem. Tiga, pengambilan atau picking. Saat ada pesanan, petugas mengambil barang sesuai daftar. Empat, pengemasan. Barang dikemas supaya aman di perjalanan, lalu diberi label. Lima, pengiriman. Barang diserahkan ke kurir atau truk, dan statusnya diperbarui. Lima langkah ini sering diringkas: terima, simpan, ambil, kemas, kirim. Kalau satu langkah dilewati, misalnya lokasi rak tidak dicatat, barangnya ada tapi tidak bisa ditemukan. Jadi, gudang yang rapi adalah gudang yang setiap langkahnya tercatat.",
+  "slug_lama": null
+ },
+ {
+  "id": "L05",
+  "judul_cover": "Logistik = kurir?",
+  "topik": "Salah kaprah: logistik = kurir",
+  "pilar": "Salah Kaprah",
+  "intinya": "Kurir hanya transportasi; logistik juga gudang, stok, kemasan, informasi, retur.",
+  "naskah_video": "Logistik itu kurir, kan? Belum tentu. Kurir hanya satu bagian, yaitu transportasi. Sebelum paket sampai ke kurir, ada yang menyimpan barang di gudang, menghitung stok, mengemas, dan mencatat setiap pergerakan. Ada juga yang merencanakan kapan harus beli lagi, supaya barang tidak habis tapi juga tidak menumpuk. Dan setelah paket diterima, masih ada retur kalau barangnya salah atau rusak. Semua itu logistik: transportasi, gudang, stok, kemasan, dan informasi. Kalau salah satunya kacau, kurir tercepat pun tidak bisa menolong. Jadi, kurir itu ujung yang paling terlihat. Pekerjaan logistik yang lain ada di belakangnya. Lain kali menerima paket, ingat ada banyak tangan di baliknya.",
+  "slug_lama": null
+ },
+ {
+  "id": "L06",
+  "judul_cover": "Barang ringan, ongkir mahal?",
+  "topik": "Kenapa ongkir barang ringan bisa mahal?",
+  "pilar": "Kirim Tanpa Drama",
+  "intinya": "Yang ditagih = lebih besar antara berat asli dan berat volume (P×L×T/pembagi).",
+  "naskah_video": "Barang Anda ringan, tapi ongkirnya mahal. Ini sebabnya. Kurir tidak hanya menimbang berat. Mereka juga mengukur besar kotaknya. Kotak besar makan tempat di truk atau pesawat, walaupun isinya ringan. Karena itu ada berat volume: panjang kali lebar kali tinggi dalam sentimeter, lalu dibagi angka pembagi. Untuk kargo udara, standar IATA memakai pembagi enam ribu. Ada juga layanan yang memakai lima ribu. Yang ditagih adalah yang lebih besar: berat asli atau berat volume. Contoh: kotak empat puluh kali tiga puluh kali tiga puluh, dibagi enam ribu, jadi enam kilo. Padahal isinya cuma satu kilo. Jadi, pakai kotak yang pas dengan barangnya. Kotak yang pas juga membuat barang tidak bergeser di jalan.",
+  "slug_lama": null
+ },
+ {
+  "id": "L07",
+  "judul_cover": "Inbound vs outbound",
+  "topik": "Inbound vs outbound",
+  "pilar": "Kamus 60 Detik",
+  "intinya": "Inbound = masuk, outbound = keluar; keduanya harus seimbang.",
+  "naskah_video": "Di gudang, ada dua arah barang yang selalu dijaga: inbound dan outbound. Inbound adalah barang yang masuk: dari pemasok atau pabrik ke gudang. Kegiatannya: bongkar muat, cek jumlah dan kondisi, cocokkan dokumen, lalu simpan ke rak. Outbound adalah barang yang keluar: dari gudang ke pelanggan atau toko. Kegiatannya: ambil barang sesuai pesanan, kemas, muat, lalu kirim. Banyak gudang memisahkan pintu atau area untuk keduanya supaya tidak tabrakan. Keduanya harus seimbang. Kalau inbound lancar tapi outbound lambat, gudang penuh. Kalau sebaliknya, stok cepat habis. Ingat saja: inbound itu masuk, outbound itu keluar. Inbound yang rapi memudahkan outbound, karena barang mudah ditemukan.",
+  "slug_lama": null
+ },
+ {
+  "id": "L08",
+  "judul_cover": "Cek ini sebelum tanda tangan",
+  "topik": "Penerimaan barang: cek apa saja?",
+  "pilar": "Isi Gudang",
+  "intinya": "Cek dokumen, jumlah, kondisi, batch/kedaluwarsa; catat selisih sebelum tanda tangan.",
+  "naskah_video": "Truk datang membawa barang. Jangan langsung tanda tangan. Ada empat hal yang wajib dicek saat penerimaan barang. Pertama, dokumen. Cocokkan surat jalan dengan pesanan pembelian: barangnya, jumlahnya, dan pemasoknya. Kedua, jumlah. Hitung karton atau unitnya, bukan hanya percaya label. Ketiga, kondisi. Periksa kemasan penyok, basah, atau segel rusak, lalu foto sebagai bukti. Keempat, nomor batch dan tanggal kedaluwarsa, untuk barang yang punya masa pakai. Kalau ada selisih atau kerusakan, catat di dokumen sebelum tanda tangan. Tanda tangan Anda berarti barang diterima sesuai catatan. Kalau dicatat belakangan, klaim ke pemasok jadi jauh lebih sulit. Lima menit memeriksa bisa menyelamatkan banyak kerugian.",
+  "slug_lama": null
+ },
+ {
+  "id": "L09",
+  "judul_cover": "FIFO vs FEFO",
+  "topik": "FIFO vs FEFO",
+  "pilar": "Kamus 60 Detik",
+  "intinya": "FIFO = pertama masuk keluar dulu; FEFO = paling cepat kedaluwarsa keluar dulu.",
+  "naskah_video": "Barang yang masuk duluan belum tentu keluar duluan. Ada dua aturan yang sering dipakai gudang: FIFO dan FEFO. FIFO, first in first out. Yang pertama masuk, dikeluarkan pertama. Cocok untuk barang tanpa tanggal kedaluwarsa, supaya stok lama tidak tertinggal di belakang. FEFO, first expired first out. Yang paling cepat kedaluwarsa, dikeluarkan pertama, walaupun datangnya belakangan. Contoh: batch B datang kemarin, tapi kedaluwarsanya lebih dekat dari batch A. Dengan FEFO, batch B keluar duluan. Barang seperti makanan, obat, dan produk kesehatan biasanya memakai FEFO. Supaya jalan, tanggal kedaluwarsa harus tercatat sejak barang diterima. Salah urutan, barang bisa kedaluwarsa di rak padahal masih tercatat sebagai stok.",
+  "slug_lama": null
+ },
+ {
+  "id": "L10",
+  "judul_cover": "Siapa ngapain di gudang?",
+  "topik": "Satu gudang, banyak peran",
+  "pilar": "Karier & Skill",
+  "intinya": "Checker, operator forklift (wajib SIO), picker, packer, admin, supervisor saling bergantung.",
+  "naskah_video": "Satu gudang, banyak peran. Kenalan dengan orang-orang di baliknya, yuk. Checker penerimaan memeriksa barang yang datang: jumlah, kondisi, dan dokumen. Operator forklift memindahkan palet berat. Di Indonesia, operator forklift wajib punya lisensi K3 atau SIO. Picker mengambil barang dari rak sesuai pesanan. Packer mengemas barang dan memasang label pengiriman. Admin gudang mencatat semua pergerakan di sistem, dan menjaga stok di sistem sama dengan stok fisik. Supervisor mengatur orang, jadwal, dan memastikan target harian tercapai dengan aman. Semua peran saling bergantung. Satu catatan salah, pekerjaan yang lain ikut kacau. Kalau Anda staf baru, peran mana yang paling ingin Anda pelajari?",
+  "slug_lama": null
+ },
+ {
+  "id": "L11",
+  "judul_cover": "Stok banyak = aman?",
+  "topik": "Salah kaprah: stok banyak = aman",
+  "pilar": "Salah Kaprah",
+  "intinya": "Stok berlebih menahan uang, makan tempat, berisiko rusak/kedaluwarsa, dan menutupi masalah.",
+  "naskah_video": "Stok menumpuk tidak selalu aman. Kadang justru itu masalahnya. Pertama, uang Anda tertahan di rak. Barang sudah dibayar, tapi belum jadi penjualan. Kedua, butuh tempat. Rak penuh, gudang perlu ditambah, biaya sewa ikut naik. Ketiga, risiko. Barang bisa rusak, kedaluwarsa, atau modelnya keburu ganti. Keempat, masalah jadi tidak terlihat. Kalau stok selalu berlebih, kesalahan perencanaan tertutup. Yang aman bukan stok paling banyak, tapi stok yang cukup: sesuai kebutuhan, ditambah cadangan secukupnya. Itu sebabnya gudang memantau berapa lama barang diam di rak. Cadangan ini namanya safety stock. Nanti kita bahas di video lain. Stok yang pas membuat uang berputar dan gudang tetap lega.",
+  "slug_lama": null
+ },
+ {
+  "id": "L12",
+  "judul_cover": "Darat, laut, atau udara?",
+  "topik": "Darat, laut, atau udara?",
+  "pilar": "Kirim Tanpa Drama",
+  "intinya": "Pilih moda dari kecepatan, ukuran/berat, dan biaya; sering digabung (multimoda).",
+  "naskah_video": "Kirim lewat darat, laut, atau udara? Jawabannya tergantung tiga hal. Satu, seberapa cepat barang harus sampai. Dua, seberapa besar dan berat. Tiga, berapa biaya yang masuk akal. Udara paling cepat, tapi biasanya paling mahal. Cocok untuk barang kecil, mendesak, atau bernilai tinggi. Laut paling lambat, tapi muat banyak dan biaya per kilo lebih rendah. Cocok untuk volume besar antarpulau atau antarnegara. Darat ada di tengah. Fleksibel, bisa sampai depan pintu, cocok untuk jarak dalam satu pulau. Sering kali ketiganya digabung: truk ke pelabuhan, kapal menyeberang, lalu truk lagi ke tujuan. Kuncinya: pilih moda yang paling sesuai dengan barang dan janji waktu kepada pelanggan.",
+  "slug_lama": null
+ },
+ {
+  "id": "L13",
+  "judul_cover": "Lead time vs transit time",
+  "topik": "Lead time vs transit time",
+  "pilar": "Kamus 60 Detik",
+  "intinya": "Transit time = waktu di jalan; lead time = dari pesan sampai siap pakai.",
+  "naskah_video": "Lead time dan transit time sering tertukar. Padahal bedanya bisa bikin stok habis. Transit time adalah waktu barang di perjalanan, dari dikirim sampai tiba. Lead time lebih panjang: dari pesanan dibuat sampai barang siap dipakai. Di dalamnya ada waktu proses pesanan, produksi atau penyiapan, pengiriman, sampai pengecekan di gudang. Contoh: pemasok bilang kirim tiga hari. Itu transit time. Tapi kalau pesanan baru diproses seminggu, lead time-nya sepuluh hari. Kalau Anda pesan ulang berdasarkan tiga hari, stok sudah habis sebelum barang datang. Jadi, rencanakan stok dengan lead time, bukan transit time. Tanyakan lead time lengkap ke pemasok, bukan hanya lama pengirimannya.",
+  "slug_lama": null
+ },
+ {
+  "id": "L14",
+  "judul_cover": "Stok sistem ≠ stok rak",
+  "topik": "Stok di sistem beda dengan di rak",
+  "pilar": "Isi Gudang",
+  "intinya": "Selisih stok kebanyakan karena pencatatan; scan setiap pergerakan + cycle count.",
+  "naskah_video": "Di sistem ada sepuluh, di rak cuma tujuh. Ke mana barangnya? Selisih stok biasanya bukan karena hilang, tapi karena pencatatan. Penyebab pertama: barang dipindah lokasi tapi tidak dicatat. Kedua: barang rusak atau retur tidak diinput. Ketiga: salah ambil saat picking, varian tertukar. Keempat: barang masuk atau keluar tanpa di-scan. Kalau tidak diperbaiki, pesanan diterima padahal barangnya tidak ada. Cara menjaganya: setiap pergerakan barang di-scan saat itu juga, dan stok dihitung rutin sebagian setiap hari. Hitung rutin ini namanya cycle count. Selisih ketemu lebih cepat, penyebabnya juga lebih mudah dilacak. Akurasi stok bukan soal menghitung lebih sering, tapi mencatat dengan disiplin.",
+  "slug_lama": null
+ },
+ {
+  "id": "L15",
+  "judul_cover": "Masuk gudang tanpa disimpan?",
+  "topik": "Cross-docking",
+  "pilar": "Kamus 60 Detik",
+  "intinya": "Barang dibongkar, dipilah, langsung dimuat ke truk tujuan; hemat waktu simpan.",
+  "naskah_video": "Ada barang yang masuk gudang, lalu keluar lagi tanpa pernah disimpan. Namanya cross-docking, istilah yang sering dipakai di pusat distribusi. Truk dari pemasok datang, barangnya dibongkar di satu sisi dok. Lalu barang dipilah sesuai tujuan, dan langsung dimuat ke truk lain di sisi seberang. Barang hanya mampir sebentar di area dok, bukan disimpan berhari-hari di rak. Hasilnya, waktu simpan berkurang dan barang lebih cepat sampai. Tapi syaratnya berat: jadwal truk masuk dan keluar harus pas, dan datanya harus jelas. Kalau truk tujuan telat, barang justru menumpuk di dok. Jadi, cross-docking cocok untuk barang yang bergerak cepat dan jadwalnya rapi.",
+  "slug_lama": null
+ },
+ {
+  "id": "L16",
+  "judul_cover": "Putaway: ditaruh di mana?",
+  "topik": "Putaway: barang disimpan di mana?",
+  "pilar": "Isi Gudang",
+  "intinya": "Putaway = memindahkan barang ke lokasi rak yang tepat dan mencatatnya.",
+  "naskah_video": "Barang sudah diterima. Sekarang, ditaruh di mana? Langkah ini namanya putaway, dan terjadi setelah barang selesai dicek. Putaway artinya memindahkan barang dari area penerimaan ke lokasi rak, lalu mencatat lokasinya di sistem. Setiap lokasi punya alamat, misalnya lorong, rak, tingkat, dan posisi. Barang yang sering diambil ditaruh di lokasi yang dekat dan mudah dijangkau. Barang berat di bawah, barang ringan di atas. Yang paling penting: barang ditaruh di mana, itu yang dicatat. Kalau lokasinya tidak dicatat, barangnya ada di gudang tapi tidak bisa ditemukan. Jadi, putaway yang rapi membuat pengambilan barang jadi cepat dan tidak salah lokasi.",
+  "slug_lama": null
+ },
+ {
+  "id": "L17",
+  "judul_cover": "Cepat sampai = pengiriman bagus?",
+  "topik": "Salah kaprah: cepat sampai = pengiriman bagus",
+  "pilar": "Salah Kaprah",
+  "intinya": "Pengiriman bagus = tepat barang, jumlah, kondisi, waktu yang dijanjikan; bukan cuma cepat.",
+  "naskah_video": "Paketnya sampai dalam sehari. Cepat sekali. Tapi isinya salah. Pelanggan senang kurirnya cepat, tapi kecewa begitu kotaknya dibuka. Jadi, pengiriman yang cepat pasti bagus? Belum tentu. Pengiriman yang bagus harus tepat di beberapa hal sekaligus. Ada empat yang paling penting. Tepat barangnya, sesuai yang dipesan pelanggan. Tepat jumlahnya, tidak kurang dan tidak lebih. Tepat kondisinya, tidak rusak, basah, atau penyok. Dan tepat waktu, sesuai yang dijanjikan, bukan sekadar secepat mungkin. Paket yang datang cepat tapi salah barang justru bikin repot: retur, kirim ulang, dan pelanggan kecewa. Jadi, pengiriman bagus itu yang tepat, bukan cuma yang cepat. Cepat itu bonus.",
+  "slug_lama": null
+ },
+ {
+  "id": "L18",
+  "judul_cover": "Kenapa paket \"transit\" lama?",
+  "topik": "Kenapa paket \"transit\" lama?",
+  "pilar": "Kirim Tanpa Drama",
+  "intinya": "Transit = paket berpindah antar hub/sortir; ada antrean, jadwal angkut, dan rute.",
+  "naskah_video": "Status paket \"transit\" sudah tiga hari. Sebenarnya paketnya di mana? Transit artinya paket sedang berpindah dari satu hub ke hub berikutnya. Hub adalah tempat paket dikumpulkan, disortir, lalu dikirim lagi sesuai tujuan. Paket jarang berjalan langsung. Biasanya lewat beberapa hub dulu. Di setiap hub, paket menunggu giliran disortir dan menunggu jadwal truk, kapal, atau pesawat berikutnya. Kalau jadwal angkutnya sehari sekali, paket bisa menunggu sampai besok. Jarak jauh, antar pulau, atau musim ramai juga menambah waktu. Jadi, transit lama belum tentu paketnya hilang. Bisa jadi sedang antre di hub. Kalau lewat dari estimasi, hubungi kurir dengan nomor resi.",
+  "slug_lama": null
+ },
+ {
+  "id": "L19",
+  "judul_cover": "Safety stock itu apa?",
+  "topik": "Safety stock (stok pengaman)",
+  "pilar": "Kamus 60 Detik",
+  "intinya": "Safety stock = cadangan untuk permintaan atau pasokan yang meleset.",
+  "naskah_video": "Kenapa gudang sengaja menyimpan stok yang tidak boleh dipakai sembarangan? Namanya safety stock, atau stok pengaman. Safety stock adalah cadangan untuk berjaga-jaga kalau permintaan atau pasokan meleset dari rencana. Misalnya, pembeli tiba-tiba memesan jauh lebih banyak dari biasanya, karena promo atau musim ramai. Atau truk pemasok datang terlambat beberapa hari. Tanpa cadangan, stok bisa habis sebelum barang baru datang. Besarnya safety stock biasanya dihitung dari seberapa naik-turun permintaan dan seberapa lama barang baru datang. Terlalu kecil, stok gampang habis. Terlalu besar, uang tertahan di gudang. Jadi, safety stock bukan stok nganggur. Itu asuransi supaya pelanggan tetap terlayani.",
+  "slug_lama": null
+ },
+ {
+  "id": "L20",
+  "judul_cover": "10 istilah wajib staf gudang",
+  "topik": "Istilah wajib untuk staf gudang baru",
+  "pilar": "Karier & Skill",
+  "intinya": "10 istilah dasar: SKU, PO, GR, putaway, picking, packing, DO, cycle count, FIFO, FEFO.",
+  "naskah_video": "Hari pertama di gudang, istilahnya bikin bingung? Ini sepuluh yang paling sering dipakai. SKU: kode untuk setiap varian barang. PO: purchase order, pesanan pembelian ke pemasok. GR: goods receipt, pencatatan barang yang diterima. Putaway: menaruh barang ke lokasi rak. Picking: mengambil barang sesuai pesanan. Packing: mengemas barang sebelum dikirim. DO: delivery order, dokumen pengiriman barang ke penerima. Cycle count: menghitung stok sebagian secara bergilir. FIFO: yang masuk duluan, keluar duluan. FEFO: yang kedaluwarsa duluan, keluar duluan. Tidak perlu hafal sekaligus. Pahami artinya, nanti terbiasa sendiri. Simpan video ini sebagai contekan hari pertama Anda.",
+  "slug_lama": null
+ }
+]

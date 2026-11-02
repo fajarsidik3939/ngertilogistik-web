@@ -1,2 +1,623 @@
-{ "cleanUrls": true, "trailingSlash": false, "outputDirectory": "public",
-  "headers": [{ "source": "/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] }] }
+{
+ "cleanUrls": true,
+ "trailingSlash": false,
+ "outputDirectory": "public",
+ "headers": [
+  {
+   "source": "/img/(.*)",
+   "headers": [
+    {
+     "key": "Cache-Control",
+     "value": "public, max-age=2592000"
+    }
+   ]
+  }
+ ],
+ "redirects": [
+  {
+   "source": "/materi/l01-apa-itu-logistik-kenalan-dengan-fajar",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l02-logistik-vs-supply-chain-apa-bedanya",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l03-sku-itu-apa",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l04-5-langkah-barang-di-gudang",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l05-salah-kaprah-logistik-kurir",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l06-kenapa-ongkir-barang-ringan-bisa-mahal",
+   "destination": "/blog/berat-volume",
+   "permanent": true
+  },
+  {
+   "source": "/materi/l07-inbound-vs-outbound",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l08-penerimaan-barang-cek-apa-saja",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l09-fifo-vs-fefo",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l10-satu-gudang-banyak-peran",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l11-salah-kaprah-stok-banyak-aman",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l12-darat-laut-atau-udara",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l13-lead-time-vs-transit-time",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l14-stok-di-sistem-beda-dengan-di-rak",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l15-cross-docking",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l16-putaway-barang-disimpan-di-mana",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l17-salah-kaprah-cepat-sampai-pengiriman-bagus",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l18-kenapa-paket-transit-lama",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l19-safety-stock-stok-pengaman",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l20-istilah-wajib-untuk-staf-gudang-baru",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l21-reorder-point-kapan-harus-pesan-lagi",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l22-picking-cara-mengambil-barang-pesanan",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l23-stock-opname-vs-cycle-count",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l24-packing-kayu-perlu-atau-tidak",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l25-salah-kaprah-gudang-cuma-tempat-numpuk-barang",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l26-packing-yang-benar-supaya-barang-aman",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l27-3pl-itu-apa",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l28-skill-excel-dasar-untuk-admin-gudang",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l29-last-mile-delivery",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l30-asuransi-pengiriman-kapan-perlu",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l31-pod-proof-of-delivery",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l32-kode-lokasi-rak-bin-location",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l33-salah-kaprah-sistem-pasti-benar",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l34-barang-berbahaya-dangerous-goods",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l35-reverse-logistics-alur-retur",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l36-barcode-vs-qr-code-di-gudang",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l37-incoterms-siapa-tanggung-apa",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l38-kpi-gudang-yang-sering-dipakai",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l39-dead-stock-slow-moving",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l40-alur-retur-paket",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l41-fill-rate-vs-otif",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l42-layout-gudang-barang-laris-dekat-pintu",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l43-salah-kaprah-ongkir-murah-pasti-untung",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l44-ftl-vs-ltl-truk-penuh-vs-gabungan",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l45-surat-jalan-vs-invoice",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l46-jalur-karier-di-logistik",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l47-dropship-vs-fulfillment",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l48-k3-gudang-forklift-jalur-pejalan-kaki",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l49-wms-itu-apa",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l50-cara-baca-resi-status-tracking",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l51-salah-kaprah-stock-opname-setahun-sekali-cukup",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l52-laporan-stok-harian",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l53-just-in-time-jit",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l54-label-karton-yang-benar",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l55-analisis-abc",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l56-cod-dari-sisi-logistik",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l57-backorder",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l58-komunikasi-dengan-ekspedisi",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l59-salah-kaprah-barang-lambat-laku-dibiarkan-saja",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l60-kontainer-20-kaki-vs-40-kaki",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l61-supply-chain-disruption",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l62-gudang-menjelang-harbolnas",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l63-cut-off-time-pengiriman",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l64-salah-kaprah-gudang-besar-pasti-efisien",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l65-bullwhip-effect",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l66-cara-membaca-laporan-aging-stok",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l67-kitting-bundling",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l68-volumetrik-laut-cbm",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l69-fcl-vs-lcl",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l70-pallet-standar-cara-menumpuk",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l71-salah-kaprah-stok-nol-gagal",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l72-pengiriman-barang-pecah-belah",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l73-demand-forecasting-sederhana",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l74-soft-skill-untuk-supervisor-gudang",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l75-cold-chain-rantai-dingin",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l76-same-day-vs-next-day",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l77-lead-time-pemasok-cara-mengukurnya",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l78-salah-kaprah-semua-barang-harus-fifo",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l79-gudang-berpendingin-gudang-kering",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l80-biaya-tersembunyi-impor",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l81-milk-run",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l82-membuat-sop-gudang-yang-dipakai",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l83-pick-face-replenishment",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l84-tarif-kurir-berat-aktual-vs-volume",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l85-salah-kaprah-otomatisasi-pasti-hemat",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l86-konsinyasi",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l87-quality-control-saat-penerimaan",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l88-pengiriman-antar-pulau",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l89-safety-stock-vs-buffer-stock",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l90-cara-presentasi-data-gudang-ke-atasan",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l91-wave-picking",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l92-klaim-paket-rusak",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l93-salah-kaprah-retur-itu-kerugian-saja",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l94-make-to-stock-vs-make-to-order",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l95-housekeeping-gudang-5r",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l96-memilih-ekspedisi-untuk-bisnis-kecil",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l97-total-landed-cost",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l98-membaca-grafik-stok",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l99-penyimpanan-barang-kimia",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l100-pengiriman-ke-daerah-terpencil",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l101-vendor-managed-inventory-vmi",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l102-salah-kaprah-kurir-lambat-kurir-jelek",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l103-penanganan-barang-retur-di-gudang",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l104-packing-untuk-pengiriman-udara",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l105-belajar-logistik-dari-nol-mulai-dari-mana",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l106-carrying-cost-biaya-simpan",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l107-batch-serial-number",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l108-pengiriman-barang-besar-kargo",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l109-salah-kaprah-stok-aman-kalau-gudang-penuh",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l110-order-cycle-time",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l111-inventory-turnover",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l112-tracking-real-time-gps-di-truk",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l113-kesalahan-umum-admin-gudang-baru",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l114-rantai-pasok-berkelanjutan",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l115-tutup-buku-stok-akhir-tahun",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l116-pengiriman-saat-musim-liburan",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l117-salah-kaprah-logistik-cuma-biaya",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l118-rangkuman-10-istilah-logistik-2026",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l119-rencana-belajar-logistik-2027",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi/l120-terima-kasih-apa-selanjutnya",
+   "destination": "/blog",
+   "permanent": false
+  },
+  {
+   "source": "/materi",
+   "destination": "/blog",
+   "permanent": false
+  }
+ ]
+}

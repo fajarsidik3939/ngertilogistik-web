@@ -1,185 +1,403 @@
 #!/usr/bin/env python3
-"""Generator situs statis Ngerti Logistik.
-Sumber: data/topics.json  ->  public/ (siap di-deploy ke Vercel)
+"""Generator blog statis Ngerti Logistik.
+
+Sumber : content/artikel/*.md  (frontmatter YAML + isi Markdown)
+Keluaran: public/              (di-deploy apa adanya oleh Vercel)
+
 Jalankan: python3 build.py
+Hanya artikel yang ada file .md-nya yang terbit. Materi lain tetap tersembunyi.
 """
-import json, re, html, os, shutil, datetime
+import os, re, json, html, glob, shutil, datetime, subprocess
+import yaml, markdown
 
 SITE = "https://ngertilogistik.web.id"
+NAME = "Ngerti Logistik"
 TIKTOK = "https://www.tiktok.com/@ngertilogistik"
+BASE = "/blog"            # awalan URL artikel
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "public")
-T = json.load(open(os.path.join(ROOT, "data/topics.json"), encoding="utf-8"))
+WPM = 200                 # kecepatan baca (kata/menit)
 
-PILAR = {
-    "P0": ("Perkenalan", "Kenalan dengan dunia logistik."),
-    "P1": ("Kamus 60 Detik", "Istilah logistik dijelaskan singkat dan jelas."),
-    "P2": ("Isi Gudang", "Apa yang sebenarnya terjadi di dalam gudang."),
-    "P3": ("Kirim Tanpa Drama", "Pengiriman, ongkir, dan cara barang sampai dengan aman."),
-    "P4": ("Salah Kaprah", "Anggapan keliru yang sering terdengar soal logistik."),
-    "P5": ("Karier & Skill", "Peran, keterampilan, dan jalur karier di logistik."),
+AUTHOR = {
+    "nama": "Fajar",
+    "slug": "fajar",
+    "peran": "Praktisi logistik",
+    "bio": "Praktisi logistik dengan sekitar sepuluh tahun pengalaman di industri teknologi, FMCG, dan manufaktur. "
+           "Menulis Ngerti Logistik supaya urusan gudang dan pengiriman bisa dipahami siapa saja.",
 }
-ORDER = ["P1", "P2", "P3", "P4", "P5", "P0"]
 
-def esc(s): return html.escape(s, quote=True)
-def em(s): return re.sub(r"\*(.+?)\*", r"<em>\1</em>", esc(s))
-def plain(s): return s.replace("*", "")
-def slug(t):
-    s = t["topic"].lower()
-    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")[:60].strip("-")
-    return f"{t['id'].lower()}-{s}"
-for t in T: t["slug"] = slug(t)
+# kategori = 6 pilar. Bisa ditimpa oleh content/kategori.yml
+KATEGORI = {
+    "kamus-logistik": dict(pilar="P1", nama="Kamus Logistik", judul="Kamus Logistik: Istilah Gudang & Pengiriman Dijelaskan",
+                           desk="Arti istilah logistik, gudang, dan supply chain dijelaskan singkat dengan contoh sehari-hari."),
+    "manajemen-gudang": dict(pilar="P2", nama="Manajemen Gudang", judul="Manajemen Gudang: Proses di Dalam Gudang",
+                             desk="Penerimaan, penyimpanan, picking, packing, dan stok. Cara kerja gudang dari dalam."),
+    "pengiriman-barang": dict(pilar="P3", nama="Pengiriman Barang", judul="Pengiriman Barang: Ongkir, Moda, dan Tips Aman",
+                              desk="Ongkir, berat volume, moda darat-laut-udara, dan cara barang sampai dengan aman."),
+    "salah-kaprah-logistik": dict(pilar="P4", nama="Salah Kaprah Logistik", judul="Salah Kaprah Logistik yang Sering Terdengar",
+                                  desk="Anggapan keliru soal logistik, stok, dan pengiriman, beserta penjelasan yang benar."),
+    "karier-logistik": dict(pilar="P5", nama="Karier Logistik", judul="Karier Logistik: Peran, Skill, dan Jalur Karier",
+                            desk="Peran di gudang dan logistik, keterampilan yang dibutuhkan, dan cara memulai karier."),
+    "dasar-logistik": dict(pilar="P0", nama="Dasar Logistik", judul="Dasar Logistik untuk Pemula",
+                           desk="Mulai dari sini: apa itu logistik dan bagaimana barang sampai ke tangan kita."),
+}
 
-def head(title, desc, path, img="/img/og.png", extra=""):
+def esc(s): return html.escape(str(s), quote=True)
+
+# ---------------------------------------------------------------- data
+def load_cfg():
+    p = os.path.join(ROOT, "content/kategori.yml")
+    if os.path.exists(p):
+        KATEGORI.clear(); KATEGORI.update(yaml.safe_load(open(p, encoding="utf-8")))
+    global BASE
+    p = os.path.join(ROOT, "content/situs.yml")
+    if os.path.exists(p):
+        c = yaml.safe_load(open(p, encoding="utf-8")) or {}
+        BASE = c.get("base", BASE)
+
+def url(a): return f"{BASE}/{a['slug']}" if BASE else f"/{a['slug']}"
+
+def load_articles():
+    arts = []
+    for f in sorted(glob.glob(os.path.join(ROOT, "content/artikel/*.md"))):
+        raw = open(f, encoding="utf-8").read()
+        m = re.match(r"^---\n(.*?)\n---\n(.*)$", raw, re.S)
+        if not m: raise SystemExit(f"Frontmatter tidak valid: {f}")
+        a = yaml.safe_load(m.group(1)); a["body"] = m.group(2).strip()
+        for k in ("id", "slug", "judul", "deskripsi", "kategori"):
+            if not a.get(k): raise SystemExit(f"{f}: field '{k}' kosong")
+        if a["kategori"] not in KATEGORI: raise SystemExit(f"{f}: kategori '{a['kategori']}' tidak dikenal")
+        a.setdefault("seo_title", a["judul"]); a.setdefault("faq", []); a.setdefault("sumber", [])
+        a.setdefault("kata_kunci", []); a.setdefault("intinya", "")
+        a["terbit"] = str(a.get("terbit") or datetime.date.today())
+        a["diperbarui"] = str(a.get("diperbarui") or a["terbit"])
+        arts.append(a)
+    ids = {a["id"]: a for a in arts}
+    for a in arts:
+        txt = re.sub(r"[#>*_`\[\]\(\)|-]", " ", a["body"])
+        a["kata"] = len(txt.split()) + sum(len((q.get("a") or "").split()) for q in a["faq"])
+        a["menit"] = max(1, round(a["kata"] / WPM))
+    arts.sort(key=lambda a: (a["terbit"], a["id"]), reverse=True)
+    return arts, ids
+
+# ---------------------------------------------------------------- markdown
+def slugify(s):
+    s = re.sub(r"<[^>]+>", "", s).lower()
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    return s[:60] or "bagian"
+
+def render_body(a, ids):
+    body = a["body"]
+    # link internal: [anchor](L06) -> URL artikel. Jika belum terbit, jadikan teks biasa.
+    def repl(m):
+        t, ref = m.group(1), m.group(2)
+        if ref in ids: return f"[{t}]({url(ids[ref])})"
+        return t
+    body = re.sub(r"\[([^\]]+)\]\((L\d{2,3})\)", repl, body)
+    md = markdown.Markdown(extensions=["tables", "sane_lists", "attr_list"])
+    h = md.convert(body)
+    toc, used = [], set()
+    def hrepl(m):
+        lvl, inner = m.group(1), m.group(2)
+        sid = slugify(inner); n = 2
+        while sid in used: sid = f"{slugify(inner)}-{n}"; n += 1
+        used.add(sid)
+        toc.append((int(lvl), re.sub(r"<[^>]+>", "", inner), sid))
+        return f'<h{lvl} id="{sid}">{inner}</h{lvl}>'
+    h = re.sub(r"<h([23])>(.*?)</h\1>", hrepl, h)
+    # blockquote berawalan CONTOH -> kotak contoh
+    h = re.sub(r"<blockquote>\s*<p><strong>CONTOH(.*?)</strong>", r'<blockquote class="contoh"><p><strong>CONTOH\1</strong>', h)
+    # tautan keluar
+    h = re.sub(r'<a href="(https?://(?!ngertilogistik\.web\.id)[^"]+)"', r'<a href="\1" target="_blank" rel="noopener"', h)
+    h = h.replace("<table>", '<div class="tbl"><table>').replace("</table>", "</table></div>")
+    return h, toc
+
+def md_inline(s):
+    return markdown.markdown(s or "").removeprefix("<p>").removesuffix("</p>")
+
+# ---------------------------------------------------------------- layout
+def tgl(d):
+    b = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"]
+    y, m, dd = map(int, d.split("-")); return f"{dd} {b[m-1]} {y}"
+
+def head(title, desc, path, img=None, kind="website", extra="", noindex=False):
+    img = img or "/img/og.png"
     return f"""<!doctype html><html lang="id"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{SITE}{path}">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Ngerti Logistik">
+<link rel="canonical" href="{SITE}{path}">{'<meta name="robots" content="noindex">' if noindex else '<meta name="robots" content="index,follow,max-image-preview:large">'}
+<meta property="og:locale" content="id_ID"><meta property="og:type" content="{kind}"><meta property="og:site_name" content="{NAME}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{SITE}{path}"><meta property="og:image" content="{SITE}{img}">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B1220">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="{NAME}" href="/feed.xml">
+<link rel="preload" href="/fonts/jakarta-800.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/serif-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/style.css">{extra}</head><body>"""
 
-NAV = f"""<header class="nav"><div class="wrap nav-in">
-<a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="36" height="36"><span>Ngerti <b>Logistik</b></span></a>
-<nav><a href="/#materi">Materi</a><a href="/#pilar">Pilar</a><a href="/tentang">Tentang</a>
+def nav():
+    cats = "".join(f'<a href="/kategori/{k}">{esc(v["nama"])}</a>' for k, v in KATEGORI.items())
+    return f"""<a class="skip" href="#isi">Langsung ke isi</a>
+<header class="nav"><div class="wrap nav-in">
+<a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="34" height="34"><span>Ngerti <b>Logistik</b></span></a>
+<nav aria-label="Utama"><a href="{BASE or '/'}">Artikel</a><details class="dd"><summary>Kategori</summary><div>{cats}</div></details><a href="/tentang">Tentang</a>
 <a class="btn-sm" href="{TIKTOK}" target="_blank" rel="noopener">Follow</a></nav></div></header>"""
 
-FOOT = f"""<footer class="foot"><div class="wrap foot-in">
-<div><a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="32" height="32"><span>Ngerti <b>Logistik</b></span></a>
-<p>Belajar logistik dari nol, satu materi singkat setiap kali. Konten edukasi, gratis untuk semua.</p></div>
-<div class="foot-links"><a href="/#materi">Semua materi</a><a href="/tentang">Tentang</a><a href="{TIKTOK}" target="_blank" rel="noopener">TikTok @ngertilogistik</a></div>
-</div><div class="wrap fine">Contoh angka yang ditandai CONTOH adalah ilustrasi, bukan data nyata. Fakta di dalam materi menyebut sumbernya di naskah.</div></footer>
+def foot():
+    cats = "".join(f'<a href="/kategori/{k}">{esc(v["nama"])}</a>' for k, v in KATEGORI.items())
+    return f"""<footer class="foot"><div class="wrap foot-in">
+<div><a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="30" height="30"><span>Ngerti <b>Logistik</b></span></a>
+<p>Blog edukasi logistik berbahasa Indonesia. Gudang, pengiriman, dan supply chain dijelaskan dengan bahasa sehari-hari. Gratis, tanpa iklan.</p></div>
+<div class="foot-links"><b>Kategori</b>{cats}</div>
+<div class="foot-links"><b>Ngerti Logistik</b><a href="/tentang">Tentang</a><a href="/penulis/{AUTHOR['slug']}">Penulis</a><a href="/feed.xml">RSS</a><a href="{TIKTOK}" target="_blank" rel="noopener">TikTok @ngertilogistik</a></div>
+</div><div class="wrap fine">© {datetime.date.today().year} {NAME}. Angka yang ditandai CONTOH adalah ilustrasi, bukan data nyata. Fakta lain disertai sumber di akhir artikel.</div></footer>
 </body></html>"""
 
 CTA = f"""<section class="cta"><div class="wrap cta-in"><div>
-<h2>Mau belajar logistik <em>lebih dalam?</em></h2><p>Follow Ngerti Logistik di TikTok, Instagram Reels, dan Facebook Reels. Video baru tayang rutin.</p></div>
+<h2>Mau belajar logistik <em>lebih dalam?</em></h2><p>Follow Ngerti Logistik di TikTok, Instagram Reels, dan Facebook Reels. Penjelasan singkat setiap minggu.</p></div>
 <a class="btn" href="{TIKTOK}" target="_blank" rel="noopener">Follow @ngertilogistik</a></div></section>"""
 
-def card(t):
-    return f"""<a class="card" href="/materi/{t['slug']}" data-p="{t['pillar']}" data-q="{esc((plain(t['title'])+' '+t['topic']+' '+t['sub']+' '+t['kicker']).lower())}">
-<div class="thumb"><img src="/img/c/{t['id'].lower()}.webp" alt="" loading="lazy" width="540" height="960"><span class="no">#{t['n']:03d}</span></div>
-<div class="cbody"><span class="kick">{esc(PILAR[t['pillar']][0])}</span><h3>{em(t['title'])}</h3><p>{esc(t['sub'])}</p></div></a>"""
+def ld(obj): return f'<script type="application/ld+json">{json.dumps(obj, ensure_ascii=False)}</script>'
 
-# ---------- index ----------
-def build_index():
-    counts = {p: sum(1 for t in T if t["pillar"] == p) for p in PILAR}
-    chips = '<button class="chip on" data-f="all">Semua <i>%d</i></button>' % len(T) + "".join(
-        f'<button class="chip" data-f="{p}">{esc(PILAR[p][0])} <i>{counts[p]}</i></button>' for p in ORDER)
-    pil = "".join(f"""<button class="pil" data-f="{p}"><span class="pn">{p}</span><h3>{esc(PILAR[p][0])}</h3><p>{esc(PILAR[p][1])}</p><span class="pc">{counts[p]} materi →</span></button>""" for p in ORDER)
-    feat = [t for t in T if t["id"] in ("L01", "L06", "L61")]
-    grid = "".join(card(t) for t in T)
-    h = head("Ngerti Logistik · Belajar logistik dari nol",
-             "120 materi logistik singkat: istilah, isi gudang, pengiriman, salah kaprah, dan karier. Dijelaskan sederhana oleh praktisi logistik.", "/")
-    h += NAV + f"""
-<section class="hero"><div class="wrap hero-in">
-<div class="hero-tx">
-<span class="eyebrow">Edukasi logistik · gratis</span>
-<h1>Logistik itu <em>bisa dimengerti.</em></h1>
-<p class="lead">Dari istilah gudang sampai kenapa ongkir barang ringan bisa mahal. {len(T)} materi singkat, masing-masing selesai dibaca dalam satu menit.</p>
-<div class="hero-act"><a class="btn" href="#materi">Mulai belajar</a><a class="btn ghost" href="/materi/{T[0]['slug']}">Apa itu logistik?</a></div>
-<dl class="stats"><div><dt>{len(T)}</dt><dd>materi</dd></div><div><dt>6</dt><dd>pilar</dd></div><div><dt>±60 dtk</dt><dd>per materi</dd></div></dl>
-</div>
-<div class="hero-art" aria-hidden="true">{''.join(f'<img src="/img/c/{t["id"].lower()}.webp" alt="" width="540" height="960">' for t in feat)}</div>
-</div><div class="route" aria-hidden="true"></div></section>
+ORG = {"@type": "Organization", "@id": f"{SITE}/#org", "name": NAME, "url": SITE,
+       "logo": {"@type": "ImageObject", "url": f"{SITE}/img/logo-256.png", "width": 256, "height": 256},
+       "sameAs": [TIKTOK]}
+PERSON = {"@type": "Person", "@id": f"{SITE}/penulis/{AUTHOR['slug']}#person", "name": AUTHOR["nama"],
+          "jobTitle": AUTHOR["peran"], "url": f"{SITE}/penulis/{AUTHOR['slug']}", "description": AUTHOR["bio"]}
 
-<section id="pilar" class="sec"><div class="wrap">
-<div class="sec-h"><span class="eyebrow">6 pilar</span><h2>Pilih dari mana mau mulai</h2></div>
-<div class="pils">{pil}</div></div></section>
+def crumbs_ld(items):
+    return {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + p} for i, (n, p) in enumerate(items)]}
 
-<section id="materi" class="sec alt"><div class="wrap">
-<div class="sec-h"><span class="eyebrow">Perpustakaan</span><h2>Semua materi</h2></div>
-<div class="tools"><label class="search"><svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-<input id="q" type="search" placeholder="Cari: SKU, FIFO, ongkir, Incoterms…" autocomplete="off"></label>
-<div class="chips">{chips}</div></div>
-<p id="count" class="count" aria-live="polite"></p>
-<div id="grid" class="grid">{grid}</div>
-<p id="empty" class="empty" hidden>Belum ada materi yang cocok. Coba kata lain.</p>
+def card(a, big=False):
+    k = KATEGORI[a["kategori"]]
+    return f"""<article class="post{' big' if big else ''}"><a href="{url(a)}">
+<div class="pimg"><img src="/img/og/{a['slug']}.png" alt="" loading="lazy" width="1200" height="630"></div>
+<div class="pbody"><span class="kick">{esc(k['nama'])}</span><h3>{esc(a['judul'])}</h3>
+<p>{esc(a['deskripsi'])}</p><span class="meta">{tgl(a['terbit'])} · {a['menit']} menit baca</span></div></a></article>"""
+
+def write(path, s):
+    d = os.path.join(OUT, path.strip("/")) if path.strip("/") else OUT
+    f = d + ".html" if path.endswith(".html") else os.path.join(d, "index.html")
+    if path.endswith(".html"): f = os.path.join(OUT, path.strip("/"))
+    os.makedirs(os.path.dirname(f), exist_ok=True)
+    open(f, "w", encoding="utf-8").write(s)
+
+# ---------------------------------------------------------------- halaman
+def page_article(a, arts, ids):
+    k = KATEGORI[a["kategori"]]
+    body, toc = render_body(a, ids)
+    path = url(a)
+    toc_h = "".join(f'<li class="l{l}"><a href="#{i}">{esc(t)}</a></li>' for l, t, i in toc)
+    faq_h = ""
+    if a["faq"]:
+        faq_h = '<section class="faq" id="faq"><h2>Pertanyaan yang sering ditanyakan</h2>' + "".join(
+            f'<details><summary>{esc(q["q"])}</summary><div>{markdown.markdown(q["a"])}</div></details>' for q in a["faq"]) + "</section>"
+    src_h = ""
+    if a["sumber"]:
+        src_h = '<section class="src" id="sumber"><h2>Sumber</h2><ol>' + "".join(
+            f'<li><a href="{esc(s["url"])}" target="_blank" rel="noopener nofollow">{esc(s["judul"])}</a>'
+            + (f' <span>{esc(s["catatan"])}</span>' if s.get("catatan") else "") + "</li>" for s in a["sumber"]) + "</ol></section>"
+    same = [x for x in arts if x["kategori"] == a["kategori"] and x is not a]
+    other = [x for x in arts if x["kategori"] != a["kategori"] and x is not a]
+    rel = (same + other)[:3]
+    i = sorted(arts, key=lambda x: x["id"]); n = [x["id"] for x in i].index(a["id"])
+    prv = i[n - 1] if n else None; nxt = i[n + 1] if n + 1 < len(i) else None
+    pn = (f'<a class="pn-l" href="{url(prv)}"><small>← Sebelumnya</small><span>{esc(prv["judul"])}</span></a>' if prv else "<span></span>") + \
+         (f'<a class="pn-r" href="{url(nxt)}"><small>Berikutnya →</small><span>{esc(nxt["judul"])}</span></a>' if nxt else "")
+    img = f"/img/og/{a['slug']}.png"
+    graph = {"@context": "https://schema.org", "@graph": [
+        {"@type": "BlogPosting", "@id": f"{SITE}{path}#artikel", "headline": a["judul"][:110], "description": a["deskripsi"],
+         "image": f"{SITE}{img}", "datePublished": a["terbit"], "dateModified": a["diperbarui"], "inLanguage": "id-ID",
+         "mainEntityOfPage": f"{SITE}{path}", "author": {"@id": PERSON["@id"]}, "publisher": {"@id": ORG["@id"]},
+         "articleSection": k["nama"], "keywords": ", ".join(a["kata_kunci"]), "wordCount": a["kata"],
+         "isAccessibleForFree": True},
+        crumbs_ld([("Beranda", "/"), (k["nama"], f"/kategori/{a['kategori']}"), (a["judul"], path)]),
+        PERSON, ORG]}
+    if a["faq"]:
+        graph["@graph"].append({"@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q["q"], "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", markdown.markdown(q["a"]))}}
+            for q in a["faq"]]})
+    extra = f'<meta property="article:published_time" content="{a["terbit"]}"><meta property="article:modified_time" content="{a["diperbarui"]}"><meta property="article:section" content="{esc(k["nama"])}">' + ld(graph)
+    s = head(a["seo_title"], a["deskripsi"], path, img, "article", extra) + nav() + f"""
+<main id="isi" class="post-page"><div class="wrap">
+<nav class="crumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><a href="/kategori/{a['kategori']}">{esc(k['nama'])}</a></nav>
+<header class="ph"><span class="eyebrow">{esc(k['nama'])}</span><h1>{esc(a['judul'])}</h1>
+<p class="dek">{esc(a['deskripsi'])}</p>
+<div class="byline"><img src="/img/logo-256.png" alt="" width="40" height="40"><div><a href="/penulis/{AUTHOR['slug']}">{AUTHOR['nama']}</a><span>{AUTHOR['peran']}</span></div>
+<div class="bm"><time datetime="{a['terbit']}">{tgl(a['terbit'])}</time>{f' · diperbarui <time datetime="{a["diperbarui"]}">{tgl(a["diperbarui"])}</time>' if a['diperbarui'] != a['terbit'] else ''} · {a['menit']} menit baca</div></div>
+</header>
+<div class="post-grid">
+<aside class="toc-side">{f'<nav class="toc" aria-label="Daftar isi"><b>Daftar isi</b><ol>{toc_h}</ol></nav>' if toc else ''}</aside>
+<article class="prose">
+{f'<div class="key"><span>Intinya</span><p>{md_inline(a["intinya"])}</p></div>' if a['intinya'] else ''}
+{f'<details class="toc-mob"><summary>Daftar isi</summary><ol>{toc_h}</ol></details>' if toc else ''}
+{body}
+{faq_h}
+{src_h}
+<a class="watch" href="{TIKTOK}" target="_blank" rel="noopener"><span class="play">▶</span><span><b>Lebih suka versi video 60 detik?</b><small>Tonton di TikTok @ngertilogistik</small></span></a>
+<div class="author-box"><img src="/img/logo-256.png" alt="" width="64" height="64"><div><small>Ditulis oleh</small><a href="/penulis/{AUTHOR['slug']}"><b>{AUTHOR['nama']}</b></a><p>{esc(AUTHOR['bio'])}</p></div></div>
+<div class="pn">{pn}</div>
+</article></div></div>
+{f'<section class="rel"><div class="wrap"><h2>Baca juga</h2><div class="posts g3">{"".join(card(x) for x in rel)}</div></div></section>' if rel else ''}
+</main>""" + CTA + foot()
+    write(path, s)
+
+def page_home(arts):
+    feat, rest = arts[0], arts[1:]
+    cats = "".join(f"""<a class="cat" href="/kategori/{k}"><h3>{esc(v['nama'])}</h3><p>{esc(v['desk'])}</p>
+<span>{sum(1 for a in arts if a['kategori']==k)} artikel →</span></a>""" for k, v in KATEGORI.items() if any(a['kategori'] == k for a in arts))
+    graph = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebSite", "@id": f"{SITE}/#web", "url": SITE, "name": NAME, "inLanguage": "id-ID", "publisher": {"@id": ORG["@id"]},
+         "description": "Blog edukasi logistik: gudang, pengiriman, dan supply chain dengan bahasa sederhana."}, ORG]}
+    s = head("Ngerti Logistik: Blog Belajar Logistik, Gudang & Pengiriman",
+             "Belajar logistik dari nol: arti istilah gudang, cara kerja pengiriman, stok, dan karier logistik. Dijelaskan sederhana oleh praktisi logistik.",
+             "/", extra=ld(graph)) + nav() + f"""
+<main id="isi">
+<section class="bhero"><div class="wrap">
+<span class="eyebrow">Blog edukasi logistik</span>
+<h1>Belajar logistik, <em>pelan-pelan sampai ngerti.</em></h1>
+<p class="lead">Artikel lengkap tentang gudang, pengiriman, dan supply chain. Ditulis praktisi, pakai bahasa sehari-hari, dan setiap fakta ada sumbernya.</p>
+<form class="search" role="search" action="{BASE or '/'}" method="get"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+<input name="q" type="search" placeholder="Cari artikel: FIFO, SKU, ongkir…" aria-label="Cari artikel"></form>
 </div></section>
-""" + CTA + FOOT.replace("</body>", "<script src=\"/app.js\" defer></script></body>")
-    open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(h)
+<section class="sec"><div class="wrap">
+<div class="sec-h row"><h2>Artikel terbaru</h2><a href="{BASE or '/'}">Lihat semua →</a></div>
+<div class="posts lead-grid">{card(feat, True)}{''.join(card(a) for a in rest[:4])}</div></div></section>
+<section class="sec alt"><div class="wrap"><div class="sec-h"><h2>Jelajahi per kategori</h2></div><div class="cats">{cats}</div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-h"><h2>Mulai dari sini</h2></div>
+<div class="posts g3">{''.join(card(a) for a in sorted(arts, key=lambda x: x['id'])[:3])}</div></div></section>
+</main>""" + CTA + foot()
+    write("/", s)
 
-# ---------- halaman materi ----------
-def build_pages():
-    for i, t in enumerate(T):
-        prev = T[i - 1] if i else None
-        nxt = T[i + 1] if i + 1 < len(T) else None
-        rel = [x for x in T if x["pillar"] == t["pillar"] and x["id"] != t["id"]]
-        k = [x["id"] for x in rel].index(nxt["id"]) if nxt and nxt in rel else 0
-        rel = (rel[k:] + rel[:k])[:3]
-        body = "".join(f'<p class="{"contoh" if v.startswith("Contoh") else ""}">{esc(v)}</p>' for v in t["vo"])
-        title = f"{plain(t['title'])} · Ngerti Logistik"
-        desc = t["key"] if len(t["key"]) > 40 else f"{t['topic']}. {t['key']}"
-        ld = json.dumps({"@context": "https://schema.org", "@type": "LearningResource", "name": plain(t["title"]),
-                         "description": t["key"], "inLanguage": "id", "isAccessibleForFree": True,
-                         "learningResourceType": "Materi singkat", "about": PILAR[t["pillar"]][0],
-                         "publisher": {"@type": "Organization", "name": "Ngerti Logistik", "url": SITE}}, ensure_ascii=False)
-        h = head(title, desc, f"/materi/{t['slug']}", f"/img/c/{t['id'].lower()}.webp",
-                 f'<script type="application/ld+json">{ld}</script>')
-        nav = ""
-        if prev: nav += f'<a class="pn-l" href="/materi/{prev["slug"]}"><small>← Sebelumnya</small><span>{em(prev["title"])}</span></a>'
-        else: nav += "<span></span>"
-        if nxt: nav += f'<a class="pn-r" href="/materi/{nxt["slug"]}"><small>Berikutnya →</small><span>{em(nxt["title"])}</span></a>'
-        h += NAV + f"""
-<main class="art"><div class="wrap art-in">
-<aside class="art-cover"><img src="/img/c/{t['id'].lower()}.webp" alt="Sampul materi {esc(plain(t['title']))}" width="540" height="960"></aside>
-<article>
-<nav class="crumb"><a href="/">Beranda</a> / <a href="/?p={t['pillar']}#materi">{esc(PILAR[t['pillar']][0])}</a> / <span>#{t['n']:03d}</span></nav>
-<span class="eyebrow">{esc(t['kicker'])}</span>
-<h1>{em(t['title'])}</h1>
-<p class="sub">{esc(t['sub'])}</p>
-<div class="key"><span>Intinya</span><p>{esc(t['key'])}</p></div>
-<h2 class="nh">Penjelasan lengkap</h2>
-<div class="prose">{body}</div>
-<a class="watch" href="{TIKTOK}" target="_blank" rel="noopener"><span class="play">▶</span><span><b>Tonton versi videonya</b><small>di TikTok @ngertilogistik</small></span></a>
-<div class="pn">{nav}</div>
-</article></div>
-<section class="rel"><div class="wrap"><h2>Materi lain di pilar {esc(PILAR[t['pillar']][0])}</h2><div class="grid g3">{''.join(card(x) for x in rel)}</div></div></section>
-</main>""" + CTA + FOOT
-        d = os.path.join(OUT, "materi", t["slug"]); os.makedirs(d, exist_ok=True)
-        open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(h)
+def page_list(arts):
+    data = [dict(u=url(a), t=a["judul"], d=a["deskripsi"], k=a["kategori"], w=" ".join(a["kata_kunci"])) for a in arts]
+    chips = '<button class="chip on" data-f="all">Semua</button>' + "".join(
+        f'<button class="chip" data-f="{k}">{esc(v["nama"])}</button>' for k, v in KATEGORI.items() if any(a["kategori"] == k for a in arts))
+    s = head("Semua Artikel Logistik | Ngerti Logistik", "Daftar lengkap artikel Ngerti Logistik tentang gudang, pengiriman, stok, istilah logistik, dan karier.", BASE or "/",
+             extra=ld({"@context": "https://schema.org", "@graph": [crumbs_ld([("Beranda", "/"), ("Artikel", BASE)])]})) + nav() + f"""
+<main id="isi" class="sec"><div class="wrap">
+<nav class="crumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><span>Artikel</span></nav>
+<div class="sec-h"><h1>Semua artikel</h1><p class="lead">{len(arts)} artikel. Cari topik atau pilih kategori.</p></div>
+<div class="tools"><label class="search"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+<input id="q" type="search" placeholder="Cari: FIFO, SKU, ongkir…" aria-label="Cari artikel"></label><div class="chips">{chips}</div></div>
+<p id="count" class="count" aria-live="polite"></p>
+<div id="grid" class="posts">{''.join(card(a).replace('<article class="post"', f'<article class="post" data-k="{a["kategori"]}" data-q="{esc((a["judul"]+" "+a["deskripsi"]+" "+" ".join(a["kata_kunci"])).lower())}"') for a in arts)}</div>
+<p id="empty" class="empty" hidden>Belum ada artikel yang cocok. Coba kata lain.</p>
+</div></main>""" + CTA + foot().replace("</body>", '<script src="/app.js" defer></script></body>')
+    write(BASE or "/semua", s)
 
-def build_about():
-    h = head("Tentang · Ngerti Logistik", "Ngerti Logistik adalah akun edukasi logistik yang menjelaskan dunia gudang, pengiriman, dan supply chain dengan bahasa sederhana.", "/tentang")
-    h += NAV + f"""<main class="about"><div class="wrap narrow">
+def page_categories(arts):
+    for k, v in KATEGORI.items():
+        lst = [a for a in arts if a["kategori"] == k]
+        path = f"/kategori/{k}"
+        graph = {"@context": "https://schema.org", "@graph": [
+            {"@type": "CollectionPage", "name": v["judul"], "description": v["desk"], "url": SITE + path, "inLanguage": "id-ID"},
+            crumbs_ld([("Beranda", "/"), (v["nama"], path)])]}
+        inner = "".join(card(a) for a in lst) if lst else '<p class="empty">Artikel untuk kategori ini sedang ditulis. Segera terbit.</p>'
+        s = head(f"{v['judul']} | {NAME}"[:70], v["desk"], path, extra=ld(graph), noindex=not lst) + nav() + f"""
+<main id="isi" class="sec"><div class="wrap">
+<nav class="crumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><span>{esc(v['nama'])}</span></nav>
+<div class="sec-h"><span class="eyebrow">Kategori</span><h1>{esc(v['judul'])}</h1><p class="lead">{esc(v['desk'])}</p></div>
+<div class="posts">{inner}</div></div></main>""" + CTA + foot()
+        write(path, s)
+
+def page_author(arts):
+    path = f"/penulis/{AUTHOR['slug']}"
+    graph = {"@context": "https://schema.org", "@graph": [{"@type": "ProfilePage", "mainEntity": PERSON, "url": SITE + path}, ORG]}
+    s = head(f"{AUTHOR['nama']}, Penulis Ngerti Logistik", AUTHOR["bio"], path, extra=ld(graph)) + nav() + f"""
+<main id="isi" class="about"><div class="wrap narrow">
+<nav class="crumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><span>Penulis</span></nav>
+<div class="author-hero"><img src="/img/logo-256.png" alt="" width="96" height="96"><div><span class="eyebrow">Penulis</span><h1>{AUTHOR['nama']}</h1><p>{AUTHOR['peran']}</p></div></div>
+<p class="lead">{esc(AUTHOR['bio'])}</p>
+<h2>Cara menulis di Ngerti Logistik</h2>
+<ul class="ticks"><li><b>Satu artikel, satu topik.</b> Dibahas tuntas sampai bisa dipraktikkan.</li>
+<li><b>Fakta bersumber.</b> Angka, standar, dan kejadian nyata disertai sumbernya.</li>
+<li><b>Contoh ditandai.</b> Ilustrasi angka diberi label CONTOH.</li>
+<li><b>Netral.</b> Tidak membahas atau mempromosikan perusahaan tertentu.</li></ul>
+<h2>Artikel oleh {AUTHOR['nama']}</h2></div>
+<div class="wrap"><div class="posts">{''.join(card(a) for a in arts)}</div></div></main>""" + CTA + foot()
+    write(path, s)
+
+def page_about():
+    s = head("Tentang Ngerti Logistik", "Ngerti Logistik adalah blog dan akun edukasi yang menjelaskan logistik, gudang, dan pengiriman dengan bahasa sederhana.", "/tentang") + nav() + f"""
+<main id="isi" class="about"><div class="wrap narrow">
 <span class="eyebrow">Tentang</span><h1>Belajar logistik <em>tanpa ribet.</em></h1>
-<p class="lead">Ngerti Logistik adalah akun edukasi yang menjelaskan logistik dengan bahasa sehari-hari. Setiap materi membahas satu hal saja, cukup singkat untuk dipahami dalam satu menit.</p>
+<p class="lead">Ngerti Logistik adalah blog dan akun edukasi yang menjelaskan logistik dengan bahasa sehari-hari. Di media sosial kami membuat video 60 detik. Di blog ini, setiap topik dibahas lebih lengkap.</p>
 <h2>Siapa di baliknya?</h2>
-<p>Ngerti Logistik dibuat oleh Fajar, praktisi logistik yang sudah sekitar sepuluh tahun bekerja di bidang ini, di industri teknologi, FMCG, dan manufaktur. Materinya disusun dari pengalaman lapangan dan rujukan yang bisa dicek.</p>
+<p>Ngerti Logistik ditulis oleh <a href="/penulis/{AUTHOR['slug']}">{AUTHOR['nama']}</a>, praktisi logistik dengan sekitar sepuluh tahun pengalaman di industri teknologi, FMCG, dan manufaktur.</p>
 <h2>Prinsip konten</h2>
 <ul class="ticks">
-<li><b>Satu materi, satu ide.</b> Tidak bertele-tele.</li>
 <li><b>Fakta bersumber.</b> Angka dan kejadian nyata disebut sumber dan waktunya.</li>
 <li><b>Contoh ditandai.</b> Ilustrasi angka diberi label CONTOH supaya tidak tertukar dengan data nyata.</li>
 <li><b>Netral.</b> Tidak membahas atau mempromosikan perusahaan tertentu.</li>
-<li><b>Gratis.</b> Murni edukasi, tanpa iklan dan tanpa jualan.</li>
-</ul>
+<li><b>Gratis.</b> Murni edukasi, tanpa iklan dan tanpa jualan.</li></ul>
 <h2>Untuk siapa?</h2>
-<p>Pelajar dan mahasiswa yang penasaran, pekerja baru di gudang atau pengiriman, pelaku UMKM yang mengirim barang setiap hari, dan siapa saja yang ingin tahu bagaimana barang bisa sampai ke tangan kita.</p>
-<p><a class="btn" href="/#materi">Lihat semua materi</a></p>
-</div></main>""" + CTA + FOOT
-    d = os.path.join(OUT, "tentang"); os.makedirs(d, exist_ok=True)
-    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(h)
+<p>Pelajar dan mahasiswa, pekerja baru di gudang atau pengiriman, pelaku UMKM yang mengirim barang setiap hari, dan siapa saja yang ingin tahu bagaimana barang bisa sampai ke tangan kita.</p>
+<p><a class="btn" href="{BASE or '/'}">Baca artikel</a></p></div></main>""" + CTA + foot()
+    write("/tentang", s)
 
-def build_misc():
-    h = head("Halaman tidak ditemukan · Ngerti Logistik", "Halaman tidak ditemukan.", "/404")
-    h += NAV + """<main class="about"><div class="wrap narrow" style="text-align:center">
+def page_404():
+    s = head("Halaman tidak ditemukan | Ngerti Logistik", "Halaman tidak ditemukan.", "/404", noindex=True) + nav() + f"""
+<main id="isi" class="about"><div class="wrap narrow" style="text-align:center">
 <span class="eyebrow">404</span><h1>Paket ini <em>salah alamat.</em></h1><p class="lead">Halaman yang dicari tidak ada. Mungkin sudah pindah rak.</p>
-<p><a class="btn" href="/">Kembali ke beranda</a></p></div></main>""" + FOOT
-    open(os.path.join(OUT, "404.html"), "w", encoding="utf-8").write(h)
+<p><a class="btn" href="{BASE or '/'}">Lihat semua artikel</a></p></div></main>""" + foot()
+    write("/404.html", s)
+
+def feeds(arts):
     today = datetime.date.today().isoformat()
-    urls = ["/", "/tentang"] + [f"/materi/{t['slug']}" for t in T]
-    sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(
-        f"<url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod></url>" for u in urls) + "</urlset>\n"
+    urls = [("/", today), (BASE, today), ("/tentang", today), (f"/penulis/{AUTHOR['slug']}", today)]
+    urls += [(f"/kategori/{k}", today) for k in KATEGORI if any(a["kategori"] == k for a in arts)]
+    urls += [(url(a), a["diperbarui"]) for a in arts]
+    sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
+        f"<url><loc>{SITE}{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls if u) + "</urlset>\n"
     open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)
-    open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
+    open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
+    def rfc(d): return datetime.datetime.strptime(d, "%Y-%m-%d").strftime("%a, %d %b %Y 07:00:00 +0700")
+    items = "".join(f"""<item><title>{esc(a['judul'])}</title><link>{SITE}{url(a)}</link><guid>{SITE}{url(a)}</guid>
+<pubDate>{rfc(a['terbit'])}</pubDate><category>{esc(KATEGORI[a['kategori']]['nama'])}</category><description>{esc(a['deskripsi'])}</description></item>""" for a in arts[:30])
+    rss = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>{NAME}</title><link>{SITE}</link>
+<atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Blog edukasi logistik berbahasa Indonesia.</description><language>id</language>{items}</channel></rss>"""
+    open(os.path.join(OUT, "feed.xml"), "w").write(rss)
+
+def og_images(arts):
+    """Gambar 1200x630 per artikel (sampul + og:image). Dibuat sekali, lewati yang sudah ada."""
+    need = [a for a in arts if not os.path.exists(os.path.join(OUT, "img/og", a["slug"] + ".png"))]
+    if not need: return
+    os.makedirs(os.path.join(OUT, "img/og"), exist_ok=True)
+    job = [dict(slug=a["slug"], judul=a["judul"], kat=KATEGORI[a["kategori"]]["nama"], id=a["id"]) for a in need]
+    json.dump(job, open(os.path.join(ROOT, "tools/og_job.json"), "w"), ensure_ascii=False)
+    subprocess.run(["node", os.path.join(ROOT, "tools/og.js")], check=True, cwd=ROOT,
+                   env={**os.environ, "NODE_PATH": subprocess.check_output(["npm", "root", "-g"]).decode().strip()})
+
+def redirects(arts):
+    """Alihkan URL lama /materi/lxx-* ke artikel baru (308), sisanya ke daftar artikel."""
+    v = json.load(open(os.path.join(ROOT, "vercel.json")))
+    old = json.load(open(os.path.join(ROOT, "data/topics.json"), encoding="utf-8"))
+    by = {a["id"]: a for a in arts}
+    r = []
+    for t in old:
+        s = re.sub(r"[^a-z0-9]+", "-", t["topic"].lower()).strip("-")[:60].strip("-")
+        src = f"/materi/{t['id'].lower()}-{s}"
+        r.append({"source": src, "destination": url(by[t["id"]]) if t["id"] in by else (BASE or "/"), "permanent": t["id"] in by})
+    r.append({"source": "/materi", "destination": BASE or "/", "permanent": False})
+    v["redirects"] = r
+    json.dump(v, open(os.path.join(ROOT, "vercel.json"), "w"), indent=1)
 
 if __name__ == "__main__":
-    shutil.rmtree(os.path.join(OUT, "materi"), ignore_errors=True)
-    build_index(); build_pages(); build_about(); build_misc()
-    print("OK", len(T), "materi")
+    load_cfg()
+    arts, ids = load_articles()
+    if not arts: raise SystemExit("Belum ada artikel di content/artikel/")
+    keep = {"img", "fonts", "style.css", "app.js", "favicon.svg", "apple-touch-icon.png"}
+    for f in os.listdir(OUT):
+        if f not in keep:
+            p = os.path.join(OUT, f); shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
+    og_images(arts)
+    for a in arts: page_article(a, arts, ids)
+    page_home(arts); page_list(arts); page_categories(arts); page_author(arts); page_about(); page_404()
+    feeds(arts); redirects(arts)
+    print(f"OK {len(arts)} artikel terbit · base={BASE or '/'}")

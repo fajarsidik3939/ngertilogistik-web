@@ -1,0 +1,602 @@
+[
+ {
+  "id": "L01",
+  "topik": "Apa itu logistik? + Kenalan dengan Fajar",
+  "pilar": "Perkenalan"
+ },
+ {
+  "id": "L02",
+  "topik": "Logistik vs supply chain: apa bedanya?",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L03",
+  "topik": "SKU itu apa?",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L04",
+  "topik": "5 langkah barang di gudang",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L05",
+  "topik": "Salah kaprah: logistik = kurir",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L06",
+  "topik": "Kenapa ongkir barang ringan bisa mahal?",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L07",
+  "topik": "Inbound vs outbound",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L08",
+  "topik": "Penerimaan barang: cek apa saja?",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L09",
+  "topik": "FIFO vs FEFO",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L10",
+  "topik": "Satu gudang, banyak peran",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L11",
+  "topik": "Salah kaprah: stok banyak = aman",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L12",
+  "topik": "Darat, laut, atau udara?",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L13",
+  "topik": "Lead time vs transit time",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L14",
+  "topik": "Stok di sistem beda dengan di rak",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L15",
+  "topik": "Cross-docking",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L16",
+  "topik": "Putaway: barang disimpan di mana?",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L17",
+  "topik": "Salah kaprah: cepat sampai = pengiriman bagus",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L18",
+  "topik": "Kenapa paket \"transit\" lama?",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L19",
+  "topik": "Safety stock (stok pengaman)",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L20",
+  "topik": "Istilah wajib untuk staf gudang baru",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L21",
+  "topik": "Reorder point: kapan harus pesan lagi?",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L22",
+  "topik": "Picking: cara mengambil barang pesanan",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L23",
+  "topik": "Stock opname vs cycle count",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L24",
+  "topik": "Packing kayu: perlu atau tidak?",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L25",
+  "topik": "Salah kaprah: gudang cuma tempat numpuk barang",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L26",
+  "topik": "Packing yang benar supaya barang aman",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L27",
+  "topik": "3PL itu apa?",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L28",
+  "topik": "Skill Excel dasar untuk admin gudang",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L29",
+  "topik": "Last mile delivery",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L30",
+  "topik": "Asuransi pengiriman: kapan perlu?",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L31",
+  "topik": "POD (proof of delivery)",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L32",
+  "topik": "Kode lokasi rak (bin location)",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L33",
+  "topik": "Salah kaprah: sistem pasti benar",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L34",
+  "topik": "Barang berbahaya (dangerous goods)",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L35",
+  "topik": "Reverse logistics (alur retur)",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L36",
+  "topik": "Barcode vs QR code di gudang",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L37",
+  "topik": "Incoterms: siapa tanggung apa?",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L38",
+  "topik": "KPI gudang yang sering dipakai",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L39",
+  "topik": "Dead stock & slow moving",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L40",
+  "topik": "Alur retur paket",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L41",
+  "topik": "Fill rate vs OTIF",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L42",
+  "topik": "Layout gudang: barang laris dekat pintu",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L43",
+  "topik": "Salah kaprah: ongkir murah pasti untung",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L44",
+  "topik": "FTL vs LTL (truk penuh vs gabungan)",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L45",
+  "topik": "Surat jalan vs invoice",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L46",
+  "topik": "Jalur karier di logistik",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L47",
+  "topik": "Dropship vs fulfillment",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L48",
+  "topik": "K3 gudang: forklift & jalur pejalan kaki",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L49",
+  "topik": "WMS itu apa?",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L50",
+  "topik": "Cara baca resi & status tracking",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L51",
+  "topik": "Salah kaprah: stock opname setahun sekali cukup",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L52",
+  "topik": "Laporan stok harian",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L53",
+  "topik": "Just in time (JIT)",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L54",
+  "topik": "Label karton yang benar",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L55",
+  "topik": "Analisis ABC",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L56",
+  "topik": "COD dari sisi logistik",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L57",
+  "topik": "Backorder",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L58",
+  "topik": "Komunikasi dengan ekspedisi",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L59",
+  "topik": "Salah kaprah: barang lambat laku dibiarkan saja",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L60",
+  "topik": "Kontainer 20 kaki vs 40 kaki",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L61",
+  "topik": "Supply chain disruption",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L62",
+  "topik": "Gudang menjelang Harbolnas",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L63",
+  "topik": "Cut-off time pengiriman",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L64",
+  "topik": "Salah kaprah: gudang besar pasti efisien",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L65",
+  "topik": "Bullwhip effect",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L66",
+  "topik": "Cara membaca laporan aging stok",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L67",
+  "topik": "Kitting & bundling",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L68",
+  "topik": "Volumetrik laut: CBM",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L69",
+  "topik": "FCL vs LCL",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L70",
+  "topik": "Pallet: standar & cara menumpuk",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L71",
+  "topik": "Salah kaprah: stok nol = gagal",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L72",
+  "topik": "Pengiriman barang pecah belah",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L73",
+  "topik": "Demand forecasting sederhana",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L74",
+  "topik": "Soft skill untuk supervisor gudang",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L75",
+  "topik": "Cold chain: rantai dingin",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L76",
+  "topik": "Same day vs next day",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L77",
+  "topik": "Lead time pemasok & cara mengukurnya",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L78",
+  "topik": "Salah kaprah: semua barang harus FIFO",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L79",
+  "topik": "Gudang berpendingin & gudang kering",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L80",
+  "topik": "Biaya tersembunyi impor",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L81",
+  "topik": "Milk run",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L82",
+  "topik": "Membuat SOP gudang yang dipakai",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L83",
+  "topik": "Pick face & replenishment",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L84",
+  "topik": "Tarif kurir: berat aktual vs volume",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L85",
+  "topik": "Salah kaprah: otomatisasi pasti hemat",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L86",
+  "topik": "Konsinyasi",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L87",
+  "topik": "Quality control saat penerimaan",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L88",
+  "topik": "Pengiriman antar pulau",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L89",
+  "topik": "Safety stock vs buffer stock",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L90",
+  "topik": "Cara presentasi data gudang ke atasan",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L91",
+  "topik": "Wave picking",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L92",
+  "topik": "Klaim paket rusak",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L93",
+  "topik": "Salah kaprah: retur itu kerugian saja",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L94",
+  "topik": "Make to stock vs make to order",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L95",
+  "topik": "Housekeeping gudang (5R)",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L96",
+  "topik": "Memilih ekspedisi untuk bisnis kecil",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L97",
+  "topik": "Total landed cost",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L98",
+  "topik": "Membaca grafik stok",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L99",
+  "topik": "Penyimpanan barang kimia",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L100",
+  "topik": "Pengiriman ke daerah terpencil",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L101",
+  "topik": "Vendor managed inventory (VMI)",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L102",
+  "topik": "Salah kaprah: kurir lambat = kurir jelek",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L103",
+  "topik": "Penanganan barang retur di gudang",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L104",
+  "topik": "Packing untuk pengiriman udara",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L105",
+  "topik": "Belajar logistik dari nol: mulai dari mana?",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L106",
+  "topik": "Carrying cost (biaya simpan)",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L107",
+  "topik": "Batch & serial number",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L108",
+  "topik": "Pengiriman barang besar (kargo)",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L109",
+  "topik": "Salah kaprah: stok aman kalau gudang penuh",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L110",
+  "topik": "Order cycle time",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L111",
+  "topik": "Inventory turnover",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L112",
+  "topik": "Tracking real time: GPS di truk",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L113",
+  "topik": "Kesalahan umum admin gudang baru",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L114",
+  "topik": "Rantai pasok berkelanjutan",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L115",
+  "topik": "Tutup buku stok akhir tahun",
+  "pilar": "Isi Gudang"
+ },
+ {
+  "id": "L116",
+  "topik": "Pengiriman saat musim liburan",
+  "pilar": "Kirim Tanpa Drama"
+ },
+ {
+  "id": "L117",
+  "topik": "Salah kaprah: logistik cuma biaya",
+  "pilar": "Salah Kaprah"
+ },
+ {
+  "id": "L118",
+  "topik": "Rangkuman: 10 istilah logistik 2026",
+  "pilar": "Kamus 60 Detik"
+ },
+ {
+  "id": "L119",
+  "topik": "Rencana belajar logistik 2027",
+  "pilar": "Karier & Skill"
+ },
+ {
+  "id": "L120",
+  "topik": "Terima kasih & apa selanjutnya",
+  "pilar": "Perkenalan"
+ }
+]
