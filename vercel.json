@@ -1,0 +1,2 @@
+{ "cleanUrls": true, "trailingSlash": false, "outputDirectory": "public",
+  "headers": [{ "source": "/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }] }] }
