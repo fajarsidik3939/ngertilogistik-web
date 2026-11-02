@@ -24,6 +24,9 @@ sumber:
   - judul: "UU No. 38 Tahun 2009 tentang Pos (teks via pasal.id)"
     url: "https://pasal.id/peraturan/uu/uu-no-38-tahun-2009"
     catatan: "Pasal 28: pengguna layanan pos berhak mendapat ganti rugi atas kehilangan kiriman, kerusakan isi paket, keterlambatan kiriman, atau ketidaksesuaian barang yang dikirim dan diterima. Pasal 31 ayat (1): penyelenggara pos wajib memberi ganti rugi atas kerugian akibat kelalaian dan/atau kesalahannya."
+  - judul: "McKinsey & Company (2019), Defining 'on-time, in-full' in the consumer sector"
+    url: "https://www.mckinsey.com.br/capabilities/operations/our-insights/defining-on-time-in-full-in-the-consumer-sector"
+    catatan: "OTIF mengukur sejauh mana kiriman tiba di tujuan sesuai jumlah dan jadwal yang tertera di pesanan."
 ---
 Pengiriman yang bagus adalah pengiriman yang **tepat**, bukan sekadar cepat: tepat barang, tepat jumlah, tepat kondisi, dan tepat waktu sesuai janji. Prinsip ini dikenal sebagai 7R logistik atau *seven rights of logistics*. Kecepatan itu bonus. Paket yang tiba sehari tapi isinya salah tetap pengiriman yang gagal.
 
@@ -73,7 +76,7 @@ Empat hal di atas adalah inti yang paling mudah dirasakan pelanggan. Dalam liter
 | Right customer | Tepat pelanggan | Apakah diterima oleh orang yang benar? |
 | Right price | Tepat harga/biaya | Apakah biayanya wajar bagi pengirim dan pelanggan? |
 
-Ketujuh unsur ini dicapai bersamaan. Satu unsur meleset, hasilnya tetap dianggap gagal di mata pelanggan. Di dunia kerja, ada juga ukuran yang menggabungkan tepat waktu dan tepat jumlah, yang disebut OTIF (*on time in full*). Istilah ini akan dibahas di artikel tersendiri.
+Ketujuh unsur ini dicapai bersamaan. Satu unsur meleset, hasilnya tetap dianggap gagal di mata pelanggan. Di dunia kerja, ada juga ukuran yang menggabungkan tepat waktu dan tepat jumlah, yang disebut OTIF (*on-time, in-full*): kiriman tiba sesuai jumlah dan jadwal di pesanan. Istilah ini akan dibahas di artikel tersendiri.
 
 ## Biaya pengiriman yang tidak tepat
 

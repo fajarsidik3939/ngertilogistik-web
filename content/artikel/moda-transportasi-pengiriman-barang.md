@@ -102,6 +102,8 @@ Tiga ilustrasi berikut fiktif, untuk menunjukkan cara berpikirnya.
 
 Perhatikan bahwa dalam ketiga skenario, keputusan diambil dari kebutuhan barang dan [tepat waktu sesuai janji](L17) kepada pelanggan, bukan semata dari tarif termurah.
 
+Satu hal lagi: apa pun modanya, catat berapa lama pengiriman benar-benar berlangsung dari pengalaman Anda sendiri. Catatan ini jauh lebih berguna daripada perkiraan umum, karena menggambarkan rute dan penyedia jasa yang memang Anda pakai. Dari catatan itu, Anda bisa memberi janji waktu yang realistis kepada pelanggan dan tahu kapan harus mengirim lebih awal.
+
 ## Kesalahan umum
 
 - **Memilih hanya dari tarif.** Moda termurah bisa jadi paling mahal kalau barang telat dan pelanggan membatalkan pesanan.

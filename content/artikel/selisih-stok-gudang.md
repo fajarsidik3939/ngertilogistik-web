@@ -67,6 +67,12 @@ Sebelum mengoreksi angka di sistem, telusuri dulu penyebabnya dengan daftar peri
 4. **Cek retur dan barang rusak.** Apakah ada barang di area karantina atau retur yang belum diinput?
 5. **Catat penyebabnya.** Setelah ketemu, tulis penyebabnya. Catatan ini berharga untuk memperbaiki proses.
 
+Ilustrasi berikut fiktif, untuk menunjukkan cara kerja daftar periksa ini.
+
+> **CONTOH** Sistem mencatat 10 kaus ukuran L, tapi di rak hanya ada 7. Petugas mengecek rak di sekitarnya dan tidak menemukan apa-apa. Lalu ia mengecek varian mirip: ukuran M ternyata lebih 3 dari catatan sistem. Transaksi terakhir menunjukkan ada 3 pesanan ukuran M kemarin. Kesimpulannya, saat picking, kaus L terambil untuk pesanan M. Barangnya tidak hilang, hanya tertukar dan sudah terkirim ke pelanggan.
+
+Dari contoh ini, perbaikannya bukan sekadar mengoreksi angka, tapi juga memeriksa kenapa ukuran L dan M bisa tertukar. Mungkin labelnya mirip, letaknya bersebelahan, atau picking tidak memakai scan.
+
 ## Cara mencegah: scan saat itu juga
 
 Pencegahan paling efektif sederhana: setiap pergerakan barang dicatat atau di-scan saat itu juga, bukan nanti sore atau besok. Barang masuk, dipindah, diambil, dikirim, rusak, atau diretur, semuanya dicatat ketika terjadi.

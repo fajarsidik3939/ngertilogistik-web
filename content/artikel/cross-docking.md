@@ -81,6 +81,14 @@ Petugas harus tahu barang mana untuk tujuan mana sebelum barang dibongkar. Kalau
 
 Area dok tidak dirancang untuk menyimpan barang lama. Kalau truk tujuan telat, barang menumpuk di lantai dok, menghalangi bongkar muat berikutnya, dan berisiko rusak atau tertukar.
 
+### Pengecekan saat bongkar tetap wajib
+
+Karena barang langsung diteruskan, kesalahan jumlah atau barang rusak dari pemasok bisa ikut terbawa ke tujuan kalau tidak dicek saat bongkar. Pengecekan harus cepat, tapi tidak boleh dilewati. Selisih yang ditemukan di dok jauh lebih mudah diselesaikan daripada keluhan dari toko keesokan harinya.
+
+### Tata letak dok harus mendukung
+
+Area pilah sebaiknya berada di antara dok masuk dan dok keluar, dengan jalur yang jelas untuk tiap tujuan. Kalau area dok sempit atau jalurnya tidak ditandai, barang mudah tertukar dan petugas bolak-balik terlalu jauh.
+
 ## Barang apa yang cocok untuk cross docking?
 
 Barang yang cocok punya ciri-ciri berikut:
