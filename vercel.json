@@ -116,8 +116,8 @@
   },
   {
    "source": "/materi/l21-reorder-point-kapan-harus-pesan-lagi",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/reorder-point",
+   "permanent": true
   },
   {
    "source": "/materi/l22-picking-cara-mengambil-barang-pesanan",
