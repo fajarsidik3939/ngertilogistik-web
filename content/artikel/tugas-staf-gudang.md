@@ -56,7 +56,7 @@ Cara paling mudah memahami struktur gudang adalah menempelkan setiap peran ke la
 
 Supervisor mengawasi seluruh alur. Admin hadir di hampir setiap langkah karena setiap pergerakan barang harus tercatat. Urutan ini sejalan dengan daftar aktivitas gudang dalam materi Supply Chain Indonesia (Setijadi, 2015): dari unloading dan pemeriksaan barang, penyimpanan, order picking, sampai loading dan delivery.
 
-## Tugas tiap peran
+## Tugas staf gudang per peran
 
 ### Checker penerimaan
 

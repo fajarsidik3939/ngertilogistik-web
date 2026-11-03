@@ -44,7 +44,7 @@ Transit time adalah lama barang berada di perjalanan. Hitungannya dimulai ketika
 
 Transit time dipengaruhi jarak, moda transportasi, dan berapa kali barang singgah. Paket yang singgah di beberapa titik pemilahan bisa lebih lama, seperti dibahas di artikel tentang [transit di hub kurir](L18).
 
-## Apa itu lead time?
+## Lead time adalah waktu dari pesan sampai siap pakai
 
 Dalam materi kuliah manajemen rantai pasok Universitas Esa Unggul, lead time dijelaskan sebagai waktu yang diperlukan dari proses awal pemesanan sampai barang diterima oleh pemesan. Dalam praktik gudang, saya menghitungnya sampai barang benar-benar siap dipakai, karena barang yang baru tiba belum tentu bisa langsung dijual. Ada empat komponen utama.
 

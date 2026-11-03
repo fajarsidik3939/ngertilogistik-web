@@ -33,7 +33,7 @@ Bayangkan sistem mencatat 10 unit, tapi di rak hanya ada 7. Reaksi pertama biasa
 
 Sebuah studi di jurnal Manajemen IKM IPB mengelompokkan penyebab ketidakakuratan catatan stok menjadi empat: shrinkage (barang berkurang, misalnya karena dicuri atau rusak), spoilage (kerusakan barang), misplaced inventory (barang ada di gudang tapi tidak ditemukan di lokasi simpannya), dan transaction errors (salah catat jumlah saat barang masuk dan keluar). Dua kelompok terakhir murni soal pencatatan dan penempatan.
 
-## 4 penyebab selisih stok yang paling sering
+## 4 penyebab selisih stok gudang yang paling sering
 
 ### Barang dipindah lokasi tanpa dicatat
 

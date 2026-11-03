@@ -38,7 +38,7 @@ Penerimaan barang gudang yang benar berarti memeriksa empat hal sebelum tanda ta
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang penerimaan barang.
 
-## Jawaban singkat: cek 4 hal sebelum tanda tangan
+## Penerimaan barang gudang: cek 4 hal sebelum tanda tangan
 
 Penerimaan barang (receiving) adalah pintu pertama dari [kegiatan inbound](L07). Materi pergudangan Supply Chain Indonesia (Setijadi, 2015) menyebut tujuannya: memastikan kuantitas dan kualitas barang yang masuk sesuai dokumen pesanan.
 

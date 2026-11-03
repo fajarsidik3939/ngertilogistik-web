@@ -78,7 +78,7 @@ Sebagian layanan ekspres memakai pembagi 5.000. Contohnya, satu penyedia ekspres
 
 Setiap layanan bisa memakai pembagi dan aturan pembulatan sendiri, dan aturan itu bisa berubah. Jangan menebak. Cek halaman resmi layanan yang Anda pakai sebelum menghitung ongkir untuk pelanggan.
 
-## Contoh menghitung berat volume
+## Cara menghitung berat volume: contoh langkah demi langkah
 
 Supaya lebih jelas, berikut ilustrasi hitungan dengan angka buatan.
 

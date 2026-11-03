@@ -40,7 +40,7 @@ Sebelum membandingkan tarif, jawab dulu tiga pertanyaan ini:
 
 Jawaban ketiganya biasanya langsung mempersempit pilihan.
 
-## Perbandingan moda pengiriman
+## Perbandingan moda transportasi pengiriman barang
 
 Tabel berikut membandingkan secara relatif, bukan tarif pasti. Tarif nyata selalu bergantung pada rute, penyedia jasa, dan waktu pengiriman.
 

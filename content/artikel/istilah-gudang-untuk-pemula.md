@@ -24,7 +24,7 @@ sumber:
   - judul: "GS1 Support, How many GS1 GTINs do I need when I have a product with many sizes and colours?"
     url: "https://support.gs1.org/support/solutions/articles/43000734083-how-many-gs1-gtins-do-i-need-when-i-have-a-product-with-many-sizes-and-colours-"
     catatan: "'Each product variation needs its own GS1 GTIN': tiap ukuran, warna, dan kombinasinya butuh nomor sendiri. Dipakai sebagai analogi logika SKU."
-  - judul: "Accounting BINUS, SAP S4/HANA: Material Management Module (Part 2), 13 Desember 2022"
+  - judul: "Accounting BINUS (2022), Material Management Module, Part 2: Purchase Order dan Goods Receipt"
     url: "https://accounting.binus.ac.id/2022/12/13/sap-s4-hana-material-management-module-part-2/"
     catatan: "'Purchase Order adalah dokumen yang dibuat oleh pihak pembeli yang berisi daftar barang atau jasa'; 'Goods receipt merupakan proses pergerakan barang dimana pembeli menerima barang masuk ke dalam gudang.'"
   - judul: "CIMB Niaga, Surat Jalan"
@@ -65,7 +65,7 @@ Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang istilah wa
 | PO | Purchase order | Pesanan pembelian ke pemasok | "Cocokkan barang datang dengan PO-nya." |
 | GR | Goods receipt | Penerimaan dan pencatatan barang masuk | "Barangnya sudah datang, tapi belum di-GR." |
 | Putaway | (put away) | Menaruh barang ke lokasi simpan dan mencatatnya | "Selesai GR, langsung putaway ke lorong B." |
-| Picking | (order picking) | Mengambil barang sesuai pesanan | "Daftar picking pagi ini ada 40 baris." |
+| Picking | (order picking) | Mengambil barang sesuai pesanan | "Daftar picking pagi ini sudah keluar." |
 | Packing | (pengemasan) | Mengemas barang agar aman dikirim | "Barang pecah belah, packing pakai bubble wrap." |
 | DO | Delivery order | Dokumen pengiriman barang ke penerima | "DO-nya ikut dibawa sopir." |
 | Cycle count | (hitung bergilir) | Menghitung sebagian stok secara terjadwal | "Hari ini cycle count lorong A." |

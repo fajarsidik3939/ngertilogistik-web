@@ -60,7 +60,7 @@ Gambaran umumnya seperti ini, meski jumlah hub tiap rute bisa berbeda:
 
 Di rute antar pulau, satu perjalanan bisa memakai lebih dari satu moda, misalnya truk lalu kapal atau pesawat. Peraturan Indonesia menyebut angkutan barang dengan paling sedikit dua moda berbeda dalam satu kontrak sebagai angkutan multimoda (PP No. 8 Tahun 2011). Perbedaan tiap moda dibahas di artikel [moda darat, laut, dan udara](L12).
 
-## Kenapa paket bisa lama di status transit
+## Kenapa paket transit lama? Ini 5 penyebabnya
 
 ### Antre sortir di hub
 
