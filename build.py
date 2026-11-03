@@ -72,6 +72,11 @@ def load_articles():
         a["terbit"] = str(a.get("terbit") or datetime.date.today())
         a["diperbarui"] = str(a.get("diperbarui") or a["terbit"])
         arts.append(a)
+    # hanya artikel yang tanggal terbitnya sudah lewat (WIB) yang tayang; sisanya antrean
+    today = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=7)).date().isoformat()
+    antre = sorted(a["id"] + " " + a["terbit"] for a in arts if a["terbit"] > today)
+    if antre: print("Antrean (belum tayang):", ", ".join(antre))
+    arts = [a for a in arts if a["terbit"] <= today]
     ids = {a["id"]: a for a in arts}
     for a in arts:
         txt = re.sub(r"[#>*_`\[\]\(\)|-]", " ", a["body"])
