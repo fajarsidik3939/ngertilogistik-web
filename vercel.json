@@ -121,8 +121,8 @@
   },
   {
    "source": "/materi/l22-picking-cara-mengambil-barang-pesanan",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/metode-picking-gudang",
+   "permanent": true
   },
   {
    "source": "/materi/l23-stock-opname-vs-cycle-count",
