@@ -25,6 +25,11 @@ Setiap pagi (±07.00 WIB) tugas terjadwal melakukan:
 Ikuti **semua** aturan di `content/brief/PANDUAN_PENULIS.md`: 900–1.300 kata, sumber nyata yang dibuka sendiri, angka fiktif dalam blockquote **CONTOH**, tanpa menyebut perusahaan atau merek kurir/software, tanpa em dash, FAQ di frontmatter, dan diakhiri `## Ringkasan`.
 Pengecualian dari panduan itu: link internal `[anchor](Lxx)` boleh ke **semua** artikel yang sudah ada filenya (sudah tayang atau masih antre), 2–4 link. Builder otomatis menjadikan link ke artikel yang belum tayang sebagai teks biasa sampai artikelnya tayang.
 
+## Kuis & glosarium untuk artikel baru (wajib)
+- Tambahkan 5 soal untuk artikel baru di `data/kuis.json` dengan format yang sama (`{"Lxx": {"slug","judul","soal":[{"q","opsi":[4 opsi],"jawab":0-3,"bahas"}]}}`). Soal hanya dari isi artikel itu, variasikan posisi jawaban benar, tanpa em dash.
+- Tambahkan 1–3 istilah baru dari artikel itu ke `data/glosarium.json` (`istilah`, `alias`, `arti`, `artikel`), jaga urutan abjad dan jangan menggandakan istilah yang sudah ada.
+- Validasi kedua file dengan `python3 -c "import json;json.load(open('data/kuis.json'));json.load(open('data/glosarium.json'))"`.
+
 ## Cek sebelum push
 - Frontmatter YAML valid, `python3 build.py` sukses, dan baris "Antrean" menampilkan tanggalnya.
 - Buka ulang setiap URL sumber dan pastikan klaimnya didukung. Klaim yang tidak didukung harus dihapus.
@@ -33,4 +38,5 @@ Pengecualian dari panduan itu: link internal `[anchor](Lxx)` boleh ke **semua** 
 ## Halaman alat (jangan dihapus)
 - `/template` dan `/kalkulator-kubikasi` dibuat build.py dari `content/halaman/*.html`.
 - File Excel template ada di `public/files/` (dipertahankan build.py). Generatornya di `tools/template_xlsx/` (`python3 tools/template_xlsx/run.py public/files`).
+- `/belajar`, `/kuis`, `/glosarium`, `/karier`, `/cheat-sheet`, dan `/kalkulator-logistik` dibuat `belajar.py` dari `data/*.json` dan `content/halaman/kalkulator-logistik.html`. PDF cheat sheet dibuat otomatis ke `public/files/cheatsheet/` saat isinya berubah.
 - Setiap artikel otomatis punya tombol bagikan (WhatsApp, Facebook, X, LinkedIn, Telegram, salin link).

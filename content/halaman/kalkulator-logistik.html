@@ -1,0 +1,64 @@
+<div class="wrap">
+<div class="tp-filter kl-tabs" role="tablist" aria-label="Pilih kalkulator">
+<button class="on" data-t="rop">Reorder point &amp; safety stock</button><button data-t="eoq">EOQ</button><button data-t="pal">Kebutuhan palet</button><button data-t="bv">Berat volume</button><button data-t="bs">Biaya simpan</button><button data-t="to">Inventory turnover</button>
+</div>
+
+<section class="kl" id="k-rop"><div class="kl-in pan-b"><h2>Reorder point &amp; safety stock</h2><p class="kl-s">Kapan harus pesan lagi, dan berapa stok cadangan yang perlu disiapkan.</p>
+<div class="kl-f"><label>Pemakaian rata-rata / hari<input type="number" id="r1" value="20"></label><label>Pemakaian maksimum / hari<input type="number" id="r2" value="30"></label>
+<label>Lead time rata-rata (hari)<input type="number" id="r3" value="5"></label><label>Lead time maksimum (hari)<input type="number" id="r4" value="7"></label><label>Stok saat ini<input type="number" id="r5" value="150"></label></div></div>
+<div class="kl-out pan-b"><div class="m hl"><small>Reorder point</small><b id="rO1">-</b></div><div class="m"><small>Safety stock</small><b id="rO2">-</b></div><div class="m"><small>Status</small><b id="rO3">-</b></div>
+<p class="kl-n">Safety stock = (pemakaian maksimum × lead time maksimum) − (pemakaian rata-rata × lead time rata-rata). Reorder point = pemakaian rata-rata × lead time rata-rata + safety stock. Penjelasan: <a href="/blog/safety-stock">safety stock</a> dan <a href="/blog/reorder-point">reorder point</a>.</p></div></section>
+
+<section class="kl" id="k-eoq" hidden><div class="kl-in pan-b"><h2>EOQ (economic order quantity)</h2><p class="kl-s">Jumlah pesanan yang membuat total biaya pesan dan biaya simpan per tahun paling rendah.</p>
+<div class="kl-f"><label>Kebutuhan per tahun (unit)<input type="number" id="e1" value="12000"></label><label>Biaya per sekali pesan (Rp)<input type="number" id="e2" value="150000"></label>
+<label>Biaya simpan per unit per tahun (Rp)<input type="number" id="e3" value="2500"></label><label>Hari kerja per tahun<input type="number" id="e4" value="300"></label></div></div>
+<div class="kl-out pan-b"><div class="m hl"><small>EOQ</small><b id="eO1">-</b></div><div class="m"><small>Pesanan per tahun</small><b id="eO2">-</b></div><div class="m"><small>Jarak antar pesanan</small><b id="eO3">-</b></div><div class="m"><small>Total biaya pesan + simpan / tahun</small><b id="eO4">-</b></div>
+<p class="kl-n">EOQ = √(2 × kebutuhan per tahun × biaya per pesan ÷ biaya simpan per unit per tahun). Rumus ini berasumsi permintaan stabil sepanjang periode dan setiap pesanan datang utuh. Sumber: Wikipedia, <a href="https://en.wikipedia.org/wiki/Economic_order_quantity" target="_blank" rel="noopener">Economic order quantity</a>.</p></div></section>
+
+<section class="kl" id="k-pal" hidden><div class="kl-in pan-b"><h2>Kebutuhan palet</h2><p class="kl-s">Berapa karton per lapis, per palet, dan berapa palet yang dibutuhkan.</p>
+<div class="kl-f"><label>Ukuran palet<select id="p0"><option value="1200x1000">1.200 × 1.000 mm</option><option value="1200x800">1.200 × 800 mm</option><option value="1100x1100">1.100 × 1.100 mm</option><option value="1219x1016">1.219 × 1.016 mm</option><option value="c">Ukuran sendiri</option></select></label>
+<label>Panjang palet (mm)<input type="number" id="p1" value="1200"></label><label>Lebar palet (mm)<input type="number" id="p2" value="1000"></label>
+<label>Tinggi muatan maks. (mm, tanpa palet)<input type="number" id="p3" value="1500"></label>
+<label>Karton P (mm)<input type="number" id="p4" value="400"></label><label>Karton L (mm)<input type="number" id="p5" value="300"></label><label>Karton T (mm)<input type="number" id="p6" value="250"></label>
+<label>Jumlah karton<input type="number" id="p7" value="500"></label></div></div>
+<div class="kl-out pan-b"><div class="m hl"><small>Palet dibutuhkan</small><b id="pO1">-</b></div><div class="m"><small>Karton per palet</small><b id="pO2">-</b></div><div class="m"><small>Per lapis × lapis</small><b id="pO3">-</b></div>
+<svg id="pSvg" class="kl-svg" viewBox="0 0 300 250" aria-label="Tampak atas susunan karton di palet"></svg>
+<p class="kl-n">Dihitung dengan susunan karton seragam dan orientasi terbaik dari dua arah putar. Belum memperhitungkan batas berat dan aturan tumpuk barang. Ukuran palet pilihan mengacu ISO 6780 sebagaimana dirangkum Wikipedia, <a href="https://en.wikipedia.org/wiki/Pallet" target="_blank" rel="noopener">Pallet</a>.</p></div></section>
+
+<section class="kl" id="k-bv" hidden><div class="kl-in pan-b"><h2>Berat volume</h2><p class="kl-s">Berat yang ditagih: berat aktual atau berat volume, mana yang lebih besar.</p>
+<div class="kl-f"><label>Panjang (cm)<input type="number" id="b1" value="40"></label><label>Lebar (cm)<input type="number" id="b2" value="30"></label><label>Tinggi (cm)<input type="number" id="b3" value="30"></label>
+<label>Berat aktual (kg)<input type="number" id="b4" value="4"></label><label>Pembagi<select id="b5"><option value="6000">6.000 (acuan IATA, kargo udara)</option><option value="5000">5.000 (sebagian layanan ekspres)</option></select></label></div></div>
+<div class="kl-out pan-b"><div class="m hl"><small>Berat ditagih</small><b id="bO1">-</b></div><div class="m"><small>Berat volume</small><b id="bO2">-</b></div><div class="m"><small>Penentu</small><b id="bO3">-</b></div>
+<p class="kl-n">Berat volume = P × L × T (cm) ÷ pembagi. Cek pembagi dan aturan pembulatan resmi layanan Anda. Penjelasan: <a href="/blog/berat-volume">berat volume</a>. Untuk banyak karton atau kontainer, pakai <a href="/kalkulator-kubikasi">kalkulator kubikasi</a>.</p></div></section>
+
+<section class="kl" id="k-bs" hidden><div class="kl-in pan-b"><h2>Biaya simpan persediaan</h2><p class="kl-s">Perkiraan biaya menyimpan stok dalam setahun, sebulan, dan sehari.</p>
+<div class="kl-f"><label>Nilai rata-rata persediaan (Rp)<input type="number" id="s1" value="250000000"></label><label>Biaya simpan per tahun (% dari nilai)<input type="number" id="s2" value="20"></label></div></div>
+<div class="kl-out pan-b"><div class="m hl"><small>Biaya simpan per tahun</small><b id="sO1">-</b></div><div class="m"><small>Per bulan</small><b id="sO2">-</b></div><div class="m"><small>Per hari</small><b id="sO3">-</b></div>
+<p class="kl-n">Persentase biaya simpan berbeda di setiap perusahaan, karena mencakup modal yang tertahan, sewa ruang, asuransi, kerusakan, dan barang usang. Angka 20% di atas hanya CONTOH. Hitung persentase perusahaan Anda sendiri bersama tim keuangan. Baca juga: <a href="/blog/dampak-overstock">risiko overstock</a>.</p></div></section>
+
+<section class="kl" id="k-to" hidden><div class="kl-in pan-b"><h2>Inventory turnover &amp; days on hand</h2><p class="kl-s">Seberapa sering stok berputar, dan berapa hari stok bertahan.</p>
+<div class="kl-f"><label>HPP / nilai barang keluar dalam periode (Rp)<input type="number" id="t1" value="600000000"></label><label>Persediaan awal (Rp)<input type="number" id="t2" value="180000000"></label>
+<label>Persediaan akhir (Rp)<input type="number" id="t3" value="220000000"></label><label>Jumlah hari periode<input type="number" id="t4" value="90"></label></div></div>
+<div class="kl-out pan-b"><div class="m hl"><small>Turnover</small><b id="tO1">-</b></div><div class="m"><small>Days on hand</small><b id="tO2">-</b></div><div class="m"><small>Rata-rata persediaan</small><b id="tO3">-</b></div>
+<p class="kl-n">Turnover = HPP ÷ rata-rata persediaan, dengan rata-rata = (awal + akhir) ÷ 2. Days on hand = jumlah hari periode ÷ turnover. Pakai satuan nilai yang sama untuk HPP dan persediaan.</p></div></section>
+
+<p class="bl-p" style="margin:26px 0 60px">Butuh versi Excel untuk banyak SKU sekaligus? Download <a href="/template">template spreadsheet gratis</a>.</p>
+</div>
+<script>
+(function(){var $=function(i){return document.getElementById(i)},v=function(i){return parseFloat($(i).value)||0},f=function(n,d){return n.toLocaleString('id-ID',{maximumFractionDigits:d||0,minimumFractionDigits:d||0})},rp=function(n){return 'Rp'+f(Math.round(n))};
+var tabs=[].slice.call(document.querySelectorAll('.kl-tabs button'));function show(t){tabs.forEach(function(b){b.classList.toggle('on',b.dataset.t===t)});document.querySelectorAll('.kl').forEach(function(s){s.hidden=s.id!=='k-'+t});history.replaceState(null,'','#'+t)}
+tabs.forEach(function(b){b.onclick=function(){show(b.dataset.t)}});if(location.hash&&$('k-'+location.hash.slice(1)))show(location.hash.slice(1));
+function rop(){var ss=Math.max(0,v('r2')*v('r4')-v('r1')*v('r3')),r=v('r1')*v('r3')+ss;$('rO1').textContent=f(r);$('rO2').textContent=f(ss);var st=v('r5');$('rO3').textContent=st<=r?'Pesan sekarang':'Aman';$('rO3').style.color=st<=r?'#ff8a7f':'#5fe0a8'}
+function eoq(){var D=v('e1'),S=v('e2'),H=v('e3');if(!D||!S||!H){['eO1','eO2','eO3','eO4'].forEach(function(i){$(i).textContent='-'});return}var q=Math.sqrt(2*D*S/H),n=D/q;$('eO1').textContent=f(q)+' unit';$('eO2').textContent=f(n,1)+' kali';$('eO3').textContent=f(v('e4')/n,1)+' hari kerja';$('eO4').textContent=rp(n*S+q/2*H)}
+function pal(){var s=$('p0').value;if(s!=='c'){var d=s.split('x');$('p1').value=d[0];$('p2').value=d[1]}$('p1').disabled=$('p2').disabled=s!=='c';
+var P=v('p1'),W=v('p2'),H=v('p3'),a=v('p4'),b=v('p5'),c=v('p6'),n=v('p7');if(!P||!W||!a||!b||!c){return}
+var o1=Math.floor(P/a)*Math.floor(W/b),o2=Math.floor(P/b)*Math.floor(W/a),best=o1>=o2?[a,b,o1]:[b,a,o2],ly=Math.floor(H/c),per=best[2]*ly;
+$('pO2').textContent=f(per);$('pO3').textContent=f(best[2])+' × '+f(ly);$('pO1').textContent=per?f(Math.ceil(n/per)):'Tidak muat';
+var sc=280/Math.max(P,W),g='<rect x="10" y="10" width="'+P*sc+'" height="'+W*sc+'" rx="3" fill="#0F1A30" stroke="#22304B"/>';var nx=Math.floor(P/best[0]),ny=Math.floor(W/best[1]);
+for(var x=0;x<nx;x++)for(var y=0;y<ny;y++)g+='<rect x="'+(11+x*best[0]*sc)+'" y="'+(11+y*best[1]*sc)+'" width="'+(best[0]*sc-2)+'" height="'+(best[1]*sc-2)+'" rx="2" fill="#FFC400" opacity=".85"/>';
+$('pSvg').setAttribute('viewBox','0 0 300 '+(W*sc+20));$('pSvg').innerHTML=g}
+function bv(){var x=v('b1')*v('b2')*v('b3')/v('b5'),a=v('b4');$('bO2').textContent=f(x,2)+' kg';$('bO1').textContent=f(Math.max(x,a),2)+' kg';$('bO3').textContent=x>a?'Berat volume':'Berat aktual'}
+function bs(){var y=v('s1')*v('s2')/100;$('sO1').textContent=rp(y);$('sO2').textContent=rp(y/12);$('sO3').textContent=rp(y/365)}
+function to(){var av=(v('t2')+v('t3'))/2,t=av?v('t1')/av:0;$('tO1').textContent=f(t,2)+'x';$('tO2').textContent=t?f(v('t4')/t,1)+' hari':'-';$('tO3').textContent=rp(av)}
+var all=function(){rop();eoq();pal();bv();bs();to()};document.querySelectorAll('.kl input,.kl select').forEach(function(i){i.addEventListener('input',all)});all()})();
+</script>

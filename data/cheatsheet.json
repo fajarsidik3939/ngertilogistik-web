@@ -1,0 +1,678 @@
+[
+  {
+    "slug": "rumus-stok",
+    "judul": "Cheat Sheet Rumus Stok",
+    "sub": "Rumus dasar supaya stok tidak habis, tapi juga tidak menumpuk.",
+    "artikel": [
+      "L11",
+      "L13",
+      "L19",
+      "L21"
+    ],
+    "blok": [
+      {
+        "judul": "Reorder point (ROP)",
+        "jenis": "rumus",
+        "isi": "ROP = pemakaian rata-rata per hari × lead time (hari) + safety stock",
+        "catatan": "Begitu stok menyentuh angka ini, buat pesanan. ROP menjawab kapan pesan, bukan berapa banyak."
+      },
+      {
+        "judul": "Safety stock (rumus rata-rata-maksimum)",
+        "jenis": "rumus",
+        "isi": "Safety stock = (pemakaian harian maksimum × lead time maksimum) − (pemakaian harian rata-rata × lead time rata-rata)",
+        "catatan": "Rumus ini memperhitungkan variasi lead time, tapi tidak memperhitungkan variasi permintaan secara statistik."
+      },
+      {
+        "judul": "Penentu besar safety stock",
+        "jenis": "daftar",
+        "isi": [
+          "Naik-turunnya permintaan harian",
+          "Lama dan ketidakpastian lead time",
+          "Target layanan: seberapa jarang boleh kehabisan stok",
+          "Dihitung per SKU, bukan disamaratakan"
+        ]
+      },
+      {
+        "judul": "Lead time vs transit time",
+        "jenis": "tabel",
+        "isi": {
+          "kolom": [
+            "Aspek",
+            "Transit time",
+            "Lead time"
+          ],
+          "baris": [
+            [
+              "Mulai",
+              "Barang dikirim",
+              "Pesanan dibuat"
+            ],
+            [
+              "Selesai",
+              "Barang tiba",
+              "Barang siap dipakai atau dijual"
+            ],
+            [
+              "Cakupan",
+              "Perjalanan saja",
+              "Proses pesanan, penyiapan, transit, penerimaan dan pengecekan"
+            ],
+            [
+              "Dipakai untuk",
+              "Memilih layanan kirim",
+              "Merencanakan pesan ulang dan safety stock"
+            ]
+          ]
+        },
+        "catatan": "Ukur lead time per pemasok dari tanggal PO sampai barang siap pakai. Catat rata-rata dan yang terlama."
+      },
+      {
+        "judul": "Hitung ROP",
+        "jenis": "contoh",
+        "isi": "CONTOH Pemakaian rata-rata 10 karton per hari. Lead time 5 hari. Safety stock 20 karton. Kebutuhan selama menunggu: 10 × 5 = 50 karton. ROP = 50 + 20 = 70 karton. Jadi pesan begitu stok tinggal 70 karton."
+      },
+      {
+        "judul": "Hitung safety stock",
+        "jenis": "contoh",
+        "isi": "CONTOH Pemakaian rata-rata 10 unit per hari, tertinggi 15 unit. Lead time rata-rata 10 hari, terlama 12 hari. Safety stock = (15 × 12) − (10 × 10) = 180 − 100 = 80 unit."
+      },
+      {
+        "judul": "Tanda gudang kelebihan stok",
+        "jenis": "daftar",
+        "isi": [
+          "Ada barang berbulan-bulan tidak keluar dari rak",
+          "Rak selalu penuh, barang baru ditaruh di lantai atau lorong",
+          "Sering cuci gudang atau diskon besar untuk barang lama",
+          "Barang ditemukan kedaluwarsa atau rusak saat dihitung",
+          "Uang terasa seret padahal gudang terlihat penuh"
+        ],
+        "catatan": "Stok yang pas = kebutuhan selama lead time + safety stock secukupnya."
+      },
+      {
+        "judul": "Kesalahan umum",
+        "jenis": "daftar",
+        "isi": [
+          "Memakai transit time sebagai lead time",
+          "ROP tanpa safety stock",
+          "Angka tidak pernah diperbarui",
+          "Catatan stok di sistem tidak akurat",
+          "Lupa pesanan yang masih di jalan"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "istilah-gudang",
+    "judul": "Cheat Sheet Istilah Gudang",
+    "sub": "Kosakata gudang dan dokumen yang paling sering dipakai staf baru.",
+    "artikel": [
+      "L03",
+      "L07",
+      "L11",
+      "L13",
+      "L14",
+      "L15",
+      "L16",
+      "L19",
+      "L20",
+      "L21",
+      "L23"
+    ],
+    "blok": [
+      {
+        "judul": "Barang dan dokumen",
+        "jenis": "daftar",
+        "isi": [
+          "SKU (stock keeping unit): kode untuk setiap varian barang",
+          "GTIN: nomor global di bawah barcode produk ritel",
+          "PO (purchase order): pesanan pembelian ke pemasok",
+          "GR (goods receipt): penerimaan dan pencatatan barang masuk",
+          "DO (delivery order): dokumen pengiriman barang ke penerima",
+          "Surat jalan: dokumen bukti pengiriman barang",
+          "Bin location: kode alamat lokasi simpan, misalnya lorong-rak-tingkat-posisi"
+        ]
+      },
+      {
+        "judul": "Gerakan barang",
+        "jenis": "daftar",
+        "isi": [
+          "Inbound: barang masuk ke gudang",
+          "Outbound: barang keluar dari gudang",
+          "Putaway: menaruh barang ke lokasi simpan dan mencatat lokasinya",
+          "Picking: mengambil barang sesuai pesanan",
+          "Packing: mengemas barang agar aman dikirim",
+          "Cross-docking: barang dari truk masuk langsung dipilah ke truk keluar tanpa disimpan"
+        ]
+      },
+      {
+        "judul": "Kontrol stok",
+        "jenis": "daftar",
+        "isi": [
+          "Cycle count: menghitung sebagian stok secara bergilir dan terjadwal",
+          "Stock opname: menghitung fisik seluruh stok dalam satu waktu",
+          "FIFO (first in, first out): masuk duluan, keluar duluan",
+          "FEFO (first expired, first out): kedaluwarsa duluan, keluar duluan",
+          "Lead time: waktu dari pesanan dibuat sampai barang siap dipakai",
+          "Safety stock: stok cadangan untuk permintaan atau pasokan yang meleset",
+          "Reorder point: batas stok yang menandakan saatnya pesan ulang",
+          "Dead stock: barang yang tidak bergerak sama sekali"
+        ]
+      },
+      {
+        "judul": "Urutan istilah dari PO sampai DO",
+        "jenis": "langkah",
+        "isi": [
+          "PO dibuat sebelum barang datang",
+          "GR saat barang tiba dan dicek",
+          "Putaway saat barang ditaruh di rak",
+          "Picking saat ada pesanan, dengan aturan FIFO atau FEFO",
+          "Packing sebelum barang diserahkan ke pengangkut",
+          "DO ikut bersama barang yang keluar"
+        ],
+        "catatan": "SKU muncul di semua langkah. Cycle count berjalan di sela-sela alur."
+      },
+      {
+        "judul": "Istilah yang sering tertukar",
+        "jenis": "tabel",
+        "isi": {
+          "kolom": [
+            "Pasangan",
+            "Bedanya"
+          ],
+          "baris": [
+            [
+              "DO vs surat jalan",
+              "Di sebagian perusahaan DO perintah internal, di tempat lain sama dengan surat jalan"
+            ],
+            [
+              "FIFO gudang vs FIFO akuntansi",
+              "Gudang: urutan fisik barang keluar. Akuntansi: cara menghitung biaya persediaan"
+            ],
+            [
+              "SKU vs GTIN",
+              "SKU kode internal. GTIN nomor global"
+            ],
+            [
+              "Lead time vs transit time",
+              "Transit time hanya waktu di jalan, bagian dari lead time"
+            ]
+          ]
+        }
+      },
+      {
+        "judul": "Contoh SKU dan kode lokasi",
+        "jenis": "contoh",
+        "isi": "CONTOH Satu model kaus dengan 3 warna dan 3 ukuran berarti 9 SKU. Kode lokasi A-03-2-B dibaca: lorong A, rak 03, tingkat 2 dari bawah, posisi B."
+      }
+    ]
+  },
+  {
+    "slug": "alur-gudang",
+    "judul": "Cheat Sheet Alur Gudang",
+    "sub": "Terima, simpan, ambil, kemas, kirim, dan apa yang dicek di tiap langkah.",
+    "artikel": [
+      "L04",
+      "L07",
+      "L08",
+      "L16",
+      "L22"
+    ],
+    "blok": [
+      {
+        "judul": "5 langkah dasar",
+        "jenis": "langkah",
+        "isi": [
+          "Terima (receiving): cek jumlah, kondisi, dan dokumen",
+          "Simpan (putaway): taruh di rak dan catat kode lokasinya",
+          "Ambil (picking): ambil sesuai daftar pesanan, cocokkan kode",
+          "Kemas (packing): cek ulang isi, kemas aman, tempel label",
+          "Kirim (shipping): serahkan barang dan perbarui status di sistem"
+        ],
+        "catatan": "Dua langkah pertama adalah inbound, tiga terakhir outbound."
+      },
+      {
+        "judul": "Checklist penerimaan barang",
+        "jenis": "daftar",
+        "isi": [
+          "Dokumen: surat jalan vs PO (pemasok, kode barang, jumlah)",
+          "Jumlah: hitung fisik, buka sampel karton",
+          "Kondisi: penyok, basah, sobek, segel rusak",
+          "Batch dan tanggal kedaluwarsa dicatat",
+          "Foto bukti: barang, label, kendaraan",
+          "Selisih dicatat sebelum tanda tangan, ditandatangani kedua pihak"
+        ],
+        "catatan": "Setelah cek selesai, buat GR berdasarkan yang benar-benar diterima."
+      },
+      {
+        "judul": "Selisih saat terima",
+        "jenis": "contoh",
+        "isi": "CONTOH Surat jalan menulis 50 karton isi 24 pcs. Di dok hanya ada 48 karton, dan satu karton berisi 20 pcs. Selisih dicatat sekarang, bukan setelah barang masuk rak."
+      },
+      {
+        "judul": "Aturan dasar putaway",
+        "jenis": "daftar",
+        "isi": [
+          "Barang laris di dekat area ambil dan setinggi jangkauan tangan",
+          "Berat di bawah, ringan di atas",
+          "Satu SKU per lokasi, pisahkan per batch",
+          "Batch baru tidak menutupi batch lama",
+          "Scan dan konfirmasi lokasi di sistem saat itu juga"
+        ]
+      },
+      {
+        "judul": "Metode picking",
+        "jenis": "tabel",
+        "isi": {
+          "kolom": [
+            "Metode",
+            "Cara kerja",
+            "Cocok untuk"
+          ],
+          "baris": [
+            [
+              "Per pesanan",
+              "1 pesanan diambil sampai selesai",
+              "Pesanan sedikit, gudang kecil"
+            ],
+            [
+              "Batch",
+              "Beberapa pesanan diambil sekaligus, lalu dipilah",
+              "Banyak pesanan dengan barang mirip"
+            ],
+            [
+              "Zona",
+              "Tiap petugas pegang 1 area",
+              "Gudang besar, pesanan banyak"
+            ],
+            [
+              "Wave",
+              "Pesanan dikelompokkan per gelombang",
+              "Gudang sibuk dengan jadwal kirim tetap"
+            ]
+          ]
+        },
+        "catatan": "Pilih dari jumlah pesanan, ragam barang, dan ukuran gudang."
+      },
+      {
+        "judul": "Kesalahan umum",
+        "jenis": "daftar",
+        "isi": [
+          "Tanda tangan dulu, cek belakangan",
+          "Lokasi rak tidak dicatat",
+          "Packing tanpa cek ulang pesanan",
+          "Status kirim tidak diperbarui",
+          "Barang rusak dicampur dengan barang baik"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ongkir-berat-volume",
+    "judul": "Cheat Sheet Ongkir dan Berat Volume",
+    "sub": "Cara membaca berat yang ditagih, memilih moda, dan menimbang packing kayu.",
+    "artikel": [
+      "L06",
+      "L12",
+      "L24"
+    ],
+    "blok": [
+      {
+        "judul": "Berat volume",
+        "jenis": "rumus",
+        "isi": "Berat volume (kg) = panjang × lebar × tinggi (cm) ÷ angka pembagi",
+        "catatan": "Ukur sisi terluar paket setelah dikemas, termasuk bantalan dan lakban."
+      },
+      {
+        "judul": "Berat yang ditagih (chargeable weight)",
+        "jenis": "rumus",
+        "isi": "Berat yang ditagih = yang lebih besar antara berat aktual dan berat volume",
+        "catatan": "Berat volume, berat volumetrik, dan berat dimensi (DIM) artinya sama."
+      },
+      {
+        "judul": "Angka pembagi",
+        "jenis": "tabel",
+        "isi": {
+          "kolom": [
+            "Pembagi",
+            "Dipakai di",
+            "Catatan"
+          ],
+          "baris": [
+            [
+              "6.000",
+              "Kargo udara, acuan IATA",
+              "Setiap 6.000 cm³ dihitung 1 kg"
+            ],
+            [
+              "5.000",
+              "Sebagian layanan ekspres",
+              "Berat volume lebih besar untuk kotak yang sama"
+            ],
+            [
+              "Lainnya",
+              "Tiap layanan bisa berbeda",
+              "Cek situs resmi layanan, termasuk aturan pembulatan"
+            ]
+          ]
+        }
+      },
+      {
+        "judul": "Hitung berat volume",
+        "jenis": "contoh",
+        "isi": "CONTOH Kotak 40 × 30 × 30 cm berisi barang 1 kg. Volumenya 36.000 cm³. Pembagi 6.000: 6 kg. Pembagi 5.000: 7,2 kg. Yang ditagih 6 atau 7,2 kg, bukan 1 kg. Di kotak 25 × 20 × 15 cm, berat volumenya 1,25 kg (pembagi 6.000)."
+      },
+      {
+        "judul": "Memilih moda",
+        "jenis": "tabel",
+        "isi": {
+          "kolom": [
+            "Moda",
+            "Kecepatan",
+            "Biaya per kg",
+            "Cocok untuk"
+          ],
+          "baris": [
+            [
+              "Udara",
+              "Paling cepat",
+              "Paling tinggi",
+              "Barang kecil, mendesak, bernilai tinggi"
+            ],
+            [
+              "Laut",
+              "Paling lambat",
+              "Paling rendah",
+              "Volume besar, tidak mendesak"
+            ],
+            [
+              "Truk",
+              "Sedang",
+              "Sedang",
+              "Pengiriman rutin, sampai depan pintu"
+            ],
+            [
+              "Kereta api",
+              "Sedang",
+              "Cenderung rendah untuk volume besar",
+              "Volume besar jarak jauh, ada jalur rel"
+            ]
+          ]
+        },
+        "catatan": "Antarpulau sering multimoda: truk, kapal, lalu truk."
+      },
+      {
+        "judul": "Packing kayu",
+        "jenis": "daftar",
+        "isi": [
+          "Pakai untuk barang mudah pecah, berat, bentuk tidak beraturan, atau bernilai tinggi",
+          "Biasanya tidak perlu untuk pakaian, buku, mainan plastik, makanan kemasan kering",
+          "Menambah berat dan ukuran, jadi ongkir ikut naik",
+          "Tetap butuh peredam di dalam kemasan",
+          "Untuk ekspor, kemasan kayu harus memenuhi ISPM 15"
+        ],
+        "catatan": "Bandingkan kerugian kalau barang rusak dengan total biaya packing kayu."
+      },
+      {
+        "judul": "Cara menekan ongkir",
+        "jenis": "daftar",
+        "isi": [
+          "Pilih kotak yang pas",
+          "Hindari kemasan menggembung",
+          "Bandingkan layanan dan angka pembaginya",
+          "Jangan mengorbankan keamanan barang"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "fifo-fefo-stok-opname",
+    "judul": "Cheat Sheet FIFO, FEFO, dan Stock Opname",
+    "sub": "Urutan barang keluar, cara menghitung stok, dan penyebab selisih.",
+    "artikel": [
+      "L09",
+      "L14",
+      "L23"
+    ],
+    "blok": [
+      {
+        "judul": "FIFO vs FEFO",
+        "jenis": "tabel",
+        "isi": {
+          "kolom": [
+            "Aspek",
+            "FIFO",
+            "FEFO"
+          ],
+          "baris": [
+            [
+              "Kepanjangan",
+              "First in, first out",
+              "First expired, first out"
+            ],
+            [
+              "Patokan",
+              "Tanggal masuk",
+              "Tanggal kedaluwarsa"
+            ],
+            [
+              "Cocok untuk",
+              "Barang tanpa kedaluwarsa: suku cadang, alat tulis",
+              "Makanan, minuman, obat, kosmetik"
+            ]
+          ]
+        },
+        "catatan": "FIFO di gudang adalah urutan fisik, berbeda dengan FIFO di akuntansi."
+      },
+      {
+        "judul": "Batch A dan B",
+        "jenis": "contoh",
+        "isi": "CONTOH Batch A diterima 1 Maret, kedaluwarsa 30 November. Batch B diterima 10 Maret, kedaluwarsa 31 Agustus. Menurut FIFO, A keluar duluan. Menurut FEFO, B keluar duluan karena kedaluwarsanya lebih dekat."
+      },
+      {
+        "judul": "Syarat FEFO jalan",
+        "jenis": "daftar",
+        "isi": [
+          "Tanggal kedaluwarsa dicatat sejak penerimaan",
+          "Label dan lokasi per batch, tidak dicampur",
+          "Picking mengikuti sistem, bukan yang paling depan"
+        ]
+      },
+      {
+        "judul": "Stock opname vs cycle count",
+        "jenis": "tabel",
+        "isi": {
+          "kolom": [
+            "Aspek",
+            "Stock opname",
+            "Cycle count"
+          ],
+          "baris": [
+            [
+              "Cakupan",
+              "Semua barang",
+              "Sebagian barang"
+            ],
+            [
+              "Waktu",
+              "Satu waktu, sering tahunan",
+              "Rutin dan bergilir"
+            ],
+            [
+              "Operasional",
+              "Biasanya dihentikan sementara",
+              "Tetap berjalan"
+            ],
+            [
+              "Selisih ketemu",
+              "Lambat",
+              "Lebih cepat"
+            ]
+          ]
+        },
+        "catatan": "Pakai keduanya: cycle count rutin, stock opname berkala."
+      },
+      {
+        "judul": "Penyebab selisih stok",
+        "jenis": "daftar",
+        "isi": [
+          "Barang dipindah lokasi tanpa dicatat",
+          "Barang rusak atau retur tidak diinput",
+          "Salah ambil varian saat picking",
+          "Barang masuk atau keluar tanpa di-scan"
+        ],
+        "catatan": "Stok sistem lebih besar dari fisik membuat pesanan diterima padahal barang tidak ada."
+      },
+      {
+        "judul": "Menelusuri selisih sebelum koreksi",
+        "jenis": "langkah",
+        "isi": [
+          "Cek lokasi di sekitar, area transit, dan area kemas",
+          "Cek varian yang mirip",
+          "Cek transaksi terakhir",
+          "Cek retur dan barang rusak",
+          "Catat penyebabnya, lalu koreksi angka dan perbaiki proses"
+        ]
+      },
+      {
+        "judul": "Cycle count sederhana",
+        "jenis": "langkah",
+        "isi": [
+          "Bagi lokasi atau SKU jadi kelompok kecil",
+          "Hitung satu kelompok tiap hari, saat barang tidak bergerak",
+          "Hitung tanpa melihat angka sistem",
+          "Bandingkan, lalu hitung ulang yang selisih"
+        ],
+        "catatan": "Barang bernilai tinggi atau sering bergerak dihitung lebih sering."
+      }
+    ]
+  },
+  {
+    "slug": "dasar-logistik",
+    "judul": "Cheat Sheet Dasar Logistik",
+    "sub": "Arti logistik, bedanya dengan supply chain, ruang lingkup, 7R, dan cross-docking.",
+    "artikel": [
+      "L01",
+      "L02",
+      "L05",
+      "L15",
+      "L17"
+    ],
+    "blok": [
+      {
+        "judul": "Definisi singkat",
+        "jenis": "daftar",
+        "isi": [
+          "Logistik: mengatur aliran dan penyimpanan barang beserta informasinya, dari titik asal sampai ke pemakai",
+          "Supply chain: seluruh rantai dari bahan baku, produksi, distribusi, sampai pembeli",
+          "Semua logistik bagian dari supply chain, tapi tidak sebaliknya",
+          "Ukuran dasar logistik: tepat jumlah, tepat waktu, tepat tempat"
+        ]
+      },
+      {
+        "judul": "Logistik vs supply chain",
+        "jenis": "tabel",
+        "isi": {
+          "kolom": [
+            "Aspek",
+            "Supply chain",
+            "Logistik"
+          ],
+          "baris": [
+            [
+              "Kegiatan",
+              "Pengadaan, produksi, logistik, koordinasi antarmitra",
+              "Transportasi, gudang, stok, kemasan, pencatatan, retur"
+            ],
+            [
+              "Contoh keputusan",
+              "Memilih pemasok, jumlah produksi",
+              "Rute truk, lokasi rak, jadwal kirim"
+            ]
+          ]
+        },
+        "catatan": "Apa dan dari siapa: supply chain. Bagaimana barang bergerak dan disimpan: logistik."
+      },
+      {
+        "judul": "Ruang lingkup logistik",
+        "jenis": "daftar",
+        "isi": [
+          "Transportasi",
+          "Gudang",
+          "Stok dan pembelian ulang",
+          "Kemasan",
+          "Informasi dan pencatatan",
+          "Retur (alur balik)"
+        ],
+        "catatan": "Kurir hanya bagian transportasi, ujung yang paling terlihat."
+      },
+      {
+        "judul": "7R logistik",
+        "jenis": "tabel",
+        "isi": {
+          "kolom": [
+            "7R",
+            "Cek"
+          ],
+          "baris": [
+            [
+              "Right product",
+              "SKU dan varian sama dengan pesanan?"
+            ],
+            [
+              "Right quantity",
+              "Jumlah sama dengan pesanan?"
+            ],
+            [
+              "Right condition",
+              "Barang utuh, kemasan layak?"
+            ],
+            [
+              "Right place",
+              "Alamat lengkap dan benar?"
+            ],
+            [
+              "Right time",
+              "Tiba sesuai janji?"
+            ],
+            [
+              "Right customer",
+              "Diterima orang yang benar?"
+            ],
+            [
+              "Right price",
+              "Biaya wajar bagi pengirim dan pelanggan?"
+            ]
+          ]
+        },
+        "catatan": "Tepat waktu artinya sesuai janji, bukan secepat mungkin."
+      },
+      {
+        "judul": "Cepat tapi salah",
+        "jenis": "contoh",
+        "isi": "CONTOH Pembeli memesan sepatu ukuran 42. Paket tiba keesokan harinya, tapi isinya ukuran 41. Cepat, tapi tidak tepat barang. Kesalahannya terjadi di gudang, bukan di pengantaran."
+      },
+      {
+        "judul": "Cross-docking",
+        "jenis": "langkah",
+        "isi": [
+          "Truk pemasok merapat di dok masuk",
+          "Barang dibongkar dan dicek",
+          "Barang dipilah sesuai tujuan",
+          "Barang dipindah ke dok keluar",
+          "Barang dimuat ke truk tujuan"
+        ],
+        "catatan": "Syaratnya: jadwal truk pas dan data pesanan jelas sebelum barang tiba."
+      },
+      {
+        "judul": "Salah paham umum",
+        "jenis": "daftar",
+        "isi": [
+          "Logistik sama dengan kurir",
+          "Logistik hanya urusan gudang",
+          "Logistik hanya urusan perusahaan besar",
+          "Logistik sama dengan supply chain"
+        ]
+      }
+    ]
+  }
+]

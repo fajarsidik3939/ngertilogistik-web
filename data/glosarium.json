@@ -1,0 +1,650 @@
+[
+  {
+    "istilah": "7R",
+    "alias": [
+      "seven rights of logistics",
+      "7 tepat logistik"
+    ],
+    "arti": "Konsep bahwa logistik yang baik memberikan produk, jumlah, kondisi, tempat, waktu, pelanggan, dan harga atau biaya yang tepat. Ketujuhnya harus tercapai bersamaan, dan daftarnya bisa sedikit berbeda antarbuku.",
+    "artikel": "L17"
+  },
+  {
+    "istilah": "Admin gudang",
+    "alias": [
+      "admin stok"
+    ],
+    "arti": "Peran yang mencatat semua pergerakan barang di sistem: penerimaan, pemindahan lokasi, pengeluaran, dan retur. Tugas utamanya menjaga stok di sistem sama dengan stok fisik.",
+    "artikel": "L10"
+  },
+  {
+    "istilah": "Analisis ABC",
+    "alias": [
+      "pengelompokan ABC",
+      "kelas A, B, C"
+    ],
+    "arti": "Pengelompokan barang berdasarkan perbandingan nilainya, yang dipakai untuk mengatur frekuensi cycle count. Barang bernilai tinggi dihitung lebih sering, barang yang jarang bergerak dihitung lebih jarang.",
+    "artikel": "L23"
+  },
+  {
+    "istilah": "Angka pembagi",
+    "alias": [
+      "faktor dim",
+      "pembagi berat volume"
+    ],
+    "arti": "Angka yang mengubah ukuran ruang paket menjadi berat dalam rumus berat volume, misalnya 6.000 untuk kargo udara atau 5.000 di sebagian layanan ekspres. Pembagi yang lebih kecil menghasilkan berat volume yang lebih besar.",
+    "artikel": "L06"
+  },
+  {
+    "istilah": "Barcode",
+    "alias": [],
+    "arti": "Gambar garis yang bisa dipindai mesin. Pada produk ritel, angka di bawah barcode umumnya adalah GTIN.",
+    "artikel": "L03"
+  },
+  {
+    "istilah": "Batch",
+    "alias": [
+      "nomor batch",
+      "bets",
+      "nomor bets"
+    ],
+    "arti": "Kelompok barang dengan nomor batch dan tanggal kedaluwarsa sendiri, yang dicatat saat penerimaan. Catatan batch menjadi dasar urutan keluar barang dengan FIFO dan FEFO.",
+    "artikel": "L08"
+  },
+  {
+    "istilah": "Batch picking",
+    "alias": [],
+    "arti": "Metode picking yang mengambil barang untuk beberapa pesanan sekaligus dalam satu putaran, lalu memilahnya ke tiap pesanan. Perjalanan lebih hemat, tetapi tahap pemilahan harus teliti.",
+    "artikel": "L22"
+  },
+  {
+    "istilah": "Berat aktual",
+    "alias": [
+      "berat timbangan",
+      "berat asli"
+    ],
+    "arti": "Berat paket menurut timbangan, yaitu massa barang plus kemasan. Dipakai untuk tagihan ongkir saat lebih besar dari berat volume.",
+    "artikel": "L06"
+  },
+  {
+    "istilah": "Berat volume",
+    "alias": [
+      "berat volumetrik",
+      "berat dimensi",
+      "berat DIM"
+    ],
+    "arti": "Berat yang dihitung dari ruang yang dipakai paket: panjang x lebar x tinggi (cm) dibagi angka pembagi. Barang ringan tapi besar biasanya ditagih berdasarkan berat ini.",
+    "artikel": "L06"
+  },
+  {
+    "istilah": "Bin location",
+    "alias": [
+      "kode lokasi",
+      "alamat lokasi rak"
+    ],
+    "arti": "Kode alamat unik untuk setiap tempat simpan di gudang, misalnya lorong, rak, tingkat, dan posisi. Kode ini membuat lokasi barang bisa dicatat dan ditemukan lagi.",
+    "artikel": "L16"
+  },
+  {
+    "istilah": "Bongkar muat",
+    "alias": [
+      "loading",
+      "unloading",
+      "bongkar",
+      "muat"
+    ],
+    "arti": "Kegiatan menurunkan barang dari truk ke area penerimaan (unloading) dan menaikkan barang ke kendaraan untuk dikirim (loading). Barang perlu diturunkan dengan aman dan diletakkan di area yang sudah ditentukan.",
+    "artikel": "L07"
+  },
+  {
+    "istilah": "Break-bulk",
+    "alias": [
+      "operasi break-bulk"
+    ],
+    "arti": "Salah satu fungsi gudang, yaitu memecah kiriman besar menjadi kiriman-kiriman kecil.",
+    "artikel": "L04"
+  },
+  {
+    "istilah": "Chargeable weight",
+    "alias": [
+      "berat yang ditagih"
+    ],
+    "arti": "Berat yang dipakai untuk menghitung ongkir, yaitu yang lebih besar di antara berat aktual dan berat volume.",
+    "artikel": "L06"
+  },
+  {
+    "istilah": "Checker",
+    "alias": [
+      "checker penerimaan",
+      "pemeriksa barang"
+    ],
+    "arti": "Peran yang memeriksa barang secara fisik: mencocokkan surat jalan dengan pesanan, menghitung jumlah, memeriksa kondisi kemasan, dan mencatat batch atau tanggal kedaluwarsa. Di beberapa gudang, checker juga memeriksa barang keluar sebelum dimuat.",
+    "artikel": "L10"
+  },
+  {
+    "istilah": "Cross-docking",
+    "alias": [
+      "cross docking",
+      "cross dock",
+      "gudang transit"
+    ],
+    "arti": "Cara menangani barang tanpa menyimpannya: barang dari kendaraan masuk dibongkar, dipilah sesuai tujuan, lalu langsung dimuat ke kendaraan keluar. Tahap putaway, penyimpanan, dan picking dari rak dihindari.",
+    "artikel": "L15"
+  },
+  {
+    "istilah": "Cycle count",
+    "alias": [
+      "cycle counting",
+      "hitung bergilir"
+    ],
+    "arti": "Teknik audit akurasi stok dengan menghitung sebagian barang secara terjadwal dan bergiliran, sementara gudang tetap beroperasi. Selisih stok jadi ketahuan lebih cepat.",
+    "artikel": "L23"
+  },
+  {
+    "istilah": "Daftar ambil",
+    "alias": [
+      "picking list"
+    ],
+    "arti": "Daftar untuk picker yang berisi kode barang, jumlah, dan lokasi rak yang harus diambil sesuai pesanan.",
+    "artikel": "L04"
+  },
+  {
+    "istilah": "Dead stock",
+    "alias": [],
+    "arti": "Barang yang tidak bergerak sama sekali di gudang. Kelompok ini termasuk tanda kelebihan stok yang perlu diperhatikan.",
+    "artikel": "L11"
+  },
+  {
+    "istilah": "DO",
+    "alias": [
+      "delivery order"
+    ],
+    "arti": "Di banyak gudang, dokumen pengiriman barang ke penerima yang ikut bersama barang atau menjadi dasar barang dikeluarkan. Penamaannya berbeda antarperusahaan, kadang sama dengan surat jalan.",
+    "artikel": "L20"
+  },
+  {
+    "istilah": "Dok",
+    "alias": [
+      "dock",
+      "dok bongkar muat"
+    ],
+    "arti": "Pintu bongkar muat tempat truk merapat di gudang. Banyak gudang memisahkan dok atau area untuk inbound dan outbound.",
+    "artikel": "L15"
+  },
+  {
+    "istilah": "Ekspedisi",
+    "alias": [],
+    "arti": "Pengiriman surat atau barang, atau perusahaan pengangkutan barang. Fokusnya pengangkutan, sehingga ekspedisi adalah salah satu pelaku di dalam logistik.",
+    "artikel": "L05"
+  },
+  {
+    "istilah": "Fast-moving",
+    "alias": [
+      "barang cepat bergerak"
+    ],
+    "arti": "Kelompok barang yang cepat keluar-masuk gudang. Barang seperti ini cocok ditaruh dekat area pengambilan dan setinggi jangkauan tangan.",
+    "artikel": "L11"
+  },
+  {
+    "istilah": "FEFO",
+    "alias": [
+      "first expired, first out"
+    ],
+    "arti": "Aturan urutan keluar barang: barang dengan tanggal kedaluwarsa paling dekat dikeluarkan lebih dulu, walaupun datangnya belakangan. Dipakai untuk makanan, minuman, obat, produk kesehatan, dan kosmetik.",
+    "artikel": "L09"
+  },
+  {
+    "istilah": "FIFO",
+    "alias": [
+      "first in, first out"
+    ],
+    "arti": "Aturan urutan keluar barang: barang yang masuk lebih dulu dikeluarkan lebih dulu. Cocok untuk barang tanpa tanggal kedaluwarsa, dan berbeda dengan FIFO di akuntansi yang merupakan cara menghitung nilai persediaan.",
+    "artikel": "L09"
+  },
+  {
+    "istilah": "FMCG",
+    "alias": [
+      "barang konsumsi cepat laku"
+    ],
+    "arti": "Singkatan untuk barang konsumsi yang cepat laku.",
+    "artikel": "L01"
+  },
+  {
+    "istilah": "Forklift",
+    "alias": [
+      "operator forklift"
+    ],
+    "arti": "Alat untuk memindahkan palet dari dok ke rak, menyusun barang di rak tinggi, dan memuat palet ke truk. Di Indonesia, operator forklift wajib punya Lisensi K3.",
+    "artikel": "L10"
+  },
+  {
+    "istilah": "Fumigasi",
+    "alias": [
+      "fumigasi metil bromida",
+      "MB"
+    ],
+    "arti": "Salah satu perlakuan kayu kemasan ekspor menurut ISPM 15, dengan metil bromida dan kode MB pada cap tanda kepatuhan. Pilihan lainnya adalah perlakuan panas dengan kode HT.",
+    "artikel": "L24"
+  },
+  {
+    "istilah": "GR",
+    "alias": [
+      "goods receipt",
+      "GRN",
+      "bukti terima barang"
+    ],
+    "arti": "Pencatatan resmi bahwa barang sudah diterima gudang, biasanya di sistem. GR dibuat berdasarkan jumlah dan kondisi yang benar-benar diterima, lalu stok di sistem bertambah.",
+    "artikel": "L08"
+  },
+  {
+    "istilah": "GTIN",
+    "alias": [
+      "Global Trade Item Number",
+      "U.P.C",
+      "EAN"
+    ],
+    "arti": "Nomor global di bawah barcode produk ritel yang bersifat unik dan bisa diverifikasi. Seperti SKU, prinsipnya satu varian satu kode.",
+    "artikel": "L03"
+  },
+  {
+    "istilah": "Hub sortir",
+    "alias": [
+      "hub",
+      "hub asal",
+      "hub tujuan"
+    ],
+    "arti": "Tempat paket dari banyak pengirim dikumpulkan, disortir menurut tujuan, lalu dikirim lagi. Dengan hub, banyak paket ke arah yang sama bisa digabung dalam satu angkutan.",
+    "artikel": "L18"
+  },
+  {
+    "istilah": "Hub transit",
+    "alias": [
+      "hub perantara"
+    ],
+    "arti": "Hub perantara tempat paket untuk rute jauh singgah sebelum lanjut ke hub tujuan.",
+    "artikel": "L18"
+  },
+  {
+    "istilah": "Inbound",
+    "alias": [
+      "barang masuk"
+    ],
+    "arti": "Semua kegiatan barang masuk ke gudang dari pemasok atau pabrik: bongkar, cek jumlah dan kondisi, cocokkan dokumen, lalu putaway. Inbound selesai saat barang tercatat dan berada di lokasi simpannya.",
+    "artikel": "L07"
+  },
+  {
+    "istilah": "Inbound logistics",
+    "alias": [],
+    "arti": "Di level perusahaan, aliran bahan atau barang dari pemasok masuk ke perusahaan. Cakupannya lebih luas dari gudang karena termasuk transportasi.",
+    "artikel": "L07"
+  },
+  {
+    "istilah": "ISPM 15",
+    "alias": [],
+    "arti": "Standar internasional untuk kemasan kayu pengiriman antarnegara, seperti palet dan peti, untuk mencegah penyebaran hama dan penyakit tumbuhan. Kayu harus diberi perlakuan panas atau fumigasi metil bromida dan dicap tanda kepatuhan.",
+    "artikel": "L24"
+  },
+  {
+    "istilah": "Kargo udara",
+    "alias": [
+      "angkutan udara"
+    ],
+    "arti": "Pengiriman lewat udara yang paling cepat tetapi biasanya paling mahal. Cocok untuk barang kecil, ringan, mendesak, atau bernilai tinggi, dan ongkosnya dihitung dari berat aktual atau berat volume, mana yang lebih besar.",
+    "artikel": "L12"
+  },
+  {
+    "istilah": "Kurir",
+    "alias": [],
+    "arti": "Bagian logistik di transportasi dan pengantaran barang ke penerima. Kurir adalah ujung yang paling terlihat, sedangkan pekerjaan logistik lain terjadi sebelumnya.",
+    "artikel": "L05"
+  },
+  {
+    "istilah": "Lead time",
+    "alias": [
+      "waktu tunggu"
+    ],
+    "arti": "Total waktu dari pesanan dibuat sampai barang siap dipakai atau dijual. Komponennya proses pesanan, penyiapan atau produksi, transit, serta penerimaan dan pengecekan di gudang.",
+    "artikel": "L13"
+  },
+  {
+    "istilah": "LIFO",
+    "alias": [
+      "last in, first out"
+    ],
+    "arti": "Aturan urutan keluar barang: barang yang terakhir masuk keluar lebih dulu. Berisiko untuk barang yang bisa kedaluwarsa atau usang karena stok lama bisa tertinggal terlalu lama.",
+    "artikel": "L09"
+  },
+  {
+    "istilah": "Lisensi K3",
+    "alias": [
+      "SIO"
+    ],
+    "arti": "Kartu tanda kewenangan untuk bertugas sebagai teknisi, operator, atau juru ikat pesawat angkat dan angkut, termasuk forklift. Di lapangan sering disebut SIO.",
+    "artikel": "L10"
+  },
+  {
+    "istilah": "Logistik",
+    "alias": [
+      "logistics management",
+      "manajemen logistik"
+    ],
+    "arti": "Kegiatan mengatur aliran dan penyimpanan barang beserta informasinya, dari titik asal sampai ke pemakai, agar tepat jumlah, waktu, dan tempat. Cakupannya transportasi, gudang, stok, kemasan, informasi, dan retur.",
+    "artikel": "L01"
+  },
+  {
+    "istilah": "Misplaced inventory",
+    "alias": [],
+    "arti": "Barang yang ada di gudang tetapi tidak ditemukan di lokasi simpannya, misalnya karena dipindah tanpa dicatat. Salah satu penyebab selisih stok.",
+    "artikel": "L14"
+  },
+  {
+    "istilah": "Moda transportasi",
+    "alias": [
+      "moda angkut",
+      "moda pengiriman"
+    ],
+    "arti": "Jenis angkutan barang: darat (truk dan kereta api), laut, atau udara. Pilihannya ditentukan oleh kecepatan, ukuran dan berat barang, serta biaya yang masuk akal.",
+    "artikel": "L12"
+  },
+  {
+    "istilah": "Multimoda",
+    "alias": [
+      "angkutan multimoda"
+    ],
+    "arti": "Angkutan barang dengan paling sedikit dua moda berbeda atas dasar satu kontrak, dari tempat barang diterima sampai diserahkan ke penerima. Contohnya truk ke pelabuhan, kapal menyeberang, lalu truk lagi ke gudang tujuan.",
+    "artikel": "L12"
+  },
+  {
+    "istilah": "Nomor resi",
+    "alias": [
+      "resi"
+    ],
+    "arti": "Nomor kiriman untuk melacak paket. Nomor ini dipakai kurir untuk menelusuri scan terakhir kalau paket lewat dari estimasi layanan.",
+    "artikel": "L18"
+  },
+  {
+    "istilah": "OTIF",
+    "alias": [
+      "on-time, in-full"
+    ],
+    "arti": "Ukuran yang menggabungkan tepat waktu dan tepat jumlah: kiriman tiba sesuai jumlah dan jadwal di pesanan.",
+    "artikel": "L17"
+  },
+  {
+    "istilah": "Outbound",
+    "alias": [
+      "barang keluar"
+    ],
+    "arti": "Semua kegiatan barang keluar dari gudang menuju pelanggan, toko, atau gudang lain: picking, packing, muat, kirim, dan perbarui status. Outbound selesai saat barang berangkat dan catatannya benar.",
+    "artikel": "L07"
+  },
+  {
+    "istilah": "Outbound logistics",
+    "alias": [],
+    "arti": "Di level perusahaan, aliran produk dari perusahaan ke pelanggan, termasuk transportasinya. Berbeda dengan istilah outbound di dunia pemasaran atau kegiatan alam terbuka.",
+    "artikel": "L07"
+  },
+  {
+    "istilah": "Overstock",
+    "alias": [
+      "stok berlebih",
+      "kelebihan stok"
+    ],
+    "arti": "Kondisi ketika stok jauh melebihi kebutuhan. Dampaknya modal tertahan, butuh ruang dan biaya, risiko rusak atau kedaluwarsa, dan masalah perencanaan jadi tertutup.",
+    "artikel": "L11"
+  },
+  {
+    "istilah": "Packer",
+    "alias": [],
+    "arti": "Peran yang memeriksa ulang barang hasil picking, mengemasnya supaya aman, lalu memasang label pengiriman. Packer sering menjadi penjaga terakhir sebelum kesalahan sampai ke pelanggan.",
+    "artikel": "L10"
+  },
+  {
+    "istilah": "Packing",
+    "alias": [
+      "pengemasan",
+      "packaging"
+    ],
+    "arti": "Mengemas barang supaya aman selama pengiriman, termasuk memilih kardus, memberi pelindung, menutup paket, dan menempel label. Packing dilakukan setelah picking.",
+    "artikel": "L20"
+  },
+  {
+    "istilah": "Packing kayu",
+    "alias": [],
+    "arti": "Rangka atau peti kayu yang dipasang di luar kemasan utama untuk menahan benturan dan tekanan tumpukan selama pengiriman. Tidak wajib untuk semua kiriman, dan menambah biaya serta berat dan ukuran yang ikut dihitung ongkir.",
+    "artikel": "L24"
+  },
+  {
+    "istilah": "Pengadaan",
+    "alias": [
+      "sourcing",
+      "procurement"
+    ],
+    "arti": "Bagian supply chain yang mengurus pembelian, misalnya memilih dan menilai pemasok serta bernegosiasi harga dan kontrak pembelian.",
+    "artikel": "L02"
+  },
+  {
+    "istilah": "Pengiriman",
+    "alias": [
+      "shipping"
+    ],
+    "arti": "Langkah terakhir alur gudang: barang diserahkan ke kurir atau dimuat ke truk, biasanya dengan dokumen serah terima atau surat jalan, lalu status di sistem diperbarui.",
+    "artikel": "L04"
+  },
+  {
+    "istilah": "Phantom inventory",
+    "alias": [],
+    "arti": "Kondisi ketika barang tercatat ada di sistem tetapi tidak ada di rak. Akibatnya pesanan diterima untuk barang yang tidak ada.",
+    "artikel": "L14"
+  },
+  {
+    "istilah": "Picker",
+    "alias": [],
+    "arti": "Peran yang mengambil barang dari lokasi rak sesuai daftar pesanan: barang, jumlah, dan batch yang benar. Picker yang baik mengikuti lokasi yang ditunjuk sistem, bukan yang paling mudah dijangkau.",
+    "artikel": "L10"
+  },
+  {
+    "istilah": "Picking",
+    "alias": [
+      "order picking",
+      "pengambilan barang"
+    ],
+    "arti": "Aktivitas mengambil dan menyiapkan barang dari lokasi simpan di gudang sesuai pesanan. Setelah picking, barang biasanya dipilah, dikemas, lalu dikirim.",
+    "artikel": "L22"
+  },
+  {
+    "istilah": "Picking per pesanan",
+    "alias": [
+      "single order picking",
+      "discrete picking"
+    ],
+    "arti": "Metode picking yang mengambil semua barang untuk satu pesanan sampai selesai, lalu pindah ke pesanan berikutnya. Sederhana dan jarang salah, tetapi banyak jalan bolak-balik.",
+    "artikel": "L22"
+  },
+  {
+    "istilah": "PO",
+    "alias": [
+      "purchase order",
+      "pesanan pembelian"
+    ],
+    "arti": "Dokumen yang dibuat pembeli berisi daftar barang atau jasa yang ingin dibeli dari pemasok. Bagi gudang, PO menjadi patokan saat barang datang.",
+    "artikel": "L20"
+  },
+  {
+    "istilah": "Pusat distribusi",
+    "alias": [
+      "distribution center"
+    ],
+    "arti": "Gudang yang tugas utamanya menyalurkan barang ke banyak tujuan. Banyak pusat distribusi memakai cross-docking dan penyimpanan biasa sekaligus.",
+    "artikel": "L15"
+  },
+  {
+    "istilah": "Putaway",
+    "alias": [
+      "put away",
+      "penyimpanan"
+    ],
+    "arti": "Proses memindahkan barang yang sudah diterima dari area penerimaan ke lokasi simpan, lalu mencatat lokasinya di sistem. Putaway terjadi setelah penerimaan dan sebelum picking.",
+    "artikel": "L16"
+  },
+  {
+    "istilah": "Receiving",
+    "alias": [
+      "penerimaan barang"
+    ],
+    "arti": "Langkah pertama alur gudang: memastikan barang masuk sesuai dokumen pesanan. Yang dicek adalah dokumen, jumlah, kondisi, serta batch dan tanggal kedaluwarsa, dan selisih dicatat sebelum tanda tangan.",
+    "artikel": "L08"
+  },
+  {
+    "istilah": "Reorder point",
+    "alias": [
+      "ROP",
+      "titik pemesanan ulang",
+      "titik pemesanan kembali"
+    ],
+    "arti": "Batas stok yang menandakan saatnya memesan barang lagi. Rumus dasarnya pemakaian rata-rata per hari dikali lead time, lalu ditambah safety stock.",
+    "artikel": "L21"
+  },
+  {
+    "istilah": "Retur",
+    "alias": [
+      "alur balik",
+      "reverse flow"
+    ],
+    "arti": "Aliran balik barang yang dikembalikan, misalnya karena salah kirim atau rusak. Barang retur diterima, dicek, lalu diputuskan untuk dijual lagi, diperbaiki, atau dimusnahkan.",
+    "artikel": "L05"
+  },
+  {
+    "istilah": "Safety stock",
+    "alias": [
+      "stok pengaman",
+      "persediaan penyangga",
+      "buffer stock"
+    ],
+    "arti": "Stok cadangan yang sengaja disimpan untuk mengurangi risiko kehabisan barang saat permintaan naik atau pasokan terlambat. Besarnya dihitung per SKU, bukan ditebak.",
+    "artikel": "L19"
+  },
+  {
+    "istilah": "Selisih stok",
+    "alias": [
+      "inventory discrepancy",
+      "selisih stok gudang"
+    ],
+    "arti": "Perbedaan antara jumlah barang di sistem dan jumlah di rak. Penyebabnya kebanyakan pencatatan, bukan barang hilang.",
+    "artikel": "L14"
+  },
+  {
+    "istilah": "Shrinkage",
+    "alias": [],
+    "arti": "Berkurangnya barang, misalnya karena dicuri atau rusak. Salah satu kelompok penyebab catatan stok tidak akurat.",
+    "artikel": "L14"
+  },
+  {
+    "istilah": "SKU",
+    "alias": [
+      "stock keeping unit",
+      "kode SKU"
+    ],
+    "arti": "Kode untuk satu varian barang yang dihitung, disimpan, dan dijual terpisah. Beda isi, warna, ukuran, atau kemasan jual biasanya berarti beda SKU.",
+    "artikel": "L03"
+  },
+  {
+    "istilah": "Slow-moving",
+    "alias": [
+      "barang lambat bergerak",
+      "non-moving"
+    ],
+    "arti": "Kelompok barang yang lambat keluar-masuk gudang. Bersama kelompok non-moving, kelompok ini paling perlu diperhatikan saat memeriksa tanda kelebihan stok.",
+    "artikel": "L11"
+  },
+  {
+    "istilah": "Sortasi",
+    "alias": [
+      "sortation",
+      "sortir",
+      "pemilahan"
+    ],
+    "arti": "Pengelompokan barang sesuai tujuan pengirimannya, yang juga perlu menyesuaikan kapasitas truk dengan rute. Di hub, paket disortir menurut kota atau area tujuan.",
+    "artikel": "L18"
+  },
+  {
+    "istilah": "Spoilage",
+    "alias": [],
+    "arti": "Kerusakan barang. Salah satu kelompok penyebab catatan stok tidak akurat.",
+    "artikel": "L14"
+  },
+  {
+    "istilah": "Stock opname",
+    "alias": [
+      "stocktaking",
+      "physical inventory",
+      "hitung fisik menyeluruh"
+    ],
+    "arti": "Kegiatan menghitung fisik seluruh persediaan dalam satu waktu untuk dicocokkan dengan catatan, termasuk mengecek kondisi barang. Biasanya aktivitas gudang dihentikan sementara dan sering dilakukan tahunan.",
+    "artikel": "L23"
+  },
+  {
+    "istilah": "Stok siklus",
+    "alias": [
+      "stok jalan"
+    ],
+    "arti": "Stok yang dipakai sehari-hari dan habis sebelum barang baru datang. Safety stock adalah lapisan cadangan di bawahnya.",
+    "artikel": "L19"
+  },
+  {
+    "istilah": "Supply chain",
+    "alias": [
+      "rantai pasok",
+      "supply chain management"
+    ],
+    "arti": "Seluruh rantai dari bahan baku, pabrik, distributor, sampai pembeli, termasuk pengadaan, produksi, logistik, dan kerja sama antarperusahaan. Logistik adalah salah satu bagian di dalamnya.",
+    "artikel": "L02"
+  },
+  {
+    "istilah": "Surat jalan",
+    "alias": [],
+    "arti": "Dokumen tertulis yang ikut bersama barang sebagai bukti pengiriman, dibuat oleh pengirim dan berisi barang yang benar-benar dikirim. Saat penerimaan, surat jalan dicocokkan dengan PO.",
+    "artikel": "L20"
+  },
+  {
+    "istilah": "Tampering",
+    "alias": [],
+    "arti": "Tanda kemasan atau kiriman pernah dibuka atau diubah. Termasuk hal yang diperiksa saat penerimaan barang.",
+    "artikel": "L08"
+  },
+  {
+    "istilah": "Transaction errors",
+    "alias": [],
+    "arti": "Salah catat jumlah saat barang masuk dan keluar. Salah satu kelompok penyebab catatan stok tidak akurat.",
+    "artikel": "L14"
+  },
+  {
+    "istilah": "Transit",
+    "alias": [
+      "status transit"
+    ],
+    "arti": "Status paket yang sedang berpindah dari satu hub ke hub berikutnya, disortir, dan menunggu jadwal angkut. Status ini baru berubah saat paket di-scan di titik berikutnya.",
+    "artikel": "L18"
+  },
+  {
+    "istilah": "Transit time",
+    "alias": [
+      "waktu transit"
+    ],
+    "arti": "Waktu barang di perjalanan, dari diserahkan ke pengangkut sampai tiba di tujuan. Transit time hanya satu bagian dari lead time.",
+    "artikel": "L13"
+  },
+  {
+    "istilah": "Wave picking",
+    "alias": [],
+    "arti": "Metode picking yang mengelompokkan pesanan menjadi gelombang, misalnya berdasarkan jadwal truk, tujuan pengiriman, atau prioritas, lalu mengambilnya berurutan. Butuh perencanaan matang karena sulit diubah setelah dimulai.",
+    "artikel": "L22"
+  },
+  {
+    "istilah": "Zone picking",
+    "alias": [
+      "picking zona"
+    ],
+    "arti": "Metode picking yang membagi gudang menjadi beberapa zona, dan setiap petugas hanya mengambil barang di zonanya sendiri. Butuh lebih banyak petugas dan sering perlu penyortiran tambahan.",
+    "artikel": "L22"
+  }
+]

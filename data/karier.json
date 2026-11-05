@@ -1,0 +1,311 @@
+{
+  "jalur": [
+    {
+      "tahap": "Mulai",
+      "peran": ["Picker", "Packer", "Checker", "Staf receiving (inbound)", "Operator forklift", "Admin gudang"]
+    },
+    {
+      "tahap": "Berkembang",
+      "peran": ["Staf inventory control", "Dispatcher (koordinator pengiriman)", "Staf PPIC", "Staf pembelian", "Analis supply chain"]
+    },
+    {
+      "tahap": "Memimpin",
+      "peran": ["Kepala regu (team leader)", "Supervisor gudang", "Kepala gudang"]
+    }
+  ],
+  "peran": [
+    {
+      "nama": "Picker",
+      "area": "Gudang",
+      "ringkas": "Mengambil barang dari rak sesuai daftar pesanan: barang yang benar, jumlah yang benar, dan batch yang benar.",
+      "tugas": [
+        "Membaca daftar pesanan (picking list) dan menuju lokasi rak yang ditunjuk sistem.",
+        "Mencocokkan kode barang, varian, dan jumlah sebelum mengambil, bukan hanya melihat gambar di kardus.",
+        "Mengambil batch sesuai aturan gudang, misalnya FIFO atau FEFO.",
+        "Melaporkan bila stok di rak kurang atau barang rusak, lalu menyerahkan hasil picking ke packer."
+      ],
+      "skill": ["Teliti membaca kode dan lokasi rak", "Cepat tapi tidak terburu-buru", "Memakai pemindai bila gudang menyediakannya", "Paham urutan FIFO dan FEFO"],
+      "artikel": ["L22", "L04", "L09", "L03"]
+    },
+    {
+      "nama": "Packer",
+      "area": "Gudang",
+      "ringkas": "Memeriksa ulang hasil picking, mengemas barang supaya aman di perjalanan, lalu memasang label pengiriman.",
+      "tugas": [
+        "Mencocokkan barang hasil picking dengan pesanan sebelum dikemas.",
+        "Memilih kemasan dan bahan pelindung yang sesuai dengan sifat barang.",
+        "Menimbang atau mengukur paket bila diperlukan untuk menghitung ongkos kirim.",
+        "Memasang label pengiriman dengan benar dan menyerahkan paket ke area muat."
+      ],
+      "skill": ["Rapi dan cermat memeriksa ulang", "Teknik mengemas dan memilih kemasan", "Paham dasar berat volume", "Menjaga kebersihan area kerja"],
+      "artikel": ["L04", "L24", "L06"]
+    },
+    {
+      "nama": "Checker",
+      "area": "Gudang",
+      "ringkas": "Memeriksa barang secara fisik, baik yang datang maupun yang akan dimuat, supaya jumlah, kondisi, dan dokumennya cocok.",
+      "tugas": [
+        "Mencocokkan surat jalan dengan pesanan dan menghitung jumlah fisik barang.",
+        "Memeriksa kondisi kemasan dan mencatat kerusakan sebelum dokumen ditandatangani.",
+        "Mencatat batch atau tanggal kedaluwarsa bila ada.",
+        "Memeriksa barang keluar sebelum dimuat ke kendaraan, di gudang yang menerapkannya."
+      ],
+      "skill": ["Membaca dokumen pengiriman", "Teliti menghitung", "Mengenali kerusakan barang", "Berani mencatat selisih apa adanya"],
+      "artikel": ["L08", "L07", "L14"]
+    },
+    {
+      "nama": "Staf receiving (inbound)",
+      "area": "Gudang",
+      "ringkas": "Mengurus barang masuk dari kedatangan truk sampai barang siap disimpan di lokasi yang tepat.",
+      "tugas": [
+        "Menyiapkan dok dan jadwal bongkar sesuai rencana kedatangan barang.",
+        "Mengawasi bongkar muat dan bekerja sama dengan checker saat pemeriksaan.",
+        "Memberi label atau identitas pada barang yang sudah diterima.",
+        "Mengarahkan barang ke lokasi simpan (putaway) dan memastikan tercatat di sistem."
+      ],
+      "skill": ["Paham alur inbound", "Koordinasi dengan sopir dan pemasok", "Tertib dokumen", "Mengatur area bongkar supaya tidak menumpuk"],
+      "artikel": ["L08", "L16", "L07"]
+    },
+    {
+      "nama": "Operator forklift",
+      "area": "Gudang",
+      "ringkas": "Memindahkan dan menyusun palet dari dok ke rak dan dari rak ke kendaraan; di Indonesia wajib punya Lisensi K3, yang di lapangan sering disebut SIO.",
+      "tugas": [
+        "Memindahkan palet dari area bongkar ke lokasi simpan.",
+        "Menyusun barang di rak tinggi sesuai lokasi yang ditunjuk.",
+        "Memuat palet ke kendaraan untuk pengiriman.",
+        "Memeriksa kondisi forklift sebelum dipakai dan mengisi buku kerja serta laporan harian."
+      ],
+      "skill": ["Mengoperasikan forklift dengan aman", "Memiliki Lisensi K3 (SIO); dasarnya Permenakertrans 9/2010 yang diperbarui lewat Permenaker 8/2020, cek ketentuan terbaru ke dinas ketenagakerjaan setempat", "Disiplin keselamatan dan konsentrasi", "Paham tata letak rak dan jalur gudang"],
+      "artikel": ["L10", "L16", "L04"]
+    },
+    {
+      "nama": "Admin gudang",
+      "area": "Gudang",
+      "ringkas": "Mencatat semua pergerakan barang di sistem dan menjaga stok di sistem sama dengan stok fisik.",
+      "tugas": [
+        "Mencatat penerimaan, pemindahan lokasi, pengeluaran, dan retur barang.",
+        "Menyiapkan dokumen seperti surat jalan dan bukti terima.",
+        "Membuat laporan stok dan laporan harian gudang.",
+        "Menelusuri selisih bersama checker dan tim inventory."
+      ],
+      "skill": ["Input data yang teliti", "Spreadsheet dasar", "Tertib dokumen dan arsip", "Paham istilah dan kode barang"],
+      "artikel": ["L10", "L14", "L03", "L20"]
+    },
+    {
+      "nama": "Staf inventory control",
+      "area": "Inventory",
+      "ringkas": "Menjaga akurasi stok lewat penghitungan rutin, penelusuran selisih, dan pemantauan kondisi barang.",
+      "tugas": [
+        "Menjadwalkan dan menjalankan cycle count atau membantu stock opname.",
+        "Menelusuri penyebab selisih antara stok sistem dan stok fisik.",
+        "Memantau barang yang mendekati kedaluwarsa atau lama tidak bergerak.",
+        "Memberi masukan perbaikan prosedur supaya selisih tidak terulang."
+      ],
+      "skill": ["Analisis data stok sederhana", "Teliti dan sistematis", "Paham FIFO, FEFO, dan cycle count", "Komunikasi dengan bagian gudang dan keuangan"],
+      "artikel": ["L14", "L23", "L09", "L11"]
+    },
+    {
+      "nama": "Dispatcher (koordinator pengiriman)",
+      "area": "Pengiriman",
+      "ringkas": "Mengatur jadwal, kendaraan, dan rute supaya barang terkirim tepat waktu, tepat tempat, dan dalam kondisi baik.",
+      "tugas": [
+        "Menyusun jadwal pengiriman dan membagi muatan ke kendaraan.",
+        "Memilih moda atau armada yang sesuai dengan jenis barang dan tujuan.",
+        "Memantau status pengiriman dan menindaklanjuti keterlambatan.",
+        "Menjadi penghubung antara gudang, sopir, dan pelanggan."
+      ],
+      "skill": ["Perencanaan rute dan jadwal", "Komunikasi yang jelas dan tenang", "Paham lead time dan transit time", "Cepat mengambil keputusan saat ada kendala"],
+      "artikel": ["L12", "L17", "L18", "L13", "L06"]
+    },
+    {
+      "nama": "Staf PPIC",
+      "area": "Supply chain",
+      "ringkas": "Merencanakan kebutuhan stok dan jadwal produksi atau pengadaan supaya barang tidak kurang dan tidak menumpuk.",
+      "tugas": [
+        "Memantau level stok dan menentukan kapan harus memesan atau memproduksi lagi.",
+        "Menghitung kebutuhan berdasarkan rencana penjualan dan lead time.",
+        "Menjaga safety stock di level yang masuk akal.",
+        "Berkoordinasi dengan pembelian, produksi, dan gudang soal jadwal."
+      ],
+      "skill": ["Spreadsheet dan rumus dasar", "Paham reorder point dan safety stock", "Berpikir terencana", "Komunikasi lintas bagian"],
+      "artikel": ["L21", "L19", "L13", "L11"]
+    },
+    {
+      "nama": "Staf pembelian",
+      "area": "Supply chain",
+      "ringkas": "Mengurus pemesanan barang ke pemasok, dari permintaan masuk sampai barang tiba sesuai kesepakatan.",
+      "tugas": [
+        "Membuat pesanan pembelian berdasarkan permintaan dari PPIC atau bagian lain.",
+        "Membandingkan penawaran dan berkomunikasi dengan pemasok.",
+        "Memantau jadwal kedatangan dan menindaklanjuti keterlambatan.",
+        "Mencocokkan barang yang diterima dengan pesanan bersama tim gudang."
+      ],
+      "skill": ["Negosiasi dan komunikasi tertulis", "Teliti membaca dokumen", "Paham lead time pemasok", "Menjaga integritas dan transparansi"],
+      "artikel": ["L13", "L21", "L02", "L08"]
+    },
+    {
+      "nama": "Analis supply chain",
+      "area": "Supply chain",
+      "ringkas": "Mengolah data stok, pengiriman, dan permintaan menjadi temuan yang membantu tim mengambil keputusan.",
+      "tugas": [
+        "Mengumpulkan dan merapikan data dari gudang, pengiriman, dan pembelian.",
+        "Membuat laporan dan ukuran kinerja yang mudah dipahami.",
+        "Mencari pola masalah, misalnya overstock, stok habis, atau pengiriman yang sering terlambat.",
+        "Mengusulkan perbaikan dan memantau hasilnya."
+      ],
+      "skill": ["Spreadsheet tingkat menengah", "Berpikir analitis", "Menyajikan data dengan sederhana", "Paham gambaran besar logistik dan supply chain"],
+      "artikel": ["L02", "L05", "L11", "L19"]
+    },
+    {
+      "nama": "Kepala regu (team leader)",
+      "area": "Gudang",
+      "ringkas": "Memimpin satu kelompok kecil di lantai gudang, misalnya tim picking atau tim bongkar, dan menjadi contoh dalam bekerja.",
+      "tugas": [
+        "Membagi tugas harian ke anggota tim sesuai arahan supervisor.",
+        "Memastikan tim mengikuti SOP, terutama soal keselamatan.",
+        "Membantu anggota baru memahami alur dan istilah gudang.",
+        "Melaporkan kendala dan capaian tim ke supervisor."
+      ],
+      "skill": ["Menguasai pekerjaan tim yang dipimpin", "Memberi arahan dengan jelas", "Sabar mengajari orang baru", "Menyelesaikan masalah kecil di tempat"],
+      "artikel": ["L22", "L04", "L20"]
+    },
+    {
+      "nama": "Supervisor gudang",
+      "area": "Gudang",
+      "ringkas": "Mengatur orang, jadwal shift, prioritas pesanan, dan target harian sambil memastikan semua orang bekerja dengan aman.",
+      "tugas": [
+        "Menyusun pembagian kerja dan jadwal shift.",
+        "Memantau target harian dan mengatur prioritas pesanan.",
+        "Menyelesaikan masalah di lantai gudang, dari selisih stok sampai kendala alat.",
+        "Menegakkan aturan keselamatan dan SOP."
+      ],
+      "skill": ["Kepemimpinan", "Membaca laporan", "Menyusun jadwal", "Komunikasi dan menyelesaikan masalah"],
+      "artikel": ["L10", "L04", "L15", "L14"]
+    },
+    {
+      "nama": "Kepala gudang",
+      "area": "Gudang",
+      "ringkas": "Bertanggung jawab atas seluruh operasional gudang: alur barang, akurasi stok, tim, dan keselamatan.",
+      "tugas": [
+        "Merencanakan kapasitas, tata letak, dan alur kerja gudang.",
+        "Memastikan akurasi stok lewat stock opname dan cycle count.",
+        "Membina para supervisor dan kepala regu.",
+        "Berkoordinasi dengan bagian pengiriman, pembelian, dan keuangan."
+      ],
+      "skill": ["Perencanaan operasional", "Membaca dan menganalisis laporan", "Membina tim", "Paham alur inbound, penyimpanan, dan outbound secara menyeluruh"],
+      "artikel": ["L04", "L07", "L23", "L15"]
+    }
+  ],
+  "wawancara": [
+    {
+      "q": "Ceritakan tentang diri Anda dan kenapa tertarik bekerja di gudang.",
+      "untuk": "Staf gudang",
+      "tips": "Jawab singkat: latar belakang, pengalaman yang relevan, lalu alasan Anda tertarik. Kaitkan dengan sifat yang dibutuhkan di gudang, misalnya teliti, disiplin, atau terbiasa kerja fisik. Hindari jawaban \"yang penting kerja\"."
+    },
+    {
+      "q": "Bagaimana cara Anda memastikan jumlah barang yang Anda hitung sudah benar?",
+      "untuk": "Checker, picker, staf receiving",
+      "tips": "Sebutkan langkah konkret, misalnya menghitung per tumpukan atau per lapis palet, mencocokkan dengan dokumen, lalu menghitung ulang bila hasilnya beda. Tambahkan bahwa Anda mencatat selisih apa adanya, bukan menyesuaikan angka supaya cocok."
+    },
+    {
+      "q": "Apa yang Anda lakukan kalau jumlah barang datang tidak sesuai dengan surat jalan?",
+      "untuk": "Checker, staf receiving",
+      "tips": "Tunjukkan bahwa Anda tidak langsung tanda tangan. Jelaskan Anda akan menghitung ulang, mencatat selisih di dokumen, memberi tahu atasan, dan meminta sopir ikut mengetahui. Intinya: catat dulu, baru serah terima."
+    },
+    {
+      "q": "Apa yang Anda lakukan kalau barang di rak tidak sesuai dengan yang tertulis di daftar pesanan?",
+      "untuk": "Picker",
+      "tips": "Jangan jawab \"ambil yang mirip saja\". Jelaskan bahwa Anda akan mencocokkan kode barang, tidak mengambil dari lokasi lain tanpa izin, lalu melaporkan ke admin atau kepala regu supaya stok bisa dicek."
+    },
+    {
+      "q": "Apa bedanya FIFO dan FEFO, dan kapan dipakai?",
+      "untuk": "Picker, staf inventory control",
+      "tips": "Jelaskan dengan bahasa sederhana: FIFO berarti barang yang masuk duluan keluar duluan, FEFO berarti barang yang kedaluwarsa duluan keluar duluan. Beri contoh barang yang cocok memakai FEFO, misalnya makanan atau obat."
+    },
+    {
+      "q": "Bagaimana Anda menjaga keselamatan kerja di gudang?",
+      "untuk": "Staf gudang, operator forklift",
+      "tips": "Sebut kebiasaan nyata: memakai alat pelindung diri, memakai jalur pejalan kaki, tidak berdiri di jalur forklift, dan melaporkan kondisi berbahaya. Untuk operator forklift, sebut pemeriksaan alat sebelum dipakai dan bahwa Anda memiliki Lisensi K3 (SIO)."
+    },
+    {
+      "q": "Pernahkah Anda membuat kesalahan dalam pekerjaan? Apa yang Anda lakukan?",
+      "untuk": "Semua level",
+      "tips": "Pilih contoh nyata yang tidak fatal. Ceritakan apa yang terjadi, bagaimana Anda melaporkannya, dan apa yang Anda ubah supaya tidak terulang. Pewawancara ingin melihat kejujuran dan kemauan belajar, bukan orang yang tidak pernah salah."
+    },
+    {
+      "q": "Bagaimana cara Anda menjaga stok di sistem tetap sama dengan stok fisik?",
+      "untuk": "Admin gudang, staf inventory control",
+      "tips": "Jelaskan kebiasaan mencatat setiap pergerakan saat itu juga, bukan ditunda. Sebut juga pengecekan rutin seperti cycle count dan cara Anda menelusuri selisih, misalnya mengecek transaksi terakhir dan dokumen pendukung."
+    },
+    {
+      "q": "Seberapa nyaman Anda bekerja dengan spreadsheet?",
+      "untuk": "Admin gudang, staf PPIC, analis",
+      "tips": "Jawab jujur sesuai kemampuan dan sebut fungsi yang benar-benar Anda kuasai, misalnya filter, pengurutan, penjumlahan bersyarat, atau tabel ringkasan. Kalau masih belajar, sebut apa yang sedang Anda pelajari. Lebih baik jujur daripada mengaku mahir lalu kesulitan saat tes."
+    },
+    {
+      "q": "Kalau ada pesanan mendesak padahal tim sedang sibuk, apa yang Anda lakukan?",
+      "untuk": "Kepala regu, supervisor",
+      "tips": "Tunjukkan cara Anda menentukan prioritas: cek tenggat setiap pesanan, bicarakan dengan atasan atau bagian terkait, lalu atur ulang pembagian tugas. Tekankan bahwa kecepatan tidak boleh mengorbankan akurasi dan keselamatan."
+    },
+    {
+      "q": "Bagaimana Anda menangani pengiriman yang terlambat?",
+      "untuk": "Dispatcher",
+      "tips": "Jelaskan langkahnya: cari tahu penyebab dan posisi barang, beri kabar ke pelanggan atau bagian penjualan lebih dulu, lalu tawarkan solusi. Tambahkan bahwa Anda mencatat kejadiannya supaya polanya bisa diperbaiki."
+    },
+    {
+      "q": "Kapan sebaiknya kita memesan barang lagi?",
+      "untuk": "Staf PPIC, staf pembelian",
+      "tips": "Jelaskan konsep reorder point secara sederhana: pesan lagi saat stok cukup untuk menutup pemakaian selama lead time ditambah safety stock. Tunjukkan bahwa Anda paham risikonya dua arah: telat pesan membuat stok habis, pesan berlebihan membuat overstock."
+    },
+    {
+      "q": "Bagaimana cara Anda menghadapi anggota tim yang sering tidak mengikuti SOP?",
+      "untuk": "Kepala regu, supervisor",
+      "tips": "Tunjukkan pendekatan bertahap: bicara empat mata untuk mencari tahu alasannya, jelaskan kembali kenapa SOP itu penting, lalu pantau perubahannya. Bila tidak ada perbaikan, ikuti jalur sesuai aturan perusahaan. Hindari jawaban yang hanya berisi marah atau menghukum."
+    },
+    {
+      "q": "Bagaimana Anda memastikan target harian tercapai tanpa mengorbankan keselamatan?",
+      "untuk": "Supervisor, kepala gudang",
+      "tips": "Sebutkan cara yang bisa diukur, misalnya membagi target per jam atau per shift, memantau progres di tengah hari, dan menyiapkan rencana cadangan. Tegaskan bahwa aturan keselamatan tidak ditawar walaupun target mepet."
+    },
+    {
+      "q": "Kenapa kami harus memilih Anda?",
+      "untuk": "Semua level",
+      "tips": "Rangkum dua atau tiga kekuatan yang paling sesuai dengan posisi, masing-masing dengan contoh singkat. Tutup dengan apa yang ingin Anda pelajari atau kontribusikan di perusahaan itu."
+    }
+  ],
+  "skill_umum": [
+    {
+      "nama": "Teliti menghitung dan mencocokkan",
+      "kenapa": "Hampir semua masalah gudang berawal dari angka yang salah. Kebiasaan menghitung ulang dan mencocokkan dengan dokumen membuat Anda dipercaya di peran mana pun."
+    },
+    {
+      "nama": "Spreadsheet dasar",
+      "kenapa": "Laporan stok, jadwal, dan data pengiriman banyak diolah di spreadsheet. Menguasai filter, pengurutan, dan rumus sederhana membuka jalan dari lantai gudang ke peran admin atau perencanaan."
+    },
+    {
+      "nama": "Membaca dokumen dan label",
+      "kenapa": "Surat jalan, daftar pesanan, kode barang, dan label lokasi adalah bahasa sehari-hari di gudang. Salah baca berarti salah ambil atau salah kirim."
+    },
+    {
+      "nama": "Disiplin SOP dan keselamatan kerja",
+      "kenapa": "Gudang penuh alat berat dan barang bertumpuk. Orang yang konsisten mengikuti prosedur melindungi dirinya, timnya, dan barang yang ditangani."
+    },
+    {
+      "nama": "Komunikasi yang jelas",
+      "kenapa": "Semua peran di logistik saling bergantung. Melapor dengan jelas dan cepat, termasuk saat ada selisih, membuat masalah kecil tidak membesar."
+    },
+    {
+      "nama": "Paham alur barang dari ujung ke ujung",
+      "kenapa": "Mengerti alur terima, simpan, ambil, kemas, kirim membantu Anda melihat dampak pekerjaan Anda pada peran lain. Ini juga bekal penting untuk naik ke posisi yang lebih tinggi."
+    },
+    {
+      "nama": "Menguasai istilah logistik",
+      "kenapa": "Istilah seperti SKU, putaway, lead time, dan safety stock dipakai setiap hari. Paham istilah membuat Anda cepat nyambung dengan tim dan lebih percaya diri saat wawancara."
+    },
+    {
+      "nama": "Mau belajar dan bertanya",
+      "kenapa": "Setiap gudang punya cara kerja sendiri. Orang yang bertanya sebelum bertindak dan terus belajar biasanya lebih cepat dipercaya memegang tanggung jawab baru."
+    }
+  ]
+}

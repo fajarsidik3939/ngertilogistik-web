@@ -1,0 +1,1466 @@
+{
+  "L01": {
+    "slug": "apa-itu-logistik",
+    "judul": "Apa Itu Logistik? Penjelasan Sederhana dari Praktisi",
+    "soal": [
+      {
+        "q": "Menurut artikel, apa pengertian logistik yang paling tepat?",
+        "opsi": [
+          "Kegiatan mengantar paket dari penjual ke pembeli secepat mungkin",
+          "Pengaturan aliran dan penyimpanan barang beserta informasinya sampai ke pemakai",
+          "Kegiatan memilih pemasok dan merencanakan jumlah produksi pabrik",
+          "Pengelolaan gudang agar barang bisa ditumpuk sebanyak mungkin"
+        ],
+        "jawab": 1,
+        "bahas": "Artikel mendefinisikan logistik sebagai pengaturan aliran dan penyimpanan barang beserta informasinya dari asal sampai ke pemakai. Mengantar paket hanya salah satu bagiannya."
+      },
+      {
+        "q": "Tiga kata kunci ukuran logistik yang baik menurut artikel adalah...",
+        "opsi": [
+          "Murah, cepat, dan aman",
+          "Rapi, bersih, dan tercatat",
+          "Pemasok, pabrik, dan pembeli",
+          "Tepat jumlah, tepat waktu, tepat tempat"
+        ],
+        "jawab": 3,
+        "bahas": "Artikel meminta pembaca mengingat jumlah, waktu, dan tempat. Barang yang telat, kurang, atau salah alamat berarti logistiknya belum berjalan baik."
+      },
+      {
+        "q": "Gudang menerima 100 karton masker, tetapi petugas lupa mencatat lokasi raknya. Apa akibat yang digambarkan artikel?",
+        "opsi": [
+          "Barang terlihat ada di sistem, tetapi tidak ditemukan saat toko memesan",
+          "Barang otomatis dikirim ke toko lain karena lokasinya kosong",
+          "Sistem langsung menghapus stok masker dari catatan",
+          "Pemasok wajib mengirim ulang 100 karton masker baru"
+        ],
+        "jawab": 0,
+        "bahas": "Dalam ilustrasi artikel, stok tampak ada di sistem tetapi barang tidak ketemu, sehingga toko kehabisan masker dua hari padahal barangnya ada di gudang."
+      },
+      {
+        "q": "Apa hubungan pengiriman barang dengan logistik menurut artikel?",
+        "opsi": [
+          "Pengiriman dan logistik adalah dua istilah untuk hal yang sama",
+          "Pengiriman berada di luar logistik karena diurus kurir",
+          "Pengiriman hanya salah satu bagian dari logistik",
+          "Logistik hanya bagian kecil dari kegiatan pengiriman"
+        ],
+        "jawab": 2,
+        "bahas": "Pengiriman atau transportasi adalah bagian logistik yang paling terlihat. Logistik juga mencakup gudang, stok, kemasan, informasi, dan retur."
+      },
+      {
+        "q": "Seorang penjual online rumahan menyimpan stok, mengemas pesanan, memilih ekspedisi, dan mengurus retur. Pernyataan mana yang sesuai artikel?",
+        "opsi": [
+          "Ia belum menjalankan logistik karena usahanya masih kecil",
+          "Ia sudah menjalankan logistik, hanya skalanya yang berbeda",
+          "Ia hanya menjalankan supply chain, bukan logistik",
+          "Ia baru disebut menjalankan logistik kalau punya gudang sendiri"
+        ],
+        "jawab": 1,
+        "bahas": "Artikel menyebut anggapan logistik hanya urusan perusahaan besar sebagai salah paham. Penjual rumahan pun menjalankan logistik, hanya skalanya lebih kecil."
+      }
+    ]
+  },
+  "L02": {
+    "slug": "logistik-vs-supply-chain",
+    "judul": "Logistik vs Supply Chain: Apa Bedanya?",
+    "soal": [
+      {
+        "q": "Apa perbedaan utama logistik dan supply chain menurut artikel?",
+        "opsi": [
+          "Logistik lebih luas karena mencakup semua perusahaan",
+          "Keduanya sama, hanya beda bahasa",
+          "Supply chain hanya mengurus pembelian bahan baku",
+          "Supply chain adalah seluruh rantai, logistik adalah bagian di dalamnya"
+        ],
+        "jawab": 3,
+        "bahas": "Supply chain mencakup seluruh rantai dari bahan baku sampai pembeli. Logistik adalah bagian di dalamnya yang mengalirkan dan menyimpan barang beserta informasinya."
+      },
+      {
+        "q": "Keputusan mana yang termasuk ranah supply chain secara luas, bukan logistik?",
+        "opsi": [
+          "Memilih pemasok kain untuk bahan masker",
+          "Memilih rute truk ke toko",
+          "Menentukan lokasi rak untuk karton masker",
+          "Menjadwalkan pengiriman pesanan toko"
+        ],
+        "jawab": 0,
+        "bahas": "Artikel menyebut keputusan soal apa yang dibeli, dibuat, dan dari siapa sebagai ranah supply chain. Rute, rak, dan jadwal kirim adalah ranah logistik."
+      },
+      {
+        "q": "Dalam analogi mudik di artikel, apa yang menggambarkan logistik?",
+        "opsi": [
+          "Menentukan kota tujuan dan rencana mudik",
+          "Memutuskan siapa saja yang ikut mudik",
+          "Menyiapkan bagasi, memilih rute, dan mengisi bensin",
+          "Menetapkan tanggal dan jam berangkat mudik"
+        ],
+        "jawab": 2,
+        "bahas": "Menjalankan perjalanan, seperti menyiapkan bagasi, memilih rute, dan mengisi bensin, adalah logistik. Menentukan tujuan, peserta, dan waktu adalah peta perjalanan atau supply chain."
+      },
+      {
+        "q": "Pada contoh rantai pasok masker, langkah \"masker diproduksi dan dikemas per kotak\" dikelompokkan sebagai apa?",
+        "opsi": [
+          "Logistik: pergudangan",
+          "Supply chain: konversi",
+          "Logistik: transportasi masuk",
+          "Logistik: alur balik"
+        ],
+        "jawab": 1,
+        "bahas": "Artikel menandai produksi masker sebagai konversi, yaitu kegiatan supply chain yang mengubah bahan menjadi produk. Konversi bukan kegiatan logistik."
+      },
+      {
+        "q": "Definisi resmi yang dikutip artikel diawali frasa \"that part of supply chain management\". Frasa ini menunjukkan bahwa...",
+        "opsi": [
+          "Supply chain adalah bagian dari logistik",
+          "Logistik dan supply chain tidak saling berhubungan",
+          "Logistik hanya berlaku di perusahaan manufaktur",
+          "Logistik adalah bagian dari supply chain management"
+        ],
+        "jawab": 3,
+        "bahas": "Definisi resmi itu sendiri menyebut logistics management sebagai bagian dari supply chain management. Jadi semua logistik termasuk supply chain, tapi tidak sebaliknya."
+      }
+    ]
+  },
+  "L03": {
+    "slug": "apa-itu-sku",
+    "judul": "SKU Itu Apa? Arti Stock Keeping Unit dan Contohnya di Gudang",
+    "soal": [
+      {
+        "q": "Apa arti SKU menurut artikel?",
+        "opsi": [
+          "Kode untuk jenis barang secara umum, apa pun variannya",
+          "Gambar garis yang dipindai mesin kasir",
+          "Kode untuk setiap varian barang yang dihitung, disimpan, dan dijual terpisah",
+          "Nomor global yang diterbitkan organisasi standar internasional"
+        ],
+        "jawab": 2,
+        "bahas": "SKU adalah stock keeping unit, kode untuk setiap varian. Masker isi 50 dan isi 20 adalah dua SKU berbeda."
+      },
+      {
+        "q": "Apa beda SKU dan GTIN di barcode menurut artikel?",
+        "opsi": [
+          "SKU umumnya kode internal, GTIN adalah nomor global yang mengikuti standar",
+          "SKU berlaku global, GTIN hanya dipakai di satu toko",
+          "SKU wajib mengikuti format standar, GTIN bebas dibuat sendiri",
+          "SKU dan GTIN selalu berisi angka yang sama persis"
+        ],
+        "jawab": 0,
+        "bahas": "SKU dibuat sendiri oleh perusahaan atau toko dengan format bebas. GTIN di barcode diterbitkan lewat organisasi standar global, berlaku global, dan formatnya baku."
+      },
+      {
+        "q": "Sebuah toko mencatat masker isi 50 dan isi 20 dalam satu kode. Sistem menunjukkan 30 kotak. Masalah apa yang bisa muncul?",
+        "opsi": [
+          "Sistem tidak bisa mencetak label harga",
+          "Pesanan isi 50 diterima padahal di rak tinggal isi 20",
+          "Barcode pada kemasan tidak bisa dipindai",
+          "Stok di sistem selalu lebih kecil dari stok di rak"
+        ],
+        "jawab": 1,
+        "bahas": "Karena dua varian dicampur, sistem bilang barang tersedia padahal varian yang dipesan sudah habis. Pesanan lalu dibatalkan atau dikirim salah."
+      },
+      {
+        "q": "Sebuah produk berhenti dijual. Apa yang sebaiknya dilakukan dengan kode SKU-nya?",
+        "opsi": [
+          "Langsung dipakai untuk produk baru supaya daftar tetap pendek",
+          "Dihapus dari daftar induk tanpa catatan",
+          "Diganti dengan nama produk tanpa kode",
+          "Dibiarkan pensiun dan tidak dipakai ulang untuk barang baru"
+        ],
+        "jawab": 3,
+        "bahas": "Artikel menyarankan kode lama dibiarkan pensiun. Kalau dipakai ulang, data penjualan dan stok lama tercampur dengan barang yang berbeda."
+      },
+      {
+        "q": "Aturan dasar membuat kode SKU menurut artikel adalah...",
+        "opsi": [
+          "Panjang, lengkap, dan memakai spasi agar mudah dibaca",
+          "Mengikuti satu format baku yang berlaku untuk semua usaha",
+          "Unik, konsisten, dan tanpa spasi",
+          "Sama dengan nomor di bawah barcode produk"
+        ],
+        "jawab": 2,
+        "bahas": "Artikel menyebut tiga aturan dasar: unik, konsisten, dan tanpa spasi atau karakter aneh. Artikel juga menegaskan tidak ada format SKU baku untuk semua usaha."
+      }
+    ]
+  },
+  "L04": {
+    "slug": "alur-proses-gudang",
+    "judul": "5 Langkah Barang di Gudang: Terima, Simpan, Ambil, Kemas, Kirim",
+    "soal": [
+      {
+        "q": "Urutan lima langkah dasar alur proses gudang menurut artikel adalah...",
+        "opsi": [
+          "Terima, ambil, simpan, kemas, kirim",
+          "Terima, simpan, ambil, kemas, kirim",
+          "Simpan, terima, kemas, ambil, kirim",
+          "Terima, kemas, simpan, ambil, kirim"
+        ],
+        "jawab": 1,
+        "bahas": "Alur dasarnya receiving, putaway, picking, packing, shipping. Singkatnya terima, simpan, ambil, kemas, kirim."
+      },
+      {
+        "q": "Apa kata kunci terpenting pada langkah putaway menurut artikel?",
+        "opsi": [
+          "Lokasi rak yang tercatat",
+          "Kecepatan menaruh barang",
+          "Berat paket",
+          "Nomor resi pengiriman"
+        ],
+        "jawab": 0,
+        "bahas": "Barang tidak cukup ditaruh di rak. Kode lokasinya harus tercatat, kalau tidak barangnya ada tetapi tidak bisa ditemukan."
+      },
+      {
+        "q": "Seorang packer langsung mengemas apa pun yang diserahkan picker tanpa mencocokkan dengan pesanan. Apa risikonya?",
+        "opsi": [
+          "Lokasi rak jadi tidak tercatat",
+          "Status kirim tidak bisa diperbarui",
+          "Barang rusak tercampur dengan barang baik di rak",
+          "Kesalahan picking lolos sampai ke pembeli"
+        ],
+        "jawab": 3,
+        "bahas": "Packing adalah titik cek terakhir sebelum barang keluar. Tanpa cek ulang, kesalahan picking ikut terkirim ke pembeli."
+      },
+      {
+        "q": "Barang sudah diserahkan ke kurir, tetapi admin lupa memperbarui status di sistem. Apa akibatnya?",
+        "opsi": [
+          "Barang otomatis kembali ke gudang",
+          "Stok di sistem tampak berkurang dua kali",
+          "Stok terlihat lebih banyak dari kenyataan",
+          "Label pengiriman menjadi tidak berlaku"
+        ],
+        "jawab": 2,
+        "bahas": "Tanpa pembaruan status, sistem masih menganggap barang ada di gudang. Stok terlihat lebih banyak dan pembeli tidak bisa melacak pesanannya."
+      },
+      {
+        "q": "Dalam ilustrasi artikel, 1 dari 40 karton masker yang diterima penyok. Apa yang dilakukan petugas?",
+        "opsi": [
+          "Mencatatnya di dokumen penerimaan dan menaruhnya di area karantina",
+          "Menyimpannya di rak yang sama dengan 39 karton lain",
+          "Mengirimkannya lebih dulu agar cepat habis",
+          "Mendiamkannya dan mencatat 40 karton dalam kondisi baik"
+        ],
+        "jawab": 0,
+        "bahas": "Petugas mencatat karton penyok saat itu juga dan menaruhnya di area karantina. Barang rusak yang dicampur dengan barang baik bisa ikut terkirim."
+      }
+    ]
+  },
+  "L05": {
+    "slug": "ruang-lingkup-logistik",
+    "judul": "Salah Kaprah: Logistik Itu Kurir? Ini Ruang Lingkup Sebenarnya",
+    "soal": [
+      {
+        "q": "Menurut artikel, kurir termasuk bagian logistik yang mana?",
+        "opsi": [
+          "Pengelolaan stok",
+          "Pergudangan",
+          "Transportasi dan pengantaran",
+          "Informasi dan pencatatan"
+        ],
+        "jawab": 2,
+        "bahas": "Kurir adalah bagian logistik di transportasi dan pengantaran. Ia ujung yang paling terlihat, sementara bagian lain bekerja di belakang layar."
+      },
+      {
+        "q": "Bagaimana hubungan logistik, ekspedisi, dan kurir menurut artikel?",
+        "opsi": [
+          "Kurir bagian dari ekspedisi, dan ekspedisi bagian dari logistik",
+          "Logistik bagian dari ekspedisi, dan ekspedisi bagian dari kurir",
+          "Ketiganya istilah berbeda untuk kegiatan yang sama",
+          "Ekspedisi bagian dari kurir, dan kurir bagian dari logistik"
+        ],
+        "jawab": 0,
+        "bahas": "Artikel merangkum bahwa kurir bagian dari ekspedisi, dan ekspedisi bagian dari logistik. Ekspedisi fokus pada pengangkutan, logistik lebih luas."
+      },
+      {
+        "q": "Toko online mencatat stok kaus L sebanyak 5 potong, padahal di rak tinggal 0 karena penjualan lewat kanal lain tidak dicatat. Di mana sumber masalahnya?",
+        "opsi": [
+          "Di kurir yang datang terlambat",
+          "Di kemasan yang kurang tebal",
+          "Di label pengiriman yang salah tempel",
+          "Di pencatatan stok"
+        ],
+        "jawab": 3,
+        "bahas": "Artikel menegaskan masalahnya bukan di kurir, melainkan di pencatatan stok. Kurir secepat apa pun tidak bisa menolong kalau barangnya memang tidak ada."
+      },
+      {
+        "q": "Dalam urutan sembilan peran di balik satu paket, kurir atau sopir ada di urutan ke berapa?",
+        "opsi": [
+          "Pertama",
+          "Kedelapan",
+          "Kelima",
+          "Kesembilan"
+        ],
+        "jawab": 1,
+        "bahas": "Kurir ada di urutan kedelapan dari sembilan, setelah perencana stok, petugas gudang, admin, picker, packer, dan admin pengiriman. Urutan kesembilan adalah petugas retur."
+      },
+      {
+        "q": "Setelah barang retur diterima dan dicek, apa saja pilihan keputusannya menurut artikel?",
+        "opsi": [
+          "Dikirim ulang ke pembeli tanpa dicek",
+          "Disimpan di dok sampai pemasok datang",
+          "Dijual lagi, diperbaiki, atau dimusnahkan",
+          "Selalu dikembalikan ke pabrik"
+        ],
+        "jawab": 2,
+        "bahas": "Artikel menyebut barang retur harus diterima, dicek, lalu diputuskan: dijual lagi, diperbaiki, atau dimusnahkan."
+      }
+    ]
+  },
+  "L06": {
+    "slug": "berat-volume",
+    "judul": "Kenapa Ongkir Barang Ringan Bisa Mahal? Kenali Berat Volume",
+    "soal": [
+      {
+        "q": "Berat mana yang dipakai untuk menagih ongkir menurut artikel?",
+        "opsi": [
+          "Selalu berat aktual di timbangan",
+          "Selalu berat volume dari ukuran kotak",
+          "Rata-rata berat aktual dan berat volume",
+          "Yang lebih besar antara berat aktual dan berat volume"
+        ],
+        "jawab": 3,
+        "bahas": "Angka yang lebih besar menjadi berat yang ditagih atau chargeable weight. Prinsip ini juga tertulis di materi kargo udara ASEAN yang mengacu aturan IATA."
+      },
+      {
+        "q": "Ilustrasi: kotak 40 × 30 × 30 cm berisi barang 1 kg dikirim dengan pembagi 6.000. Berapa berat yang ditagih?",
+        "opsi": [
+          "6 kg",
+          "1 kg",
+          "7,2 kg",
+          "3,6 kg"
+        ],
+        "jawab": 0,
+        "bahas": "40 × 30 × 30 = 36.000, lalu dibagi 6.000 hasilnya 6 kg. Karena 6 kg lebih besar dari berat aktual 1 kg, yang ditagih 6 kg."
+      },
+      {
+        "q": "Ilustrasi: kotak yang sama, 36.000 cm³, dihitung dengan pembagi 5.000. Berapa berat volumenya sebelum pembulatan?",
+        "opsi": [
+          "6 kg",
+          "5 kg",
+          "7,2 kg",
+          "8 kg"
+        ],
+        "jawab": 2,
+        "bahas": "36.000 dibagi 5.000 hasilnya 7,2 kg. Pembagi yang lebih kecil menghasilkan berat volume yang lebih besar untuk kotak yang sama."
+      },
+      {
+        "q": "Seorang admin mengukur sisi dalam kotak sebelum bubble wrap dipasang di luar. Apa yang keliru?",
+        "opsi": [
+          "Tidak ada yang keliru, sisi dalam memang yang dipakai",
+          "Seharusnya ia mengukur sisi luar paket setelah selesai dikemas",
+          "Seharusnya ia hanya menimbang tanpa mengukur",
+          "Seharusnya ia mengukur barangnya saja tanpa kotak"
+        ],
+        "jawab": 1,
+        "bahas": "Yang dipakai adalah sisi luar paket yang sudah jadi. Bantalan yang menempel di luar kotak ikut terukur."
+      },
+      {
+        "q": "Apa tujuan memilih kotak menurut artikel?",
+        "opsi": [
+          "Kotak sekecil mungkin walaupun barang tertekan",
+          "Kotak sebesar mungkin supaya barang aman",
+          "Kotak yang sama untuk semua jenis barang",
+          "Kotak yang pas: barang aman dan ruang kosong minimal"
+        ],
+        "jawab": 3,
+        "bahas": "Artikel menegaskan tujuannya bukan kotak sekecil mungkin, tetapi pas. Kotak terlalu sempit bisa merusak barang, kotak terlalu besar membuat bayar angin."
+      }
+    ]
+  },
+  "L07": {
+    "slug": "inbound-vs-outbound",
+    "judul": "Inbound vs Outbound: Dua Arah Barang di Gudang",
+    "soal": [
+      {
+        "q": "Apa arti inbound dan outbound di gudang?",
+        "opsi": [
+          "Inbound barang masuk ke gudang, outbound barang keluar dari gudang",
+          "Inbound barang keluar, outbound barang masuk",
+          "Inbound kegiatan di kantor, outbound kegiatan di lapangan",
+          "Inbound barang retur, outbound barang baru"
+        ],
+        "jawab": 0,
+        "bahas": "Inbound adalah barang masuk dari pemasok atau pabrik. Outbound adalah barang keluar menuju pelanggan, toko, atau gudang lain."
+      },
+      {
+        "q": "Kegiatan mana yang termasuk outbound?",
+        "opsi": [
+          "Membongkar barang dari truk pemasok",
+          "Mencocokkan barang datang dengan dokumen",
+          "Picking barang sesuai pesanan pelanggan",
+          "Putaway barang ke lokasi rak"
+        ],
+        "jawab": 2,
+        "bahas": "Outbound mencakup picking, packing, muat, dan kirim. Bongkar, cek dokumen, dan putaway adalah kegiatan inbound."
+      },
+      {
+        "q": "Ilustrasi: gudang berkapasitas 2.000 palet terisi 1.200 palet. Setiap hari masuk 100 palet dan keluar 60 palet. Dalam berapa hari sisa ruang habis?",
+        "opsi": [
+          "12 hari",
+          "20 hari",
+          "30 hari",
+          "8 hari"
+        ],
+        "jawab": 1,
+        "bahas": "Isi bertambah 100 dikurangi 60, yaitu 40 palet per hari. Sisa ruang 800 palet dibagi 40 sama dengan 20 hari."
+      },
+      {
+        "q": "Sebuah gudang kecil hanya punya satu pintu. Bagaimana cara menerapkan prinsip pemisahan inbound dan outbound menurut artikel?",
+        "opsi": [
+          "Membiarkan bongkar dan muat berjalan bersamaan",
+          "Menutup kegiatan inbound selama musim ramai",
+          "Menumpuk barang datang di dok sampai sore",
+          "Mengatur jadwal, misalnya pagi untuk bongkar dan siang untuk muat"
+        ],
+        "jawab": 3,
+        "bahas": "Gudang satu pintu tetap bisa memisahkan alur dengan jadwal. Tujuannya agar truk tidak berebut dok dan barang tidak tertukar."
+      },
+      {
+        "q": "Barang sudah ada di rak tetapi belum masuk sistem. Apa akibat yang disebut artikel?",
+        "opsi": [
+          "Picker mengira stok kosong",
+          "Stok di sistem menjadi dobel",
+          "Barang otomatis masuk karantina",
+          "Truk outbound berangkat lebih cepat"
+        ],
+        "jawab": 0,
+        "bahas": "Mencatat belakangan membuat barang fisik ada tetapi sistem belum tahu. Akibatnya picker mengira stok kosong."
+      }
+    ]
+  },
+  "L08": {
+    "slug": "penerimaan-barang-gudang",
+    "judul": "Penerimaan Barang: 4 Hal yang Wajib Dicek Sebelum Tanda Tangan",
+    "soal": [
+      {
+        "q": "Empat hal yang wajib dicek saat penerimaan barang menurut artikel adalah...",
+        "opsi": [
+          "Harga, diskon, jumlah, dan warna kemasan",
+          "Dokumen, jumlah, kondisi, serta batch dan kedaluwarsa",
+          "Nama sopir, jam datang, cuaca, dan nomor dok",
+          "Jumlah, lokasi rak, label harga, dan resi"
+        ],
+        "jawab": 1,
+        "bahas": "Artikel menyebut empat hal: dokumen, jumlah, kondisi, serta nomor batch dan tanggal kedaluwarsa untuk barang yang punya masa pakai."
+      },
+      {
+        "q": "Apa beda PO dan surat jalan menurut artikel?",
+        "opsi": [
+          "PO dibuat pengirim, surat jalan dibuat pembeli",
+          "Keduanya dibuat oleh admin gudang penerima",
+          "PO dibuat pembeli, surat jalan dibuat pengirim",
+          "PO berisi barang rusak, surat jalan berisi barang baik"
+        ],
+        "jawab": 2,
+        "bahas": "PO berisi barang dan jumlah yang dipesan pembeli. Surat jalan berisi barang yang benar-benar dikirim pengirim hari itu. Keduanya dicocokkan saat penerimaan."
+      },
+      {
+        "q": "Ilustrasi: surat jalan menulis 50 karton isi 24 pcs, tetapi di dok hanya ada 48 karton. Berapa pcs yang seharusnya dikirim menurut surat jalan?",
+        "opsi": [
+          "1.152 pcs",
+          "1.000 pcs",
+          "960 pcs",
+          "1.200 pcs"
+        ],
+        "jawab": 3,
+        "bahas": "50 karton dikali 24 pcs sama dengan 1.200 pcs. Kekurangan 2 karton dan isi karton yang kurang harus dicatat saat itu juga."
+      },
+      {
+        "q": "Saat menerima barang, Anda menemukan 2 karton penyok dan basah. Apa yang sebaiknya dilakukan?",
+        "opsi": [
+          "Catat di dokumen sebelum tanda tangan, foto, dan pisahkan barangnya",
+          "Tanda tangan dulu, lalu klaim ke pemasok minggu depan",
+          "Simpan semua karton ke rak agar dok cepat kosong",
+          "Tolak seluruh kiriman tanpa catatan apa pun"
+        ],
+        "jawab": 0,
+        "bahas": "Selisih dan kerusakan dicatat sebelum tanda tangan, difoto, dan barang bermasalah dipisah. Klaim belakangan jauh lebih sulit dibuktikan."
+      },
+      {
+        "q": "Goods receipt (GR) dibuat berdasarkan apa?",
+        "opsi": [
+          "Jumlah yang tertulis di surat jalan pengirim",
+          "Jumlah yang tertulis di PO",
+          "Jumlah dan kondisi yang benar-benar diterima",
+          "Perkiraan jumlah dari label karton"
+        ],
+        "jawab": 2,
+        "bahas": "GR adalah pencatatan resmi barang yang diterima dan dibuat berdasarkan jumlah serta kondisi yang benar-benar diterima, bukan jumlah di dokumen pengirim."
+      }
+    ]
+  },
+  "L09": {
+    "slug": "fifo-vs-fefo",
+    "judul": "FIFO vs FEFO: Barang Mana yang Harus Keluar Duluan?",
+    "soal": [
+      {
+        "q": "Apa perbedaan dasar FIFO dan FEFO?",
+        "opsi": [
+          "FIFO melihat harga beli, FEFO melihat harga jual",
+          "FIFO melihat tanggal masuk, FEFO melihat tanggal kedaluwarsa",
+          "FIFO untuk obat, FEFO untuk suku cadang",
+          "FIFO mengambil yang paling depan, FEFO yang paling belakang"
+        ],
+        "jawab": 1,
+        "bahas": "FIFO mengeluarkan barang yang pertama masuk. FEFO mengeluarkan barang yang paling cepat kedaluwarsa, walaupun datangnya belakangan."
+      },
+      {
+        "q": "Ilustrasi: batch A diterima 1 Maret, kedaluwarsa 30 November. Batch B diterima 10 Maret, kedaluwarsa 31 Agustus. Menurut FEFO, batch mana yang keluar duluan?",
+        "opsi": [
+          "Batch A, karena datang lebih dulu",
+          "Keduanya keluar bersamaan",
+          "Batch B, karena kedaluwarsanya lebih dekat",
+          "Bebas, karena produknya sama"
+        ],
+        "jawab": 2,
+        "bahas": "FEFO melihat tanggal kedaluwarsa. Batch B kedaluwarsa lebih dulu, jadi keluar duluan walaupun datangnya belakangan."
+      },
+      {
+        "q": "Gudang suku cadang tanpa tanggal kedaluwarsa ingin memilih metode urutan keluar. Apa saran artikel?",
+        "opsi": [
+          "FIFO biasanya cukup dan lebih mudah dijalankan",
+          "Wajib FEFO untuk semua jenis barang",
+          "LIFO paling aman agar stok lama tetap tersimpan",
+          "Tidak perlu metode apa pun"
+        ],
+        "jawab": 0,
+        "bahas": "Untuk barang tanpa kedaluwarsa, FIFO biasanya cukup. Tujuannya agar stok lama tidak tertinggal sampai rusak, berdebu, atau usang."
+      },
+      {
+        "q": "Apa beda FIFO di gudang dengan FIFO di akuntansi?",
+        "opsi": [
+          "Keduanya sama persis dan harus selalu diikuti bersama",
+          "FIFO gudang menghitung harga pokok, FIFO akuntansi mengatur rak",
+          "FIFO akuntansi hanya untuk barang berkedaluwarsa",
+          "FIFO gudang adalah urutan fisik barang keluar, FIFO akuntansi cara menilai persediaan"
+        ],
+        "jawab": 3,
+        "bahas": "Di gudang, FIFO adalah urutan fisik barang diambil dari rak. Di akuntansi, FIFO adalah metode menghitung nilai persediaan dan harga pokok. Keduanya tidak harus sama."
+      },
+      {
+        "q": "Seorang picker selalu mengambil barang yang paling mudah dijangkau, padahal barang baru ditaruh di depan. Apa akibatnya pada FEFO?",
+        "opsi": [
+          "FEFO tetap jalan karena sistem yang mengatur",
+          "Stok lama terdorong ke belakang dan FEFO gagal",
+          "Tanggal kedaluwarsa otomatis diperbarui",
+          "Barang baru jadi lebih cepat kedaluwarsa"
+        ],
+        "jawab": 1,
+        "bahas": "Artikel menyebut FEFO langsung gagal kalau barang baru ditaruh di depan dan picker mengambil yang termudah. Picker harus mengikuti lokasi dan batch yang ditunjuk sistem."
+      }
+    ]
+  },
+  "L10": {
+    "slug": "tugas-staf-gudang",
+    "judul": "Satu Gudang, Banyak Peran: Mengenal Tugas Staf Gudang",
+    "soal": [
+      {
+        "q": "Apa beda tugas checker dan admin gudang menurut artikel?",
+        "opsi": [
+          "Checker mencatat ke sistem, admin memeriksa fisik barang",
+          "Checker memeriksa barang secara fisik, admin mencatat pergerakan ke sistem",
+          "Keduanya sama-sama mengemas barang",
+          "Checker mengatur jadwal shift, admin mengoperasikan forklift"
+        ],
+        "jawab": 1,
+        "bahas": "Checker memastikan faktanya benar di lantai gudang. Admin memastikan catatannya benar di sistem."
+      },
+      {
+        "q": "Operator forklift di Indonesia wajib memiliki apa?",
+        "opsi": [
+          "Lisensi K3, yang di lapangan sering disebut SIO",
+          "Sertifikat admin gudang",
+          "Surat jalan dari pemasok",
+          "Izin dari supervisor saja sudah cukup"
+        ],
+        "jawab": 0,
+        "bahas": "Artikel menyebut operator forklift wajib punya Lisensi K3. Permenakertrans 9/2010 melarang pengusaha mempekerjakan operator tanpa Lisensi K3 dan buku kerja, lalu aturannya diperbarui lewat Permenaker 8/2020."
+      },
+      {
+        "q": "Ilustrasi: checker menghitung 48 karton sebagai 50, lalu admin memasukkan 50 ke sistem. Apa yang terjadi seminggu kemudian?",
+        "opsi": [
+          "Sistem otomatis mengoreksi menjadi 48 karton",
+          "Pemasok mengirim 2 karton tambahan",
+          "Packer menemukan kelebihan 2 karton",
+          "Picker mendapat pesanan 50 karton, tetapi di rak hanya ada 48"
+        ],
+        "jawab": 3,
+        "bahas": "Kesalahan satu peran merambat ke peran lain. Pesanan tertunda, supervisor harus menelusuri, dan pelanggan menunggu."
+      },
+      {
+        "q": "Seorang picker baru melihat dua kardus bergambar sama di dua lokasi berbeda. Apa yang sebaiknya ia lakukan?",
+        "opsi": [
+          "Mengambil dari lokasi yang paling dekat",
+          "Mengambil dari kardus yang tampak paling baru",
+          "Mencocokkan kode barang, bukan hanya gambar di kardus",
+          "Mengambil separuh dari masing-masing lokasi"
+        ],
+        "jawab": 2,
+        "bahas": "Banyak barang punya kemasan mirip tapi ukuran atau varian berbeda. Artikel menyarankan selalu mencocokkan kode barang."
+      },
+      {
+        "q": "Seorang staf baru menemukan selisih stok tetapi takut disalahkan. Apa saran artikel?",
+        "opsi": [
+          "Diam saja sampai ada yang bertanya",
+          "Melaporkannya cepat karena lebih mudah ditelusuri",
+          "Mengubah angka di sistem diam-diam",
+          "Menunggu stock opname akhir tahun"
+        ],
+        "jawab": 1,
+        "bahas": "Selisih yang dilaporkan cepat lebih mudah ditelusuri. Selisih yang disembunyikan biasanya membesar dan merepotkan semua orang."
+      }
+    ]
+  },
+  "L11": {
+    "slug": "dampak-overstock",
+    "judul": "Salah Kaprah: Stok Banyak = Aman? Ini 4 Risiko Overstock",
+    "soal": [
+      {
+        "q": "Manakah yang BUKAN termasuk empat dampak overstock menurut artikel?",
+        "opsi": [
+          "Modal tertahan di barang yang belum terjual",
+          "Butuh ruang lebih dan biaya simpan naik",
+          "Pesanan pelanggan selalu terkirim lebih cepat",
+          "Masalah perencanaan jadi tidak terlihat"
+        ],
+        "jawab": 2,
+        "bahas": "Empat dampaknya adalah modal tertahan, ruang dan biaya naik, risiko rusak atau kedaluwarsa, dan masalah perencanaan tertutup. Pengiriman lebih cepat bukan salah satunya."
+      },
+      {
+        "q": "Ilustrasi: toko membeli 500 botol minum seharga modal Rp20.000 per unit. Setelah 3 bulan baru 150 unit terjual. Berapa modal yang masih tertahan?",
+        "opsi": [
+          "Rp3.000.000",
+          "Rp10.000.000",
+          "Rp5.000.000",
+          "Rp7.000.000"
+        ],
+        "jawab": 3,
+        "bahas": "Sisa barang 500 dikurangi 150 sama dengan 350 unit. 350 dikali Rp20.000 sama dengan Rp7.000.000 modal yang masih tidur di gudang."
+      },
+      {
+        "q": "Kenapa overstock disebut bisa menutupi masalah perencanaan?",
+        "opsi": [
+          "Karena tumpukan stok menambal perkiraan yang meleset atau pemasok yang telat",
+          "Karena gudang penuh membuat laporan tidak bisa dibuat",
+          "Karena barang berlebih otomatis tercatat sebagai penjualan",
+          "Karena pemasok berhenti mengirim saat stok banyak"
+        ],
+        "jawab": 0,
+        "bahas": "Kalau stok selalu berlebih, kesalahan perkiraan atau keterlambatan pemasok tidak pernah ketahuan. Masalahnya baru muncul saat stok mulai dikurangi."
+      },
+      {
+        "q": "Gudang Anda sudah terlanjur kelebihan stok. Langkah awal apa yang disarankan artikel?",
+        "opsi": [
+          "Langsung banting harga semua barang yang menumpuk",
+          "Menambah pesanan supaya dapat diskon lebih besar",
+          "Mendata barang yang diam dan menahan pembelian ulang",
+          "Memindahkan barang ke lorong agar rak kosong"
+        ],
+        "jawab": 2,
+        "bahas": "Artikel menyarankan jangan panik dan jangan langsung banting harga. Mulai dengan mendata barang yang diam, menahan pembelian ulang, lalu mendahulukan yang paling berisiko."
+      },
+      {
+        "q": "Menurut artikel, stok yang pas terdiri dari apa?",
+        "opsi": [
+          "Stok sebanyak kapasitas rak yang tersedia di gudang",
+          "Kebutuhan selama lead time ditambah safety stock secukupnya",
+          "Pesanan untuk tiga bulan ke depan bagi semua SKU",
+          "Jumlah minimum pembelian yang ditawarkan pemasok"
+        ],
+        "jawab": 1,
+        "bahas": "Stok yang pas adalah kebutuhan selama menunggu barang datang ditambah cadangan secukupnya, dihitung per SKU."
+      }
+    ]
+  },
+  "L12": {
+    "slug": "moda-transportasi-pengiriman-barang",
+    "judul": "Darat, Laut, atau Udara? Cara Memilih Moda Pengiriman Barang",
+    "soal": [
+      {
+        "q": "Tiga pertanyaan untuk memilih moda pengiriman menurut artikel adalah...",
+        "opsi": [
+          "Kecepatan, ukuran dan berat, serta biaya yang masuk akal",
+          "Warna kemasan, jarak, dan nama penerima",
+          "Jumlah kurir, cuaca, dan hari libur",
+          "Harga barang, merek, dan jenis kendaraan"
+        ],
+        "jawab": 0,
+        "bahas": "Artikel meminta menjawab dulu seberapa cepat barang harus sampai, seberapa besar dan beratnya, dan berapa biaya yang masuk akal."
+      },
+      {
+        "q": "Sebuah bengkel butuh satu suku cadang 2 kg dari pulau lain karena mesinnya berhenti. Moda apa yang masuk akal menurut ilustrasi artikel?",
+        "opsi": [
+          "Laut, karena paling murah",
+          "Kereta api, karena muat banyak",
+          "Udara, karena kecepatan lebih penting dari ongkos",
+          "Truk saja, karena sampai depan pintu"
+        ],
+        "jawab": 2,
+        "bahas": "Setiap hari mesin mati berarti pesanan tertunda. Untuk barang kecil dan mendesak, udara masuk akal."
+      },
+      {
+        "q": "Menurut PP Nomor 8 Tahun 2011 yang dikutip artikel, apa ciri angkutan multimoda?",
+        "opsi": [
+          "Memakai satu moda dengan beberapa kontrak",
+          "Hanya berlaku untuk kiriman antarnegara",
+          "Memakai kapal dan pesawat sekaligus",
+          "Paling sedikit dua moda berbeda atas dasar satu kontrak"
+        ],
+        "jawab": 3,
+        "bahas": "Kata kuncinya satu kontrak. Pengirim cukup berurusan dengan satu pihak yang bertanggung jawab atas seluruh perjalanan."
+      },
+      {
+        "q": "Apa kekurangan kereta api yang disebut artikel?",
+        "opsi": [
+          "Kapasitasnya paling kecil dibanding moda lain",
+          "Tidak sampai depan pintu, jadi perlu truk di kedua ujung",
+          "Biayanya paling tinggi per kilogram barang",
+          "Hanya bisa dipakai untuk pengiriman antarpulau"
+        ],
+        "jawab": 1,
+        "bahas": "Kereta hanya antarstasiun sepanjang jalur rel. Karena itu biasanya tetap perlu truk untuk menjemput dan mengantar barang."
+      },
+      {
+        "q": "Produsen keripik ingin mengirim 1 ton produk ke distributor di pulau lain untuk stok bulan depan. Pilihan apa yang masuk akal menurut ilustrasi artikel?",
+        "opsi": [
+          "Multimoda truk, kapal, lalu truk",
+          "Udara, supaya sampai besok",
+          "Kurir motor berkali-kali",
+          "Kereta api langsung antarpulau"
+        ],
+        "jawab": 0,
+        "bahas": "Barangnya berat dan tidak mendesak, jadi kombinasi truk ke pelabuhan, kapal menyeberang, lalu truk ke tujuan lebih masuk akal."
+      }
+    ]
+  },
+  "L13": {
+    "slug": "lead-time-vs-transit-time",
+    "judul": "Lead Time vs Transit Time: Jangan Sampai Stok Habis karena Salah Hitung",
+    "soal": [
+      {
+        "q": "Apa beda lead time dan transit time menurut artikel?",
+        "opsi": [
+          "Transit time dari pesanan dibuat sampai siap pakai, lead time hanya waktu di jalan",
+          "Keduanya sama, hanya beda istilah",
+          "Lead time dari pesanan dibuat sampai siap pakai, transit time hanya waktu di jalan",
+          "Lead time hanya waktu pengecekan di gudang"
+        ],
+        "jawab": 2,
+        "bahas": "Transit time adalah waktu barang di perjalanan. Lead time lebih panjang, dari pesanan dibuat sampai barang siap dipakai, dan transit time hanya satu potongannya."
+      },
+      {
+        "q": "Manakah yang BUKAN komponen lead time menurut artikel?",
+        "opsi": [
+          "Waktu proses pesanan",
+          "Waktu promosi barang di toko",
+          "Waktu produksi atau penyiapan",
+          "Waktu penerimaan dan pengecekan"
+        ],
+        "jawab": 1,
+        "bahas": "Empat komponen lead time adalah proses pesanan, produksi atau penyiapan, transit, serta penerimaan dan pengecekan. Promosi tidak termasuk."
+      },
+      {
+        "q": "Ilustrasi: catatan 4 pesanan terakhir menunjukkan lead time 9, 10, 8, dan 13 hari. Berapa rata-ratanya?",
+        "opsi": [
+          "10 hari",
+          "9 hari",
+          "13 hari",
+          "11 hari"
+        ],
+        "jawab": 0,
+        "bahas": "(9 + 10 + 8 + 13) dibagi 4 sama dengan 40 dibagi 4, yaitu 10 hari. Artikel juga mengingatkan untuk mencatat lead time terlama, yaitu 13 hari."
+      },
+      {
+        "q": "Pemasok bilang \"kirim 3 hari\", tetapi dalam ilustrasi artikel lead time sebenarnya 10 hari. Kalau Anda memesan ulang dengan anggapan 3 hari, berapa hari stok berisiko habis?",
+        "opsi": [
+          "3 hari",
+          "10 hari",
+          "13 hari",
+          "7 hari"
+        ],
+        "jawab": 3,
+        "bahas": "Selisih 10 hari dikurangi 3 hari adalah 7 hari. Selama itu stok bisa habis sementara barang baru belum siap dijual."
+      },
+      {
+        "q": "Seorang admin hanya memakai rata-rata lead time untuk merencanakan pesan ulang. Apa risikonya menurut artikel?",
+        "opsi": [
+          "Tidak ada risiko, rata-rata sudah cukup aman",
+          "Pesanan yang telat tetap bisa membuat stok habis",
+          "Ia akan selalu memesan terlalu banyak barang",
+          "Transit time pemasok menjadi lebih panjang"
+        ],
+        "jawab": 1,
+        "bahas": "Rata-rata menyembunyikan pesanan yang telat. Artikel meminta memperhatikan juga lead time terlama, dan di sinilah safety stock berperan."
+      }
+    ]
+  },
+  "L14": {
+    "slug": "selisih-stok-gudang",
+    "judul": "Stok di Sistem Beda dengan di Rak? Ini Penyebab Selisih Stok",
+    "soal": [
+      {
+        "q": "Menurut artikel, dari mana kebanyakan selisih stok berasal?",
+        "opsi": [
+          "Dari pencurian oleh orang luar gudang",
+          "Dari kesalahan pemasok saat produksi barang",
+          "Dari pencatatan yang tidak sesuai kejadian",
+          "Dari rak yang terlalu tinggi dan sulit dijangkau"
+        ],
+        "jawab": 2,
+        "bahas": "Artikel menegaskan kebanyakan selisih berasal dari pencatatan, misalnya pindah lokasi tanpa dicatat, retur tidak diinput, salah ambil varian, atau barang keluar-masuk tanpa scan."
+      },
+      {
+        "q": "Apa yang dimaksud phantom inventory?",
+        "opsi": [
+          "Barang ada di sistem, tetapi tidak ada di rak",
+          "Barang ada di rak, tetapi belum dibayar",
+          "Barang yang sengaja disembunyikan untuk cadangan",
+          "Barang retur yang sudah dimusnahkan"
+        ],
+        "jawab": 0,
+        "bahas": "Phantom inventory adalah kondisi stok tercatat di sistem tetapi barangnya tidak ada di rak. Akibatnya pesanan diterima padahal barang tidak ada."
+      },
+      {
+        "q": "Ilustrasi: sistem mencatat 10 kaus L, di rak hanya 7. Ukuran M ternyata lebih 3 dari catatan. Apa kesimpulan yang paling masuk akal?",
+        "opsi": [
+          "3 kaus L dicuri",
+          "Pemasok mengirim kaus M yang salah",
+          "Sistem rusak dan perlu diganti",
+          "Kaus L terambil untuk pesanan M saat picking"
+        ],
+        "jawab": 3,
+        "bahas": "Selisih di varian mirip menunjukkan barang tertukar saat picking. Barangnya tidak hilang, hanya salah ambil dan sudah terkirim."
+      },
+      {
+        "q": "Anda menemukan selisih stok pada satu SKU. Apa yang sebaiknya dilakukan lebih dulu?",
+        "opsi": [
+          "Langsung mengoreksi angka di sistem",
+          "Menelusuri penyebabnya, baru mengoreksi angka",
+          "Menunggu stock opname tahunan",
+          "Mencari siapa yang harus disalahkan"
+        ],
+        "jawab": 1,
+        "bahas": "Artikel meminta penyebab ditelusuri dulu lewat cek lokasi sekitar, varian mirip, transaksi terakhir, serta retur dan barang rusak. Koreksi tanpa penyebab membuat selisih muncul lagi."
+      },
+      {
+        "q": "Saat menjalankan cycle count, kapan sebaiknya barang dihitung?",
+        "opsi": [
+          "Saat picking sedang ramai di siang hari, agar cepat",
+          "Saat truk pemasok baru selesai dibongkar di dok",
+          "Saat barang tidak bergerak, misalnya pagi sebelum picking",
+          "Kapan saja, karena waktu hitung tidak berpengaruh"
+        ],
+        "jawab": 2,
+        "bahas": "Barang yang sedang diambil atau baru diterima membuat hasil hitungan tidak bisa dibandingkan dengan sistem. Karena itu hitung saat barang tidak bergerak."
+      }
+    ]
+  },
+  "L15": {
+    "slug": "cross-docking",
+    "judul": "Cross-Docking: Barang Masuk Gudang, Langsung Keluar Lagi",
+    "soal": [
+      {
+        "q": "Apa itu cross docking menurut artikel?",
+        "opsi": [
+          "Barang dibongkar, dipilah, lalu langsung dimuat tanpa disimpan",
+          "Barang disimpan lama di rak sampai ada pesanan masuk",
+          "Barang dipindah antargudang secara rutin setiap minggu",
+          "Barang dikembalikan ke pemasok karena rusak atau kurang"
+        ],
+        "jawab": 0,
+        "bahas": "Cross docking memindahkan barang dari kendaraan masuk ke kendaraan keluar tanpa disimpan. Gudangnya berfungsi sebagai tempat transit."
+      },
+      {
+        "q": "Tahap apa saja yang dipangkas cross docking dibanding proses gudang biasa?",
+        "opsi": [
+          "Bongkar dan pengecekan jumlah barang",
+          "Pemilahan dan pemuatan ke truk tujuan",
+          "Penerimaan dan pengiriman ke toko",
+          "Putaway, penyimpanan, dan picking dari rak"
+        ],
+        "jawab": 3,
+        "bahas": "Artikel menyebut cross docking memangkas tahap putaway, penyimpanan, dan picking dari rak. Pengecekan saat bongkar tetap wajib."
+      },
+      {
+        "q": "Sebuah pusat distribusi ingin menerapkan cross docking, tetapi data pesanan toko baru datang setelah truk pemasok dibongkar. Apa akibatnya?",
+        "opsi": [
+          "Tidak masalah, barang bisa dipilah belakangan di truk",
+          "Barang terpaksa ditaruh dulu, dan itu sama saja dengan menyimpan",
+          "Truk tujuan bisa berangkat lebih cepat",
+          "Barang otomatis kembali ke pemasok"
+        ],
+        "jawab": 1,
+        "bahas": "Petugas harus tahu barang mana untuk tujuan mana sebelum dibongkar. Kalau data datang belakangan, barang terpaksa disimpan dulu."
+      },
+      {
+        "q": "Barang seperti apa yang cocok untuk cross docking?",
+        "opsi": [
+          "Barang dengan permintaan tidak menentu",
+          "Barang yang perlu disimpan lama sebagai cadangan",
+          "Barang yang bergerak cepat dan tujuannya pasti sebelum tiba",
+          "Barang yang harus dicek mendalam berhari-hari"
+        ],
+        "jawab": 2,
+        "bahas": "Cocok untuk barang cepat bergerak, rutin, tujuannya pasti, dan mudah rusak seperti sayur dan buah. Barang dengan permintaan tidak menentu lebih cocok di gudang biasa."
+      },
+      {
+        "q": "Kenapa pengecekan saat bongkar tetap wajib dalam cross docking?",
+        "opsi": [
+          "Karena kesalahan dari pemasok bisa ikut terbawa ke tujuan",
+          "Karena barang akan disimpan lama di rak gudang",
+          "Karena truk tujuan selalu datang terlambat",
+          "Karena pemasok tidak membuat dokumen pengiriman"
+        ],
+        "jawab": 0,
+        "bahas": "Barang langsung diteruskan, jadi kesalahan yang tidak dicek di dok baru ketahuan di toko. Selisih di dok jauh lebih mudah diselesaikan."
+      }
+    ]
+  },
+  "L16": {
+    "slug": "putaway-gudang",
+    "judul": "Putaway: Barang Sudah Diterima, Lalu Disimpan di Mana?",
+    "soal": [
+      {
+        "q": "Putaway terdiri dari dua bagian yang sama penting. Apa saja?",
+        "opsi": [
+          "Menghitung dan mengemas barang",
+          "Menimbang dan memberi label harga",
+          "Membongkar truk dan menandatangani surat jalan",
+          "Gerakan fisik ke lokasi dan pencatatan lokasinya"
+        ],
+        "jawab": 3,
+        "bahas": "Putaway adalah membawa barang ke lokasi simpan lalu mencatat lokasinya. Kalau hanya gerakan fisik yang dikerjakan, putaway belum selesai."
+      },
+      {
+        "q": "Ilustrasi: kode lokasi A-03-2-B dibaca sebagai apa?",
+        "opsi": [
+          "Lorong A, rak 03, tingkat 2 dari bawah, posisi B",
+          "Gudang A, lantai 3, rak 2, karton B",
+          "Batch A, tanggal 03, jumlah 2, ukuran B",
+          "Rak A, lorong 03, posisi 2, tingkat B"
+        ],
+        "jawab": 0,
+        "bahas": "Artikel mencontohkan kode bertingkat mirip alamat rumah: lorong, rak, tingkat, dan posisi. Satu lokasi, satu kode unik."
+      },
+      {
+        "q": "Barang mana yang sebaiknya ditaruh di tingkat rak paling bawah?",
+        "opsi": [
+          "Barang paling ringan",
+          "Barang paling jarang diambil",
+          "Barang yang paling berat",
+          "Barang yang baru datang"
+        ],
+        "jawab": 2,
+        "bahas": "Aturannya berat di bawah, ringan di atas. Barang berat dekat lantai lebih stabil dan lebih mudah diangkat."
+      },
+      {
+        "q": "Sepuluh karton diterima sore hari dan ditaruh di rak kosong terdekat tanpa diinput lokasinya. Apa yang terjadi besok paginya menurut ilustrasi artikel?",
+        "opsi": [
+          "Sistem otomatis menemukan lokasi barangnya",
+          "Stok tampak ada di sistem, tetapi barang harus dicari",
+          "Barang langsung terkirim tanpa masalah apa pun",
+          "Stok di sistem otomatis berubah menjadi nol"
+        ],
+        "jawab": 1,
+        "bahas": "Lokasi yang tidak dicatat membuat barang ada tapi tidak ketemu. Pesanan tertunda dan barang akhirnya dianggap selisih."
+      },
+      {
+        "q": "Menurut artikel, apa yang paling menentukan dalam putaway?",
+        "opsi": [
+          "Seberapa cepat barang ditaruh",
+          "Seberapa tinggi rak yang dipakai",
+          "Apakah lokasinya dicatat",
+          "Seberapa dekat rak dengan pintu masuk"
+        ],
+        "jawab": 2,
+        "bahas": "Artikel menegaskan yang paling menentukan bukan di mana barang ditaruh, tetapi apakah lokasinya dicatat. Barang di tempat kurang ideal tapi tercatat masih bisa ditemukan."
+      }
+    ]
+  },
+  "L17": {
+    "slug": "7r-logistik-pengiriman-tepat",
+    "judul": "Salah Kaprah: Cepat Sampai = Pengiriman Bagus? Kenali 7R Logistik",
+    "soal": [
+      {
+        "q": "Menurut artikel, ukuran utama pengiriman yang bagus adalah...",
+        "opsi": [
+          "Paket sampai secepat mungkin ke pembeli",
+          "Ongkir semurah mungkin untuk setiap kiriman",
+          "Tepat barang, jumlah, kondisi, dan waktu sesuai janji",
+          "Kurir ramah dan sopan saat mengantar paket"
+        ],
+        "jawab": 2,
+        "bahas": "Artikel menegaskan pengiriman bagus itu tepat, bukan sekadar cepat. Kecepatan adalah bonus setelah semua hal itu terpenuhi."
+      },
+      {
+        "q": "Ilustrasi: pembeli memesan sepatu ukuran 42, paket tiba keesokan hari tetapi isinya ukuran 41. Di mana kesalahan itu terjadi?",
+        "opsi": [
+          "Di gudang, saat barang diambil dan dikemas",
+          "Di kurir, karena mengantar terlalu cepat",
+          "Di pembeli, karena salah memilih ukuran",
+          "Di hub sortir, karena paket tertukar"
+        ],
+        "jawab": 0,
+        "bahas": "Dalam ilustrasi itu kurir sudah bekerja cepat. Kesalahan terjadi lebih awal, di gudang, saat picking dan packing."
+      },
+      {
+        "q": "Apa arti \"tepat waktu\" menurut artikel?",
+        "opsi": [
+          "Secepat mungkin, kalau bisa hari yang sama",
+          "Kapan saja asal barangnya benar",
+          "Selalu dalam satu hari kerja",
+          "Tiba sesuai waktu yang dijanjikan atau disepakati"
+        ],
+        "jawab": 3,
+        "bahas": "Tepat waktu berarti sesuai janji, bukan secepat mungkin. Janji tiga hari yang selalu ditepati lebih bisa dipegang daripada janji satu hari yang sering meleset."
+      },
+      {
+        "q": "Unsur 7R mana yang paling terancam oleh alamat yang kurang jelas?",
+        "opsi": [
+          "Tepat barang dan tepat jumlah",
+          "Tepat tempat dan tepat pelanggan",
+          "Tepat kondisi dan tepat harga",
+          "Tepat jumlah dan tepat kondisi"
+        ],
+        "jawab": 1,
+        "bahas": "Artikel menyebut alamat yang kurang jelas mengancam tepat tempat dan tepat pelanggan. Karena itu nama, nomor telepon, dan alamat harus lengkap."
+      },
+      {
+        "q": "Seorang packer dikejar target kirim hari ini. Langkah mana yang disarankan artikel agar pengiriman tetap tepat?",
+        "opsi": [
+          "Melewatkan cek ulang supaya paket cepat keluar",
+          "Menjanjikan waktu kirim lebih cepat ke pelanggan",
+          "Cek ulang kode, varian, dan jumlah, lalu foto isi sebelum ditutup",
+          "Menyerahkan pengecekan sepenuhnya ke kurir"
+        ],
+        "jawab": 2,
+        "bahas": "Artikel menyarankan cek ulang saat picking dan foto isi sebelum dilakban. Mengejar target sampai melewatkan cek ulang membuat retur datang belakangan."
+      }
+    ]
+  },
+  "L18": {
+    "slug": "paket-transit-lama",
+    "judul": "Kenapa Paket \"Transit\" Lama? Ini yang Terjadi di Balik Status Itu",
+    "soal": [
+      {
+        "q": "Apa arti status transit pada paket menurut artikel?",
+        "opsi": [
+          "Paket sudah hilang di tengah perjalanan",
+          "Paket sedang pindah antar-hub dan menunggu jadwal angkut",
+          "Paket sedang dikembalikan ke alamat penjual",
+          "Paket sudah sampai dan menunggu diambil penerima"
+        ],
+        "jawab": 1,
+        "bahas": "Transit adalah ringkasan beberapa kegiatan: diangkut, dibongkar, disortir, dimuat lagi, dan diangkut lagi. Transit tidak berarti paket diam atau hilang."
+      },
+      {
+        "q": "Kenapa paket jarang dikirim langsung dari penjual ke pembeli?",
+        "opsi": [
+          "Karena aturan melarang pengiriman langsung",
+          "Karena kurir tidak tahu alamat pembeli",
+          "Karena paket harus dicek ulang di setiap kota",
+          "Karena satu kendaraan untuk satu paket sangat mahal"
+        ],
+        "jawab": 3,
+        "bahas": "Dengan hub, ribuan paket ke arah yang sama bisa digabung dalam satu angkutan. Biayanya turun, tapi paket harus singgah di beberapa titik."
+      },
+      {
+        "q": "Ilustrasi: truk dari hub A ke hub B berangkat sekali sehari pukul 20.00. Paket selesai disortir pukul 20.30. Apa akibatnya?",
+        "opsi": [
+          "Paket menunggu truk keesokan hari dan bertambah hampir satu hari",
+          "Paket dikirim dengan truk tambahan malam itu",
+          "Paket langsung dipindah ke pesawat",
+          "Paket dikembalikan ke hub asal"
+        ],
+        "jawab": 0,
+        "bahas": "Angkutan berangkat sesuai jadwal. Terlambat 30 menit saja membuat paket menunggu truk berikutnya, hampir satu hari di status transit."
+      },
+      {
+        "q": "Status paket Anda tidak berubah dua hari, tetapi masih dalam estimasi layanan. Apa yang sebaiknya dilakukan?",
+        "opsi": [
+          "Langsung membatalkan pesanan",
+          "Menganggap paket hilang dan minta ganti rugi",
+          "Menunggu dulu, karena patokannya estimasi layanan",
+          "Membandingkan dengan paket teman yang lebih cepat"
+        ],
+        "jawab": 2,
+        "bahas": "Selama masih dalam estimasi, tunggu dulu. Kalau sudah lewat estimasi dan status tidak bergerak, baru hubungi kurir dengan nomor resi."
+      },
+      {
+        "q": "Kenapa status paket bisa terlihat diam padahal paket sudah bergerak?",
+        "opsi": [
+          "Karena status hanya berubah saat paket di-scan, dan scan bisa tertunda",
+          "Karena pelacakan hanya diperbarui seminggu sekali",
+          "Karena paket yang bergerak tidak tercatat di sistem",
+          "Karena penjual belum membayar ongkir"
+        ],
+        "jawab": 0,
+        "bahas": "Status baru berubah setiap kali paket di-scan di titik berikutnya. Kalau scan belum masuk ke sistem, status tertinggal dari posisi fisik paket."
+      }
+    ]
+  },
+  "L19": {
+    "slug": "safety-stock",
+    "judul": "Safety Stock (Stok Pengaman): Cadangan Supaya Stok Tidak Habis",
+    "soal": [
+      {
+        "q": "Apa itu safety stock menurut artikel?",
+        "opsi": [
+          "Stok yang dipakai sehari-hari sampai barang baru datang",
+          "Stok cadangan untuk berjaga saat permintaan atau pasokan meleset",
+          "Stok rusak yang disimpan terpisah",
+          "Stok sisa promo yang belum laku"
+        ],
+        "jawab": 1,
+        "bahas": "Safety stock adalah cadangan yang sengaja disimpan untuk mengurangi risiko kehabisan stok. Stok yang dipakai sehari-hari disebut stok siklus."
+      },
+      {
+        "q": "Ilustrasi: pemakaian harian rata-rata 10 unit, tertinggi 15 unit, lead time rata-rata 10 hari, terlama 12 hari. Berapa safety stock dengan rumus rata-rata-maksimum?",
+        "opsi": [
+          "50 unit",
+          "100 unit",
+          "180 unit",
+          "80 unit"
+        ],
+        "jawab": 3,
+        "bahas": "Skenario terburuk 15 × 12 = 180 unit. Kondisi normal 10 × 10 = 100 unit. Selisihnya 180 dikurangi 100 sama dengan 80 unit."
+      },
+      {
+        "q": "Manakah yang BUKAN faktor penentu besarnya safety stock menurut artikel?",
+        "opsi": [
+          "Naik-turunnya permintaan",
+          "Lama dan ketidakpastian lead time",
+          "Warna kemasan barang",
+          "Target layanan"
+        ],
+        "jawab": 2,
+        "bahas": "Artikel menyebut tiga faktor utama: naik-turunnya permintaan, lama dan ketidakpastian lead time, serta target layanan."
+      },
+      {
+        "q": "Permintaan tiba-tiba melonjak karena promo dan stok siklus hampir habis. Seorang admin menolak memakai safety stock karena dianggap tidak boleh disentuh. Bagaimana menurut artikel?",
+        "opsi": [
+          "Keliru, safety stock boleh dipakai saat dibutuhkan lalu segera diisi ulang",
+          "Benar, safety stock hanya untuk audit",
+          "Benar, safety stock hanya dipakai saat barang rusak",
+          "Keliru, safety stock seharusnya dijual dulu sebelum stok siklus"
+        ],
+        "jawab": 0,
+        "bahas": "Safety stock adalah asuransi dan boleh dipakai saat kondisi meleset. Setelah terpakai, pesanan berikutnya mengembalikannya ke tingkat semula."
+      },
+      {
+        "q": "Apa akibat safety stock yang terlalu besar?",
+        "opsi": [
+          "Stok jadi mudah habis saat ada lonjakan",
+          "Pesanan pelanggan jadi selalu tertunda",
+          "Lead time pemasok jadi lebih pendek",
+          "Uang tertahan, biaya simpan naik, dan risiko barang rusak"
+        ],
+        "jawab": 3,
+        "bahas": "Tabel di artikel menyebut safety stock terlalu besar membuat uang tertahan, biaya simpan naik, dan barang berisiko rusak atau kedaluwarsa."
+      }
+    ]
+  },
+  "L20": {
+    "slug": "istilah-gudang-untuk-pemula",
+    "judul": "10 Istilah Gudang yang Wajib Dipahami Staf Baru",
+    "soal": [
+      {
+        "q": "Urutan istilah dalam satu alur kerja gudang menurut artikel adalah...",
+        "opsi": [
+          "GR, PO, picking, putaway, DO, packing",
+          "PO, GR, putaway, picking, packing, DO",
+          "PO, putaway, GR, packing, picking, DO",
+          "DO, PO, GR, putaway, packing, picking"
+        ],
+        "jawab": 1,
+        "bahas": "PO dibuat sebelum barang datang, GR saat barang tiba, putaway saat ditaruh di rak, picking saat ada pesanan, packing sebelum diserahkan, dan DO ikut bersama barang keluar."
+      },
+      {
+        "q": "Apa arti GR atau goods receipt?",
+        "opsi": [
+          "Pesanan pembelian ke pemasok",
+          "Dokumen pengiriman barang ke penerima",
+          "Proses penerimaan dan pencatatan barang masuk",
+          "Penghitungan stok sebagian secara bergilir"
+        ],
+        "jawab": 2,
+        "bahas": "GR adalah proses penerimaan barang masuk ke gudang sekaligus catatannya di sistem. Pesanan pembelian adalah PO, dokumen pengiriman adalah DO."
+      },
+      {
+        "q": "Satu model kaus punya tiga warna dan tiga ukuran. Berapa SKU yang dibutuhkan menurut artikel?",
+        "opsi": [
+          "9 SKU",
+          "3 SKU",
+          "6 SKU",
+          "1 SKU"
+        ],
+        "jawab": 0,
+        "bahas": "Setiap kombinasi warna dan ukuran adalah varian sendiri. 3 warna dikali 3 ukuran sama dengan 9 SKU."
+      },
+      {
+        "q": "Seorang staf pindah kerja dan bingung karena di gudang baru DO dan surat jalan dipakai untuk dokumen yang sama. Apa saran artikel?",
+        "opsi": [
+          "Memakai istilah dari tempat kerja lama",
+          "Menganggap gudang baru keliru",
+          "Mengabaikan perbedaan istilah",
+          "Tanyakan penamaan yang berlaku dan catat istilah lokalnya"
+        ],
+        "jawab": 3,
+        "bahas": "Penamaan DO dan surat jalan berbeda antarperusahaan dan sistem. Artikel menyarankan bertanya, bukan menebak, dan mencatat istilah lokal."
+      },
+      {
+        "q": "Di mana posisi cycle count dalam alur kerja gudang menurut artikel?",
+        "opsi": [
+          "Hanya sekali setahun setelah semua DO keluar",
+          "Tepat sebelum PO dibuat untuk pemasok",
+          "Di sela-sela alur, untuk mencocokkan catatan dengan fisik",
+          "Menggantikan langkah GR saat barang datang"
+        ],
+        "jawab": 2,
+        "bahas": "Cycle count berjalan di sela-sela alur, menghitung sebagian barang secara bergilir, sehingga selisih ketahuan lebih cepat tanpa menutup gudang."
+      }
+    ]
+  },
+  "L21": {
+    "slug": "reorder-point",
+    "judul": "Reorder Point: Kapan Harus Pesan Barang Lagi?",
+    "soal": [
+      {
+        "q": "Rumus dasar reorder point menurut artikel adalah...",
+        "opsi": [
+          "Pemakaian rata-rata per hari dikali lead time, ditambah safety stock",
+          "Safety stock dikali lead time, dikurangi pemakaian harian",
+          "Kapasitas gudang dibagi jumlah SKU",
+          "Pemakaian bulanan ditambah transit time"
+        ],
+        "jawab": 0,
+        "bahas": "Bagian pertama adalah kebutuhan selama menunggu barang datang, bagian kedua adalah cadangan untuk kejutan."
+      },
+      {
+        "q": "Ilustrasi: pemakaian rata-rata 10 karton per hari, lead time 5 hari, safety stock 20 karton. Berapa reorder point-nya?",
+        "opsi": [
+          "50 karton",
+          "70 karton",
+          "35 karton",
+          "100 karton"
+        ],
+        "jawab": 1,
+        "bahas": "10 × 5 = 50 karton kebutuhan selama menunggu. Ditambah safety stock 20, hasilnya 70 karton."
+      },
+      {
+        "q": "Dengan ilustrasi yang sama, lead time naik menjadi 7 hari. Berapa reorder point yang baru?",
+        "opsi": [
+          "70 karton",
+          "77 karton",
+          "90 karton",
+          "140 karton"
+        ],
+        "jawab": 2,
+        "bahas": "10 × 7 = 70 karton, ditambah safety stock 20 menjadi 90 karton. Makin panjang lead time, makin tinggi reorder point."
+      },
+      {
+        "q": "Stok fisik sebuah SKU menyentuh reorder point, tetapi pesanan sebelumnya ke pemasok masih di jalan. Apa yang sebaiknya dilakukan?",
+        "opsi": [
+          "Langsung memesan lagi dalam jumlah dua kali lipat",
+          "Menurunkan reorder point supaya tanda tidak muncul",
+          "Menghapus safety stock dari rumus",
+          "Mengecek dulu pesanan yang belum datang sebelum memesan lagi"
+        ],
+        "jawab": 3,
+        "bahas": "Artikel menyebut lupa stok yang sudah dipesan sebagai kesalahan umum. Cek dulu pesanan yang masih di jalan agar tidak memesan dobel."
+      },
+      {
+        "q": "Pertanyaan apa yang dijawab oleh reorder point?",
+        "opsi": [
+          "Berapa banyak barang yang harus dipesan",
+          "Kapan harus memesan",
+          "Pemasok mana yang paling murah",
+          "Di rak mana barang harus disimpan"
+        ],
+        "jawab": 1,
+        "bahas": "Reorder point menjawab kapan memesan. Jumlah pesanan adalah keputusan terpisah yang diatur kebijakan pembelian."
+      }
+    ]
+  },
+  "L22": {
+    "slug": "metode-picking-gudang",
+    "judul": "Metode Picking Gudang: Per Pesanan, Batch, atau Zona?",
+    "soal": [
+      {
+        "q": "Apa ciri batch picking menurut artikel?",
+        "opsi": [
+          "Satu petugas mengambil satu pesanan sampai selesai",
+          "Setiap petugas hanya mengambil barang di areanya sendiri",
+          "Beberapa pesanan diambil sekaligus dalam satu putaran, lalu dipilah",
+          "Pesanan dikirim langsung tanpa diambil dari rak"
+        ],
+        "jawab": 2,
+        "bahas": "Batch picking mengumpulkan beberapa pesanan dan mengambil barangnya sekaligus. Setelah itu barang dipilah ke masing-masing pesanan."
+      },
+      {
+        "q": "Ilustrasi: ada 3 pesanan yang sama-sama berisi barang dari rak paling belakang. Dengan picking per pesanan, berapa kali petugas berjalan ke rak belakang?",
+        "opsi": [
+          "1 kali",
+          "2 kali",
+          "6 kali",
+          "3 kali"
+        ],
+        "jawab": 3,
+        "bahas": "Picking per pesanan mengambil satu pesanan sampai selesai, jadi petugas ke rak belakang sekali untuk tiap pesanan, total 3 kali. Dengan batch, cukup 1 kali."
+      },
+      {
+        "q": "Sebuah gudang kecil hanya menerima sedikit pesanan per hari. Metode picking apa yang biasanya sudah cukup?",
+        "opsi": [
+          "Picking per pesanan",
+          "Zone picking dengan banyak petugas",
+          "Wave picking dengan jadwal ketat",
+          "Kombinasi batch dan zona"
+        ],
+        "jawab": 0,
+        "bahas": "Untuk pesanan sedikit dan gudang kecil, picking per pesanan sederhana dan risiko salah ambilnya rendah."
+      },
+      {
+        "q": "Apa kekurangan zone picking menurut artikel?",
+        "opsi": [
+          "Petugas harus berjalan ke seluruh area gudang",
+          "Butuh lebih banyak petugas dan rawan salah saat dioper",
+          "Tidak bisa dipakai di gudang yang besar",
+          "Tidak memerlukan penyortiran sama sekali"
+        ],
+        "jawab": 1,
+        "bahas": "Zone picking membuat petugas fokus pada satu area, tetapi butuh lebih banyak orang, rawan salah saat barang dioper, dan sering perlu penyortiran tambahan."
+      },
+      {
+        "q": "Pada batch picking, di tahap mana kesalahan paling sering terjadi menurut artikel?",
+        "opsi": [
+          "Saat membuat daftar pesanan di pagi hari",
+          "Saat barang diterima dari truk pemasok",
+          "Saat membagi barang ke tiap pesanan di tahap pemilahan",
+          "Saat truk pengiriman berangkat ke tujuan"
+        ],
+        "jawab": 2,
+        "bahas": "Artikel menyebut kesalahan batch picking sering terjadi bukan saat mengambil, tetapi saat pemilahan yang terburu-buru."
+      }
+    ]
+  },
+  "L23": {
+    "slug": "stock-opname-vs-cycle-count",
+    "judul": "Stock Opname vs Cycle Count: Hitung Sekaligus atau Bergilir?",
+    "soal": [
+      {
+        "q": "Apa perbedaan utama stock opname dan cycle count?",
+        "opsi": [
+          "Stock opname menghitung semua stok sekaligus, cycle count menghitung sebagian secara bergilir",
+          "Stock opname hanya menghitung barang rusak, cycle count barang baik",
+          "Cycle count dilakukan setahun sekali, stock opname setiap hari",
+          "Keduanya sama, hanya beda nama"
+        ],
+        "jawab": 0,
+        "bahas": "Stock opname memberi potret lengkap pada satu tanggal. Cycle count menghitung sebagian stok secara rutin sampai semua barang tercakup."
+      },
+      {
+        "q": "Ilustrasi: gudang punya 400 lokasi rak dan 20 hari kerja per bulan. Berapa lokasi yang dihitung per hari agar semua rak tercakup dalam sebulan?",
+        "opsi": [
+          "40 lokasi",
+          "10 lokasi",
+          "20 lokasi",
+          "80 lokasi"
+        ],
+        "jawab": 2,
+        "bahas": "400 lokasi dibagi 20 hari kerja sama dengan 20 lokasi per hari."
+      },
+      {
+        "q": "Saat cycle count, kenapa petugas sebaiknya menghitung tanpa melihat angka sistem?",
+        "opsi": [
+          "Supaya penghitungan lebih cepat selesai",
+          "Supaya hasil hitung tidak terpengaruh angka di sistem",
+          "Karena angka sistem selalu salah",
+          "Karena sistem harus dimatikan saat menghitung"
+        ],
+        "jawab": 1,
+        "bahas": "Petugas mencatat hasil hitung apa adanya agar tidak terpengaruh angka sistem. Setelah itu baru dibandingkan."
+      },
+      {
+        "q": "Sebuah gudang menjalankan stock opname tanpa menghentikan barang keluar-masuk. Apa masalahnya?",
+        "opsi": [
+          "Tim hitung yang dibutuhkan jadi terlalu banyak",
+          "Kondisi barang jadi tidak bisa ikut dicek",
+          "Laporan keuangan tidak bisa dibuat tepat waktu",
+          "Barang terus bergerak sehingga hasil hitung tidak cocok"
+        ],
+        "jawab": 3,
+        "bahas": "Artikel menyebut opname tanpa menghentikan keluar-masuk barang sebagai kesalahan umum, karena hasilnya tidak bisa dicocokkan dengan sistem."
+      },
+      {
+        "q": "Bagaimana pola yang disarankan artikel untuk memakai kedua metode?",
+        "opsi": [
+          "Pilih salah satu saja agar tidak dobel kerja",
+          "Cycle count sebagai kebiasaan rutin, stock opname menyeluruh secara berkala",
+          "Stock opname setiap hari, cycle count setahun sekali",
+          "Cycle count hanya untuk barang kelas C"
+        ],
+        "jawab": 1,
+        "bahas": "Keduanya tidak saling meniadakan. Cycle count yang berjalan baik juga membuat opname berkala lebih lancar."
+      }
+    ]
+  },
+  "L24": {
+    "slug": "packing-kayu",
+    "judul": "Packing Kayu: Perlu atau Tidak? Cara Memutuskannya",
+    "soal": [
+      {
+        "q": "Apa dua tugas utama packing kayu menurut artikel?",
+        "opsi": [
+          "Menahan benturan dan menahan tekanan tumpukan",
+          "Mengurangi berat dan memperkecil ukuran kiriman",
+          "Menggantikan bubble wrap dan kardus di dalam",
+          "Mempercepat sortir dan mengurangi ongkir"
+        ],
+        "jawab": 0,
+        "bahas": "Kayu bekerja sebagai lapisan luar yang kaku untuk menahan benturan saat paket berpindah tangan dan tekanan saat disusun bertumpuk."
+      },
+      {
+        "q": "Barang mana yang biasanya cukup dikirim dengan kardus kuat dan pengisi memadai?",
+        "opsi": [
+          "Cermin dan keramik",
+          "Mesin kecil dan suku cadang logam",
+          "Akuarium kaca",
+          "Pakaian dan buku"
+        ],
+        "jawab": 3,
+        "bahas": "Artikel menyebut pakaian, buku, kain, mainan plastik, dan makanan kemasan kering biasanya cukup memakai kardus kuat. Barang pecah belah dan berat lebih cocok dengan packing kayu."
+      },
+      {
+        "q": "Kenapa ongkir bisa naik setelah memakai packing kayu?",
+        "opsi": [
+          "Karena kiriman berkayu wajib lewat udara",
+          "Karena kayu menambah berat dan ukuran yang ikut dihitung ongkir",
+          "Karena kiriman berkayu tidak boleh ditumpuk",
+          "Karena kayu membuat paket harus disortir ulang"
+        ],
+        "jawab": 1,
+        "bahas": "Ongkir dihitung dari berat aktual atau berat volume, mana yang lebih besar. Kayu menambah keduanya, ditambah biaya jasa packing kayunya."
+      },
+      {
+        "q": "Dua kiriman punya biaya packing kayu yang sama: 10 lusin kaos dan satu set gelas kristal. Keputusan mana yang paling masuk akal menurut ilustrasi artikel?",
+        "opsi": [
+          "Packing kayu untuk keduanya agar aman",
+          "Packing kayu untuk kaos saja karena jumlahnya banyak",
+          "Packing kayu untuk gelas kristal saja",
+          "Tidak perlu packing kayu untuk keduanya"
+        ],
+        "jawab": 2,
+        "bahas": "Kaos hampir tidak mungkin rusak karena benturan, jadi kayu hanya menambah biaya. Untuk gelas kristal, biaya yang sama jauh lebih kecil dibanding kerugian kalau pecah."
+      },
+      {
+        "q": "Seorang penjual memakai packing kayu untuk gelas, tetapi tidak memberi peredam di dalam kardus. Bagaimana menurut artikel?",
+        "opsi": [
+          "Barang tetap bisa pecah karena guncangan di dalam kemasan",
+          "Sudah aman karena kayu menahan semua guncangan",
+          "Lebih aman karena ruang di dalam jadi lebih lega",
+          "Wajib diganti peti kayu tertutup penuh"
+        ],
+        "jawab": 0,
+        "bahas": "Packing kayu tidak menggantikan pengemasan dalam. Kayu melindungi dari luar, bukan dari guncangan di dalam kemasan."
+      }
+    ]
+  }
+}

@@ -7,8 +7,9 @@ Keluaran: public/              (di-deploy apa adanya oleh Vercel)
 Jalankan: python3 build.py
 Hanya artikel yang ada file .md-nya yang terbit. Materi lain tetap tersembunyi.
 """
-import os, re, json, html, glob, shutil, datetime, subprocess
+import os, re, sys, json, html, glob, shutil, datetime, subprocess
 import yaml, markdown
+import belajar
 
 SITE = "https://ngertilogistik.web.id"
 NAME = "Ngerti Logistik"
@@ -144,10 +145,13 @@ def head(title, desc, path, img=None, kind="website", extra="", noindex=False):
 
 def nav():
     cats = "".join(f'<a href="/kategori/{k}">{esc(v["nama"])}</a>' for k, v in KATEGORI.items())
+    bl = '<a href="/belajar">Jalur belajar</a><a href="/kuis">Kuis</a><a href="/glosarium">Glosarium</a><a href="/cheat-sheet">Cheat sheet</a><a href="/karier">Karier</a>'
+    al = '<a href="/template">Template Excel</a><a href="/kalkulator-logistik">Kalkulator logistik</a><a href="/kalkulator-kubikasi">Kalkulator kubikasi</a>'
     return f"""<a class="skip" href="#isi">Langsung ke isi</a>
 <header class="nav"><div class="wrap nav-in">
 <a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="34" height="34"><span>Ngerti <b>Logistik</b></span></a>
-<nav aria-label="Utama"><a href="{BASE or '/'}">Artikel</a><details class="dd"><summary>Kategori</summary><div>{cats}</div></details><a href="/template">Template</a><a href="/kalkulator-kubikasi">Kalkulator</a><a href="/tentang">Tentang</a>
+<nav aria-label="Utama"><a href="{BASE or '/'}">Artikel</a><details class="dd dd-d"><summary>Kategori</summary><div>{cats}</div></details><details class="dd dd-d"><summary>Belajar</summary><div>{bl}</div></details><details class="dd dd-d"><summary>Alat</summary><div>{al}</div></details><a href="/tentang">Tentang</a>
+<details class="dd dd-m"><summary>Menu</summary><div><a href="{BASE or '/'}">Semua artikel</a>{bl}{al}<a href="/tentang">Tentang</a></div></details>
 <a class="btn-sm" href="{TIKTOK}" target="_blank" rel="noopener">Follow</a></nav></div></header>"""
 
 def foot():
@@ -156,7 +160,8 @@ def foot():
 <div><a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="30" height="30"><span>Ngerti <b>Logistik</b></span></a>
 <p>Blog edukasi logistik berbahasa Indonesia. Gudang, pengiriman, dan supply chain dijelaskan dengan bahasa sehari-hari. Gratis, tanpa iklan.</p></div>
 <div class="foot-links"><b>Kategori</b>{cats}</div>
-<div class="foot-links"><b>Ngerti Logistik</b><a href="/template">Template gratis</a><a href="/kalkulator-kubikasi">Kalkulator kubikasi</a><a href="/tentang">Tentang</a><a href="/penulis/{AUTHOR['slug']}">Penulis</a><a href="/feed.xml">RSS</a><a href="{TIKTOK}" target="_blank" rel="noopener">TikTok @ngertilogistik</a></div>
+<div class="foot-links"><b>Belajar &amp; alat</b><a href="/belajar">Jalur belajar</a><a href="/kuis">Kuis</a><a href="/glosarium">Glosarium</a><a href="/cheat-sheet">Cheat sheet</a><a href="/karier">Karier</a><a href="/template">Template Excel</a><a href="/kalkulator-logistik">Kalkulator logistik</a><a href="/kalkulator-kubikasi">Kalkulator kubikasi</a></div>
+<div class="foot-links"><b>Ngerti Logistik</b><a href="/tentang">Tentang</a><a href="/penulis/{AUTHOR['slug']}">Penulis</a><a href="/feed.xml">RSS</a><a href="{TIKTOK}" target="_blank" rel="noopener">TikTok @ngertilogistik</a></div>
 </div><div class="wrap fine">© {datetime.date.today().year} {NAME}. Angka yang ditandai CONTOH adalah ilustrasi, bukan data nyata. Fakta lain disertai sumber di akhir artikel.</div></footer>
 </body></html>"""
 
@@ -206,6 +211,9 @@ def write(path, s):
     open(f, "w", encoding="utf-8").write(s)
 
 # ---------------------------------------------------------------- halaman
+KUIS = {}
+EXTRA = []
+
 def page_article(a, arts, ids):
     k = KATEGORI[a["kategori"]]
     body, toc = render_body(a, ids)
@@ -259,12 +267,14 @@ def page_article(a, arts, ids):
 {faq_h}
 {src_h}
 <a class="watch" href="{TIKTOK}" target="_blank" rel="noopener"><span class="play">▶</span><span><b>Lebih suka versi video 60 detik?</b><small>Tonton di TikTok @ngertilogistik</small></span></a>
+{belajar.kuis_cta(a, KUIS)}
 {share(path, a['judul'], 'end')}
 <div class="author-box"><img src="/img/logo-256.png" alt="" width="64" height="64"><div><small>Ditulis oleh</small><a href="/penulis/{AUTHOR['slug']}"><b>{AUTHOR['nama']}</b></a><p>{esc(AUTHOR['bio'])}</p></div></div>
 <div class="pn">{pn}</div>
 </article></div></div>
 {f'<section class="rel"><div class="wrap"><h2>Baca juga</h2><div class="posts g3">{"".join(card(x) for x in rel)}</div></div></section>' if rel else ''}
-</main>""" + CTA + foot().replace("</body>", SHARE_JS + "</body>")
+</main>""" + CTA + foot().replace("</body>", SHARE_JS + belajar.ARTICLE_JS + "</body>")
+    s = s.replace("<body>", f'<body data-aid="{a["id"]}">', 1)
     write(path, s)
 
 def page_home(arts):
@@ -386,6 +396,7 @@ def feeds(arts):
     today = datetime.date.today().isoformat()
     urls = [("/", today), (BASE, today), ("/tentang", today), (f"/penulis/{AUTHOR['slug']}", today)]
     urls += [(p, today) for p, *_ in HALAMAN]
+    urls += [(p, today) for p in EXTRA]
     urls += [(f"/kategori/{k}", today) for k in KATEGORI if any(a["kategori"] == k for a in arts)]
     urls += [(url(a), a["diperbarui"]) for a in arts]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
@@ -434,7 +445,9 @@ if __name__ == "__main__":
         if f not in keep:
             p = os.path.join(OUT, f); shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
     og_images(arts)
+    KUIS = belajar.load(sys.modules[__name__], "kuis.json", {})
     for a in arts: page_article(a, arts, ids)
     page_home(arts); page_list(arts); page_categories(arts); page_author(arts); page_about(); page_halaman(); page_404()
+    EXTRA = belajar.build(sys.modules[__name__], arts)
     feeds(arts); redirects(arts)
     print(f"OK {len(arts)} artikel terbit · base={BASE or '/'}")
