@@ -126,8 +126,8 @@
   },
   {
    "source": "/materi/l23-stock-opname-vs-cycle-count",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/stock-opname-vs-cycle-count",
+   "permanent": true
   },
   {
    "source": "/materi/l24-packing-kayu-perlu-atau-tidak",
