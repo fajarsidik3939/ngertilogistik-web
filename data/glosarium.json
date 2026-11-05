@@ -246,6 +246,14 @@
     "artikel": "L03"
   },
   {
+    "istilah": "Gudang",
+    "alias": [
+      "warehouse"
+    ],
+    "arti": "Area yang direncanakan untuk menyimpan dan menangani barang. Fungsinya bukan hanya menyimpan, tapi juga menerima, mengambil, mengemas, mengirim, dan mencatat setiap pergerakan barang.",
+    "artikel": "L25"
+  },
+  {
     "istilah": "Hub sortir",
     "alias": [
       "hub",
@@ -296,6 +304,15 @@
     "alias": [],
     "arti": "Bagian logistik di transportasi dan pengantaran barang ke penerima. Kurir adalah ujung yang paling terlihat, sedangkan pekerjaan logistik lain terjadi sebelumnya.",
     "artikel": "L05"
+  },
+  {
+    "istilah": "Layanan nilai tambah",
+    "alias": [
+      "value-added services",
+      "VAS"
+    ],
+    "arti": "Kegiatan tambahan di gudang atau pusat distribusi di luar penyimpanan, misalnya pelabelan, pengemasan, cross-docking, dan pengolahan barang retur.",
+    "artikel": "L25"
   },
   {
     "istilah": "Lead time",

@@ -1462,5 +1462,66 @@
         "bahas": "Packing kayu tidak menggantikan pengemasan dalam. Kayu melindungi dari luar, bukan dari guncangan di dalam kemasan."
       }
     ]
+  },
+  "L25": {
+    "slug": "fungsi-gudang-dalam-logistik",
+    "judul": "Salah Kaprah: Gudang Cuma Tempat Numpuk Barang? Ini Fungsi Sebenarnya",
+    "soal": [
+      {
+        "q": "Menurut artikel, gudang lebih tepat diibaratkan seperti apa?",
+        "opsi": [
+          "Lemari yang ditutup setelah diisi",
+          "Stasiun tempat barang datang, berpindah, dan berangkat lagi",
+          "Tempat buangan barang tidak laku",
+          "Ruang pajang barang"
+        ],
+        "jawab": 1,
+        "bahas": "Gudang mengelola aliran barang. Barang datang, diperiksa, disimpan di lokasi jelas, lalu keluar lagi saat ada pesanan, seperti stasiun."
+      },
+      {
+        "q": "Mana yang BUKAN termasuk enam kegiatan gudang yang dibahas artikel?",
+        "opsi": [
+          "Menerima",
+          "Mencatat",
+          "Memproduksi barang",
+          "Mengemas"
+        ],
+        "jawab": 2,
+        "bahas": "Enam kegiatan gudang adalah terima, simpan, ambil, kemas, kirim, dan catat. Memproduksi barang bukan kegiatan gudang."
+      },
+      {
+        "q": "Apa yang terjadi pada biaya bila barang semakin lama menumpuk di gudang?",
+        "opsi": [
+          "Biaya turun karena barang tidak dipindah",
+          "Biaya tetap sama",
+          "Biaya hanya naik untuk barang mahal",
+          "Biaya penyimpanan semakin tinggi, disertai biaya perawatan"
+        ],
+        "jawab": 3,
+        "bahas": "Semakin lama barang menumpuk, semakin tinggi biaya yang dikeluarkan, dan biaya penyimpanan disertai biaya perawatan."
+      },
+      {
+        "q": "Menurut artikel, apa beda utama gudang penyimpanan dan pusat distribusi?",
+        "opsi": [
+          "Kecepatan gerak barang dan kegiatan di dalamnya",
+          "Pusat distribusi tidak punya rak",
+          "Gudang tidak punya pintu bongkar muat",
+          "Ukuran bangunannya selalu berbeda jauh"
+        ],
+        "jawab": 0,
+        "bahas": "Secara fisik keduanya mirip. Bedanya, pusat distribusi menekankan barang yang bergerak cepat dan layanan tambahan seperti pelabelan, pengemasan, dan retur."
+      },
+      {
+        "q": "Mana yang menjadi tanda gudang masih jadi tempat numpuk?",
+        "opsi": [
+          "Setiap lokasi rak tercatat di sistem",
+          "Barang rata-rata keluar dalam beberapa minggu",
+          "Barang ditaruh di lorong karena rak penuh",
+          "Barang retur langsung diputuskan tindakannya"
+        ],
+        "jawab": 2,
+        "bahas": "Barang di lorong karena rak penuh, barang tak bergerak berbulan-bulan, dan retur menumpuk tanpa keputusan adalah tanda gudang belum mengalir."
+      }
+    ]
   }
 }
