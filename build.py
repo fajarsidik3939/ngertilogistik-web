@@ -147,7 +147,7 @@ def nav():
     return f"""<a class="skip" href="#isi">Langsung ke isi</a>
 <header class="nav"><div class="wrap nav-in">
 <a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="34" height="34"><span>Ngerti <b>Logistik</b></span></a>
-<nav aria-label="Utama"><a href="{BASE or '/'}">Artikel</a><details class="dd"><summary>Kategori</summary><div>{cats}</div></details><a href="/tentang">Tentang</a>
+<nav aria-label="Utama"><a href="{BASE or '/'}">Artikel</a><details class="dd"><summary>Kategori</summary><div>{cats}</div></details><a href="/template">Template</a><a href="/kalkulator-kubikasi">Kalkulator</a><a href="/tentang">Tentang</a>
 <a class="btn-sm" href="{TIKTOK}" target="_blank" rel="noopener">Follow</a></nav></div></header>"""
 
 def foot():
@@ -156,13 +156,28 @@ def foot():
 <div><a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="30" height="30"><span>Ngerti <b>Logistik</b></span></a>
 <p>Blog edukasi logistik berbahasa Indonesia. Gudang, pengiriman, dan supply chain dijelaskan dengan bahasa sehari-hari. Gratis, tanpa iklan.</p></div>
 <div class="foot-links"><b>Kategori</b>{cats}</div>
-<div class="foot-links"><b>Ngerti Logistik</b><a href="/tentang">Tentang</a><a href="/penulis/{AUTHOR['slug']}">Penulis</a><a href="/feed.xml">RSS</a><a href="{TIKTOK}" target="_blank" rel="noopener">TikTok @ngertilogistik</a></div>
+<div class="foot-links"><b>Ngerti Logistik</b><a href="/template">Template gratis</a><a href="/kalkulator-kubikasi">Kalkulator kubikasi</a><a href="/tentang">Tentang</a><a href="/penulis/{AUTHOR['slug']}">Penulis</a><a href="/feed.xml">RSS</a><a href="{TIKTOK}" target="_blank" rel="noopener">TikTok @ngertilogistik</a></div>
 </div><div class="wrap fine">© {datetime.date.today().year} {NAME}. Angka yang ditandai CONTOH adalah ilustrasi, bukan data nyata. Fakta lain disertai sumber di akhir artikel.</div></footer>
 </body></html>"""
 
 CTA = f"""<section class="cta"><div class="wrap cta-in"><div>
 <h2>Mau belajar logistik <em>lebih dalam?</em></h2><p>Follow Ngerti Logistik di TikTok, Instagram Reels, dan Facebook Reels. Penjelasan singkat setiap minggu.</p></div>
 <a class="btn" href="{TIKTOK}" target="_blank" rel="noopener">Follow @ngertilogistik</a></div></section>"""
+
+def share(path, title, where):
+    """Tombol bagikan ke media sosial (tanpa skrip pihak ketiga)."""
+    from urllib.parse import quote
+    u = quote(SITE + path, safe=""); tt = quote(title, safe="")
+    links = [("WhatsApp", f"https://wa.me/?text={tt}%20{u}"), ("Facebook", f"https://www.facebook.com/sharer/sharer.php?u={u}"),
+             ("X", f"https://twitter.com/intent/tweet?text={tt}&url={u}"), ("LinkedIn", f"https://www.linkedin.com/sharing/share-offsite/?url={u}"),
+             ("Telegram", f"https://t.me/share/url?url={u}&text={tt}")]
+    btn = "".join(f'<a class="sh-{n.lower()}" href="{esc(h)}" target="_blank" rel="noopener nofollow" aria-label="Bagikan ke {n}">{n}</a>' for n, h in links)
+    return (f'<div class="share share-{where}" data-url="{esc(SITE + path)}" data-title="{esc(title)}"><span class="share-l">Bagikan</span>{btn}'
+            '<button type="button" class="sh-copy">Salin link</button><button type="button" class="sh-native" hidden>Bagikan…</button></div>')
+
+SHARE_JS = """<script>document.querySelectorAll('.share').forEach(function(s){var u=s.dataset.url,t=s.dataset.title,c=s.querySelector('.sh-copy'),n=s.querySelector('.sh-native');
+c.onclick=function(){(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){c.textContent='Tersalin ✓';setTimeout(function(){c.textContent='Salin link'},1800)},function(){prompt('Salin link ini:',u)})};
+if(navigator.share){n.hidden=false;n.onclick=function(){navigator.share({title:t,url:u}).catch(function(){})}}});</script>"""
 
 def ld(obj): return f'<script type="application/ld+json">{json.dumps(obj, ensure_ascii=False)}</script>'
 
@@ -231,6 +246,7 @@ def page_article(a, arts, ids):
 <nav class="crumb" aria-label="Breadcrumb"><a href="/">Beranda</a><span>/</span><a href="/kategori/{a['kategori']}">{esc(k['nama'])}</a></nav>
 <header class="ph"><span class="eyebrow">{esc(k['nama'])}</span><h1>{esc(a['judul'])}</h1>
 <p class="dek">{esc(a['deskripsi'])}</p>
+{share(path, a['judul'], 'top')}
 <div class="byline"><img src="/img/logo-256.png" alt="" width="40" height="40"><div><a href="/penulis/{AUTHOR['slug']}">{AUTHOR['nama']}</a><span>{AUTHOR['peran']}</span></div>
 <div class="bm"><time datetime="{a['terbit']}">{tgl(a['terbit'])}</time>{f' · diperbarui <time datetime="{a["diperbarui"]}">{tgl(a["diperbarui"])}</time>' if a['diperbarui'] != a['terbit'] else ''} · {a['menit']} menit baca</div></div>
 </header>
@@ -243,11 +259,12 @@ def page_article(a, arts, ids):
 {faq_h}
 {src_h}
 <a class="watch" href="{TIKTOK}" target="_blank" rel="noopener"><span class="play">▶</span><span><b>Lebih suka versi video 60 detik?</b><small>Tonton di TikTok @ngertilogistik</small></span></a>
+{share(path, a['judul'], 'end')}
 <div class="author-box"><img src="/img/logo-256.png" alt="" width="64" height="64"><div><small>Ditulis oleh</small><a href="/penulis/{AUTHOR['slug']}"><b>{AUTHOR['nama']}</b></a><p>{esc(AUTHOR['bio'])}</p></div></div>
 <div class="pn">{pn}</div>
 </article></div></div>
 {f'<section class="rel"><div class="wrap"><h2>Baca juga</h2><div class="posts g3">{"".join(card(x) for x in rel)}</div></div></section>' if rel else ''}
-</main>""" + CTA + foot()
+</main>""" + CTA + foot().replace("</body>", SHARE_JS + "</body>")
     write(path, s)
 
 def page_home(arts):
@@ -344,6 +361,20 @@ def page_about():
 <p><a class="btn" href="{BASE or '/'}">Baca artikel</a></p></div></main>""" + CTA + foot()
     write("/tentang", s)
 
+HALAMAN = [  # halaman statis dari content/halaman/<file>.html
+    ("/template", "template.html", "Template Spreadsheet Logistik Gratis (Excel) | Ngerti Logistik",
+     "Download gratis 18 template Excel logistik: kartu stok, reorder point, analisis ABC, cycle count, picking list, tracker pengiriman, dan lainnya."),
+    ("/kalkulator-kubikasi", "kalkulator-kubikasi.html", "Kalkulator Kubikasi & Cargo Planner Kontainer | Ngerti Logistik",
+     "Hitung CBM, berat volume, dan perkiraan jumlah karton yang muat di kontainer 20 ft, 40 ft, 40 ft high cube, atau truk Anda. Gratis, langsung di browser."),
+]
+
+def page_halaman():
+    for path, f, title, desc in HALAMAN:
+        body = open(os.path.join(ROOT, "content/halaman", f), encoding="utf-8").read()
+        body = body.replace("<!--SHARE-->", share(path, title.split(" | ")[0], "top"))
+        s = head(title, desc, path) + nav() + body + CTA + foot().replace("</body>", SHARE_JS + "</body>")
+        write(path, s)
+
 def page_404():
     s = head("Halaman tidak ditemukan | Ngerti Logistik", "Halaman tidak ditemukan.", "/404", noindex=True) + nav() + f"""
 <main id="isi" class="about"><div class="wrap narrow" style="text-align:center">
@@ -354,6 +385,7 @@ def page_404():
 def feeds(arts):
     today = datetime.date.today().isoformat()
     urls = [("/", today), (BASE, today), ("/tentang", today), (f"/penulis/{AUTHOR['slug']}", today)]
+    urls += [(p, today) for p, *_ in HALAMAN]
     urls += [(f"/kategori/{k}", today) for k in KATEGORI if any(a["kategori"] == k for a in arts)]
     urls += [(url(a), a["diperbarui"]) for a in arts]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
@@ -397,12 +429,12 @@ if __name__ == "__main__":
     load_cfg()
     arts, ids = load_articles()
     if not arts: raise SystemExit("Belum ada artikel di content/artikel/")
-    keep = {"img", "fonts", "style.css", "app.js", "favicon.svg", "apple-touch-icon.png"}
+    keep = {"files", "img", "fonts", "style.css", "app.js", "favicon.svg", "apple-touch-icon.png"}
     for f in os.listdir(OUT):
         if f not in keep:
             p = os.path.join(OUT, f); shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)
     og_images(arts)
     for a in arts: page_article(a, arts, ids)
-    page_home(arts); page_list(arts); page_categories(arts); page_author(arts); page_about(); page_404()
+    page_home(arts); page_list(arts); page_categories(arts); page_author(arts); page_about(); page_halaman(); page_404()
     feeds(arts); redirects(arts)
     print(f"OK {len(arts)} artikel terbit · base={BASE or '/'}")

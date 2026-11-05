@@ -29,3 +29,8 @@ Pengecualian dari panduan itu: link internal `[anchor](Lxx)` boleh ke **semua** 
 - Frontmatter YAML valid, `python3 build.py` sukses, dan baris "Antrean" menampilkan tanggalnya.
 - Buka ulang setiap URL sumber dan pastikan klaimnya didukung. Klaim yang tidak didukung harus dihapus.
 - Commit ke `main` dengan pesan `Artikel Lxx: <judul>` (untuk tayangan harian: `Tayang <tanggal>`).
+
+## Halaman alat (jangan dihapus)
+- `/template` dan `/kalkulator-kubikasi` dibuat build.py dari `content/halaman/*.html`.
+- File Excel template ada di `public/files/` (dipertahankan build.py). Generatornya di `tools/template_xlsx/` (`python3 tools/template_xlsx/run.py public/files`).
+- Setiap artikel otomatis punya tombol bagikan (WhatsApp, Facebook, X, LinkedIn, Telegram, salin link).

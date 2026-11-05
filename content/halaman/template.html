@@ -1,0 +1,186 @@
+<style>
+.tp-hero{padding:64px 0 28px;position:relative;overflow:hidden}
+.tp-hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:620px;height:620px;background:radial-gradient(closest-side,rgba(255,196,0,.16),transparent);pointer-events:none}
+.tp-hero h1{font-size:clamp(34px,5.2vw,58px);font-weight:800;max-width:820px}
+.tp-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.tp-stats span{font:700 13px/1 var(--fm);color:var(--txt);background:var(--bg2);border:1px solid var(--line);padding:10px 14px;border-radius:999px}
+.tp-stats b{color:var(--acc)}
+.tp-filter{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 26px}
+.tp-filter button{font:600 14px/1 var(--fs);color:var(--mute);background:transparent;border:1px solid var(--line);padding:11px 18px;border-radius:999px;cursor:pointer}
+.tp-filter button.on,.tp-filter button:hover{color:#0B1220;background:var(--acc);border-color:var(--acc)}
+.tp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding-bottom:70px}
+.tp{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.tp:hover{transform:translateY(-4px);border-color:#3a4c70}
+.tp-prev{background:linear-gradient(160deg,#0F1A30,#0B1220);padding:16px;border-bottom:1px solid var(--line);aspect-ratio:16/10}
+.sheet{height:100%;background:#F7F9FC;border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:8px;box-shadow:0 10px 30px rgba(0,0,0,.35);color:#0B1220}
+.sheet-h{display:flex;justify-content:space-between;align-items:center;font:800 10px/1 var(--fs);letter-spacing:.02em}
+.sheet-h i{font-style:normal;font:700 8px/1 var(--fm);background:#0B1220;color:var(--acc);padding:4px 6px;border-radius:4px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.kpi{background:#fff;border:1px solid #E3E8F0;border-radius:6px;padding:6px}
+.kpi small{display:block;font:600 7px/1.2 var(--fs);color:#6B7891;text-transform:uppercase}
+.kpi b{font:800 13px/1.2 var(--fs)}
+.kpi b.g{color:#0E9F6E}.kpi b.r{color:#E0453A}.kpi b.y{color:#C98A00}
+.viz{flex:1;display:grid;grid-template-columns:1.4fr 1fr;gap:6px;min-height:0}
+.box{background:#fff;border:1px solid #E3E8F0;border-radius:6px;padding:6px;display:flex;align-items:flex-end;gap:4px;min-height:0}
+.bar{flex:1;background:#1F3A6B;border-radius:2px 2px 0 0}.bar.a{background:#FFC400}
+.rows{display:flex;flex-direction:column;gap:4px;justify-content:center;align-items:stretch}
+.rw{height:7px;border-radius:2px;background:#E8EDF5;position:relative}.rw:after{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);border-radius:2px;background:var(--c,#1F3A6B)}
+.donut{width:100%;max-width:72px;aspect-ratio:1;border-radius:50%;margin:auto;background:conic-gradient(#FFC400 0 62%,#1F3A6B 62% 86%,#E3E8F0 86%);-webkit-mask:radial-gradient(circle,transparent 46%,#000 47%);mask:radial-gradient(circle,transparent 46%,#000 47%)}
+.grid-mini{flex:1;display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.grid-mini span{background:#E8EDF5;border-radius:2px}.grid-mini span.d{background:#0E9F6E}.grid-mini span.t{background:#FFC400}.grid-mini span.x{background:#E0453A}
+.tp-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.tp-tag{font:700 11px/1 var(--fm);letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.tp-body h3{font-size:20px;font-weight:800}
+.tp-body p{margin:0;color:var(--mute);font-size:15px;line-height:1.55}
+.tp-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.tp-tabs span{font:500 12px/1 var(--fm);color:var(--txt);background:var(--bg2);border:1px solid var(--line);padding:6px 9px;border-radius:6px}
+.tp-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:6px}
+.tp-foot small{font:500 12px/1.3 var(--fm);color:var(--mute)}
+.tp-foot .btn{padding:11px 18px;font-size:14px}
+.tp-how{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}
+.tp-how h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;margin-bottom:26px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.step b{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--acc);color:#0B1220;font-weight:800;margin-bottom:12px}
+.step h3{font-size:18px;margin-bottom:6px}.step p{margin:0;color:var(--mute);font-size:15px}
+.tp-note{padding:40px 0 64px;color:var(--mute);font-size:15px}
+.tp-note a{color:var(--acc)}
+@media(max-width:980px){.tp-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}}
+@media(max-width:640px){.tp-grid{grid-template-columns:1fr}.tp-hero{padding-top:44px}}
+.tp-tools{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:28px 0 26px}
+.tp-tools .tp-filter{margin:0}
+.tp-search{flex:1;min-width:220px;max-width:340px;margin-left:auto;background:var(--bg2);border:1px solid var(--line);color:var(--ink);font:500 15px/1 var(--fs);padding:12px 16px;border-radius:999px}
+.tp-search:focus{outline:none;border-color:var(--acc)}
+.tp-count{font:600 13px/1 var(--fm);color:var(--mute);margin:-8px 0 18px}
+.tbl-mini{flex:1;display:flex;flex-direction:column;gap:3px}
+.tbl-mini span{height:9px;border-radius:2px;background:#E8EDF5;display:grid}
+.tbl-mini span:first-child{background:#1F3A6B}
+.tbl-mini span.y{background:#FFE58A}.tbl-mini span.r{background:#FFD0CC}.tbl-mini span.g{background:#C9F0DE}
+.chk{flex:1;display:flex;flex-direction:column;gap:5px;justify-content:center}
+.chk span{display:flex;align-items:center;gap:6px}
+.chk span:before{content:"";width:9px;height:9px;border-radius:2px;background:#0E9F6E;flex:none}
+.chk span.n:before{background:#fff;border:1.5px solid #C3CCDA}
+.chk span:after{content:"";height:6px;border-radius:2px;background:#E8EDF5;width:var(--w)}
+.tp-new{font:700 10px/1 var(--fm);background:var(--acc);color:#0B1220;padding:4px 7px;border-radius:5px;margin-left:8px;vertical-align:middle}
+</style>
+<main id="isi">
+<section class="tp-hero"><div class="wrap">
+<span class="eyebrow">Template gratis</span>
+<h1>Template spreadsheet logistik, <em>siap pakai.</em></h1>
+<p class="lead">18 template Excel sederhana untuk inventory, gudang, dan pengiriman. Lengkap dengan dashboard ringkas, rumus sudah terpasang, tinggal isi data Anda. Gratis, tanpa daftar.</p>
+<div class="tp-stats"><span><b>18</b> template</span><span>Format <b>.xlsx</b></span><span>Bisa dibuka di Excel &amp; Google Sheets</span><span>Tanpa makro</span></div>
+<!--SHARE-->
+<div class="tp-tools"><div class="tp-filter" role="tablist" aria-label="Filter template">
+<button class="on" data-f="semua">Semua (18)</button><button data-f="inventory">Inventory (6)</button><button data-f="gudang">Gudang (6)</button><button data-f="pengiriman">Pengiriman (6)</button></div>
+<input class="tp-search" type="search" placeholder="Cari template, misal: stok, retur, truk" aria-label="Cari template"></div>
+<p class="tp-count" id="tpCount">Menampilkan 18 template</p>
+</div></section>
+
+<div class="wrap"><div class="tp-grid">
+<article class="tp" data-k="inventory" data-q="kartu stok & dashboard inventory catat barang masuk dan keluar per sku. saldo terhitung otomatis, dan dashboard menandai barang yang sudah di bawah titik pesan ulang."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Dashboard Stok <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Total SKU</small><b>48</b></div><div class="kpi"><small>Perlu order</small><b class=r>6</b></div><div class="kpi"><small>Nilai stok</small><b>Rp 82jt</b></div></div><div class="viz"><div class="box"><span class="bar" style="height:55%"></span><span class="bar" style="height:78%"></span><span class="bar a" style="height:40%"></span><span class="bar" style="height:66%"></span><span class="bar" style="height:90%"></span><span class="bar a" style="height:30%"></span><span class="bar" style="height:60%"></span></div><div class="box rows"><span class="rw" style="--w:90%"></span><span class="rw" style="--w:70%"></span><span class="rw" style="--w:45%;--c:#FFC400"></span><span class="rw" style="--w:25%;--c:#E0453A"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Inventory</span><h3>Kartu Stok & Dashboard Inventory</h3>
+<p>Catat barang masuk dan keluar per SKU. Saldo terhitung otomatis, dan dashboard menandai barang yang sudah di bawah titik pesan ulang.</p><div class="tp-tabs"><span>Master SKU</span><span>Transaksi</span><span>Dashboard</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/kartu-stok-dashboard.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="inventory" data-q="kalkulator reorder point & safety stock masukkan pemakaian harian dan lead time pemasok. template menghitung stok pengaman dan kapan harus pesan lagi untuk setiap sku."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Reorder Point <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Pemakaian/hari</small><b>24</b></div><div class="kpi"><small>Safety stock</small><b class=y>72</b></div><div class="kpi"><small>ROP</small><b class=g>240</b></div></div><div class="viz" style="grid-template-columns:1fr"><div class="box" style="align-items:stretch"><svg viewBox="0 0 200 60" preserveAspectRatio="none" style="width:100%;height:100%"><polyline fill="none" stroke="#1F3A6B" stroke-width="2.5" points="0,8 40,40 40,8 85,42 85,10 130,44 130,9 175,41 175,8 200,22"/><line x1="0" y1="30" x2="200" y2="30" stroke="#FFC400" stroke-width="2" stroke-dasharray="5 4"/></svg></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Inventory</span><h3>Kalkulator Reorder Point & Safety Stock</h3>
+<p>Masukkan pemakaian harian dan lead time pemasok. Template menghitung stok pengaman dan kapan harus pesan lagi untuk setiap SKU.</p><div class="tp-tabs"><span>Input</span><span>Hasil per SKU</span><span>Panduan</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/reorder-point-safety-stock.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="inventory" data-q="analisis abc persediaan urutkan barang berdasarkan nilai pemakaian, lalu kelompokkan otomatis ke kelas a, b, dan c. persentase batas kelas bisa anda ubah sendiri."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Analisis ABC <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Kelas A</small><b class=y>20%</b></div><div class="kpi"><small>Kelas B</small><b>30%</b></div><div class="kpi"><small>Kelas C</small><b>50%</b></div></div><div class="viz"><div class="box"><span class="bar a" style="height:95%"></span><span class="bar a" style="height:70%"></span><span class="bar" style="height:42%"></span><span class="bar" style="height:30%"></span><span class="bar" style="height:20%"></span><span class="bar" style="height:14%"></span><span class="bar" style="height:9%"></span><span class="bar" style="height:6%"></span></div><div class="box"><span class="donut" style="background:conic-gradient(#FFC400 0 62%,#1F3A6B 62% 86%,#E3E8F0 86%)"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Inventory</span><h3>Analisis ABC Persediaan</h3>
+<p>Urutkan barang berdasarkan nilai pemakaian, lalu kelompokkan otomatis ke kelas A, B, dan C. Persentase batas kelas bisa Anda ubah sendiri.</p><div class="tp-tabs"><span>Data barang</span><span>Hasil ABC</span><span>Grafik Pareto</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/analisis-abc.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="inventory" data-q="aging stok & dead stock kelompokkan stok berdasarkan umur sejak terakhir bergerak. barang lambat laku dan dead stock langsung terlihat, lengkap dengan nilainya."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Aging Stok <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>0–90 hari</small><b class=g>71%</b></div><div class="kpi"><small>91–180</small><b class=y>18%</b></div><div class="kpi"><small>>180 hari</small><b class=r>11%</b></div></div><div class="viz"><div class="box"><span class="bar" style="height:88%"></span><span class="bar" style="height:60%"></span><span class="bar" style="height:35%"></span><span class="bar a" style="height:20%"></span><span class="bar a" style="height:12%"></span></div><div class="box"><span class="donut" style="background:conic-gradient(#0E9F6E 0 71%,#FFC400 71% 89%,#E3E8F0 89%)"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Inventory</span><h3>Aging Stok & Dead Stock</h3>
+<p>Kelompokkan stok berdasarkan umur sejak terakhir bergerak. Barang lambat laku dan dead stock langsung terlihat, lengkap dengan nilainya.</p><div class="tp-tabs"><span>Data stok</span><span>Rekap umur</span><span>Dashboard</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/aging-stok-dead-stock.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="inventory" data-q="inventory turnover & days on hand hitung perputaran persediaan dan berapa hari stok bertahan per sku atau per kategori, lalu bandingkan dari bulan ke bulan."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Inventory Turnover <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Turnover</small><b class=g>6,2x</b></div><div class="kpi"><small>Days on hand</small><b>59</b></div><div class="kpi"><small>SKU lambat</small><b class=r>9</b></div></div><div class="viz" style="grid-template-columns:1fr"><div class="box" style="align-items:stretch"><svg viewBox="0 0 200 60" preserveAspectRatio="none" style="width:100%;height:100%"><polyline fill="none" stroke="#1F3A6B" stroke-width="2.5" points="0,40 33,34 66,36 100,26 133,22 166,24 200,14"/></svg></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Inventory</span><h3>Inventory Turnover & Days on Hand</h3>
+<p>Hitung perputaran persediaan dan berapa hari stok bertahan per SKU atau per kategori, lalu bandingkan dari bulan ke bulan.</p><div class="tp-tabs"><span>Data bulanan</span><span>Hasil per SKU</span><span>Tren</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/inventory-turnover.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="inventory" data-q="formulir stock opname lembar hitung fisik siap cetak per lokasi, kolom hasil hitung 1 dan 2, lalu rekap selisih qty dan nilai secara otomatis."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Stock Opname <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Lokasi</small><b>120</b></div><div class="kpi"><small>Selesai</small><b class=g>104</b></div><div class="kpi"><small>Selisih</small><b class=r>7</b></div></div><div class="viz"><div class="box tbl-mini" style="align-items:stretch"><span></span><span class="g"></span><span></span><span class="g"></span><span></span><span class="r"></span><span></span><span class="g"></span><span></span><span class="y"></span><span></span><span class="g"></span></div><div class="box"><span class="donut" style="background:conic-gradient(#0E9F6E 0 87%,#E0453A 87% 93%,#E3E8F0 93%)"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Inventory</span><h3>Formulir Stock Opname</h3>
+<p>Lembar hitung fisik siap cetak per lokasi, kolom hasil hitung 1 dan 2, lalu rekap selisih qty dan nilai secara otomatis.</p><div class="tp-tabs"><span>Lembar hitung</span><span>Rekap selisih</span><span>Berita acara</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/formulir-stock-opname.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="gudang" data-q="jadwal & hasil cycle count bagi lokasi rak ke jadwal hitung bergilir, catat hasil hitung fisik, dan lihat akurasi stok serta selisih per lokasi dalam satu dashboard."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Jadwal Cycle Count <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Lokasi dihitung</small><b>86</b></div><div class="kpi"><small>Akurasi</small><b class=g>97,6%</b></div><div class="kpi"><small>Selisih</small><b class=r>4</b></div></div><div class="grid-mini"><span class="d"></span><span class="d"></span><span class="d"></span><span class="x"></span><span class="d"></span><span class="t"></span><span></span><span class="d"></span><span class="d"></span><span class="t"></span><span class="d"></span><span class="d"></span><span></span><span></span><span class="d"></span><span class="x"></span><span class="d"></span><span class="d"></span><span class="t"></span><span></span><span></span></div></div></div>
+<div class="tp-body"><span class="tp-tag">Gudang</span><h3>Jadwal & Hasil Cycle Count</h3>
+<p>Bagi lokasi rak ke jadwal hitung bergilir, catat hasil hitung fisik, dan lihat akurasi stok serta selisih per lokasi dalam satu dashboard.</p><div class="tp-tabs"><span>Jadwal</span><span>Hasil hitung</span><span>Dashboard</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/cycle-count.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="gudang" data-q="log penerimaan barang (receiving) cocokkan po, surat jalan, dan barang fisik. catat jumlah, kondisi, dan catatan masalah, lalu lihat rekap kedatangan per pemasok."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Log Penerimaan <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Kedatangan</small><b>32</b></div><div class="kpi"><small>Sesuai PO</small><b class=g>28</b></div><div class="kpi"><small>Bermasalah</small><b class=r>4</b></div></div><div class="viz"><div class="box rows"><span class="rw" style="--w:100%;--c:#0E9F6E"></span><span class="rw" style="--w:100%;--c:#0E9F6E"></span><span class="rw" style="--w:62%;--c:#FFC400"></span><span class="rw" style="--w:100%;--c:#0E9F6E"></span><span class="rw" style="--w:35%;--c:#E0453A"></span></div><div class="box"><span class="donut" style="background:conic-gradient(#0E9F6E 0 87%,#E0453A 87% 100%,#E3E8F0 100%)"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Gudang</span><h3>Log Penerimaan Barang (Receiving)</h3>
+<p>Cocokkan PO, surat jalan, dan barang fisik. Catat jumlah, kondisi, dan catatan masalah, lalu lihat rekap kedatangan per pemasok.</p><div class="tp-tabs"><span>Log harian</span><span>Checklist</span><span>Rekap pemasok</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/log-penerimaan-barang.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="gudang" data-q="picking list & rekap order susun daftar ambil barang per order lengkap dengan lokasi rak, urutkan per zona, dan pantau status picking sampai siap kirim."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Picking List <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Order hari ini</small><b>58</b></div><div class="kpi"><small>Sudah dipick</small><b class=g>41</b></div><div class="kpi"><small>Pending</small><b class=y>17</b></div></div><div class="viz"><div class="box tbl-mini" style="align-items:stretch"><span></span><span class="g"></span><span class="g"></span><span class="g"></span><span class="y"></span><span></span><span></span></div><div class="box rows"><span class="rw" style="--w:71%;--c:#0E9F6E"></span><span class="rw" style="--w:29%;--c:#FFC400"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Gudang</span><h3>Picking List & Rekap Order</h3>
+<p>Susun daftar ambil barang per order lengkap dengan lokasi rak, urutkan per zona, dan pantau status picking sampai siap kirim.</p><div class="tp-tabs"><span>Daftar order</span><span>Picking list</span><span>Status</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/picking-list.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="gudang" data-q="kapasitas & utilisasi rak gudang petakan lokasi rak, catat yang terisi dan kosong, lalu lihat persentase utilisasi per zona supaya penempatan barang lebih terencana."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Utilisasi Rak <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Total lokasi</small><b>400</b></div><div class="kpi"><small>Terisi</small><b class=y>82%</b></div><div class="kpi"><small>Kosong</small><b class=g>72</b></div></div><div class="grid-mini"><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="t"></span><span class="d"></span><span class="d"></span><span class="x"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="t"></span><span class="d"></span><span></span><span class="d"></span><span class="d"></span><span class="d"></span><span></span><span></span><span class="d"></span></div></div></div>
+<div class="tp-body"><span class="tp-tag">Gudang</span><h3>Kapasitas & Utilisasi Rak Gudang</h3>
+<p>Petakan lokasi rak, catat yang terisi dan kosong, lalu lihat persentase utilisasi per zona supaya penempatan barang lebih terencana.</p><div class="tp-tabs"><span>Master lokasi</span><span>Status lokasi</span><span>Dashboard</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/utilisasi-rak-gudang.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="gudang" data-q="dashboard kpi gudang satu halaman ringkasan kpi gudang bulanan: akurasi stok, ketepatan order, waktu dock to stock, dan produktivitas, dengan target yang bisa diatur."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">KPI Gudang <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Akurasi stok</small><b class=g>98,1%</b></div><div class="kpi"><small>Order on time</small><b class=g>94%</b></div><div class="kpi"><small>Dock to stock</small><b>1,4 hr</b></div></div><div class="viz"><div class="box"><span class="bar" style="height:70%"></span><span class="bar" style="height:74%"></span><span class="bar" style="height:72%"></span><span class="bar" style="height:80%"></span><span class="bar" style="height:78%"></span><span class="bar a" style="height:85%"></span></div><div class="box rows"><span class="rw" style="--w:98%;--c:#0E9F6E"></span><span class="rw" style="--w:94%;--c:#0E9F6E"></span><span class="rw" style="--w:76%;--c:#FFC400"></span><span class="rw" style="--w:60%"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Gudang</span><h3>Dashboard KPI Gudang</h3>
+<p>Satu halaman ringkasan KPI gudang bulanan: akurasi stok, ketepatan order, waktu dock to stock, dan produktivitas, dengan target yang bisa diatur.</p><div class="tp-tabs"><span>Input bulanan</span><span>Target</span><span>Dashboard</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/dashboard-kpi-gudang.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="gudang" data-q="checklist 5r & k3 gudang checklist audit harian atau mingguan untuk kerapian, kebersihan, dan keselamatan kerja per area, lengkap dengan skor dan daftar tindak lanjut."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Checklist 5R <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Area dicek</small><b>12</b></div><div class="kpi"><small>Skor</small><b class=g>86%</b></div><div class="kpi"><small>Temuan</small><b class=r>5</b></div></div><div class="viz"><div class="box chk" style="align-items:stretch"><span style="--w:80%"></span><span style="--w:65%"></span><span class=n style="--w:70%"></span><span style="--w:55%"></span><span class=n style="--w:75%"></span></div><div class="box"><span class="donut" style="background:conic-gradient(#0E9F6E 0 86%,#E0453A 86% 100%,#E3E8F0 100%)"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Gudang</span><h3>Checklist 5R & K3 Gudang</h3>
+<p>Checklist audit harian atau mingguan untuk kerapian, kebersihan, dan keselamatan kerja per area, lengkap dengan skor dan daftar tindak lanjut.</p><div class="tp-tabs"><span>Checklist</span><span>Temuan</span><span>Rekap skor</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/checklist-5r-k3.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="pengiriman" data-q="tracker pengiriman & ketepatan waktu pantau setiap kiriman dari tanggal kirim sampai diterima. status, keterlambatan, dan persentase tepat waktu terhitung otomatis per tujuan."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Tracker Pengiriman <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Terkirim</small><b>214</b></div><div class="kpi"><small>Tepat waktu</small><b class=g>93%</b></div><div class="kpi"><small>Terlambat</small><b class=r>15</b></div></div><div class="viz"><div class="box"><span class="bar" style="height:60%"></span><span class="bar" style="height:72%"></span><span class="bar" style="height:68%"></span><span class="bar a" style="height:85%"></span><span class="bar" style="height:64%"></span><span class="bar" style="height:76%"></span></div><div class="box rows"><span class="rw" style="--w:93%;--c:#0E9F6E"></span><span class="rw" style="--w:7%;--c:#E0453A"></span><span class="rw" style="--w:58%"></span><span class="rw" style="--w:40%;--c:#FFC400"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Pengiriman</span><h3>Tracker Pengiriman & Ketepatan Waktu</h3>
+<p>Pantau setiap kiriman dari tanggal kirim sampai diterima. Status, keterlambatan, dan persentase tepat waktu terhitung otomatis per tujuan.</p><div class="tp-tabs"><span>Daftar kiriman</span><span>Dashboard</span><span>Rekap tujuan</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/tracker-pengiriman.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="pengiriman" data-q="kalkulator ongkir & berat volume masukkan ukuran dan berat paket. template menghitung berat volume dengan pembagi pilihan anda dan menampilkan berat yang ditagih."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Berat Volume <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Berat aktual</small><b>3,2 kg</b></div><div class="kpi"><small>Berat volume</small><b class=y>4,8 kg</b></div><div class="kpi"><small>Ditagih</small><b class=g>5 kg</b></div></div><div class="viz"><div class="box tbl-mini" style="align-items:stretch"><span></span><span class="y"></span><span class="y"></span><span></span><span class="g"></span><span></span></div><div class="box"><span class="bar" style="height:40%"></span><span class="bar a" style="height:72%"></span><span class="bar a" style="height:72%"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Pengiriman</span><h3>Kalkulator Ongkir & Berat Volume</h3>
+<p>Masukkan ukuran dan berat paket. Template menghitung berat volume dengan pembagi pilihan Anda dan menampilkan berat yang ditagih.</p><div class="tp-tabs"><span>Kalkulator</span><span>Daftar paket</span><span>Panduan</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/kalkulator-berat-volume.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="pengiriman" data-q="jadwal armada & ritase truk atur jadwal truk per hari, catat ritase, rute, dan muatan, lalu lihat utilisasi tiap armada dalam seminggu."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Jadwal Armada <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Armada</small><b>8</b></div><div class="kpi"><small>Ritase/minggu</small><b>46</b></div><div class="kpi"><small>Utilisasi</small><b class=g>81%</b></div></div><div class="grid-mini"><span class="d"></span><span class="d"></span><span class="t"></span><span class="d"></span><span class="d"></span><span></span><span></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="t"></span><span class="d"></span><span></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="x"></span><span class="d"></span><span class="d"></span><span></span><span class="d"></span></div></div></div>
+<div class="tp-body"><span class="tp-tag">Pengiriman</span><h3>Jadwal Armada & Ritase Truk</h3>
+<p>Atur jadwal truk per hari, catat ritase, rute, dan muatan, lalu lihat utilisasi tiap armada dalam seminggu.</p><div class="tp-tabs"><span>Jadwal</span><span>Log ritase</span><span>Dashboard</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/jadwal-armada-ritase.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="pengiriman" data-q="perbandingan tarif ekspedisi bandingkan tarif, estimasi waktu, dan syarat beberapa opsi pengiriman per rute. opsi termurah dan tercepat ditandai otomatis."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Banding Tarif <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Rute</small><b>12</b></div><div class="kpi"><small>Opsi</small><b>3</b></div><div class="kpi"><small>Termurah</small><b class=g>Opsi B</b></div></div><div class="viz"><div class="box"><span class="bar" style="height:64%"></span><span class="bar a" style="height:48%"></span><span class="bar" style="height:80%"></span><span class="bar" style="height:58%"></span><span class="bar a" style="height:44%"></span><span class="bar" style="height:70%"></span></div><div class="box tbl-mini" style="align-items:stretch"><span></span><span class="g"></span><span></span><span class="y"></span><span></span><span class="g"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Pengiriman</span><h3>Perbandingan Tarif Ekspedisi</h3>
+<p>Bandingkan tarif, estimasi waktu, dan syarat beberapa opsi pengiriman per rute. Opsi termurah dan tercepat ditandai otomatis.</p><div class="tp-tabs"><span>Input tarif</span><span>Perbandingan</span><span>Ringkasan</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/perbandingan-tarif-ekspedisi.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="pengiriman" data-q="tracker retur barang catat setiap retur dari pengajuan sampai selesai: alasan, kondisi barang, dan keputusan akhir. alasan retur terbanyak tampil di dashboard."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Tracker Retur <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>Retur masuk</small><b>27</b></div><div class="kpi"><small>Selesai</small><b class=g>19</b></div><div class="kpi"><small>Proses</small><b class=y>8</b></div></div><div class="viz"><div class="box rows"><span class="rw" style="--w:70%;--c:#0E9F6E"></span><span class="rw" style="--w:30%;--c:#FFC400"></span><span class="rw" style="--w:45%"></span><span class="rw" style="--w:20%;--c:#E0453A"></span></div><div class="box"><span class="donut" style="background:conic-gradient(#0E9F6E 0 70%,#FFC400 70% 100%,#E3E8F0 100%)"></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Pengiriman</span><h3>Tracker Retur Barang</h3>
+<p>Catat setiap retur dari pengajuan sampai selesai: alasan, kondisi barang, dan keputusan akhir. Alasan retur terbanyak tampil di dashboard.</p><div class="tp-tabs"><span>Log retur</span><span>Alasan</span><span>Dashboard</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/tracker-retur.xlsx" download>Download</a></div></div></article>
+<article class="tp" data-k="pengiriman" data-q="packing list & surat jalan format packing list dan surat jalan siap cetak. isi daftar barang sekali, total koli dan berat terhitung otomatis di kedua dokumen."><div class="tp-prev"><div class="sheet">
+<div class="sheet-h">Surat Jalan <i>XLSX</i></div><div class="kpis"><div class="kpi"><small>No. dokumen</small><b>SJ-0012</b></div><div class="kpi"><small>Koli</small><b>14</b></div><div class="kpi"><small>Berat</small><b>286 kg</b></div></div><div class="viz" style="grid-template-columns:1fr"><div class="box tbl-mini" style="align-items:stretch"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div></div></div>
+<div class="tp-body"><span class="tp-tag">Pengiriman</span><h3>Packing List & Surat Jalan</h3>
+<p>Format packing list dan surat jalan siap cetak. Isi daftar barang sekali, total koli dan berat terhitung otomatis di kedua dokumen.</p><div class="tp-tabs"><span>Packing list</span><span>Surat jalan</span><span>Data barang</span></div>
+<div class="tp-foot"><small>.xlsx · 3 sheet</small><a class="btn" href="/files/packing-list-surat-jalan.xlsx" download>Download</a></div></div></article>
+</div></div>
+
+<section class="tp-how"><div class="wrap">
+<h2>Cara <em>memakainya</em></h2>
+<div class="steps">
+<div class="step"><b>1</b><h3>Download</h3><p>Klik tombol download. File .xlsx langsung tersimpan, tanpa perlu daftar atau isi email.</p></div>
+<div class="step"><b>2</b><h3>Hapus data contoh</h3><p>Setiap template berisi data CONTOH supaya dashboard terlihat hidup. Ganti dengan data Anda sendiri.</p></div>
+<div class="step"><b>3</b><h3>Pantau dashboard</h3><p>Rumus dan grafik menyesuaikan otomatis. Mau pakai Google Sheets? Upload filenya ke Google Drive.</p></div>
+</div></div></section>
+
+<div class="wrap narrow tp-note"><p>Semua angka di dalam template adalah <b>CONTOH</b>, bukan data nyata. Penjelasan konsepnya ada di artikel <a href="/blog/reorder-point">reorder point</a>, <a href="/blog/safety-stock">safety stock</a>, dan <a href="/blog/stock-opname-vs-cycle-count">stock opname vs cycle count</a>. Butuh hitung muatan kontainer? Coba <a href="/kalkulator-kubikasi">kalkulator kubikasi</a>.</p></div>
+</main>
+<script>
+(()=>{const bs=[...document.querySelectorAll('.tp-filter button')],cs=[...document.querySelectorAll('.tp')],q=document.querySelector('.tp-search'),out=document.getElementById('tpCount');let f='semua';
+function run(){const s=q.value.trim().toLowerCase();let n=0;cs.forEach(c=>{const ok=(f==='semua'||c.dataset.k===f)&&(!s||c.dataset.q.includes(s));c.style.display=ok?'':'none';n+=ok});out.textContent=n?`Menampilkan ${n} template`:'Template tidak ditemukan. Coba kata lain.'}
+bs.forEach(b=>b.onclick=()=>{f=b.dataset.f;bs.forEach(x=>x.classList.toggle('on',x===b));run()});q.oninput=run})();
+</script>

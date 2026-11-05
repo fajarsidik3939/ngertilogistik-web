@@ -1,0 +1,153 @@
+<style>
+.kb-hero{padding:56px 0 24px}
+.kb-hero h1{font-size:clamp(32px,5vw,54px);font-weight:800;max-width:820px}
+.kb{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start;padding-bottom:40px}
+.pan{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.pan h2{font-size:20px;font-weight:800;margin-bottom:4px}
+.pan .sub{color:var(--mute);font-size:14px;margin:0 0 16px}
+.it{display:grid;grid-template-columns:1.5fr repeat(3,.8fr) .7fr .9fr 34px;gap:8px;align-items:end;margin-bottom:10px}
+.it label{display:block;font:600 11px/1 var(--fm);color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.it input,.kb select,.cus input{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ink);font:500 15px/1 var(--fs);padding:11px 10px;border-radius:10px}
+.it input:focus,.kb select:focus,.cus input:focus{border-color:var(--acc);outline:none}
+.del{height:42px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--mute);cursor:pointer;font-size:18px}
+.del:hover{color:#ff7b70;border-color:#ff7b70}
+.add{margin-top:4px;background:transparent;border:1px dashed var(--line);color:var(--acc);font:700 14px/1 var(--fs);padding:12px;border-radius:10px;width:100%;cursor:pointer}
+.ctn{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 14px}
+.ctn button{background:var(--bg);border:1px solid var(--line);color:var(--txt);border-radius:12px;padding:12px 8px;cursor:pointer;text-align:left;font:700 14px/1.2 var(--fs)}
+.ctn button small{display:block;font:500 11px/1.3 var(--fm);color:var(--mute);margin-top:4px}
+.ctn button.on{border-color:var(--acc);background:rgba(255,196,0,.08)}
+.cus{display:none;grid-template-columns:repeat(4,1fr);gap:8px}
+.cus.show{display:grid}
+.cus label{font:600 11px/1 var(--fm);color:var(--mute);text-transform:uppercase;display:block;margin-bottom:6px}
+.res{position:sticky;top:84px;display:flex;flex-direction:column;gap:14px}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.m{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:14px}
+.m small{display:block;font:600 11px/1.2 var(--fm);color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
+.m b{display:block;font:800 26px/1.2 var(--fs);margin-top:6px}
+.m b span{font-size:14px;color:var(--mute);font-weight:600}
+.m.hl{border-color:var(--acc)}.m.hl b{color:var(--acc)}
+.meter{margin-top:4px}
+.meter div{display:flex;justify-content:space-between;font:600 13px/1 var(--fs);color:var(--txt);margin-bottom:7px}
+.meter i{display:block;height:12px;border-radius:99px;background:var(--bg);border:1px solid var(--line);overflow:hidden}
+.meter i u{display:block;height:100%;width:0;background:var(--acc);border-radius:99px;transition:width .35s}
+.meter i u.over{background:#ff6b5e}
+.meter+.meter{margin-top:14px}
+.viz3{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px}
+.viz3 svg{width:100%;height:auto;display:block}
+.cap{font:500 12px/1.45 var(--fm);color:var(--mute);margin:8px 2px 0}
+.air{width:100%;border-collapse:collapse;font-size:14px}
+.air th,.air td{text-align:left;padding:9px 6px;border-bottom:1px solid var(--line)}
+.air th{font:600 11px/1 var(--fm);color:var(--mute);text-transform:uppercase}
+.air td:last-child{font-weight:800;color:var(--ink);text-align:right}
+.warn{background:rgba(255,107,94,.1);border:1px solid rgba(255,107,94,.4);color:#ffb3ab;border-radius:12px;padding:10px 12px;font-size:14px;display:none}
+.kb-info{padding:10px 0 64px}
+.kb-info h2{font-size:clamp(24px,3vw,32px);font-weight:800;margin:28px 0 12px}
+.kb-info p,.kb-info li{color:var(--txt)}
+.kb-info a{color:var(--acc)}
+.spec{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0}
+.spec th,.spec td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left}
+.spec th{font:600 12px/1 var(--fm);color:var(--mute);text-transform:uppercase}
+@media(max-width:980px){.kb{grid-template-columns:1fr}.res{position:static}}
+@media(max-width:640px){.it{grid-template-columns:repeat(3,1fr)}.it .nm{grid-column:1/-1}.it .del{grid-column:3}.ctn{grid-template-columns:repeat(2,1fr)}.cus{grid-template-columns:repeat(2,1fr)}.spec{font-size:13px}}
+</style>
+<main id="isi">
+<section class="kb-hero"><div class="wrap">
+<span class="eyebrow">Alat gratis</span>
+<h1>Kalkulator kubikasi &amp; <em>cargo planner.</em></h1>
+<p class="lead">Hitung total CBM, berat volume, dan perkiraan berapa karton yang muat di kontainer 20 ft, 40 ft, 40 ft high cube, atau ukuran bak truk Anda sendiri.</p>
+<!--SHARE-->
+</div></section>
+
+<div class="wrap"><div class="kb">
+<div>
+<section class="pan">
+<h2>1. Daftar barang</h2><p class="sub">Ukuran sisi terluar per karton dalam sentimeter, berat per karton dalam kilogram.</p>
+<div id="items"></div>
+<button class="add" id="add">+ Tambah barang</button>
+</section>
+<section class="pan" style="margin-top:22px">
+<h2>2. Pilih ruang muat</h2><p class="sub">Ukuran dalam kontainer standar, atau masukkan ukuran sendiri.</p>
+<div class="ctn" id="ctn"></div>
+<div class="cus" id="cus">
+<div><label>Panjang (cm)</label><input id="cL" type="number" value="420"></div>
+<div><label>Lebar (cm)</label><input id="cW" type="number" value="200"></div>
+<div><label>Tinggi (cm)</label><input id="cH" type="number" value="200"></div>
+<div><label>Muatan maks (kg)</label><input id="cK" type="number" value="4000"></div>
+</div>
+</section>
+<section class="pan" style="margin-top:22px">
+<h2>Berat volume kiriman udara/ekspres</h2>
+<table class="air"><thead><tr><th>Pembagi</th><th>Berat volume</th><th>Berat ditagih</th></tr></thead><tbody id="air"></tbody></table>
+<p class="cap">Berat ditagih = berat aktual atau berat volume, mana yang lebih besar. Cek pembagi resmi layanan Anda.</p>
+</section>
+</div>
+
+<aside class="res" aria-live="polite">
+<section class="pan">
+<h2>Hasil</h2><p class="sub" id="ctnName">Kontainer 20 ft</p>
+<div class="big">
+<div class="m hl"><small>Total volume</small><b id="rCbm">0 <span>m³</span></b></div>
+<div class="m"><small>Total berat</small><b id="rKg">0 <span>kg</span></b></div>
+<div class="m"><small>Jumlah karton</small><b id="rQty">0</b></div>
+<div class="m"><small>Perkiraan kebutuhan</small><b id="rNeed">0 <span>unit</span></b></div>
+</div>
+<div class="meter" style="margin-top:16px"><div><span>Terisi (volume)</span><span id="pV">0%</span></div><i><u id="bV"></u></i></div>
+<div class="meter"><div><span>Terisi (berat)</span><span id="pW">0%</span></div><i><u id="bW"></u></i></div>
+<p class="warn" id="warn" style="margin-top:14px"></p>
+</section>
+<section class="pan">
+<h2>Pola muat barang pertama</h2><p class="sub" id="fitTxt">-</p>
+<div class="viz3"><svg id="svg" viewBox="0 0 400 140" role="img" aria-label="Tampak atas susunan karton"></svg></div>
+<p class="cap">Tampak atas, satu jenis karton, orientasi terbaik. Belum memperhitungkan palet, celah, dan aturan tumpuk.</p>
+</section>
+</aside>
+</div></div>
+
+<div class="wrap narrow kb-info">
+<h2>Cara membaca hasilnya</h2>
+<p><b>CBM</b> (cubic meter) adalah volume muatan dalam meter kubik: panjang × lebar × tinggi dalam meter, dikali jumlah karton. Angka ini dipakai untuk memperkirakan ruang yang dibutuhkan, misalnya saat memilih kontainer atau truk.</p>
+<p><b>Persentase terisi</b> menunjukkan perbandingan muatan dengan kapasitas. Kalau berat yang lebih dulu penuh, muatan Anda tergolong berat dan padat. Kalau volume yang lebih dulu penuh, muatan Anda ringan tapi makan tempat.</p>
+<p>Hasil kalkulator ini adalah <b>perkiraan</b>. Dalam praktik, isi kontainer yang bisa dipakai lebih kecil dari volume penuhnya karena ada celah antarkarton, palet, ganjalan, dan batas tumpuk tiap barang. Untuk berat volume, penjelasan lengkapnya ada di artikel <a href="/blog/berat-volume">berat volume</a>.</p>
+<h2>Ukuran kontainer yang dipakai</h2>
+<table class="spec"><thead><tr><th>Tipe</th><th>Ukuran dalam (P × L × T)</th><th>Volume</th><th>Muatan bersih*</th></tr></thead><tbody>
+<tr><td>20 ft</td><td>5,867 × 2,330 × 2,350 m</td><td>33,1 m³</td><td>±28.280 kg</td></tr>
+<tr><td>40 ft</td><td>11,998 × 2,330 × 2,350 m</td><td>67,5 m³</td><td>±26.680 kg</td></tr>
+<tr><td>40 ft high cube</td><td>11,998 × 2,330 × 2,654 m</td><td>75,3 m³</td><td>±26.545 kg</td></tr>
+</tbody></table>
+<p class="cap">Sumber: Wikipedia, <a href="https://en.wikipedia.org/wiki/Intermodal_container" rel="noopener" target="_blank">Intermodal container</a>. *Perkiraan; ukuran dan berat kosong bisa sedikit berbeda antarprodusen. Selalu konfirmasi ke penyedia kontainer atau angkutan Anda.</p>
+</div>
+</main>
+<script>
+const C={'20':{n:'Kontainer 20 ft',L:586.7,W:233,H:235,kg:28280,v:33.1,s:'33,1 m³'},'40':{n:'Kontainer 40 ft',L:1199.8,W:233,H:235,kg:26680,v:67.5,s:'67,5 m³'},'40hc':{n:'Kontainer 40 ft HC',L:1199.8,W:233,H:265.4,kg:26545,v:75.3,s:'75,3 m³'},'cus':{n:'Ukuran sendiri',s:'truk / bak / ruang'}};
+let cur='20';
+const $=id=>document.getElementById(id),fmt=(n,d=0)=>n.toLocaleString('id-ID',{maximumFractionDigits:d,minimumFractionDigits:d});
+const ctn=$('ctn');
+Object.entries(C).forEach(([k,v])=>{const b=document.createElement('button');b.innerHTML=`${v.n.replace('Kontainer ','')}<small>${v.s}</small>`;b.dataset.k=k;if(k===cur)b.className='on';b.onclick=()=>{cur=k;[...ctn.children].forEach(x=>x.classList.toggle('on',x===b));$('cus').classList.toggle('show',k==='cus');calc()};ctn.appendChild(b)});
+function row(d){const r=document.createElement('div');r.className='it';r.innerHTML=`<div class="nm"><label>Nama barang</label><input value="${d[0]}"></div><div><label>P</label><input type="number" value="${d[1]}"></div><div><label>L</label><input type="number" value="${d[2]}"></div><div><label>T</label><input type="number" value="${d[3]}"></div><div><label>Qty</label><input type="number" value="${d[4]}"></div><div><label>Kg/ktn</label><input type="number" value="${d[5]}"></div><button class="del" aria-label="Hapus">×</button>`;r.querySelector('.del').onclick=()=>{r.remove();calc()};r.oninput=calc;$('items').appendChild(r)}
+[['Karton A (CONTOH)',60,40,40,120,12],['Karton B (CONTOH)',50,30,30,80,8]].forEach(row);
+$('add').onclick=()=>{row(['Barang baru',40,30,30,10,5]);calc()};
+['cL','cW','cH','cK'].forEach(i=>$(i).oninput=calc);
+function space(){if(cur!=='cus')return C[cur];return{n:'Ukuran sendiri',L:+$('cL').value||0,W:+$('cW').value||0,H:+$('cH').value||0,kg:+$('cK').value||0}}
+function best(S,l,w,h){let o=[[l,w,h],[l,h,w],[w,l,h],[w,h,l],[h,l,w],[h,w,l]],b={n:0};for(const [a,c,e] of o){const nx=Math.floor(S.L/a),ny=Math.floor(S.W/c),nz=Math.floor(S.H/e),n=nx*ny*nz;if(n>b.n)b={n,nx,ny,nz,a,c,e}}return b}
+function calc(){const S=space();let cbm=0,kg=0,q=0,items=[];
+document.querySelectorAll('.it').forEach(r=>{const v=[...r.querySelectorAll('input')].map(i=>i.value);const [nm,l,w,h,n,k]=[v[0],+v[1],+v[2],+v[3],+v[4],+v[5]];if(l>0&&w>0&&h>0&&n>0){cbm+=l*w*h*n/1e6;kg+=k*n;q+=n;items.push({nm,l,w,h,n,k})}});
+const capV=S.v||S.L*S.W*S.H/1e6;const pv=capV?cbm/capV*100:0,pw=S.kg?kg/S.kg*100:0;
+$('ctnName').textContent=S.n+(capV?` · kapasitas ${fmt(capV,1)} m³ / ${fmt(S.kg)} kg`:'');
+$('rCbm').innerHTML=`${fmt(cbm,2)} <span>m³</span>`;$('rKg').innerHTML=`${fmt(kg)} <span>kg</span>`;$('rQty').textContent=fmt(q);
+$('rNeed').innerHTML=`${fmt(Math.max(1,Math.ceil(Math.max(pv,pw)/100)))} <span>unit</span>`;
+$('pV').textContent=fmt(pv,1)+'%';$('pW').textContent=fmt(pw,1)+'%';
+$('bV').style.width=Math.min(pv,100)+'%';$('bW').style.width=Math.min(pw,100)+'%';$('bV').classList.toggle('over',pv>100);$('bW').classList.toggle('over',pw>100);
+const w=$('warn');if(pv>100||pw>100){w.style.display='block';w.textContent=`Muatan melebihi satu ${S.n.toLowerCase()}. Butuh sekitar ${Math.ceil(Math.max(pv,pw)/100)} unit, atau pilih ruang muat yang lebih besar.`}else w.style.display='none';
+let air='';const vol=items.reduce((s,i)=>s+i.l*i.w*i.h*i.n,0);[6000,5000].forEach(d=>{const bv=vol/d;air+=`<tr><td>${fmt(d)}${d===6000?' (acuan IATA)':' (sebagian ekspres)'}</td><td>${fmt(bv,1)} kg</td><td>${fmt(Math.max(bv,kg),1)} kg</td></tr>`});$('air').innerHTML=air;
+draw(S,items[0])}
+function draw(S,it){const svg=$('svg');if(!it||!S.L){svg.innerHTML='';$('fitTxt').textContent='-';return}
+const b=best(S,it.l,it.w,it.h);
+if(!b.n){svg.innerHTML='';$('fitTxt').textContent=`${it.nm} tidak muat di ruang ini.`;return}
+const pad=8,W=400-2*pad,sc=W/S.L,H=S.W*sc;svg.setAttribute('viewBox',`0 0 400 ${H+2*pad}`);
+let g=`<rect x="${pad}" y="${pad}" width="${W}" height="${H}" rx="4" fill="#0F1A30" stroke="#22304B"/>`;
+const used=Math.min(it.n,b.n),perLayer=b.nx*b.ny,layers=Math.ceil(used/perLayer),fullLayers=Math.floor(used/perLayer),rest=used%perLayer;
+let cnt=0;for(let x=0;x<b.nx;x++)for(let y=0;y<b.ny;y++){cnt++;const top=cnt<=rest||fullLayers===layers?layers:fullLayers;const op=Math.max(.25,top/b.nz);g+=`<rect x="${pad+x*b.a*sc+1}" y="${pad+y*b.c*sc+1}" width="${b.a*sc-2}" height="${b.c*sc-2}" rx="2" fill="rgba(255,196,0,${op.toFixed(2)})" stroke="#0B1220" stroke-width=".6"/>`}
+svg.innerHTML=g;
+$('fitTxt').innerHTML=`<b>${it.nm}</b>: maksimal <b>${fmt(b.n)}</b> karton per ruang muat (${b.nx} × ${b.ny} per lapis, ${b.nz} lapis). ${it.n>b.n?`Anda punya ${fmt(it.n)}, sisa ${fmt(it.n-b.n)} karton.`:`Muatan Anda ${fmt(it.n)} karton, sekitar ${layers} lapis.`}`}
+calc();
+</script>
