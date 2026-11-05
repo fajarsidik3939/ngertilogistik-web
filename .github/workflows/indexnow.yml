@@ -1,0 +1,40 @@
+name: IndexNow
+# Memberi tahu Bing, Yandex, Seznam, Naver, dll. (protokol IndexNow) setiap ada halaman baru/berubah di main.
+on:
+  push:
+    branches: [main]
+    paths: ["public/**"]
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - name: Kirim URL yang berubah ke IndexNow
+        env:
+          KEY: "cf7c7341da3c8f1caef3bd939356deae"
+          HOST: ngertilogistik.web.id
+        run: |
+          python3 - <<'PY'
+          import os, re, json, subprocess, urllib.request
+          host, key = os.environ["HOST"], os.environ["KEY"]
+          try:
+              changed = subprocess.check_output(["git", "diff", "--name-only", "HEAD~1", "HEAD", "--", "public"]).decode().split()
+          except Exception:
+              changed = []
+          urls = set()
+          for f in changed:
+              if f.endswith("index.html"):
+                  p = f[len("public"):-len("index.html")].rstrip("/") or "/"
+                  urls.add(f"https://{host}{p}")
+          if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch" or not urls:
+              sm = open("public/sitemap.xml").read()
+              urls |= set(re.findall(r"<loc>(.*?)</loc>", sm)) if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch" else set()
+          if not urls:
+              print("Tidak ada halaman berubah."); raise SystemExit
+          body = json.dumps({"host": host, "key": key, "keyLocation": f"https://{host}/{key}.txt", "urlList": sorted(urls)[:10000]}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body, headers={"Content-Type": "application/json; charset=utf-8"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              print("IndexNow", r.status, len(urls), "URL")
+          PY

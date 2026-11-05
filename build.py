@@ -440,7 +440,7 @@ if __name__ == "__main__":
     load_cfg()
     arts, ids = load_articles()
     if not arts: raise SystemExit("Belum ada artikel di content/artikel/")
-    keep = {"files", "img", "fonts", "style.css", "app.js", "favicon.svg", "apple-touch-icon.png"}
+    keep = {f for f in os.listdir(OUT) if re.fullmatch(r"[0-9a-f]{32}\.txt", f)} | {"files", "img", "fonts", "style.css", "app.js", "favicon.svg", "apple-touch-icon.png"}
     for f in os.listdir(OUT):
         if f not in keep:
             p = os.path.join(OUT, f); shutil.rmtree(p) if os.path.isdir(p) else os.remove(p)

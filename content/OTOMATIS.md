@@ -30,6 +30,10 @@ Pengecualian dari panduan itu: link internal `[anchor](Lxx)` boleh ke **semua** 
 - Tambahkan 1–3 istilah baru dari artikel itu ke `data/glosarium.json` (`istilah`, `alias`, `arti`, `artikel`), jaga urutan abjad dan jangan menggandakan istilah yang sudah ada.
 - Validasi kedua file dengan `python3 -c "import json;json.load(open('data/kuis.json'));json.load(open('data/glosarium.json'))"`.
 
+## Kit promosi untuk artikel baru (wajib)
+- Buat `promosi/<id>-<slug>.md` dengan format yang sama seperti file lain di folder itu (7 bagian: video pendek, carousel, LinkedIn, grup FB, WhatsApp, thread X/Threads, jawaban forum), lalu tambahkan barisnya ke tabel di `promosi/README.md`.
+- Fakta hanya dari artikel itu. Tanpa merek, tanpa em dash.
+
 ## Cek sebelum push
 - Frontmatter YAML valid, `python3 build.py` sukses, dan baris "Antrean" menampilkan tanggalnya.
 - Buka ulang setiap URL sumber dan pastikan klaimnya didukung. Klaim yang tidak didukung harus dihapus.
