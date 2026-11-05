@@ -6,7 +6,7 @@ seo_title: "Packing Kayu: Kapan Perlu dan Kapan Cukup Kardus?"
 deskripsi: "Packing kayu melindungi barang pecah belah dan berat, tapi menambah biaya dan berat ongkir. Pelajari cara memutuskan perlu atau tidak sebelum mengirim."
 kategori: pengiriman-barang
 kata_kunci: ["packing kayu", "packing kayu adalah", "kapan perlu packing kayu", "apakah packing kayu wajib", "packing kayu barang pecah belah", "packing kayu vs kardus", "biaya packing kayu", "packing kayu ekspor ISPM 15"]
-terbit: 2026-11-08
+terbit: 2026-11-07
 intinya: "Packing kayu **bukan wajib**. Pakai untuk barang mudah pecah, berat, atau bentuknya rawan tertekan, lalu bandingkan **risiko kerugian** dengan **biaya dan berat tambahan** yang ikut dihitung ongkir."
 faq:
   - q: "Apa itu packing kayu?"

@@ -1,11 +1,11 @@
 # Terbit otomatis 1 artikel per hari
 
-Blog memakai **antrean 3 hari**. `build.py` hanya menayangkan artikel dengan `terbit` ≤ hari ini (WIB). Artikel dengan tanggal di depan menunggu di antrean, jadi Fajar sempat mengecek atau mengeditnya di GitHub sebelum tayang.
+Blog memakai **antrean pendek**. `build.py` hanya menayangkan artikel dengan `terbit` ≤ hari ini (WIB). Semua berjalan otomatis tanpa menunggu persetujuan Fajar. Fajar tetap bisa mengedit artikel yang masih antre di GitHub, tapi itu opsional.
 
 Setiap pagi (±07.00 WIB) tugas terjadwal melakukan:
 
 1. **Tayangkan artikel hari ini:** jalankan `python3 build.py`, lalu commit dan push ke `main`. Vercel otomatis deploy.
-2. **Tulis 1 artikel baru** di ujung antrean, dengan `terbit` = tanggal terbit terakhir di antrean + 1 hari (minimal hari ini + 3).
+2. **Tulis 1 artikel baru** dengan `terbit` = tanggal paling awal mulai **besok** (WIB) yang belum punya artikel. Dengan begitu tidak ada hari kosong; celah di antrean otomatis terisi duluan.
 3. Build lagi, commit, dan push.
 
 ## Cara memilih topik
