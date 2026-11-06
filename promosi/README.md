@@ -59,6 +59,7 @@ Tips singkat:
 | L23 | Stock Opname vs Cycle Count: Hitung Sekaligus atau Bergilir? | 2026-11-06 | [L23-stock-opname-vs-cycle-count.md](L23-stock-opname-vs-cycle-count.md) |
 | L24 | Packing Kayu: Perlu atau Tidak? Cara Memutuskannya | 2026-11-07 | [L24-packing-kayu.md](L24-packing-kayu.md) |
 | L25 | Salah Kaprah: Gudang Cuma Tempat Numpuk Barang? Ini Fungsi Sebenarnya | 2026-11-08 | [L25-fungsi-gudang-dalam-logistik.md](L25-fungsi-gudang-dalam-logistik.md) |
+| L26 | Cara Packing Barang yang Benar agar Paket Tidak Penyok | 2026-11-09 | [L26-cara-packing-barang.md](L26-cara-packing-barang.md) |
 
 Catatan: L01 sampai L20 tayang di tanggal yang sama (2026-11-02). Jangan posting semuanya sekaligus. Jadwalkan satu artikel per hari (atau satu sampai dua per hari) dan hitung urutan H, H+1, dan seterusnya dari hari kamu mulai mempromosikan artikel itu.
 

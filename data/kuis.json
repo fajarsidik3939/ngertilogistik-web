@@ -1523,5 +1523,66 @@
         "bahas": "Barang di lorong karena rak penuh, barang tak bergerak berbulan-bulan, dan retur menumpuk tanpa keputusan adalah tanda gudang belum mengalir."
       }
     ]
+  },
+  "L26": {
+    "slug": "cara-packing-barang",
+    "judul": "Cara Packing Barang yang Benar agar Paket Tidak Penyok",
+    "soal": [
+      {
+        "q": "Menurut artikel, apa masalah utama memakai kardus yang terlalu besar?",
+        "opsi": [
+          "Kardus jadi lebih berat sehingga sulit diangkat",
+          "Barang bebas bergeser dan kardus lebih mudah penyok",
+          "Label alamat tidak bisa ditempel",
+          "Lakban tidak bisa menempel"
+        ],
+        "jawab": 1,
+        "bahas": "Ruang kosong membuat barang bergeser, dan dinding kardus tidak tertahan dari dalam sehingga mudah penyok saat ditindih. Ukuran besar juga bisa menaikkan ongkir."
+      },
+      {
+        "q": "Di mana sebaiknya bahan pengisi diletakkan?",
+        "opsi": [
+          "Hanya di bagian atas barang",
+          "Hanya di samping barang",
+          "Di semua sisi barang, termasuk atas dan bawah",
+          "Di luar kardus"
+        ],
+        "jawab": 2,
+        "bahas": "Pengisi diletakkan di sekeliling barang agar barang tidak bisa bergerak ke arah mana pun saat paket terguncang."
+      },
+      {
+        "q": "Apa yang dimaksud lakban pola H?",
+        "opsi": [
+          "Satu strip di sambungan tengah ditambah satu strip di tiap sambungan tepi",
+          "Lakban dililit melingkar tiga kali",
+          "Satu strip lakban di tengah saja",
+          "Lakban ditempel membentuk huruf X di sisi kardus"
+        ],
+        "jawab": 0,
+        "bahas": "Strip tengah menutup celah utama, dua strip tepi memperkuat pinggir tutup kardus. Dari atas, susunannya membentuk huruf H. Pola ini dipakai di bagian atas dan bawah kardus."
+      },
+      {
+        "q": "Menurut panduan yang dikutip artikel, mana yang TIDAK disarankan untuk menutup paket?",
+        "opsi": [
+          "Lakban kemasan cokelat",
+          "Lakban yang diperkuat",
+          "Lakban kertas",
+          "Masking tape atau tali"
+        ],
+        "jawab": 3,
+        "bahas": "Panduan pengemasan layanan pos Amerika Serikat menyarankan lakban kemasan bening atau cokelat, lakban diperkuat, atau lakban kertas, dan meminta tidak memakai tali, benang, masking tape, atau selotip tipis."
+      },
+      {
+        "q": "Apa arti hasil uji guncang kalau terdengar barang bergerak di dalam paket?",
+        "opsi": [
+          "Paket siap dikirim",
+          "Kardusnya harus diganti dengan packing kayu",
+          "Celahnya belum terisi, tambahkan bahan pengisi",
+          "Labelnya perlu dipindah"
+        ],
+        "jawab": 2,
+        "bahas": "Bunyi atau gerakan berarti masih ada celah. Buka lagi paketnya dan tambahkan pengisi sampai barang tidak bergeser."
+      }
+    ]
   }
 }

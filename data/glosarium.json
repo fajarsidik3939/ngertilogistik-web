@@ -35,6 +35,15 @@
     "artikel": "L06"
   },
   {
+    "istilah": "Bahan pengisi",
+    "alias": [
+      "void fill",
+      "peredam paket"
+    ],
+    "arti": "Material yang mengisi celah di dalam kardus, misalnya bubble wrap, kertas remas, kertas cacah, atau busa. Tujuannya menahan barang agar tidak bergeser dan saling membentur selama pengiriman.",
+    "artikel": "L26"
+  },
+  {
     "istilah": "Barcode",
     "alias": [],
     "arti": "Gambar garis yang bisa dipindai mesin. Pada produk ritel, angka di bawah barcode umumnya adalah GTIN.",
@@ -252,6 +261,14 @@
     ],
     "arti": "Area yang direncanakan untuk menyimpan dan menangani barang. Fungsinya bukan hanya menyimpan, tapi juga menerima, mengambil, mengemas, mengirim, dan mencatat setiap pergerakan barang.",
     "artikel": "L25"
+  },
+  {
+    "istilah": "H-taping",
+    "alias": [
+      "lakban pola H"
+    ],
+    "arti": "Cara menutup kardus dengan satu strip lakban di sambungan tengah tutup dan satu strip di tiap sambungan tepi, sehingga dari atas membentuk huruf H. Strip tepi memperkuat pinggir kardus yang mudah terbuka saat terbentur.",
+    "artikel": "L26"
   },
   {
     "istilah": "Hub sortir",
@@ -649,6 +666,14 @@
     ],
     "arti": "Waktu barang di perjalanan, dari diserahkan ke pengangkut sampai tiba di tujuan. Transit time hanya satu bagian dari lead time.",
     "artikel": "L13"
+  },
+  {
+    "istilah": "Uji guncang",
+    "alias": [
+      "shake test"
+    ],
+    "arti": "Cek sederhana sebelum paket dikirim: paket diguncangkan pelan. Kalau terdengar atau terasa barang bergerak, celahnya belum terisi dan bahan pengisi perlu ditambah.",
+    "artikel": "L26"
   },
   {
     "istilah": "Wave picking",
