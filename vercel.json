@@ -131,8 +131,8 @@
   },
   {
    "source": "/materi/l24-packing-kayu-perlu-atau-tidak",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/packing-kayu",
+   "permanent": true
   },
   {
    "source": "/materi/l25-salah-kaprah-gudang-cuma-tempat-numpuk-barang",
