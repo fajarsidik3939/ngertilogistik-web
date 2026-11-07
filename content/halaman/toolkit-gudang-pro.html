@@ -1,12 +1,15 @@
 <style>
-.pk-hero{padding:64px 0 40px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.pk-hero{padding:60px 0 48px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 .pk-hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:640px;height:640px;background:radial-gradient(closest-side,rgba(255,196,0,.14),transparent);pointer-events:none}
 .pk-hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative}
-.pk-hero h1{font-size:clamp(36px,5.4vw,60px);font-weight:800}
-.pk-pills{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px}
-.pk-pills span{font:700 13px/1 var(--fm);color:var(--txt);background:var(--bg2);border:1px solid var(--line);padding:10px 14px;border-radius:999px}
-.pk-pills b{color:var(--acc)}
+.pk-hero h1{font-size:clamp(36px,5.4vw,62px);font-weight:800;line-height:1.08;margin:0 0 6px}
+.pk-hero .lead{max-width:600px}
+.pk-tag{display:inline-flex;align-items:center;gap:8px;font:700 13px/1 var(--fm);letter-spacing:.06em;text-transform:uppercase;color:var(--acc);background:rgba(255,196,0,.08);border:1px solid rgba(255,196,0,.3);padding:9px 14px;border-radius:999px;margin-bottom:18px}
+.pk-checks{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:9px}
+.pk-checks li{display:flex;gap:10px;align-items:flex-start;color:var(--txt);font-size:16.5px;line-height:1.45}
+.pk-checks li:before{content:"✓";flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--acc);color:#0B1220;font:800 13px/1 var(--fs);margin-top:1px}
 .pk-buy{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.pk-buy .btn{font-size:17px;padding:16px 30px}
 .pk-price{font:800 30px/1 var(--fs);color:var(--ink)}
 .pk-price small{display:block;font:500 13px/1.4 var(--fs);color:var(--mute);margin-top:6px}
 .pk-fine{font-size:14px;color:var(--mute);margin:14px 0 0}
@@ -24,11 +27,23 @@
 .sheet td.n{text-align:right;font-family:var(--fm)}
 .st{font:700 9px/1 var(--fm);padding:3px 6px;border-radius:4px}
 .st.g{background:#D9F2E3;color:#067647}.st.y{background:#FDEBD0;color:#B54708}.st.r{background:#FADBD8;color:#B42318}
-.pk-pain{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pk-story{max-width:760px}
+.pk-story p{font-size:18px;color:var(--txt);margin:0 0 16px;line-height:1.7}
+.pk-story p.big{font-size:clamp(22px,2.6vw,28px);font-weight:800;color:var(--ink);line-height:1.35}
+.pk-pain{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
 .pk-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
 .pk-card h3{font-size:19px;font-weight:800;margin:0 0 8px}
 .pk-card p{margin:0;color:var(--mute);font-size:15.5px;line-height:1.6}
 .pk-num{font:800 13px/1 var(--fm);color:var(--acc);display:block;margin-bottom:12px}
+.pk-vs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pk-vs>div{border-radius:var(--r);padding:26px;border:1px solid var(--line)}
+.pk-vs .before{background:var(--card)}
+.pk-vs .after{background:linear-gradient(160deg,rgba(255,196,0,.1),rgba(255,196,0,.02));border-color:rgba(255,196,0,.45)}
+.pk-vs h3{font-size:20px;font-weight:800;margin:0 0 14px}
+.pk-vs ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.pk-vs li{display:flex;gap:10px;color:var(--txt);font-size:16px;line-height:1.5}
+.pk-vs .before li:before{content:"✕";color:#E0453A;font-weight:800;flex:none}
+.pk-vs .after li:before{content:"✓";color:var(--acc);font-weight:800;flex:none}
 .pk-items{display:grid;gap:22px}
 .pk-item{display:grid;grid-template-columns:320px 1fr;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;align-items:start}
 .pk-item img{width:100%;border-radius:10px;border:1px solid var(--line)}
@@ -38,29 +53,48 @@
 .pk-item li{margin-bottom:6px}.pk-item li b{color:var(--ink)}
 .pk-mini{background:linear-gradient(160deg,#0F1A30,#0B1220);border-radius:12px;padding:14px;border:1px solid var(--line)}
 .pk-mini .sheet table{font-size:10px}.pk-mini .sheet th,.pk-mini .sheet td{padding:5px 4px}
-.pk-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.pk-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s;padding:0;margin:0}
 .pk-steps li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;color:var(--txt);font-size:16px}
 .pk-steps li:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--acc);color:#0B1220;font-weight:800;margin-bottom:12px}
-.pk-steps{padding:0;margin:0}
 .pk-fit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .pk-fit h3{font-size:19px;font-weight:800;margin:0 0 10px}
 .pk-fit ul{margin:0;padding-left:18px;color:var(--txt)}
+.pk-offer{max-width:620px;margin:0 auto;background:var(--card);border:2px solid var(--acc);border-radius:24px;padding:34px 30px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.pk-offer h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;margin:0 0 6px}
+.pk-offer .sub{color:var(--mute);margin:0 0 22px}
+.pk-offer ul{list-style:none;padding:0;margin:0 0 26px;text-align:left;display:grid;gap:12px}
+.pk-offer li{display:flex;gap:12px;color:var(--txt);font-size:16px;line-height:1.45;border-bottom:1px dashed var(--line);padding-bottom:12px}
+.pk-offer li:last-child{border-bottom:0;padding-bottom:0}
+.pk-offer li:before{content:"✓";flex:none;color:var(--acc);font-weight:800}
+.pk-offer li b{color:var(--ink)}
+.pk-offer .pk-price{font-size:44px;margin-bottom:6px}
+.pk-offer .btn{width:100%;font-size:18px;padding:18px 26px;margin-top:16px}
+.pk-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:16px;font-size:14px;color:var(--mute)}
 .pk-final{text-align:center;padding:64px 0}
 .pk-final h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin:0 0 10px}
 .pk-final p{color:var(--mute);margin:0 auto 24px;max-width:560px}
 .pk-final .pk-buy{justify-content:center}
-@media(max-width:900px){.pk-hero-in{grid-template-columns:1fr}.pk-stack{height:380px;max-width:480px}.pk-pain,.pk-steps{grid-template-columns:1fr}.pk-item{grid-template-columns:1fr}.pk-item img{max-width:300px}.pk-fit{grid-template-columns:1fr}}
-@media(max-width:480px){.pk-stack{height:320px}.sheet table{font-size:9.5px}.pk-hero{padding-top:40px}}
+.pk-bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(11,18,32,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .25s}
+.pk-bar.on{transform:none}
+.pk-bar b{display:block;font-size:15px}.pk-bar span{font-size:13px;color:var(--mute)}
+.pk-bar .btn{padding:12px 20px;font-size:15px}
+@media(max-width:900px){.pk-hero-in{grid-template-columns:1fr}.pk-stack{height:380px;max-width:480px}.pk-pain,.pk-steps,.pk-vs,.pk-fit{grid-template-columns:1fr}.pk-item{grid-template-columns:1fr}.pk-item img{max-width:300px}.pk-bar{display:flex}.foot{padding-bottom:80px}}
+@media(max-width:480px){.pk-stack{height:320px}.sheet table{font-size:9.5px}.pk-hero{padding-top:36px}.pk-offer{padding:28px 20px}.pk-buy .btn{width:100%}}
 </style>
 <main id="isi">
+
+<!-- ATTENTION -->
 <section class="pk-hero"><div class="wrap pk-hero-in">
 <div>
-<span class="eyebrow">Produk digital Ngerti Logistik</span>
-<h1>Toolkit Gudang <em>Pro</em></h1>
-<p class="lead">Catat barang masuk dan keluar, lalu stok akhir, kartu stok, dan status reorder terhitung sendiri. Lengkap dengan panduan kerja admin gudang serta 8 SOP dan 8 form siap print.</p>
-<div class="pk-pills"><span><b>9</b> sheet Excel terhubung</span><span>E-book <b>21</b> halaman</span><span><b>8</b> SOP + <b>8</b> form</span></div>
-<div class="pk-buy"><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener">Beli sekarang</a><div class="pk-price">{{HARGA}}<small>Bayar dan unduh lewat Lynk.id</small></div></div>
-<!--SHARE-->
+<span class="pk-tag">Untuk admin &amp; staff gudang</span>
+<h1>Stop rekap stok manual. <em>Biar Excel yang ngitung.</em></h1>
+<p class="lead">Catat barang masuk dan keluar sekali saja. Stok akhir, kartu stok, status reorder, sampai akurasi stock opname langsung muncul sendiri.</p>
+<ul class="pk-checks">
+<li>Template Excel 9-in-1 yang saling terhubung, rumus sudah terpasang</li>
+<li>E-book panduan kerja admin gudang, 21 halaman</li>
+<li>8 SOP + 8 form gudang siap print, bisa diedit</li>
+</ul>
+<div class="pk-buy"><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="hero">Ambil Toolkit-nya</a><div class="pk-price">{{HARGA}}<small>Sekali bayar · unduh lewat Lynk.id</small></div></div>
 </div>
 <div class="pk-stack" aria-hidden="true">
 <img class="b" src="/img/produk/form-bpb.webp" alt="" width="662" height="936" loading="eager">
@@ -75,18 +109,47 @@
 </div>
 </div></section>
 
+<!-- INTEREST -->
 <section class="sec"><div class="wrap">
-<div class="sec-h"><span class="eyebrow">Kenapa dibuat</span><h2>Kerja gudang yang biasanya <em>bikin lembur</em></h2></div>
-<div class="pk-pain">
-<div class="pk-card"><span class="pk-num">01</span><h3>Rekap stok manual</h3><p>Angka diambil dari banyak catatan, dijumlah ulang setiap hari. Satu salah ketik, stok akhirnya ikut salah.</p></div>
-<div class="pk-card"><span class="pk-num">02</span><h3>Opname selisih, penyebab tak ketemu</h3><p>Hasil hitung fisik beda dengan catatan, tapi riwayat keluar-masuknya susah ditelusuri.</p></div>
-<div class="pk-card"><span class="pk-num">03</span><h3>SOP dan form dari nol</h3><p>Diminta atasan membuat SOP dan form, tapi tidak ada contoh yang bisa langsung dipakai.</p></div>
+<div class="pk-story">
+<span class="eyebrow">Kenal situasi ini?</span>
+<p class="big">Sore hari, atasan minta laporan stok. Kamu buka tiga file, satu buku catatan, dan grup WhatsApp gudang.</p>
+<p>Angkanya dijumlah ulang satu per satu. Pas akhirnya selesai, ternyata ada barang yang keluar tapi belum dicatat. Ulang lagi dari awal.</p>
+<p>Belum lagi kalau stock opname: hasil hitung fisik beda dengan catatan, dan tidak ada yang tahu selisihnya dari mana.</p>
 </div>
-<p class="pk-fine" style="margin-top:22px">Toolkit ini memberi alat untuk ketiganya.</p>
+<div class="pk-pain">
+<div class="pk-card"><span class="pk-num">01</span><h3>Rekap stok makan waktu</h3><p>Angka diambil dari banyak catatan dan dijumlah manual. Satu salah ketik, stok akhirnya ikut salah.</p></div>
+<div class="pk-card"><span class="pk-num">02</span><h3>Selisih opname tanpa jejak</h3><p>Riwayat keluar-masuk per barang susah ditelusuri, jadi penyebab selisih tidak pernah ketemu.</p></div>
+<div class="pk-card"><span class="pk-num">03</span><h3>Disuruh bikin SOP dari nol</h3><p>Atasan minta SOP dan form, tapi tidak ada contoh yang bisa langsung dipakai.</p></div>
+</div>
+<p class="pk-story" style="font-size:18px;color:var(--txt);margin:0">Masalahnya bukan kamu kurang teliti. Masalahnya, <b style="color:var(--ink)">alatnya belum ada.</b></p>
 </div></section>
 
+<!-- DESIRE -->
 <section class="sec alt"><div class="wrap">
-<div class="sec-h"><span class="eyebrow">Isi paket</span><h2>Tiga bagian, <em>satu file ZIP</em></h2></div>
+<div class="sec-h"><span class="eyebrow">Bayangkan kalau</span><h2>Kerja gudangmu <em>sebelum dan sesudah</em></h2></div>
+<div class="pk-vs">
+<div class="before"><h3>Sebelum</h3><ul>
+<li>Stok akhir dihitung manual dari banyak catatan</li>
+<li>Cari riwayat satu barang harus bongkar semua file</li>
+<li>Tahu barang habis setelah ada yang minta</li>
+<li>Selisih opname dicatat, penyebabnya tetap misteri</li>
+<li>Hitung muat truk atau kontainer pakai perkiraan</li>
+<li>SOP dan form disusun dari nol</li>
+</ul></div>
+<div class="after"><h3>Dengan Toolkit Gudang Pro</h3><ul>
+<li>Input transaksi, stok akhir terhitung otomatis</li>
+<li>Pilih kode barang, kartu stok dan saldo berjalan langsung muncul</li>
+<li>Status REORDER muncul saat stok menyentuh batas minimum</li>
+<li>Selisih, nilai selisih (Rp), dan akurasi stok terhitung, riwayat bisa ditelusuri</li>
+<li>CBM, berat volumetrik, dan jumlah armada dihitung rumus</li>
+<li>8 SOP + 8 form tinggal ganti nama perusahaan</li>
+</ul></div>
+</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Isi paket</span><h2>Tiga alat kerja, <em>satu file ZIP</em></h2></div>
 <div class="pk-items">
 <div class="pk-item">
 <div class="pk-mini"><div class="sheet"><div class="sheet-h">Kartu Stok · BRG-001 <i>PILIH KODE</i></div>
@@ -95,11 +158,11 @@
 <tr><td>02/10</td><td>DO-001</td><td class="n"></td><td class="n">45</td><td class="n">135</td></tr>
 <tr><td>18/10</td><td>DO-015</td><td class="n"></td><td class="n">80</td><td class="n">55</td></tr>
 <tr><td>29/10</td><td>DO-022</td><td class="n"></td><td class="n">30</td><td class="n">25</td></tr></table></div></div>
-<div><span class="kick">Bagian 1 · Excel</span><h3>Template Excel 9-in-1</h3>
-<p>Satu workbook yang saling terhubung. Kamu cukup mengisi daftar barang dan transaksi, sisanya dihitung rumus.</p>
+<div><span class="kick">Alat 1 · Excel</span><h3>Template Excel 9-in-1</h3>
+<p>Satu workbook yang saling terhubung. Kamu cukup isi daftar barang dan transaksi, sisanya dikerjakan rumus.</p>
 <ul>
 <li><b>Dashboard:</b> total SKU, nilai stok, barang perlu reorder, dan 8 KPI gudang beserta status target</li>
-<li><b>Master Barang &amp; Transaksi:</b> stok akhir dan status Aman/Reorder/Habis terhitung otomatis</li>
+<li><b>Master Barang &amp; Transaksi:</b> stok akhir dan status Aman/Reorder/Habis otomatis</li>
 <li><b>Kartu Stok:</b> pilih kode barang, riwayat dan saldo berjalan langsung muncul</li>
 <li><b>Stock Opname:</b> isi stok fisik, lalu selisih, nilai selisih (Rp), dan akurasi stok terhitung</li>
 <li><b>Analisis ABC:</b> urutan barang paling bernilai, dibagi ke kelas A, B, dan C</li>
@@ -109,20 +172,20 @@
 </div>
 <div class="pk-item">
 <img src="/img/produk/ebook-isi.webp" alt="Contoh halaman e-book Panduan Kerja Admin Gudang" width="641" height="910" loading="lazy">
-<div><span class="kick">Bagian 2 · PDF</span><h3>E-book Panduan Kerja Admin Gudang</h3>
-<p>21 halaman ukuran A5, nyaman dibaca di HP. 14 bab dari dasar sampai yang sering ditanya saat interview.</p>
+<div><span class="kick">Alat 2 · PDF</span><h3>E-book Panduan Kerja Admin Gudang</h3>
+<p>21 halaman ukuran A5, nyaman dibaca di HP. Pegangan kerja dari dasar sampai yang sering ditanya saat interview.</p>
 <ul>
 <li>Alur barang di gudang dan dokumen wajib beserta fungsinya</li>
 <li>Receiving, penyimpanan, picking, packing, dan pengiriman</li>
 <li>Stock opname, ROP, safety stock, dan analisis ABC dengan contoh hitungan</li>
-<li>KPI gudang, 10 rumus Excel untuk admin gudang, dan K3 &amp; 5R</li>
+<li>KPI gudang, 10 rumus Excel untuk admin gudang, serta K3 &amp; 5R</li>
 <li>Pertanyaan interview yang sering muncul dan glosarium istilah logistik</li>
 </ul></div>
 </div>
 <div class="pk-item">
 <img src="/img/produk/sop-penerimaan.webp" alt="Contoh halaman SOP Penerimaan Barang" width="662" height="936" loading="lazy">
-<div><span class="kick">Bagian 3 · Word + PDF</span><h3>Paket 8 SOP + 8 Form</h3>
-<p>Format Word yang bisa diedit (tinggal ganti nama perusahaan), plus versi PDF siap print.</p>
+<div><span class="kick">Alat 3 · Word + PDF</span><h3>Paket 8 SOP + 8 Form</h3>
+<p>Format Word yang bisa diedit, tinggal ganti nama perusahaan. Ada juga versi PDF siap print.</p>
 <ul>
 <li><b>SOP:</b> penerimaan barang, penyimpanan, picking, packing, pengiriman, stock opname, retur, serta barang rusak dan selisih</li>
 <li><b>Form:</b> bukti penerimaan barang, picking list, checklist muat, count sheet opname, form retur, berita acara, checklist 5R &amp; K3, dan permintaan barang internal</li>
@@ -131,22 +194,40 @@
 </div>
 </div></section>
 
-<section class="sec"><div class="wrap">
-<div class="sec-h"><span class="eyebrow">Cara pakai</span><h2>Mulai dalam <em>tiga langkah</em></h2></div>
+<section class="sec alt"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Cara pakai</span><h2>Bisa dipakai <em>hari ini juga</em></h2></div>
 <ol class="pk-steps">
 <li>Beli lewat Lynk.id, lalu unduh paket ZIP.</li>
 <li>Buka Excel di sheet <b>Mulai Di Sini</b>, hapus data contoh, lalu isi daftar barangmu.</li>
 <li>Cetak form yang dibutuhkan dan sesuaikan SOP dengan gudangmu.</li>
 </ol>
+<div class="pk-fit" style="margin-top:22px">
+<div class="pk-card"><h3>Cocok untuk kamu yang</h3><ul><li>Kerja sebagai staff atau admin gudang</li><li>Jadi checker atau inventory controller</li><li>Sedang belajar atau melamar kerja di logistik</li></ul></div>
+<div class="pk-card"><h3>Biar jelas dari awal</h3><ul><li>Ini template Excel, bukan software WMS.</li><li>Kapasitas awal 200 SKU dan 1.000 baris transaksi. Bisa diperpanjang dengan menyalin baris rumus ke bawah (caranya ada di file).</li><li>Data di dalam file adalah <b>CONTOH</b>, bukan data nyata.</li></ul></div>
+</div>
 </div></section>
 
-<section class="sec alt"><div class="wrap pk-fit">
-<div class="pk-card"><h3>Cocok untuk</h3><ul><li>Staff dan admin gudang</li><li>Checker dan inventory controller</li><li>Yang sedang belajar atau melamar kerja di logistik</li></ul></div>
-<div class="pk-card"><h3>Perlu kamu tahu</h3><ul><li>Ini template Excel, bukan software WMS.</li><li>Kapasitas awal 200 SKU dan 1.000 baris transaksi. Bisa diperpanjang dengan menyalin baris rumus ke bawah (caranya ada di file).</li><li>Data di dalam file adalah <b>CONTOH</b>, bukan data nyata.</li></ul></div>
+<!-- ACTION -->
+<section class="sec" id="beli"><div class="wrap">
+<div class="pk-offer">
+<span class="eyebrow">Semua yang kamu dapat</span>
+<h2>Toolkit Gudang <em>Pro</em></h2>
+<p class="sub">Satu paket untuk kerja gudang yang lebih rapi.</p>
+<ul>
+<li><span><b>Template Excel 9-in-1</b> · dashboard, master barang, transaksi, kartu stok, opname, ABC, ROP, kubikasi</span></li>
+<li><span><b>E-book Panduan Kerja Admin Gudang</b> · 21 halaman, 14 bab</span></li>
+<li><span><b>8 SOP gudang</b> · Word (bisa diedit) + PDF</span></li>
+<li><span><b>8 form siap print</b> · BPB, picking list, count sheet, berita acara, dan lainnya</span></li>
+</ul>
+<div class="pk-price">{{HARGA}}</div>
+<a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="offer">Ambil Toolkit Gudang Pro</a>
+<div class="pk-trust"><span>Sekali bayar</span><span>Excel · PDF · Word</span><span>Pembayaran lewat Lynk.id</span></div>
+</div>
 </div></section>
 
-<section class="sec"><div class="wrap narrow">
-<div class="faq" style="margin-top:0"><h2>Pertanyaan umum</h2>
+<section class="sec alt"><div class="wrap narrow">
+<div class="faq" style="margin-top:0"><h2>Masih ragu? Ini jawabannya</h2>
+<details><summary>Saya tidak jago Excel, bisa pakai?</summary><div><p>Bisa. Kamu hanya mengisi kolom kuning, rumus di kolom lain bekerja sendiri. Ada sheet <b>Mulai Di Sini</b> berisi langkah pemakaian, dan setiap sheet sudah berisi data contoh supaya kamu lihat hasilnya dulu.</p></div></details>
 <details><summary>Format filenya apa saja?</summary><div><p>Excel (.xlsx), PDF, dan Word (.docx), semuanya dalam satu file ZIP.</p></div></details>
 <details><summary>Apakah SOP-nya bisa diedit?</summary><div><p>Bisa. Versi Word bisa diubah nama perusahaan, jabatan, target KPI, dan langkah-langkahnya.</p></div></details>
 <details><summary>Bedanya dengan template gratis di situs ini?</summary><div><p>Template gratis dibuat per kebutuhan. Toolkit Gudang Pro menggabungkan stok, kartu stok, opname, ABC, ROP, KPI, dan kubikasi dalam satu workbook yang saling terhubung, ditambah e-book dan paket SOP &amp; form.</p></div></details>
@@ -155,9 +236,12 @@
 </div>
 </div></section>
 
-<section class="pk-final sec alt"><div class="wrap">
-<h2>Toolkit Gudang <em>Pro</em></h2>
-<p>Excel 9-in-1, e-book 21 halaman, serta 8 SOP dan 8 form dalam satu paket.</p>
-<div class="pk-buy"><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener">Beli sekarang</a><div class="pk-price">{{HARGA}}<small>Bayar dan unduh lewat Lynk.id</small></div></div>
+<section class="pk-final"><div class="wrap">
+<h2>Laporan stok berikutnya, <em>kerjakan dengan alat yang tepat.</em></h2>
+<p>Template Excel 9-in-1, e-book 21 halaman, serta 8 SOP dan 8 form dalam satu paket.</p>
+<div class="pk-buy"><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="final">Ambil Toolkit-nya</a><div class="pk-price">{{HARGA}}<small>Sekali bayar · unduh lewat Lynk.id</small></div></div>
+<!--SHARE-->
 </div></section>
 </main>
+<div class="pk-bar" id="pkBar"><div><b>Toolkit Gudang Pro</b><span>{{HARGA}} · sekali bayar</span></div><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="bar">Ambil sekarang</a></div>
+<script>(function(){var bar=document.getElementById('pkBar'),hero=document.querySelector('.pk-hero'),offer=document.getElementById('beli');if(!bar||!('IntersectionObserver' in window))return;var hv=true,ov=false;function u(){bar.classList.toggle('on',!hv&&!ov)}new IntersectionObserver(function(e){hv=e[0].isIntersecting;u()}).observe(hero);new IntersectionObserver(function(e){ov=e[0].isIntersecting;u()}).observe(offer)})();</script>
