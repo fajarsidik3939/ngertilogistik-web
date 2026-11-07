@@ -146,7 +146,7 @@ def head(title, desc, path, img=None, kind="website", extra="", noindex=False):
 def nav():
     cats = "".join(f'<a href="/kategori/{k}">{esc(v["nama"])}</a>' for k, v in KATEGORI.items())
     bl = '<a href="/belajar">Jalur belajar</a><a href="/kuis">Kuis</a><a href="/glosarium">Glosarium</a><a href="/cheat-sheet">Cheat sheet</a><a href="/karier">Karier</a>'
-    al = '<a href="/template">Template Excel</a><a href="/kalkulator-logistik">Kalkulator logistik</a><a href="/kalkulator-kubikasi">Kalkulator kubikasi</a>'
+    al = '<a href="/toolkit-gudang-pro">Toolkit Gudang Pro</a><a href="/template">Template Excel</a><a href="/kalkulator-logistik">Kalkulator logistik</a><a href="/kalkulator-kubikasi">Kalkulator kubikasi</a>'
     return f"""<a class="skip" href="#isi">Langsung ke isi</a>
 <header class="nav"><div class="wrap nav-in">
 <a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="34" height="34"><span>Ngerti <b>Logistik</b></span></a>
@@ -160,7 +160,7 @@ def foot():
 <div><a class="brand" href="/"><img src="/img/logo-256.png" alt="" width="30" height="30"><span>Ngerti <b>Logistik</b></span></a>
 <p>Blog edukasi logistik berbahasa Indonesia. Gudang, pengiriman, dan supply chain dijelaskan dengan bahasa sehari-hari. Gratis, tanpa iklan.</p></div>
 <div class="foot-links"><b>Kategori</b>{cats}</div>
-<div class="foot-links"><b>Belajar &amp; alat</b><a href="/belajar">Jalur belajar</a><a href="/kuis">Kuis</a><a href="/glosarium">Glosarium</a><a href="/cheat-sheet">Cheat sheet</a><a href="/karier">Karier</a><a href="/template">Template Excel</a><a href="/kalkulator-logistik">Kalkulator logistik</a><a href="/kalkulator-kubikasi">Kalkulator kubikasi</a></div>
+<div class="foot-links"><b>Belajar &amp; alat</b><a href="/belajar">Jalur belajar</a><a href="/kuis">Kuis</a><a href="/glosarium">Glosarium</a><a href="/cheat-sheet">Cheat sheet</a><a href="/karier">Karier</a><a href="/toolkit-gudang-pro">Toolkit Gudang Pro</a><a href="/template">Template Excel</a><a href="/kalkulator-logistik">Kalkulator logistik</a><a href="/kalkulator-kubikasi">Kalkulator kubikasi</a></div>
 <div class="foot-links"><b>Ngerti Logistik</b><a href="/tentang">Tentang</a><a href="/penulis/{AUTHOR['slug']}">Penulis</a><a href="/feed.xml">RSS</a><a href="{TIKTOK}" target="_blank" rel="noopener">TikTok @ngertilogistik</a></div>
 </div><div class="wrap fine">© {datetime.date.today().year} {NAME}. Angka yang ditandai CONTOH adalah ilustrasi, bukan data nyata. Fakta lain disertai sumber di akhir artikel.</div></footer>
 </body></html>"""
@@ -371,7 +371,12 @@ def page_about():
 <p><a class="btn" href="{BASE or '/'}">Baca artikel</a></p></div></main>""" + CTA + foot()
     write("/tentang", s)
 
+# Produk digital: isi link Lynk.id dan harga di sini, lalu jalankan build.py
+PRODUK = {"lynk": "LYNK_BELUM_DIISI", "harga": "Rp79.000"}
+
 HALAMAN = [  # halaman statis dari content/halaman/<file>.html
+    ("/toolkit-gudang-pro", "toolkit-gudang-pro.html", "Toolkit Gudang Pro: Template Excel, E-book & SOP Gudang | Ngerti Logistik",
+     "Template Excel 9-in-1 untuk stok, kartu stok, opname, ABC, ROP, dan kubikasi, plus e-book panduan admin gudang serta 8 SOP dan 8 form siap print."),
     ("/template", "template.html", "Template Spreadsheet Logistik Gratis (Excel) | Ngerti Logistik",
      "Download gratis 18 template Excel logistik: kartu stok, reorder point, analisis ABC, cycle count, picking list, tracker pengiriman, dan lainnya."),
     ("/kalkulator-kubikasi", "kalkulator-kubikasi.html", "Kalkulator Kubikasi & Cargo Planner Kontainer | Ngerti Logistik",
@@ -382,6 +387,7 @@ def page_halaman():
     for path, f, title, desc in HALAMAN:
         body = open(os.path.join(ROOT, "content/halaman", f), encoding="utf-8").read()
         body = body.replace("<!--SHARE-->", share(path, title.split(" | ")[0], "top"))
+        body = body.replace("{{LYNK}}", esc(PRODUK["lynk"])).replace("{{HARGA}}", esc(PRODUK["harga"]))
         s = head(title, desc, path) + nav() + body + CTA + foot().replace("</body>", SHARE_JS + "</body>")
         write(path, s)
 
