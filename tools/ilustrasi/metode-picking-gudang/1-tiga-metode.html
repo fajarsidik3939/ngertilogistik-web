@@ -1,0 +1,30 @@
+<style>
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.row .card{padding:14px 14px 20px}
+.ic{display:block;width:100%;height:150px;background:#0F1930;border-radius:12px;margin-bottom:12px}
+</style>
+<span class="k">Isi Gudang</span>
+<h1><em>Picking</em>: satu-satu atau sekaligus?</h1>
+<p class="sub">3 metode ambil barang di gudang</p>
+<div class="row">
+ <div class="card"><svg class="ic" viewBox="0 0 260 150">
+  <g fill="#22304B"><rect x="20" y="20" width="220" height="16" rx="3"/><rect x="20" y="114" width="220" height="16" rx="3"/></g>
+  <path d="M40 75 H200" stroke="#FFC400" stroke-width="4" stroke-dasharray="8 8"/><path d="M200 75 H40" stroke="#FFC400" stroke-width="4" stroke-dasharray="8 8" transform="translate(0,14)"/>
+  <circle cx="220" cy="82" r="14" fill="#CBD2DC"/><rect x="196" y="95" width="16" height="14" rx="2" fill="#FFC400"/>
+  <text x="40" y="66" fill="#9AA8C0" font-family="JetBrains Mono" font-weight="700" font-size="15">1 pesanan</text></svg>
+  <div class="n">01</div><div class="t">Per pesanan</div><div class="d">Satu pesanan sampai selesai.</div></div>
+ <div class="card"><svg class="ic" viewBox="0 0 260 150">
+  <g fill="#22304B"><rect x="20" y="20" width="220" height="16" rx="3"/><rect x="20" y="114" width="220" height="16" rx="3"/></g>
+  <path d="M40 75 H180" stroke="#FFC400" stroke-width="4" stroke-dasharray="8 8"/>
+  <circle cx="200" cy="66" r="14" fill="#CBD2DC"/>
+  <g><rect x="180" y="84" width="16" height="16" rx="2" fill="#FFC400"/><rect x="198" y="84" width="16" height="16" rx="2" fill="#E5E7EB"/><rect x="216" y="84" width="16" height="16" rx="2" fill="#9CA3AF"/></g>
+  <text x="40" y="66" fill="#9AA8C0" font-family="JetBrains Mono" font-weight="700" font-size="15">3 pesanan</text></svg>
+  <div class="n">02</div><div class="t">Batch</div><div class="d">Beberapa pesanan sekali jalan, lalu dipilah.</div></div>
+ <div class="card"><svg class="ic" viewBox="0 0 260 150">
+  <g fill="none" stroke="#3A4A68" stroke-width="3" stroke-dasharray="6 6"><rect x="16" y="16" width="72" height="118" rx="8"/><rect x="94" y="16" width="72" height="118" rx="8"/><rect x="172" y="16" width="72" height="118" rx="8"/></g>
+  <g font-family="JetBrains Mono" font-weight="700" font-size="16" fill="#FFC400" text-anchor="middle"><text x="52" y="40">A</text><text x="130" y="40">B</text><text x="208" y="40">C</text></g>
+  <g fill="#CBD2DC"><circle cx="52" cy="82" r="13"/><circle cx="130" cy="82" r="13"/><circle cx="208" cy="82" r="13"/></g>
+  <g fill="#9CA3AF"><rect x="38" y="100" width="28" height="18" rx="3"/><rect x="116" y="100" width="28" height="18" rx="3"/><rect x="194" y="100" width="28" height="18" rx="3"/></g></svg>
+  <div class="n">03</div><div class="t">Zona</div><div class="d">Tiap petugas pegang satu area.</div></div>
+</div>
+{{FOOT}}

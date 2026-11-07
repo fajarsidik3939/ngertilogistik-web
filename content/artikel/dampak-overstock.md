@@ -27,6 +27,8 @@ sumber:
 ---
 Overstock adalah kondisi ketika stok di gudang jauh melebihi kebutuhan. Dampak overstock tidak kecil: uang tertahan di rak, ruang dan biaya simpan bertambah, barang berisiko rusak atau kedaluwarsa, dan kesalahan perencanaan jadi tertutup. Jadi, stok banyak belum tentu aman. Yang aman adalah stok yang cukup.
 
+![Ilustrasi 4 dampak overstock: modal tertahan, butuh tempat dan biaya naik, barang rusak atau kedaluwarsa, dan masalah perencanaan jadi tidak terlihat](/img/ilustrasi/dampak-overstock/1-empat-dampak.webp){width="960" height="568" loading="lazy" style="border-radius:16px"}
+
 ## Jawaban singkat: yang aman adalah stok yang cukup
 
 Stok berlebih terasa menenangkan karena barang selalu ada. Tapi rasa aman itu dibayar mahal. Ada empat risiko utama:
@@ -90,6 +92,8 @@ Stok yang pas punya dua bagian:
 
 1. **Kebutuhan selama menunggu barang datang.** Ini dihitung dari rata-rata penjualan dikali [lead time](L13), yaitu waktu dari pesanan dibuat sampai barang siap dijual.
 2. **Cadangan secukupnya.** Cadangan ini namanya [safety stock](L19), yaitu stok tambahan untuk mengurangi risiko kehabisan barang saat permintaan melonjak atau pemasok telat.
+
+![Ilustrasi perbandingan overstock yang jauh melebihi kebutuhan dengan stok pas berupa kebutuhan selama lead time ditambah safety stock](/img/ilustrasi/dampak-overstock/2-stok-pas.webp){width="960" height="762" loading="lazy" style="border-radius:16px"}
 
 Kata kuncinya "secukupnya". Safety stock pun bisa berlebihan bila ditetapkan asal besar. Hitungannya sebaiknya dilakukan per barang, karena kebutuhan tiap barang berbeda. Panduan [menghitung stok per SKU](L03) membantu Anda memulainya.
 

@@ -32,6 +32,8 @@ Reorder point adalah batas stok yang menandakan bahwa sudah waktunya memesan bar
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang reorder point.
 
+![Ilustrasi rumus reorder point: pemakaian rata-rata per hari dikali lead time, ditambah safety stock](/img/ilustrasi/reorder-point/1-rumus-rop.webp){width="960" height="658" loading="lazy" style="border-radius:16px"}
+
 ## Reorder point adalah titik pemesanan ulang
 
 Reorder point sering disingkat ROP. Dalam bahasa Indonesia biasa disebut titik pemesanan ulang atau titik pemesanan kembali. Wikipedia mendefinisikannya sebagai tingkat persediaan yang memicu tindakan untuk mengisi ulang persediaan tersebut. Sebuah studi di JATRI Jurnal Teknik Industri (2025) menyebut ROP sebagai kondisi ketika perusahaan wajib melakukan pemesanan.
@@ -78,6 +80,8 @@ Angka di bawah ini adalah ilustrasi, bukan data nyata.
 > Artinya, begitu stok tinggal 70 karton, saatnya membuat pesanan.
 
 Apa yang terjadi setelah pesanan dibuat? Selama 5 hari menunggu, gudang memakai sekitar 50 karton. Saat barang baru datang, stok tersisa kira-kira 20 karton, yaitu safety stock-nya. Kalau ada kejutan, misalnya pemakaian lebih tinggi dari biasanya, cadangan 20 karton itulah yang menolong.
+
+![Ilustrasi grafik stok contoh: pesan saat stok 70 karton, selama lead time 5 hari terpakai 50 karton, barang datang saat sisa safety stock 20 karton](/img/ilustrasi/reorder-point/2-grafik-stok.webp){width="960" height="761" loading="lazy" style="border-radius:16px"}
 
 ### Bagaimana kalau angkanya berubah?
 

@@ -1,0 +1,21 @@
+<style>
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:26px}
+.col{display:flex;flex-direction:column;gap:8px}
+.stp{background:#FFC400;color:#0B1220;border-radius:12px;padding:12px 8px;text-align:center;font-weight:800;font-size:22px}
+.stp small{display:block;font:700 13px 'JetBrains Mono';letter-spacing:.08em;opacity:.75}
+.who{background:#14203A;border:1px solid #22304B;border-radius:12px;padding:10px 8px;text-align:center;font-weight:700;font-size:18px;line-height:1.2}
+.sup{margin-top:12px;background:#1A2540;border:1px solid #FFC400;border-radius:14px;padding:14px 18px;text-align:center;font-weight:800;font-size:21px}
+.sup span{font:700 15px 'JetBrains Mono';color:#FFC400;letter-spacing:.1em;margin-right:10px}
+</style>
+<span class="k">Peta peran</span>
+<h1>Peran mengikuti <em>alur barang</em></h1>
+<p class="sub">Siapa terlibat di setiap langkah</p>
+<div class="flow">
+ <div class="col"><div class="stp"><small>01</small>Terima</div><div class="who">Checker</div><div class="who">Operator forklift</div></div>
+ <div class="col"><div class="stp"><small>02</small>Simpan</div><div class="who">Operator forklift</div><div class="who">Admin</div></div>
+ <div class="col"><div class="stp"><small>03</small>Ambil</div><div class="who">Picker</div></div>
+ <div class="col"><div class="stp"><small>04</small>Kemas</div><div class="who">Packer</div></div>
+ <div class="col"><div class="stp"><small>05</small>Kirim</div><div class="who">Checker keluar</div><div class="who">Admin</div></div>
+</div>
+<div class="sup"><span>SUPERVISOR</span>mengawasi seluruh alur</div>
+{{FOOT}}

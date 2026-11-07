@@ -27,6 +27,8 @@ sumber:
 ---
 Selisih stok gudang terjadi ketika jumlah barang di sistem berbeda dengan jumlah di rak. Penyebabnya kebanyakan bukan barang hilang, tapi pencatatan: barang dipindah lokasi tanpa dicatat, barang rusak atau retur tidak diinput, salah ambil varian, dan barang keluar-masuk tanpa di-scan.
 
+![Ilustrasi 4 penyebab selisih stok gudang: pindah lokasi tanpa dicatat, rusak atau retur tidak diinput, salah ambil varian, dan barang keluar-masuk tanpa scan](/img/ilustrasi/selisih-stok-gudang/1-sistem-vs-rak.webp){width="960" height="568" loading="lazy" style="border-radius:16px"}
+
 ## Jawaban singkat: kebanyakan selisih berasal dari pencatatan
 
 Bayangkan sistem mencatat 10 unit, tapi di rak hanya ada 7. Reaksi pertama biasanya "barangnya hilang". Padahal sering kali barangnya masih ada di gudang, hanya catatannya yang tidak mengikuti kejadian sebenarnya.
@@ -66,6 +68,8 @@ Sebelum mengoreksi angka di sistem, telusuri dulu penyebabnya dengan daftar peri
 3. **Cek transaksi terakhir.** Lihat pergerakan barang beberapa hari terakhir: penerimaan, pengiriman, pindah lokasi. Cari yang janggal.
 4. **Cek retur dan barang rusak.** Apakah ada barang di area karantina atau retur yang belum diinput?
 5. **Catat penyebabnya.** Setelah ketemu, tulis penyebabnya. Catatan ini berharga untuk memperbaiki proses.
+
+![Ilustrasi daftar periksa 5 langkah menelusuri selisih stok: cek lokasi sekitar, cek varian mirip, cek transaksi terakhir, cek retur dan barang rusak, catat penyebab](/img/ilustrasi/selisih-stok-gudang/2-telusuri-selisih.webp){width="960" height="688" loading="lazy" style="border-radius:16px"}
 
 Ilustrasi berikut fiktif, untuk menunjukkan cara kerja daftar periksa ini.
 

@@ -1,0 +1,29 @@
+<style>
+.f{display:grid;grid-template-columns:1fr 44px 1fr 44px 1fr;align-items:stretch;gap:8px;margin-top:28px}
+.op{display:flex;align-items:center;justify-content:center;font:800 44px 'Plus Jakarta Sans';color:#FFC400}
+.f .card{padding:18px 16px 20px}
+.ic{display:block;width:100%;height:96px;background:#0F1930;border-radius:12px;margin-bottom:12px}
+.res{margin-top:16px;display:flex;align-items:center;gap:18px;background:#1A2540;border:1px solid #FFC400;border-radius:18px;padding:18px 22px}
+.res .eq{font:800 44px 'Plus Jakarta Sans';color:#FFC400}
+.res .t{margin:0;font-size:28px}
+</style>
+<span class="k">Kamus 60 Detik</span>
+<h1>Kapan harus <em>pesan lagi</em>?</h1>
+<p class="sub">Rumus reorder point (ROP)</p>
+<div class="f">
+ <div class="card"><svg class="ic" viewBox="0 0 200 96">
+  <rect x="40" y="40" width="34" height="34" rx="3" fill="#CBD2DC"/><rect x="80" y="40" width="34" height="34" rx="3" fill="#9CA3AF"/>
+  <path d="M126 57h40" stroke="#FFC400" stroke-width="6" stroke-linecap="round"/><path d="M156 46l12 11-12 11" fill="none" stroke="#FFC400" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <div class="t">Pemakaian rata&#8209;rata per hari</div></div>
+ <div class="op">×</div>
+ <div class="card"><svg class="ic" viewBox="0 0 200 96">
+  <circle cx="100" cy="48" r="32" fill="none" stroke="#CBD2DC" stroke-width="6"/><path d="M100 48V28M100 48l14 10" stroke="#FFC400" stroke-width="6" stroke-linecap="round"/></svg>
+  <div class="t">Lead time (hari)</div></div>
+ <div class="op">+</div>
+ <div class="card"><svg class="ic" viewBox="0 0 200 96">
+  <path d="M100 14l34 12v22c0 20-16 32-34 38-18-6-34-18-34-38V26z" fill="none" stroke="#FFC400" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="86" y="40" width="28" height="24" rx="3" fill="#CBD2DC"/></svg>
+  <div class="t">Safety stock</div></div>
+</div>
+<div class="res"><span class="eq">=</span><div><div class="t">Reorder point</div><div class="d">Stok turun sampai angka ini? Saatnya buat pesanan.</div></div></div>
+{{FOOT}}

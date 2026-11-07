@@ -26,6 +26,8 @@ Alur proses gudang terdiri dari lima langkah dasar: penerimaan (receiving), peny
 
 Artikel ini versi lengkap dari video 60 detik "5 langkah barang di gudang" di Ngerti Logistik.
 
+![Ilustrasi alur proses gudang lima langkah: terima, simpan, ambil, kemas, kirim, dibagi menjadi inbound dan outbound](/img/ilustrasi/alur-proses-gudang/1-lima-langkah.webp){width="960" height="630" loading="lazy" style="border-radius:16px"}
+
 ## Alur proses gudang dalam 5 langkah
 
 1. **Penerimaan (receiving):** barang datang dicek jumlah, kondisi, dan dokumennya.
@@ -85,6 +87,8 @@ Tabel berikut adalah panduan umum. Isi dokumen dan nama perannya bisa berbeda di
 | Kirim | Serah terima, nomor resi atau surat jalan, status kirim | Admin pengiriman | Stok dan status pesanan tidak akurat |
 
 Kalau salah satu kolom ini kosong, cepat atau lambat muncul [selisih stok](L14) antara sistem dan rak.
+
+![Ilustrasi yang dicatat di setiap langkah gudang dan akibatnya kalau tidak dicatat](/img/ilustrasi/alur-proses-gudang/2-kalau-tidak-dicatat.webp){width="960" height="690" loading="lazy" style="border-radius:16px"}
 
 ## Contoh: perjalanan satu pesanan di gudang
 

@@ -35,6 +35,8 @@ Perbedaan stock opname dan cycle count ada pada cara menghitungnya. Stock opname
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang stock opname dan cycle count.
 
+![Ilustrasi perbedaan stock opname yang menghitung semua lokasi sekaligus dan cycle count yang menghitung sebagian lokasi secara bergilir](/img/ilustrasi/stock-opname-vs-cycle-count/1-opname-vs-cycle.webp){width="960" height="723" loading="lazy" style="border-radius:16px"}
+
 ## Kenapa stok perlu dihitung fisik?
 
 Sistem stok hanya mencatat apa yang diinput. Kalau ada barang dipindah tanpa dicatat, salah ambil varian, atau barang rusak yang tidak diinput, angka di sistem pelan-pelan berbeda dengan isi rak. Penyebab-penyebab ini dibahas di artikel [selisih stok gudang](L14).
@@ -89,6 +91,8 @@ Angka di bawah ini adalah ilustrasi, bukan data nyata.
 Hal yang penting bukan angkanya, tetapi konsistensinya: hitung setiap hari kerja, catat hasilnya, dan telusuri setiap selisih.
 
 ## Langkah dasar menjalankan cycle count
+
+![Ilustrasi 6 langkah cycle count: tentukan daftar hitung, hitung tanpa lihat sistem, bandingkan, hitung ulang yang selisih, cari penyebab, koreksi dan perbaiki proses](/img/ilustrasi/stock-opname-vs-cycle-count/2-langkah-cycle-count.webp){width="960" height="676" loading="lazy" style="border-radius:16px"}
 
 1. **Tentukan daftar hitung harian.** Bisa per lokasi rak, per lorong, atau per [SKU](L03).
 2. **Hitung tanpa melihat angka sistem.** Petugas mencatat hasil hitung apa adanya supaya tidak terpengaruh angka di sistem.

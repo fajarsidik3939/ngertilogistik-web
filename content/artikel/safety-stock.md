@@ -26,6 +26,8 @@ Safety stock adalah stok cadangan yang sengaja disimpan untuk berjaga-jaga kalau
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang safety stock.
 
+![Ilustrasi safety stock sebagai lapisan stok cadangan di bawah stok siklus, dipakai saat permintaan melonjak atau pasokan terlambat](/img/ilustrasi/safety-stock/1-ringkasan.webp){width="960" height="786" loading="lazy" style="border-radius:16px"}
+
 ## Safety stock adalah...
 
 IBM, dalam artikel berbahasa Indonesia, mendefinisikan stok pengaman sebagai "inventaris tambahan dari barang yang disimpan untuk mengurangi risiko kehabisan stok barang". Artikel yang sama menyebutnya sebagai persediaan penyangga yang disimpan selain stok siklus.
@@ -80,6 +82,8 @@ Angka di bawah ini adalah ilustrasi, bukan data nyata.
 > 1. Skenario terburuk: 15 unit x 12 hari = 180 unit.
 > 2. Kondisi normal: 10 unit x 10 hari = 100 unit.
 > 3. Safety stock: 180 − 100 = **80 unit**.
+
+![Ilustrasi contoh hitung safety stock rumus rata-rata-maksimum: 15 kali 12 sama dengan 180, dikurangi 10 kali 10 sama dengan 100, hasilnya 80 unit](/img/ilustrasi/safety-stock/2-contoh-hitung.webp){width="960" height="660" loading="lazy" style="border-radius:16px"}
 
 Artinya, gudang menyimpan 80 unit di atas kebutuhan normal selama lead time, untuk berjaga-jaga kalau pemakaian sedang tinggi dan barang datang terlambat.
 

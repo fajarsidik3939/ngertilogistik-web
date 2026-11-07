@@ -32,6 +32,8 @@ Pengiriman yang bagus adalah pengiriman yang **tepat**, bukan sekadar cepat: tep
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang salah kaprah "cepat sampai berarti bagus".
 
+![Ilustrasi empat tepat dalam pengiriman: tepat barang, tepat jumlah, tepat kondisi, tepat waktu sesuai janji, dengan kecepatan sebagai bonus](/img/ilustrasi/7r-logistik-pengiriman-tepat/1-ringkasan.webp){width="960" height="657" loading="lazy" style="border-radius:16px"}
+
 ## Jawaban singkat: pengiriman bagus itu tepat
 
 Banyak orang menilai pengiriman dari satu angka: berapa hari sampai. Wajar, karena itu yang paling terlihat. Padahal pelanggan baru tahu pengirimannya bagus atau tidak setelah kotaknya dibuka.
@@ -75,6 +77,8 @@ Empat hal di atas adalah inti yang paling mudah dirasakan pelanggan. Dalam liter
 | Right time | Tepat waktu | Apakah tiba sesuai janji? |
 | Right customer | Tepat pelanggan | Apakah diterima oleh orang yang benar? |
 | Right price | Tepat harga/biaya | Apakah biayanya wajar bagi pengirim dan pelanggan? |
+
+![Ilustrasi tujuh unsur 7R logistik: tepat barang, jumlah, kondisi, waktu, tempat, pelanggan, dan harga atau biaya](/img/ilustrasi/7r-logistik-pengiriman-tepat/2-tujuh-r.webp){width="960" height="597" loading="lazy" style="border-radius:16px"}
 
 Ketujuh unsur ini dicapai bersamaan. Satu unsur meleset, hasilnya tetap dianggap gagal di mata pelanggan. Di dunia kerja, ada juga ukuran yang menggabungkan tepat waktu dan tepat jumlah, yang disebut OTIF (*on-time, in-full*): kiriman tiba sesuai jumlah dan jadwal di pesanan. Istilah ini akan dibahas di artikel tersendiri.
 

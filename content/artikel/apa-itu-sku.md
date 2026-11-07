@@ -32,6 +32,8 @@ SKU adalah singkatan dari stock keeping unit, yaitu kode untuk setiap varian bar
 
 Artikel ini versi lengkap dari video 60 detik "SKU itu apa?" di Ngerti Logistik. Kita bahas kenapa satu barang bisa punya banyak SKU, bedanya dengan barcode, dan cara membuat kode SKU sederhana.
 
+![Ilustrasi SKU: satu jenis barang masker punya dua kode SKU berbeda untuk varian biru isi 50 dan biru isi 20 (contoh)](/img/ilustrasi/apa-itu-sku/1-satu-varian-satu-sku.webp){width="960" height="560" loading="lazy" style="border-radius:16px"}
+
 ## SKU adalah kode untuk setiap varian barang
 
 Bayangkan rak gudang berisi masker merek yang sama. Ada yang isi 50, ada yang isi 20. Bagi pembeli, keduanya "masker". Bagi gudang, keduanya barang berbeda, karena jumlah stoknya dihitung terpisah dan pesanan pelanggan juga menyebut varian tertentu.
@@ -100,6 +102,8 @@ Perlu diingat: tidak ada format SKU baku yang berlaku untuk semua usaha. Yang pe
 ### Pola kode yang mudah dibaca
 
 Susun kode dari kiri ke kanan, dari yang umum ke yang spesifik: jenis barang, lalu varian, lalu isi atau ukuran. Hindari huruf O dan angka 0 di posisi yang bisa tertukar. Buat daftar induk SKU di satu tempat, berisi kode, nama lengkap, varian, dan satuan.
+
+![Ilustrasi pola kode SKU contoh MSK-BIR-050: jenis, varian, lalu isi, dengan aturan unik, konsisten, dan tanpa spasi](/img/ilustrasi/apa-itu-sku/2-pola-kode-sku.webp){width="960" height="681" loading="lazy" style="border-radius:16px"}
 
 ### Jangan memakai ulang kode lama
 

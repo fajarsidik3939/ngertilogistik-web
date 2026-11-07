@@ -1,0 +1,30 @@
+<style>
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.two .card{padding:18px 18px 20px}
+.two svg{display:block;width:100%;height:220px;background:#0F1930;border-radius:12px;margin-bottom:16px}
+.tag{font:700 15px 'JetBrains Mono';letter-spacing:.1em;padding:5px 10px;border-radius:7px;display:inline-block}
+.tag.bad{background:rgba(255,138,122,.14)}.tag.ok{background:rgba(126,226,168,.14)}
+.card.best{border-color:#FFC400}
+</style>
+<span class="k">Perumpamaan</span>
+<h1>Gudang itu <em>stasiun</em>, bukan lemari</h1>
+<p class="sub">Yang datang harus bisa berangkat lagi dengan teratur.</p>
+<div class="two">
+ <div class="card"><svg viewBox="0 0 400 220">
+  <rect x="120" y="20" width="160" height="180" rx="8" fill="#14203A" stroke="#CBD2DC" stroke-width="5"/>
+  <path d="M200 20V200" stroke="#CBD2DC" stroke-width="4"/>
+  <g fill="#9CA3AF"><rect x="134" y="140" width="52" height="48" rx="3"/><rect x="214" y="140" width="52" height="48" rx="3"/><rect x="134" y="88" width="52" height="48" rx="3"/><rect x="214" y="88" width="52" height="48" rx="3"/><rect x="214" y="36" width="52" height="48" rx="3"/></g>
+  <rect x="134" y="36" width="52" height="48" rx="3" fill="#CBD2DC"/>
+  <path d="M188 110h4M208 110h4" stroke="#FFC400" stroke-width="5" stroke-linecap="round"/></svg>
+  <span class="tag bad">SALAH KAPRAH</span><div class="t">Lemari</div><div class="d">Diisi, ditutup, lalu dilupakan.</div></div>
+ <div class="card best"><svg viewBox="0 0 400 220">
+  <rect x="20" y="150" width="360" height="10" rx="4" fill="#3A4A68"/>
+  <rect x="140" y="60" width="120" height="86" rx="8" fill="#14203A" stroke="#CBD2DC" stroke-width="5"/>
+  <rect x="176" y="96" width="48" height="50" rx="3" fill="#22304B"/>
+  <g fill="#CBD2DC"><rect x="40" y="114" width="30" height="30" rx="3"/><rect x="74" y="114" width="30" height="30" rx="3" fill="#FFC400"/></g>
+  <g fill="#9CA3AF"><rect x="296" y="114" width="30" height="30" rx="3"/><rect x="330" y="114" width="30" height="30" rx="3"/></g>
+  <path d="M40 186h320" stroke="#FFC400" stroke-width="5" stroke-dasharray="14 12"/><path d="M352 176l14 10-14 10z" fill="#FFC400"/>
+  <g font-family="JetBrains Mono" font-weight="700" font-size="15" fill="#9AA8C0" text-anchor="middle"><text x="72" y="100">datang</text><text x="200" y="46">berpindah</text><text x="328" y="100">berangkat</text></g></svg>
+  <span class="tag ok">YANG BENAR</span><div class="t">Stasiun</div><div class="d">Barang datang, diperiksa, disimpan di tempat jelas, lalu keluar lagi.</div></div>
+</div>
+{{FOOT}}

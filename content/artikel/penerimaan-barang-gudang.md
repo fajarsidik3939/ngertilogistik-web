@@ -38,6 +38,8 @@ Penerimaan barang gudang yang benar berarti memeriksa empat hal sebelum tanda ta
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang penerimaan barang.
 
+![Ilustrasi 4 hal yang dicek saat penerimaan barang: dokumen, jumlah, kondisi, serta batch dan kedaluwarsa](/img/ilustrasi/penerimaan-barang-gudang/1-ringkasan.webp){width="960" height="678" loading="lazy" style="border-radius:16px"}
+
 ## Penerimaan barang gudang: cek 4 hal sebelum tanda tangan
 
 Penerimaan barang (receiving) adalah pintu pertama dari [kegiatan inbound](L07). Materi pergudangan Supply Chain Indonesia (Setijadi, 2015) menyebut tujuannya: memastikan kuantitas dan kualitas barang yang masuk sesuai dokumen pesanan.
@@ -83,6 +85,8 @@ Tanda tangan di surat jalan biasanya dibaca sebagai bukti bahwa barang sudah dit
 - Tulis kondisi singkat: "2 karton penyok, isi basah" atau "kurang 2 karton".
 - Minta sopir atau perwakilan pengirim ikut tanda tangan di catatan itu.
 - Simpan foto dan pisahkan barang bermasalah dari stok yang layak.
+
+![Ilustrasi 4 langkah mencatat selisih sebelum tanda tangan: tulis jumlah diterima, tulis kondisi, sopir ikut tanda tangan, foto dan pisahkan](/img/ilustrasi/penerimaan-barang-gudang/2-catat-selisih.webp){width="960" height="614" loading="lazy" style="border-radius:16px"}
 
 ### Kenapa klaim belakangan jauh lebih sulit
 

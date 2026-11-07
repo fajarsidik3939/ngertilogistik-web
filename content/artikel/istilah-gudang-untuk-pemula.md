@@ -44,6 +44,8 @@ Istilah gudang yang paling sering dipakai ada sepuluh: SKU, PO, GR, putaway, pic
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang istilah wajib staf gudang. Simpan halaman ini sebagai contekan.
 
+![Ilustrasi 10 istilah gudang beserta arti singkatnya: SKU, PO, GR, putaway, picking, packing, DO, cycle count, FIFO, dan FEFO](/img/ilustrasi/istilah-gudang-untuk-pemula/1-ringkasan.webp){width="960" height="628" loading="lazy" style="border-radius:16px"}
+
 ## 10 istilah gudang yang paling sering dipakai
 
 1. **SKU:** kode untuk setiap varian barang.
@@ -125,6 +127,8 @@ FEFO (*first expired, first out*) artinya barang dengan tanggal kedaluwarsa pali
 Sepuluh istilah tadi lebih mudah diingat kalau dilihat sebagai satu alur:
 
 **PO → GR → putaway → (simpan) → picking → packing → DO**
+
+![Ilustrasi alur istilah gudang dari PO, GR, putaway, simpan, picking, packing, sampai DO, dengan SKU di semua langkah dan cycle count di sela alur](/img/ilustrasi/istilah-gudang-untuk-pemula/2-alur-po-ke-do.webp){width="960" height="615" loading="lazy" style="border-radius:16px"}
 
 - **PO** dibuat sebelum barang datang.
 - **GR** saat barang tiba dan dicek.

@@ -32,6 +32,8 @@ Perbedaan logistik dan supply chain ada pada cakupannya. Supply chain (rantai pa
 
 Artikel ini versi lengkap dari video 60 detik "Logistik vs supply chain" di Ngerti Logistik. Kita pakai definisi resmi, tabel perbandingan, analogi, dan satu contoh yang dekat dengan keseharian.
 
+![Ilustrasi supply chain sebagai rantai dari bahan baku, pabrik, distributor, sampai pembeli, dengan logistik sebagai bagian yang mengalirkan dan menyimpan barang serta informasinya](/img/ilustrasi/logistik-vs-supply-chain/1-supply-chain-dan-logistik.webp){width="960" height="592" loading="lazy" style="border-radius:16px"}
+
 ## Perbedaan logistik dan supply chain dalam satu kalimat
 
 Semua logistik adalah bagian dari supply chain, tetapi supply chain lebih dari sekadar logistik.
@@ -76,6 +78,8 @@ Menurut CSCMP, kegiatan logistik umumnya meliputi transportasi, pengelolaan arma
 | Contoh peran | Perencana supply chain, staf pengadaan, perencana produksi | Staf gudang, admin stok, perencana transportasi, staf pengiriman |
 
 Kolom "contoh keputusan" paling membantu. Kalau keputusannya soal **apa yang dibeli, dibuat, dan dari siapa**, itu ranah supply chain secara luas. Kalau soal **bagaimana barang dipindahkan, disimpan, dan dicatat**, itu ranah logistik.
+
+![Ilustrasi cara membedakan: keputusan apa yang dibeli, dibuat, dan dari siapa termasuk supply chain, sedangkan keputusan bagaimana barang bergerak dan disimpan termasuk logistik](/img/ilustrasi/logistik-vs-supply-chain/2-cara-membedakan.webp){width="960" height="626" loading="lazy" style="border-radius:16px"}
 
 ## Analogi gampang: peta perjalanan vs menjalankan perjalanan
 

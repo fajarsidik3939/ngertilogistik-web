@@ -35,6 +35,8 @@ FIFO dan FEFO adalah dua aturan urutan barang keluar dari gudang. FIFO (first in
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang FIFO vs FEFO.
 
+![Ilustrasi perbedaan FIFO yang melihat tanggal masuk dan FEFO yang melihat tanggal kedaluwarsa](/img/ilustrasi/fifo-vs-fefo/1-ringkasan.webp){width="960" height="683" loading="lazy" style="border-radius:16px"}
+
 ## Perbedaan FIFO dan FEFO dalam satu kalimat
 
 **FIFO melihat tanggal masuk, FEFO melihat tanggal kedaluwarsa.** Untuk banyak barang, hasil keduanya sama, karena barang yang datang duluan biasanya juga kedaluwarsa duluan. Perbedaannya muncul saat barang yang datang belakangan justru punya tanggal kedaluwarsa lebih dekat.
@@ -71,6 +73,8 @@ Berikut ilustrasi dengan tanggal buatan.
 | B | 10 Maret | 31 Agustus | Tidak | Ya |
 
 Batch B datang belakangan, tapi kedaluwarsanya lebih dekat. Dengan FIFO, batch A keluar duluan dan batch B berisiko kedaluwarsa di gudang. Dengan FEFO, batch B keluar duluan. Inilah alasan barang yang masuk duluan belum tentu harus keluar duluan.
+
+![Ilustrasi contoh batch A dan batch B: dengan FIFO batch A keluar dulu, dengan FEFO batch B yang kedaluwarsanya lebih dekat keluar dulu](/img/ilustrasi/fifo-vs-fefo/2-contoh-batch.webp){width="960" height="630" loading="lazy" style="border-radius:16px"}
 
 ## FIFO di gudang vs FIFO di akuntansi: jangan tertukar
 

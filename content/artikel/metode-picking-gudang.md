@@ -32,6 +32,8 @@ Metode picking gudang adalah cara petugas mengambil barang pesanan dari rak. Tig
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang cara picking.
 
+![Ilustrasi tiga metode picking gudang: per pesanan, batch, dan zona](/img/ilustrasi/metode-picking-gudang/1-tiga-metode.webp){width="960" height="647" loading="lazy" style="border-radius:16px"}
+
 ## Picking adalah apa?
 
 Dalam tulisan Supply Chain Indonesia tahun 2015, Setijadi mendefinisikan picking sebagai "aktifitas penyiapan barang didalam gudang sesuai dengan surat pesanan". Wikipedia menjelaskannya sebagai kegiatan mengambil dan mengumpulkan barang dalam jumlah tertentu sebelum dikirim, untuk memenuhi pesanan pelanggan.
@@ -57,6 +59,8 @@ Beberapa pesanan dikumpulkan, lalu barangnya diambil sekaligus dalam satu putara
 Artikel yang sama mencatat bahwa batch picking mengurangi perjalanan sehingga menghemat waktu dan biaya. Tantangannya ada di tahap pemilahan. Penyortiran tambahan ini bisa menambah risiko salah, dan metode ini kurang cocok kalau isi pesanan sangat beragam.
 
 > **CONTOH** Masih dengan 3 pesanan tadi, petugas cukup ke rak belakang 1 kali dan mengambil barang untuk ketiganya. Di meja pilah, barang dibagi ke pesanan masing-masing.
+
+![Ilustrasi contoh 3 pesanan di rak belakang: picking per pesanan butuh 3 kali jalan, batch picking 1 kali jalan lalu dipilah di meja pilah](/img/ilustrasi/metode-picking-gudang/2-per-pesanan-vs-batch.webp){width="960" height="725" loading="lazy" style="border-radius:16px"}
 
 ### 3. Zone picking
 

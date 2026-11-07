@@ -36,7 +36,7 @@ Pengecualian dari panduan itu: link internal `[anchor](Lxx)` boleh ke **semua** 
 
 ## Ilustrasi artikel (wajib)
 - Setiap artikel baru diberi 2–3 ilustrasi bergaya sama dengan video dan gambar sampul: latar navy gelap (#0B1220) bergaris grid, aksen kuning (#FFC400), kotak isometrik abu-abu, font Plus Jakarta Sans dan JetBrains Mono.
-- Sumber ilustrasi ditulis sebagai potongan HTML (isi `<body>` dengan SVG inline) di `tools/ilustrasi/<slug>/<nomor>-<nama>.html`. Contoh lengkap: `tools/ilustrasi/cara-packing-barang/`. Pakai kelas yang sudah ada (`k`, `h1 em`, `sub`, `card`, `n`, `t`, `d`, `tag ok/bad`) dan akhiri dengan `{{FOOT}}`.
+- Sumber ilustrasi ditulis sebagai potongan HTML (isi `<body>` dengan SVG inline) di `tools/ilustrasi/<slug>/<nomor>-<nama>.html`. Contoh lengkap: `tools/ilustrasi/cara-packing-barang/`. Pakai kelas yang sudah ada (`k`, `h1 em`, `sub`, `card`, `n`, `t`, `d`, `tag ok/bad`) dan akhiri dengan `{{FOOT}}`. Jangan memakai nama kelas `.route` atau `.foot` untuk elemen sendiri (sudah dipakai footer).
 - Render dengan `python3 tools/ilustrasi.py <slug>`. Hasilnya WebP di `public/img/ilustrasi/<slug>/` dan tingginya dicetak di layar.
 - Pasang di isi artikel sebagai paragraf sendiri: `![alt deskriptif](/img/ilustrasi/<slug>/<nama>.webp){width="960" height="<tinggi>" loading="lazy" style="border-radius:16px"}`.
 - Satu ilustrasi ringkasan setelah paragraf pembuka, lalu 1–2 ilustrasi di bagian yang paling terbantu gambar (langkah, perbandingan, alur). Teks di gambar singkat dan besar karena gambar mengecil di HP; penjelasan tetap di teks artikel.

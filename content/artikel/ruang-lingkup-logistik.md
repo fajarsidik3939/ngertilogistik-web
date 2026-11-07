@@ -35,6 +35,8 @@ Logistik itu kurir? Belum tentu. Kurir hanya satu bagian, yaitu transportasi ata
 
 Artikel ini versi lengkap dari video 60 detik "Logistik = kurir?" di Ngerti Logistik. Tujuannya meluruskan salah kaprah, bukan mengecilkan profesi kurir. Tanpa kurir, paket memang tidak sampai. Tetapi tanpa bagian lain, paket bahkan tidak pernah siap dikirim.
 
+![Ilustrasi kurir sebagai bagian logistik yang paling terlihat, sementara gudang, stok, kemasan, informasi, dan retur bekerja di belakang layar](/img/ilustrasi/ruang-lingkup-logistik/1-kurir-hanya-satu-bagian.webp){width="960" height="535" loading="lazy" style="border-radius:16px"}
+
 ## Logistik itu kurir? Jawabannya: kurir hanya satu bagian
 
 Coba ingat paket terakhir yang Anda terima. Sebelum kurir mengetuk pintu, barang itu sudah disimpan di gudang, dihitung stoknya, diambil dari rak, dikemas, diberi label, dan dicatat pergerakannya. Setelah diterima pun, ceritanya belum tentu selesai. Kalau barangnya salah atau rusak, ada proses retur.
@@ -108,6 +110,8 @@ Kurir ada di urutan kedelapan dari sembilan. Rincian tugas tiap peran dibahas di
 | Contoh pekerjaan | Staf gudang, admin stok, perencana transportasi, staf retur | Staf operasional pengiriman, sopir truk | Kurir motor, kurir mobil |
 
 Singkatnya, kurir bagian dari ekspedisi, dan ekspedisi bagian dari logistik. Tabel ini gambaran umum, dan di lapangan satu perusahaan bisa menjalankan beberapa peran sekaligus.
+
+![Ilustrasi kurir bagian dari ekspedisi, dan ekspedisi bagian dari logistik](/img/ilustrasi/ruang-lingkup-logistik/2-logistik-ekspedisi-kurir.webp){width="960" height="567" loading="lazy" style="border-radius:16px"}
 
 ## Kalau satu bagian kacau, kurir tercepat pun tidak menolong
 

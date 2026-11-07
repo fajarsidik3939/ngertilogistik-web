@@ -27,6 +27,8 @@ sumber:
 ---
 Cross docking adalah cara menangani barang di gudang tanpa menyimpannya: barang dari truk masuk dibongkar, dipilah sesuai tujuan, lalu langsung dimuat ke truk keluar. Barang hanya mampir sebentar di area dok, bukan disimpan berhari-hari di rak. Gudang seperti ini berfungsi sebagai gudang transit.
 
+![Ilustrasi alur cross docking: truk masuk ke dok masuk, barang dipilah di area pilah, lalu dari dok keluar dimuat ke beberapa truk tujuan tanpa masuk rak](/img/ilustrasi/cross-docking/1-alur-cross-docking.webp){width="960" height="630" loading="lazy" style="border-radius:16px"}
+
 ## Cross docking adalah...
 
 Supply Chain Indonesia menjelaskan cross-docking warehouse sebagai gudang yang berfungsi sebagai tempat transit, di mana barang diterima dan segera dipindahkan ke armada tujuan tanpa disimpan.
@@ -46,6 +48,8 @@ Alurnya bisa digambarkan seperti ini:
 5. **Barang dimuat ke truk tujuan.** Truk berangkat ke toko atau pelanggan.
 
 Bandingkan dengan [proses gudang biasa](L04): barang diterima, ditempatkan di rak lewat proses [putaway](L16), disimpan, lalu diambil lagi (picking) ketika ada pesanan. Cross docking memangkas tahap putaway, penyimpanan, dan picking dari rak. Dengan kata lain, sisi [inbound dan outbound](L07) gudang terhubung langsung.
+
+![Ilustrasi perbandingan alur gudang biasa (terima, putaway, simpan, picking, kirim) dengan cross docking yang memangkas putaway, simpan, dan picking](/img/ilustrasi/cross-docking/2-vs-gudang-biasa.webp){width="960" height="682" loading="lazy" style="border-radius:16px"}
 
 ## Contoh cross docking
 

@@ -29,6 +29,8 @@ Inbound dan outbound gudang adalah dua arah aliran barang. Inbound adalah barang
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang inbound vs outbound.
 
+![Ilustrasi arah barang: inbound dari pemasok masuk ke gudang, outbound keluar dari gudang ke pelanggan](/img/ilustrasi/inbound-vs-outbound/1-ringkasan.webp){width="960" height="733" loading="lazy" style="border-radius:16px"}
+
 ## Inbound dan outbound gudang dalam satu kalimat
 
 **Inbound itu masuk, outbound itu keluar.** Gampang diingat, tapi di lapangan keduanya punya rangkaian kegiatan sendiri, orang sendiri, bahkan pintu sendiri. Dalam [alur proses gudang](L04), inbound ada di awal dan outbound ada di akhir.
@@ -62,6 +64,8 @@ Barang dikemas supaya aman di perjalanan, diberi label, lalu dimuat ke kendaraan
 ### Kirim dan perbarui status
 
 Dokumen pengiriman disiapkan, stok di sistem dikurangi, dan status pesanan diperbarui. Outbound selesai saat barang sudah berangkat dan catatannya benar.
+
+![Ilustrasi urutan kegiatan inbound (bongkar, cek, catat, putaway) dan outbound (picking, packing, muat, kirim)](/img/ilustrasi/inbound-vs-outbound/2-alur-kegiatan.webp){width="960" height="577" loading="lazy" style="border-radius:16px"}
 
 ## Tabel perbedaan inbound dan outbound
 

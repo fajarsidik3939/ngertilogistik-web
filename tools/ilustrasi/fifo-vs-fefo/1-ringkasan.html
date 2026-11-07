@@ -1,0 +1,29 @@
+<style>
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.two .card{padding:18px 18px 22px}
+.ic{display:block;width:100%;height:170px;margin-bottom:14px;background:#0F1930;border-radius:12px}
+.card.fe{border-color:#FFC400}
+.two .t{font-size:30px}.two .d{font-size:20px}
+</style>
+<span class="k">Kamus 60 Detik</span>
+<h1><em>FIFO</em> vs <em>FEFO</em></h1>
+<p class="sub">Barang mana keluar duluan?</p>
+<div class="two">
+ <div class="card"><svg class="ic" viewBox="0 0 400 170">
+  <g font-family="JetBrains Mono" font-weight="700" font-size="16" text-anchor="middle">
+  <rect x="70" y="50" width="70" height="70" rx="6" fill="#E5E7EB"/><text x="105" y="80" fill="#0B1220">MASUK</text><text x="105" y="104" fill="#0B1220" font-size="20">1</text>
+  <rect x="165" y="50" width="70" height="70" rx="6" fill="#9CA3AF"/><text x="200" y="80" fill="#0B1220">MASUK</text><text x="200" y="104" fill="#0B1220" font-size="20">2</text>
+  <rect x="260" y="50" width="70" height="70" rx="6" fill="#9CA3AF"/><text x="295" y="80" fill="#0B1220">MASUK</text><text x="295" y="104" fill="#0B1220" font-size="20">3</text></g>
+  <path d="M60 140 H20" stroke="#FFC400" stroke-width="6" stroke-linecap="round"/><path d="M34 128 l-14 12 14 12" fill="none" stroke="#FFC400" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="38" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="15" fill="#FFC400">KELUAR DULU</text></svg>
+  <div class="n">FIRST IN, FIRST OUT</div><div class="t">FIFO</div><div class="d">Lihat <b>tanggal masuk</b>. Yang pertama masuk, keluar dulu.</div></div>
+ <div class="card fe"><svg class="ic" viewBox="0 0 400 170">
+  <g font-family="JetBrains Mono" font-weight="700" font-size="16" text-anchor="middle">
+  <rect x="70" y="50" width="70" height="70" rx="6" fill="#FFC400"/><text x="105" y="80" fill="#0B1220">EXP</text><text x="105" y="102" fill="#0B1220">DEKAT</text>
+  <rect x="165" y="50" width="70" height="70" rx="6" fill="#9CA3AF"/><text x="200" y="80" fill="#0B1220">EXP</text><text x="200" y="102" fill="#0B1220">JAUH</text>
+  <rect x="260" y="50" width="70" height="70" rx="6" fill="#9CA3AF"/><text x="295" y="80" fill="#0B1220">EXP</text><text x="295" y="102" fill="#0B1220">JAUH</text></g>
+  <path d="M60 140 H20" stroke="#FFC400" stroke-width="6" stroke-linecap="round"/><path d="M34 128 l-14 12 14 12" fill="none" stroke="#FFC400" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="105" y="38" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="15" fill="#FFC400">KELUAR DULU</text></svg>
+  <div class="n">FIRST EXPIRED, FIRST OUT</div><div class="t">FEFO</div><div class="d">Lihat <b>tanggal kedaluwarsa</b>. Yang paling cepat kedaluwarsa, keluar dulu.</div></div>
+</div>
+{{FOOT}}

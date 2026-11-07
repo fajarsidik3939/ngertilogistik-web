@@ -34,6 +34,8 @@ Paket transit lama biasanya berarti paket sedang berpindah dari satu hub ke hub 
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang status transit.
 
+![Ilustrasi perjalanan paket dari penjemputan, hub asal, hub transit, hub tujuan, sampai kurir antar, dengan status transit mencakup perpindahan antar-hub](/img/ilustrasi/paket-transit-lama/1-ringkasan.webp){width="960" height="660" loading="lazy" style="border-radius:16px"}
+
 ## Arti status transit: paket sedang pindah antar-hub
 
 Saat Anda melacak resi, status transit muncul setelah paket dijemput dan sebelum paket dibawa kurir antar. Di antara dua titik itu, paket bisa melewati beberapa tempat. Status di layar baru berubah setiap kali paket di-scan di tempat berikutnya.
@@ -61,6 +63,8 @@ Gambaran umumnya seperti ini, meski jumlah hub tiap rute bisa berbeda:
 Di rute antar pulau, satu perjalanan bisa memakai lebih dari satu moda, misalnya truk lalu kapal atau pesawat. Peraturan Indonesia menyebut angkutan barang dengan paling sedikit dua moda berbeda dalam satu kontrak sebagai angkutan multimoda (PP No. 8 Tahun 2011). Perbedaan tiap moda dibahas di artikel [moda darat, laut, dan udara](L12).
 
 ## Kenapa paket transit lama? Ini 5 penyebabnya
+
+![Ilustrasi lima penyebab paket lama transit: antre sortir di hub, tunggu jadwal angkut, jarak jauh dan antar pulau, musim ramai, dan scan tertunda](/img/ilustrasi/paket-transit-lama/2-lima-penyebab.webp){width="960" height="690" loading="lazy" style="border-radius:16px"}
 
 ### Antre sortir di hub
 

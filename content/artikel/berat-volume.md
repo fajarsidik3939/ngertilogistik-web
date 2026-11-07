@@ -34,6 +34,8 @@ Ongkir dihitung dari berat aktual atau berat volume, mana yang lebih besar. Cara
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang ongkir barang ringan.
 
+![Ilustrasi berat aktual dibanding berat volume: ongkir ditagih dari angka yang lebih besar](/img/ilustrasi/berat-volume/1-ringkasan.webp){width="960" height="582" loading="lazy" style="border-radius:16px"}
+
 ## Jawaban singkat: yang ditagih adalah yang lebih besar
 
 Kurir tidak hanya menimbang paket. Mereka juga mengukur seberapa banyak ruang yang dipakai paket itu. Kotak besar makan tempat di truk atau pesawat, walaupun isinya ringan. Ruang itu tetap harus dibayar.
@@ -96,6 +98,8 @@ Dalam ilustrasi ini, Anda membayar ongkir 6 sampai 7,2 kg untuk barang yang bera
 > **CONTOH** Barang yang sama dipindah ke kotak 25 × 20 × 15 cm. Volumenya 7.500 cm³. Dengan pembagi 6.000, berat volumenya 1,25 kg.
 
 Dengan kotak yang lebih pas, berat yang ditagih turun drastis. Barangnya sama, kotaknya yang berbeda.
+
+![Ilustrasi contoh hitungan: kotak 40 x 30 x 30 cm berisi 1 kg menjadi 6 kg atau 7,2 kg, sedangkan kotak 25 x 20 x 15 cm menjadi 1,25 kg](/img/ilustrasi/berat-volume/2-contoh-kotak.webp){width="960" height="711" loading="lazy" style="border-radius:16px"}
 
 ## Cara menekan berat volume tanpa mengorbankan keamanan barang
 

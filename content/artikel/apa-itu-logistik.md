@@ -32,6 +32,8 @@ Apa itu logistik? Logistik adalah kegiatan mengatur aliran dan penyimpanan baran
 
 Artikel ini versi lengkap dari video 60 detik "Apa itu logistik?" di Ngerti Logistik. Di sini kita bahas definisinya, contoh sehari-hari, kegiatan utamanya, dan salah paham yang sering muncul.
 
+![Ilustrasi pengertian logistik: barang dan informasinya mengalir dari asal ke pemakai dengan tepat jumlah, tepat waktu, dan tepat tempat](/img/ilustrasi/apa-itu-logistik/1-pengertian-logistik.webp){width="960" height="647" loading="lazy" style="border-radius:16px"}
+
 ## Apa itu logistik? Jawaban singkatnya
 
 Bayangkan logistik sebagai "pengatur perjalanan" barang. Ia memutuskan barang disimpan di mana, diangkut kapan, dikemas seperti apa, dan dicatat bagaimana. Yang diatur bukan hanya bendanya, tetapi juga informasinya: berapa jumlahnya, di mana posisinya, dan ke mana tujuannya.
@@ -77,6 +79,8 @@ Ilustrasi di atas fiktif, tetapi polanya sering terjadi: barang telat, hilang, a
 ## Kegiatan utama dalam logistik
 
 Cakupan logistik menurut CSCMP cukup luas. Untuk pemula, kegiatan utamanya bisa dikelompokkan menjadi enam.
+
+![Ilustrasi enam kegiatan utama logistik: transportasi, gudang, stok, kemasan, informasi, dan retur](/img/ilustrasi/apa-itu-logistik/2-kegiatan-logistik.webp){width="960" height="561" loading="lazy" style="border-radius:16px"}
 
 ### Transportasi
 

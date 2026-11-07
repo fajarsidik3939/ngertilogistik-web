@@ -27,6 +27,8 @@ sumber:
 ---
 Lead time adalah total waktu dari pesanan dibuat sampai barang siap dipakai. Transit time adalah waktu barang di perjalanan, dari dikirim sampai tiba. Keduanya sering tertukar, padahal kalau Anda merencanakan stok dengan transit time, stok bisa habis sebelum barang baru datang.
 
+![Ilustrasi garis waktu lead time yang terdiri dari proses pesanan, penyiapan, transit, serta penerimaan dan cek; transit time hanya bagian perjalanan](/img/ilustrasi/lead-time-vs-transit-time/1-lead-vs-transit.webp){width="960" height="620" loading="lazy" style="border-radius:16px"}
+
 ## Lead time vs transit time dalam satu kalimat
 
 **Transit time** adalah waktu di jalan, sedangkan **lead time** adalah waktu dari pesan sampai siap pakai. Transit time hanya satu potongan di dalam lead time.
@@ -75,6 +77,8 @@ Ilustrasi berikut fiktif, untuk menunjukkan selisihnya.
 > - Hari 10: barang dibongkar, dicek, dan dicatat, lalu siap dijual.
 >
 > Pemasok bilang "kirim 3 hari", tapi lead time sebenarnya 10 hari.
+
+![Ilustrasi contoh garis waktu 10 hari: proses pesanan hari 1 sampai 2, disiapkan hari 3 sampai 6, transit hari 7 sampai 9, dicek hari 10](/img/ilustrasi/lead-time-vs-transit-time/2-contoh-10-hari.webp){width="960" height="611" loading="lazy" style="border-radius:16px"}
 
 Kalau Anda memesan ulang dengan anggapan barang datang dalam 3 hari, ada 7 hari ketika stok bisa habis sementara barang baru belum siap.
 

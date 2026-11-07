@@ -30,6 +30,8 @@ sumber:
 ---
 Memilih moda transportasi pengiriman barang, entah darat, laut, atau udara, bergantung pada tiga pertanyaan: seberapa cepat barang harus sampai, seberapa besar dan berat barangnya, dan berapa biaya yang masuk akal. Udara paling cepat tapi biasanya paling mahal, laut paling lambat tapi muat paling banyak, dan darat ada di tengah.
 
+![Ilustrasi 3 pertanyaan memilih moda pengiriman: seberapa cepat, seberapa besar dan berat, berapa biaya; beserta ciri moda udara, laut, truk, dan kereta](/img/ilustrasi/moda-transportasi-pengiriman-barang/1-tiga-pertanyaan.webp){width="960" height="832" loading="lazy" style="border-radius:16px"}
+
 ## Jawaban singkat: tergantung 3 pertanyaan
 
 Sebelum membandingkan tarif, jawab dulu tiga pertanyaan ini:
@@ -77,6 +79,8 @@ Kereta api jarang dibahas, padahal bisa jadi opsi untuk barang dalam jumlah besa
 ## Multimoda: ketika ketiganya digabung
 
 Dalam praktik, satu pengiriman sering memakai lebih dari satu moda. Contoh paling umum untuk kirim barang antar pulau: truk dari gudang ke pelabuhan, kapal menyeberang, lalu truk lagi ke gudang tujuan.
+
+![Ilustrasi pengiriman antarpulau multimoda: dari gudang asal naik truk ke pelabuhan, kapal menyeberang, lalu truk ke gudang tujuan](/img/ilustrasi/moda-transportasi-pengiriman-barang/2-multimoda.webp){width="960" height="620" loading="lazy" style="border-radius:16px"}
 
 Peraturan Pemerintah Nomor 8 Tahun 2011 mendefinisikan angkutan multimoda sebagai angkutan barang dengan paling sedikit dua moda angkutan berbeda atas dasar satu kontrak, dari tempat barang diterima sampai diserahkan ke penerima. Kata kuncinya "satu kontrak": Anda cukup berurusan dengan satu pihak yang bertanggung jawab atas seluruh perjalanan.
 

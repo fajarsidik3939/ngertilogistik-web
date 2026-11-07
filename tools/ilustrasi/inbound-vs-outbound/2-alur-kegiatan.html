@@ -1,0 +1,23 @@
+<style>
+.lane{margin-top:22px}.lane .lb{font:700 16px 'JetBrains Mono';letter-spacing:.12em;margin-bottom:10px}
+.flow{display:grid;grid-template-columns:1fr 26px 1fr 26px 1fr 26px 1fr;align-items:center;gap:6px}
+.st{background:#14203A;border:1px solid #22304B;border-radius:14px;padding:16px 10px;text-align:center;font-weight:800;font-size:22px;line-height:1.15}
+.st small{display:block;font:700 14px 'JetBrains Mono';color:#9AA8C0;margin-bottom:6px;letter-spacing:.08em}
+.ar{font:800 26px 'Plus Jakarta Sans';text-align:center}
+.in .ar,.in .lb{color:#FFC400}.in .st{border-color:rgba(255,196,0,.55)}
+.out .ar,.out .lb{color:#7EE2A8}.out .st{border-color:rgba(126,226,168,.5)}
+</style>
+<span class="k">Alur kegiatan</span>
+<h1>Inbound di awal, <em>outbound</em> di akhir</h1>
+<p class="sub">Urutan kegiatan barang masuk dan barang keluar</p>
+<div class="lane in"><div class="lb">INBOUND · BARANG MASUK</div><div class="flow">
+ <div class="st"><small>01</small>Bongkar</div><div class="ar">›</div>
+ <div class="st"><small>02</small>Cek</div><div class="ar">›</div>
+ <div class="st"><small>03</small>Catat</div><div class="ar">›</div>
+ <div class="st"><small>04</small>Putaway</div></div></div>
+<div class="lane out"><div class="lb">OUTBOUND · BARANG KELUAR</div><div class="flow">
+ <div class="st"><small>01</small>Picking</div><div class="ar">›</div>
+ <div class="st"><small>02</small>Packing</div><div class="ar">›</div>
+ <div class="st"><small>03</small>Muat</div><div class="ar">›</div>
+ <div class="st"><small>04</small>Kirim</div></div></div>
+{{FOOT}}

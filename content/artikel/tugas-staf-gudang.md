@@ -35,6 +35,8 @@ Tugas staf gudang terbagi mengikuti alur barang. Checker memeriksa barang datang
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang peran-peran di gudang.
 
+![Ilustrasi 6 peran di gudang: checker, operator forklift, picker, packer, admin gudang, dan supervisor](/img/ilustrasi/tugas-staf-gudang/1-ringkasan.webp){width="960" height="559" loading="lazy" style="border-radius:16px"}
+
 ## Siapa saja yang bekerja di gudang?
 
 Berikut enam peran yang paling sering Anda temui:
@@ -55,6 +57,8 @@ Cara paling mudah memahami struktur gudang adalah menempelkan setiap peran ke la
 **Penerimaan** (checker, operator forklift) → **Simpan** (operator forklift, admin) → **Ambil** (picker) → **Kemas** (packer) → **Kirim** (checker keluar, admin)
 
 Supervisor mengawasi seluruh alur. Admin hadir di hampir setiap langkah karena setiap pergerakan barang harus tercatat. Urutan ini sejalan dengan daftar aktivitas gudang dalam materi Supply Chain Indonesia (Setijadi, 2015): dari unloading dan pemeriksaan barang, penyimpanan, order picking, sampai loading dan delivery.
+
+![Ilustrasi peta peran mengikuti alur barang: terima, simpan, ambil, kemas, kirim, dengan supervisor mengawasi seluruh alur](/img/ilustrasi/tugas-staf-gudang/2-peta-peran.webp){width="960" height="571" loading="lazy" style="border-radius:16px"}
 
 ## Tugas staf gudang per peran
 

@@ -1,0 +1,21 @@
+<style>
+.f{margin-top:24px;padding:18px 22px;background:#0F1930;border-radius:14px;font:700 21px/1.45 'Plus Jakarta Sans';color:#B9C4D6}
+.f b{color:#EEF2F8}
+.steps{display:grid;grid-template-columns:1fr 50px 1fr 50px 1fr;align-items:stretch;margin-top:14px}
+.op{display:flex;align-items:center;justify-content:center;font:800 40px 'Plus Jakarta Sans';color:#FFC400}
+.big{font:700 40px 'JetBrains Mono';margin:8px 0 4px}
+.card.res{border-color:#FFC400;background:#1A2540}.card.res .big{color:#FFC400}
+.steps .t{font-size:21px}
+</style>
+<span class="k">Contoh</span>
+<h1>Hitung safety stock <em>rata-rata-maksimum</em></h1>
+<p class="sub">Angka ilustrasi, bukan data nyata.</p>
+<div class="f"><b>Safety stock</b> = (pemakaian harian maks × lead time maks) − (pemakaian harian rata-rata × lead time rata-rata)</div>
+<div class="steps">
+ <div class="card"><div class="n">SKENARIO TERBURUK</div><div class="big">15 × 12</div><div class="t">= 180 unit</div><div class="d">15 unit/hari, lead time 12 hari</div></div>
+ <div class="op">−</div>
+ <div class="card"><div class="n">KONDISI NORMAL</div><div class="big">10 × 10</div><div class="t">= 100 unit</div><div class="d">10 unit/hari, lead time 10 hari</div></div>
+ <div class="op">=</div>
+ <div class="card res"><div class="n">SAFETY STOCK</div><div class="big">80</div><div class="t">unit cadangan</div><div class="d">Di atas kebutuhan normal</div></div>
+</div>
+{{FOOT}}

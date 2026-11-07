@@ -29,6 +29,8 @@ Packing kayu adalah rangka atau peti kayu yang dipasang di luar kemasan barang u
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang packing kayu.
 
+![Ilustrasi kapan perlu packing kayu: barang mudah pecah, berat, bentuk tidak beraturan, bernilai tinggi; kapan cukup kardus: pakaian, buku, mainan plastik, makanan kemasan kering](/img/ilustrasi/packing-kayu/1-perlu-atau-tidak.webp){width="960" height="858" loading="lazy" style="border-radius:16px"}
+
 ## Apa itu packing kayu dan bagaimana cara kerjanya?
 
 Saat Anda mengirim barang, layanan pengiriman sering menawarkan opsi packing kayu. Bentuknya bisa berupa rangka kayu terbuka yang mengelilingi kardus, atau peti kayu tertutup penuh.
@@ -75,6 +77,8 @@ Jadi sebelum mencentang opsi packing kayu, hitung dulu dampaknya ke ongkir. Untu
 ## Cara memutuskan: bandingkan risiko dengan biaya
 
 Pertanyaan kuncinya sederhana: **kalau barang ini rusak, berapa kerugian saya dibanding biaya packing kayu?**
+
+![Ilustrasi 5 langkah memutuskan packing kayu: nilai kerapuhan, hitung kerugian, hitung biaya packing kayu, bandingkan, cek syarat klaim](/img/ilustrasi/packing-kayu/2-cara-memutuskan.webp){width="960" height="575" loading="lazy" style="border-radius:16px"}
 
 Gunakan langkah berikut:
 

@@ -1,0 +1,39 @@
+<style>
+.wrap2{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-top:26px}
+.pic{background:#0F1930;border-radius:14px;padding:10px}
+.pic svg{display:block;width:100%;height:auto}
+.code{font:700 52px 'JetBrains Mono';letter-spacing:.04em;margin:6px 0 16px}
+.code span{color:#FFC400}
+.li{display:flex;gap:14px;align-items:center;margin:10px 0}
+.li b{font:700 26px 'JetBrains Mono';color:#0B1220;background:#FFC400;border-radius:8px;min-width:58px;text-align:center;padding:4px 8px}
+.li span{font:700 22px 'Plus Jakarta Sans'}
+</style>
+<span class="k">Contoh</span>
+<h1>Alamat lokasi, <em>mirip alamat rumah</em></h1>
+<p class="sub">Satu lokasi, satu kode unik, tertempel jelas di rak.</p>
+<div class="wrap2">
+ <div class="pic"><svg viewBox="0 0 440 380">
+  <text x="20" y="34" font-family="JetBrains Mono" font-weight="700" font-size="18" fill="#9AA8C0">LORONG A · RAK 03</text>
+  <g stroke="#9CA3AF" stroke-width="8"><path d="M40 60V360M400 60V360"/></g>
+  <g stroke="#CBD2DC" stroke-width="8"><path d="M40 140H400M40 240H400M40 350H400"/></g>
+  <text x="414" y="200" font-family="JetBrains Mono" font-weight="700" font-size="18" fill="#9AA8C0" transform="rotate(90 414 200)">TINGKAT</text>
+  <g font-family="JetBrains Mono" font-weight="700" font-size="20" fill="#9AA8C0"><text x="12" y="300">1</text><text x="12" y="196">2</text><text x="12" y="104">3</text></g>
+  <g fill="#14203A" stroke="#22304B" stroke-width="2">
+   <rect x="58" y="160" width="100" height="72" rx="6"/><rect x="290" y="160" width="100" height="72" rx="6"/>
+   <rect x="58" y="262" width="100" height="80" rx="6"/><rect x="174" y="262" width="100" height="80" rx="6"/><rect x="290" y="262" width="100" height="80" rx="6"/>
+   <rect x="58" y="72" width="100" height="60" rx="6"/><rect x="174" y="72" width="100" height="60" rx="6"/></g>
+  <rect x="174" y="156" width="100" height="78" rx="6" fill="#FFC400"/>
+  <text x="224" y="203" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="17" fill="#0B1220">A-03-2-B</text>
+  <g font-family="JetBrains Mono" font-weight="700" font-size="16" fill="#9AA8C0" text-anchor="middle"><text x="108" y="376" dy="0"></text></g>
+  <g font-family="JetBrains Mono" font-weight="700" font-size="16" fill="#9AA8C0" text-anchor="middle"><text x="108" y="56">A</text><text x="224" y="56">B</text><text x="340" y="56">C</text></g>
+ </svg></div>
+ <div class="card">
+  <div class="n">KODE LOKASI</div>
+  <div class="code">A-03-<span>2</span>-B</div>
+  <div class="li"><b>A</b><span>Lorong</span></div>
+  <div class="li"><b>03</b><span>Rak nomor</span></div>
+  <div class="li"><b>2</b><span>Tingkat dari bawah</span></div>
+  <div class="li"><b>B</b><span>Posisi di tingkat itu</span></div>
+ </div>
+</div>
+{{FOOT}}

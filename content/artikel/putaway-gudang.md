@@ -32,6 +32,8 @@ Putaway adalah proses memindahkan barang yang sudah diterima dari area penerimaa
 
 Ejaannya kadang ditulis terpisah, "put away". Artinya sama. Artikel ini adalah versi lengkap dari video 60 detik Ngerti Logistik tentang putaway.
 
+![Ilustrasi putaway: bawa barang ke rak ditambah scan dan konfirmasi lokasi di sistem, hasilnya barang bisa ditemukan](/img/ilustrasi/putaway-gudang/1-ringkasan.webp){width="960" height="664" loading="lazy" style="border-radius:16px"}
+
 ## Putaway adalah...
 
 Dalam materi Supply Chain Indonesia, Setijadi (2015) menulis bahwa put away adalah "proses penempatan barang pada lokasi penyimpanan". Di lapangan, definisi itu punya dua bagian yang sama penting:
@@ -56,6 +58,8 @@ Kenapa putaway penting untuk langkah berikutnya? Setijadi mencatat bahwa picking
 Supaya lokasi bisa dicatat, setiap tempat simpan butuh alamat. Banyak gudang memakai kode bertingkat, mirip alamat rumah. Formatnya berbeda di tiap gudang, tapi logikanya serupa.
 
 > **CONTOH** Kode lokasi **A-03-2-B** dibaca sebagai: lorong **A**, rak nomor **03**, tingkat **2** dari bawah, posisi **B** di tingkat itu. Staf yang membaca kode ini bisa langsung berjalan ke titik yang tepat tanpa bertanya.
+
+![Ilustrasi contoh kode lokasi A-03-2-B pada rak: lorong A, rak nomor 03, tingkat 2 dari bawah, posisi B](/img/ilustrasi/putaway-gudang/2-kode-lokasi.webp){width="960" height="728" loading="lazy" style="border-radius:16px"}
 
 Kode seperti ini juga sering disebut *bin location*. Pembahasan cara menyusun kode lokasi dan tata letak gudang akan dibuat di artikel tersendiri. Untuk sekarang, cukup pegang satu prinsip: satu lokasi, satu kode unik, dan kodenya tertempel jelas di rak.
 

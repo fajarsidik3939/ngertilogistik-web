@@ -1,0 +1,25 @@
+<style>
+.tbl{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:10px;margin-top:26px}
+.h{font:700 15px 'JetBrains Mono';color:#9AA8C0;letter-spacing:.1em;padding:0 6px}
+.c{background:#14203A;border:1px solid #22304B;border-radius:14px;padding:16px 18px;font-weight:800;font-size:24px}
+.c small{display:block;font:700 14px 'JetBrains Mono';color:#9AA8C0;letter-spacing:.08em;margin-bottom:4px}
+.c.hot{border-color:#FFC400;color:#FFC400}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.r{border-radius:14px;padding:16px 18px;font-weight:800;font-size:23px;background:#14203A;border:1px solid #22304B}
+.r small{display:block;font:700 15px 'JetBrains Mono';letter-spacing:.1em;margin-bottom:6px}
+.r.bad small{color:#FF8A7A}.r.ok{border-color:#FFC400}.r.ok small{color:#7EE2A8}
+.r span{display:block;font:500 18px 'Plus Jakarta Sans';color:#B9C4D6;margin-top:4px}
+</style>
+<span class="k">Contoh</span>
+<h1>Datang belakangan, <em>keluar duluan</em></h1>
+<p class="sub">Ilustrasi dua batch produk minuman yang sama (tanggal buatan)</p>
+<div class="tbl">
+ <div class="h">BATCH</div><div class="h">TANGGAL TERIMA</div><div class="h">KEDALUWARSA</div>
+ <div class="c">Batch A</div><div class="c">1 Maret</div><div class="c">30 November</div>
+ <div class="c">Batch B</div><div class="c">10 Maret</div><div class="c hot">31 Agustus</div>
+</div>
+<div class="res">
+ <div class="r bad"><small>FIFO</small>Batch A keluar dulu<span>Batch B berisiko kedaluwarsa di gudang</span></div>
+ <div class="r ok"><small>FEFO</small>Batch B keluar dulu<span>Kedaluwarsanya lebih dekat</span></div>
+</div>
+{{FOOT}}

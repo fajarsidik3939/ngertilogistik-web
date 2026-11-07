@@ -1,0 +1,25 @@
+<style>
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.two .card{padding:18px 18px 20px}
+.two svg{display:block;width:100%;height:220px;background:#0F1930;border-radius:12px;margin-bottom:16px}
+.tag{font:700 15px 'JetBrains Mono';letter-spacing:.1em;padding:5px 10px;border-radius:7px;display:inline-block}
+.tag.bad{background:rgba(255,138,122,.14)}.tag.ok{background:rgba(126,226,168,.14)}
+.card.best{border-color:#FFC400}
+.calc{font:700 21px/1.6 'JetBrains Mono';color:#EEF2F8;margin-top:8px}.calc b{color:#FFC400}
+</style>
+<span class="k">Contoh</span>
+<h1>Barang 1 kg, <em>kotaknya</em> yang menentukan</h1>
+<p class="sub">Ilustrasi hitungan dari artikel. Ukuran dalam cm.</p>
+<div class="two">
+ <div class="card"><svg viewBox="0 0 400 220">
+  <polygon points="200,20 330,85 200,150 70,85" fill="#E5E7EB"/><polygon points="70,85 200,150 200,205 70,140" fill="#CBD2DC"/><polygon points="330,85 200,150 200,205 330,140" fill="#9CA3AF"/>
+  <text x="200" y="92" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="20" fill="#0B1220">isi 1 kg</text></svg>
+  <span class="tag bad">KOTAK 40 × 30 × 30</span>
+  <div class="calc">36.000 ÷ 6.000 = <b>6 kg</b><br>36.000 ÷ 5.000 = <b>7,2 kg</b></div></div>
+ <div class="card best"><svg viewBox="0 0 400 220">
+  <polygon points="200,80 260,110 200,140 140,110" fill="#E5E7EB"/><polygon points="140,110 200,140 200,170 140,140" fill="#CBD2DC"/><polygon points="260,110 200,140 200,170 260,140" fill="#9CA3AF"/>
+  <text x="200" y="64" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="20" fill="#9AA8C0">barang sama</text></svg>
+  <span class="tag ok">KOTAK 25 × 20 × 15</span>
+  <div class="calc">7.500 ÷ 6.000 = <b>1,25 kg</b><br>&nbsp;</div></div>
+</div>
+{{FOOT}}

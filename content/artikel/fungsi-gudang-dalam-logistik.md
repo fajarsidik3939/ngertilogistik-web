@@ -32,9 +32,13 @@ Fungsi gudang dalam logistik bukan sekadar menjadi tempat menumpuk barang. Gudan
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang salah kaprah gudang.
 
+![Ilustrasi enam kegiatan gudang: terima, simpan, ambil, kemas, kirim, dan catat setiap pergerakan](/img/ilustrasi/fungsi-gudang-dalam-logistik/1-enam-kegiatan.webp){width="960" height="595" loading="lazy" style="border-radius:16px"}
+
 ## Jawaban singkat: gudang adalah pusat aliran barang
 
 Bayangkan gudang seperti stasiun, bukan seperti lemari. Lemari dipakai untuk menaruh barang lalu ditutup. Stasiun dipakai supaya orang datang, berpindah, dan berangkat lagi dengan teratur.
+
+![Ilustrasi perumpamaan gudang: bukan lemari yang diisi lalu ditutup, tetapi stasiun tempat barang datang, berpindah, dan berangkat lagi](/img/ilustrasi/fungsi-gudang-dalam-logistik/2-lemari-vs-stasiun.webp){width="960" height="734" loading="lazy" style="border-radius:16px"}
 
 Gudang bekerja dengan cara yang mirip. Barang datang, diperiksa, ditaruh di tempat yang jelas, lalu keluar lagi saat ada pesanan. Penyimpanan hanya satu bagian dari rangkaian itu.
 
