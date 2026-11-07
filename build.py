@@ -383,12 +383,27 @@ HALAMAN = [  # halaman statis dari content/halaman/<file>.html
      "Hitung CBM, berat volume, dan perkiraan jumlah karton yang muat di kontainer 20 ft, 40 ft, 40 ft high cube, atau truk Anda. Gratis, langsung di browser."),
 ]
 
+# Landing page jualan: tanpa menu, link keluar, tombol bagikan, dan CTA TikTok supaya pembaca fokus ke penawaran
+LANDING = {"/toolkit-gudang-pro"}
+
+def nav_landing():
+    return """<header class="nav"><div class="wrap nav-in">
+<span class="brand"><img src="/img/logo-256.png" alt="" width="34" height="34"><span>Ngerti <b>Logistik</b></span></span>
+<a class="btn-sm" href="#beli">Lihat penawaran</a></div></header>"""
+
+def foot_landing():
+    return f"""<footer class="foot"><div class="wrap fine" style="text-align:center">© {datetime.date.today().year} {NAME}. Data di dalam file produk adalah CONTOH, bukan data nyata. File untuk dipakai pribadi atau di tempat kerja pembeli, tidak untuk dijual ulang.</div></footer>
+</body></html>"""
+
 def page_halaman():
     for path, f, title, desc in HALAMAN:
         body = open(os.path.join(ROOT, "content/halaman", f), encoding="utf-8").read()
-        body = body.replace("<!--SHARE-->", share(path, title.split(" | ")[0], "top"))
         body = body.replace("{{LYNK}}", esc(PRODUK["lynk"])).replace("{{HARGA}}", esc(PRODUK["harga"]))
-        s = head(title, desc, path) + nav() + body + CTA + foot().replace("</body>", SHARE_JS + "</body>")
+        if path in LANDING:
+            s = head(title, desc, path) + nav_landing() + body.replace("<!--SHARE-->", "") + foot_landing()
+        else:
+            body = body.replace("<!--SHARE-->", share(path, title.split(" | ")[0], "top"))
+            s = head(title, desc, path) + nav() + body + CTA + foot().replace("</body>", SHARE_JS + "</body>")
         write(path, s)
 
 def page_404():
