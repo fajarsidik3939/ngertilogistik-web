@@ -29,6 +29,8 @@ Cara packing barang yang benar ada empat langkah: pakai kardus yang pas dan kuat
 
 Artikel ini versi lengkap dari video 60 detik Ngerti Logistik tentang packing yang benar.
 
+![Ilustrasi 4 langkah packing yang benar: kardus pas dan kuat, isi semua celah, lakban pola H, label jelas, lalu uji guncang pelan](/img/ilustrasi/cara-packing-barang/1-empat-langkah.webp){width="960" height="568" loading="lazy" style="border-radius:16px"}
+
 ## Kenapa paket bisa penyok?
 
 Paket penyok tidak selalu salah kurir. Sering kali penyebabnya ada di cara packing-nya.
@@ -68,6 +70,8 @@ Isi celah dengan bahan pengisi, misalnya:
 
 Letakkan pengisi di **semua sisi** barang, termasuk bawah dan atas, bukan hanya di samping. Panduan pengemasan layanan pos Amerika Serikat menyebut peredam sebaiknya diletakkan di sekeliling barang.
 
+![Ilustrasi potongan kardus: kardus kebesaran dengan celah kosong membuat barang bergeser, kardus pas dengan bahan pengisi di semua sisi membuat barang diam](/img/ilustrasi/cara-packing-barang/3-celah-terisi.webp){width="960" height="783" loading="lazy" style="border-radius:16px"}
+
 Kalau ada beberapa barang dalam satu kardus, bungkus masing-masing dulu, lalu beri pemisah agar tidak saling membentur.
 
 > **CONTOH** Seorang penjual mengirim tiga botol saus kaca dalam satu kardus tanpa pemisah. Botol saling membentur selama perjalanan dan satu botol retak, membasahi dua botol lainnya. Pada kiriman berikutnya, setiap botol dibungkus bubble wrap dan diberi sekat kardus, lalu celah atasnya diisi kertas remas. Ilustrasi ini menunjukkan bahwa masalahnya ada di celah, bukan di kardusnya.
@@ -82,6 +86,8 @@ Lakban pola H, atau sering disebut metode H-taping, bekerja seperti ini:
 2. Tempel satu strip di sepanjang sambungan tepi kiri.
 3. Tempel satu strip di sepanjang sambungan tepi kanan.
 4. Ulangi di bagian **bawah** kardus, bukan hanya di atas.
+
+![Ilustrasi perbandingan kardus dengan satu strip lakban di tengah dan kardus dengan lakban pola H: satu strip tengah dan dua strip di tepi](/img/ilustrasi/cara-packing-barang/2-lakban-pola-h.webp){width="960" height="766" loading="lazy" style="border-radius:16px"}
 
 Dari atas, susunan lakban ini membentuk huruf H. Strip tepi memperkuat bagian pinggir yang paling sering terkena benturan.
 

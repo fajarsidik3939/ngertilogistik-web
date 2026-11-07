@@ -1,0 +1,33 @@
+<style>
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.two .card{padding:18px 18px 20px}
+.two svg{display:block;width:100%;height:250px;background:#0F1930;border-radius:12px;margin-bottom:16px}
+.tag{font:700 15px 'JetBrains Mono';letter-spacing:.1em;padding:5px 10px;border-radius:7px;display:inline-block}
+.tag.bad{background:rgba(255,138,122,.14)}.tag.ok{background:rgba(126,226,168,.14)}
+.card.best{border-color:#FFC400}
+</style>
+<span class="k">Langkah 3</span>
+<h1>Lakban <em>pola H</em>, bukan satu strip</h1>
+<p class="sub">Strip tengah menutup celah. Dua strip tepi menahan pinggir yang sering kena benturan.</p>
+<div class="two">
+ <div class="card"><svg viewBox="0 0 500 300">
+  <polygon points="250,40 410,120 250,200 90,120" fill="#E5E7EB"/><polygon points="90,120 250,200 250,280 90,200" fill="#CBD2DC"/><polygon points="410,120 250,200 250,280 410,200" fill="#9CA3AF"/>
+  <path d="M170 80 L330 160" stroke="#9CA3AF" stroke-width="2"/>
+  <path d="M164 77 L336 163 L336 186" stroke="#FFC400" stroke-width="18" fill="none" stroke-linejoin="round"/>
+  <g stroke="#FF8A7A" stroke-width="4" stroke-linecap="round" fill="none"><path d="M106 110 l-18 -14"/><path d="M118 104 l-10 -20"/><path d="M394 110 l18 -14"/><path d="M382 104 l10 -20"/></g>
+  </svg>
+  <span class="tag bad">KURANG</span><div class="t">Satu strip di tengah</div><div class="d">Celah utama tertutup, tapi kedua tepi tutup masih mudah terangkat atau terbuka.</div></div>
+ <div class="card best"><svg viewBox="0 0 500 300">
+  <polygon points="250,40 410,120 250,200 90,120" fill="#E5E7EB"/><polygon points="90,120 250,200 250,280 90,200" fill="#CBD2DC"/><polygon points="410,120 250,200 250,280 410,200" fill="#9CA3AF"/>
+  <path d="M170 80 L330 160" stroke="#9CA3AF" stroke-width="2"/>
+  <path d="M164 77 L336 163 L336 186" stroke="#FFC400" stroke-width="18" fill="none" stroke-linejoin="round"/>
+  <path d="M258 44 L102 122" stroke="#FFC400" stroke-width="18"/>
+  <path d="M398 118 L242 196 L242 222" stroke="#FFC400" stroke-width="18" fill="none" stroke-linejoin="round"/>
+  <g font-family="JetBrains Mono" font-weight="700" font-size="20" text-anchor="middle">
+   <circle cx="250" cy="120" r="17" fill="#0B1220"/><text x="250" y="127" fill="#FFC400">1</text>
+   <circle cx="150" cy="70" r="17" fill="#0B1220"/><text x="150" y="77" fill="#FFC400">2</text>
+   <circle cx="372" cy="200" r="17" fill="#0B1220"/><text x="372" y="207" fill="#FFC400">3</text></g>
+  </svg>
+  <span class="tag ok">LEBIH KUAT</span><div class="t">Pola H: 1 tengah + 2 tepi</div><div class="d">Dari atas membentuk huruf H. Ulangi di bagian bawah kardus.</div></div>
+</div>
+{{FOOT}}

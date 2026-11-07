@@ -1,0 +1,31 @@
+<style>
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.two .card{padding:18px 18px 20px}
+.two svg{display:block;width:100%;height:240px;background:#0F1930;border-radius:12px;margin-bottom:16px}
+.tag{font:700 15px 'JetBrains Mono';letter-spacing:.1em;padding:5px 10px;border-radius:7px;display:inline-block}
+.tag.bad{background:rgba(255,138,122,.14)}.tag.ok{background:rgba(126,226,168,.14)}
+.card.best{border-color:#FFC400}
+</style>
+<span class="k">Langkah 1 &amp; 2</span>
+<h1>Celah kosong bikin barang <em>bergeser</em></h1>
+<p class="sub">Potongan kardus dari samping: kebesaran vs pas dan terisi.</p>
+<div class="two">
+ <div class="card"><svg viewBox="0 0 500 280">
+  <rect x="70" y="30" width="360" height="220" rx="6" fill="#14203A" stroke="#CBD2DC" stroke-width="6"/>
+  <g transform="rotate(-14 300 190)"><rect x="250" y="150" width="100" height="80" rx="6" fill="#9CA3AF"/><rect x="250" y="150" width="100" height="18" rx="4" fill="#CBD2DC"/></g>
+  <g stroke="#FF8A7A" stroke-width="5" stroke-linecap="round"><path d="M210 170h-50"/><path d="M215 195h-70"/><path d="M210 220h-40"/></g>
+  <text x="120" y="90" font-family="JetBrains Mono" font-weight="700" font-size="20" fill="#9AA8C0">ruang kosong</text>
+  </svg>
+  <span class="tag bad">RAWAN</span><div class="t">Kebesaran, celah kosong</div><div class="d">Barang terbentur dinding setiap kali paket terguncang. Dinding kardus juga mudah penyok saat ditindih.</div></div>
+ <div class="card best"><svg viewBox="0 0 500 280">
+  <rect x="140" y="50" width="220" height="190" rx="6" fill="#14203A" stroke="#CBD2DC" stroke-width="6"/>
+  <rect x="200" y="100" width="100" height="80" rx="6" fill="#9CA3AF"/><rect x="200" y="100" width="100" height="18" rx="4" fill="#CBD2DC"/>
+  <g fill="none" stroke="#FFC400" stroke-width="3.5">
+   <circle cx="166" cy="76" r="12"/><circle cx="196" cy="74" r="12"/><circle cx="226" cy="76" r="12"/><circle cx="256" cy="74" r="12"/><circle cx="286" cy="76" r="12"/><circle cx="316" cy="74" r="12"/><circle cx="336" cy="80" r="10"/>
+   <circle cx="166" cy="108" r="12"/><circle cx="168" cy="138" r="12"/><circle cx="166" cy="168" r="12"/><circle cx="168" cy="198" r="12"/>
+   <circle cx="332" cy="108" r="12"/><circle cx="334" cy="138" r="12"/><circle cx="332" cy="168" r="12"/><circle cx="334" cy="198" r="12"/>
+   <circle cx="196" cy="208" r="12"/><circle cx="226" cy="210" r="12"/><circle cx="256" cy="208" r="12"/><circle cx="286" cy="210" r="12"/><circle cx="310" cy="214" r="10"/><circle cx="190" cy="190" r="8"/></g>
+  </svg>
+  <span class="tag ok">AMAN</span><div class="t">Pas, celah terisi</div><div class="d">Pengisi di semua sisi menahan barang tetap diam, termasuk di atas dan di bawahnya.</div></div>
+</div>
+{{FOOT}}
