@@ -1,0 +1,120 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:J;src:url(../../public/fonts/jakarta-400.woff2);font-weight:400}
+@font-face{font-family:J;src:url(../../public/fonts/jakarta-500.woff2);font-weight:500}
+@font-face{font-family:J;src:url(../../public/fonts/jakarta-700.woff2);font-weight:700}
+@font-face{font-family:J;src:url(../../public/fonts/jakarta-800.woff2);font-weight:800}
+@font-face{font-family:M;src:url(../../public/fonts/mono-700.woff2);font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#333;font-family:J;color:#EEF2F8}
+.s{width:1080px;height:1080px;position:relative;overflow:hidden;background:radial-gradient(900px 700px at 85% 10%,#1C2D50 0%,transparent 60%),radial-gradient(700px 600px at 0% 100%,#15233F 0%,transparent 60%),#0B1220;margin-bottom:20px}
+.s:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:54px 54px;pointer-events:none}
+.top{position:absolute;top:56px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.brand{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:500}
+.brand img{width:52px;height:52px;border-radius:14px}.brand b{color:#FFC400;font-weight:800}
+.chip{font:700 20px/1 M;letter-spacing:.08em;color:#0B1220;background:#FFC400;padding:12px 18px;border-radius:999px}
+.y{color:#FFC400}
+/* cover */
+.c-h{position:absolute;left:64px;top:150px;z-index:5;width:960px}
+.c-h .k{font:700 24px/1 M;letter-spacing:.14em;color:#FFC400;margin-bottom:18px}
+.c-h h1{font-size:118px;font-weight:800;line-height:.98;letter-spacing:-2px}
+.c-h p{font-size:38px;font-weight:700;line-height:1.25;color:#D7DFEB;margin-top:22px}
+.c-h p b{color:#FFC400}
+.stage{position:absolute;left:0;right:0;bottom:0;height:560px;z-index:3}
+.stage img{position:absolute;border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.eb{width:300px;left:70px;bottom:120px;transform:rotate(-7deg)}
+.fm{width:290px;right:70px;bottom:150px;transform:rotate(6deg)}
+.sheet{position:absolute;left:290px;bottom:96px;width:500px;background:#F7F9FC;border-radius:16px;padding:18px;color:#0B1220;box-shadow:0 34px 80px rgba(0,0,0,.65);z-index:4}
+.sh{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:20px;margin-bottom:12px}
+.sh i{font-style:normal;font:700 13px/1 M;background:#1F3A5F;color:#fff;padding:7px 10px;border-radius:6px}
+table{width:100%;border-collapse:collapse;font-size:16px;font-weight:500}
+th{background:#F28C28;color:#fff;text-align:left;padding:8px 9px;font-weight:700}
+td{padding:8px 9px;border-bottom:1px solid #E3E8F0}td.n{text-align:right;font-family:M}
+.st{font:700 12px/1 M;padding:5px 8px;border-radius:5px}
+.g{background:#D9F2E3;color:#067647}.w{background:#FDEBD0;color:#B54708}.r{background:#FADBD8;color:#B42318}
+.badges{position:absolute;left:0;right:0;bottom:36px;display:flex;justify-content:center;gap:14px;z-index:6}
+.badges span{font-size:24px;font-weight:700;background:rgba(16,26,46,.92);border:1.5px solid #2E4066;padding:14px 22px;border-radius:999px}
+.badges b{color:#FFC400}
+/* list slides */
+.t{position:absolute;left:64px;top:150px;right:64px;z-index:5}
+.t .k{font:700 24px/1 M;letter-spacing:.14em;color:#FFC400;margin-bottom:16px}
+.t h2{font-size:72px;font-weight:800;line-height:1.02;letter-spacing:-1px}
+.rows{position:absolute;left:64px;right:64px;top:360px;display:grid;gap:22px;z-index:5}
+.row{display:grid;grid-template-columns:96px 1fr;gap:26px;background:#14203A;border:1.5px solid #22304B;border-radius:24px;padding:26px 28px;align-items:start}
+.ic{width:96px;height:96px;border-radius:22px;background:#FFC400;color:#0B1220;display:grid;place-items:center;font:800 26px/1 M}
+.row h3{font-size:34px;font-weight:800;margin-bottom:8px}
+.row p{font-size:24px;color:#B9C5D8;line-height:1.4}
+.vs{position:absolute;left:64px;right:64px;top:340px;display:grid;grid-template-columns:1fr 1fr;gap:20px;z-index:5}
+.vs>div{border-radius:26px;padding:30px 28px;border:1.5px solid #22304B;background:#14203A}
+.vs .a{background:linear-gradient(160deg,rgba(255,196,0,.16),rgba(255,196,0,.03));border-color:rgba(255,196,0,.6)}
+.vs h3{font-size:34px;font-weight:800;margin-bottom:22px}
+.vs ul{list-style:none;display:grid;gap:24px}
+.vs li{display:flex;gap:14px;font-size:26px;line-height:1.35;color:#D7DFEB}
+.vs .b li:before{content:"✕";color:#E0453A;font-weight:800}
+.vs .a li:before{content:"✓";color:#FFC400;font-weight:800}
+.foot{position:absolute;left:64px;right:64px;bottom:50px;display:flex;justify-content:space-between;align-items:center;z-index:5;font-size:24px;color:#9AA8C0}
+.foot b{color:#FFC400}
+/* excel preview */
+.big{position:absolute;left:64px;right:64px;top:350px;display:grid;gap:22px;z-index:5}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;background:#F7F9FC;border-radius:20px;padding:18px;color:#0B1220}
+.kp{background:#fff;border:1px solid #E3E8F0;border-radius:12px;padding:16px}
+.kp small{display:block;font:700 13px/1.2 M;color:#6B7891;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px}
+.kp b{font-size:34px;font-weight:800}
+.big .sheet2{background:#F7F9FC;border-radius:20px;padding:20px;color:#0B1220}
+.big table{font-size:22px}.big th,.big td{padding:14px 12px}
+</style></head><body>
+
+<div class="s" id="s1">
+<div class="top"><div class="brand"><img src="../../public/img/logo-256.png"><span>Ngerti <b>Logistik</b></span></div><span class="chip">UNTUK ADMIN GUDANG</span></div>
+<div class="c-h"><div class="k">PAKET LENGKAP KERJA GUDANG</div>
+<h1>Toolkit Gudang <span class="y">Pro</span></h1>
+<p>Stop rekap stok manual. <b>Biar Excel yang ngitung.</b></p></div>
+<div class="stage">
+<img class="fm" src="../../public/img/produk/form-bpb.webp">
+<img class="eb" src="../../public/img/produk/ebook-cover.webp">
+<div class="sheet"><div class="sh">Master Barang <i>OTOMATIS</i></div>
+<table><tr><th>Kode</th><th>Barang</th><th>Stok</th><th>Status</th></tr>
+<tr><td>BRG-001</td><td>Air mineral</td><td class="n">25</td><td><span class="st w">REORDER</span></td></tr>
+<tr><td>BRG-003</td><td>Kopi sachet</td><td class="n">80</td><td><span class="st g">AMAN</span></td></tr>
+<tr><td>BRG-005</td><td>Kardus polos</td><td class="n">180</td><td><span class="st g">AMAN</span></td></tr>
+<tr><td>BRG-009</td><td>Kabel roll</td><td class="n">0</td><td><span class="st r">HABIS</span></td></tr></table></div>
+</div>
+<div class="badges"><span><b>Excel</b> 9-in-1</span><span><b>E-book</b> 21 hal</span><span><b>8 SOP</b> + <b>8 Form</b></span></div>
+</div>
+
+<div class="s" id="s2">
+<div class="top"><div class="brand"><img src="../../public/img/logo-256.png"><span>Ngerti <b>Logistik</b></span></div><span class="chip">ISI PAKET</span></div>
+<div class="t"><div class="k">TOOLKIT GUDANG PRO</div><h2>3 alat kerja,<br><span class="y">1 file ZIP</span></h2></div>
+<div class="rows">
+<div class="row"><div class="ic">XLS</div><div><h3>Template Excel 9-in-1</h3><p>Dashboard KPI, master barang, transaksi, kartu stok, stock opname, analisis ABC, ROP &amp; safety stock, kubikasi &amp; armada.</p></div></div>
+<div class="row"><div class="ic">PDF</div><div><h3>E-book Panduan Admin Gudang</h3><p>21 halaman, 14 bab: alur barang, dokumen, opname, KPI, rumus Excel, sampai persiapan interview.</p></div></div>
+<div class="row"><div class="ic">DOC</div><div><h3>8 SOP + 8 Form</h3><p>Word bisa diedit + PDF siap print. Tinggal ganti nama perusahaan.</p></div></div>
+</div>
+<div class="foot"><span><b>Toolkit Gudang Pro</b> · by @ngertilogistik</span><span>lynk.id/ngertilogistik</span></div>
+</div>
+
+<div class="s" id="s3">
+<div class="top"><div class="brand"><img src="../../public/img/logo-256.png"><span>Ngerti <b>Logistik</b></span></div><span class="chip">SEBELUM VS SESUDAH</span></div>
+<div class="t"><div class="k">KERJA GUDANG JADI</div><h2>Lebih rapi, <span class="y">lebih cepat</span></h2></div>
+<div class="vs">
+<div class="b"><h3>Sebelum</h3><ul><li>Stok dihitung manual dari banyak catatan</li><li>Riwayat barang susah dicari</li><li>Tahu barang habis setelah diminta</li><li>Selisih opname tanpa jejak</li><li>SOP disusun dari nol</li></ul></div>
+<div class="a"><h3>Sesudah</h3><ul><li>Input transaksi, stok akhir otomatis</li><li>Pilih kode, kartu stok langsung muncul</li><li>Status REORDER muncul sendiri</li><li>Selisih &amp; akurasi stok terhitung</li><li>8 SOP + 8 form siap pakai</li></ul></div>
+</div>
+<div class="foot"><span><b>Toolkit Gudang Pro</b> · by @ngertilogistik</span><span>lynk.id/ngertilogistik</span></div>
+</div>
+
+<div class="s" id="s4">
+<div class="top"><div class="brand"><img src="../../public/img/logo-256.png"><span>Ngerti <b>Logistik</b></span></div><span class="chip">PREVIEW EXCEL</span></div>
+<div class="t"><div class="k">PILIH KODE BARANG</div><h2>Kartu stok <span class="y">muncul sendiri</span></h2></div>
+<div class="big">
+<div class="kpis"><div class="kp"><small>Total SKU</small><b>15</b></div><div class="kp"><small>Perlu Reorder</small><b style="color:#B54708">8</b></div><div class="kp"><small>Nilai Stok</small><b>Rp19,9 jt</b></div></div>
+<div class="sheet2"><div class="sh">Kartu Stok · BRG-001 Air Mineral <i>SALDO BERJALAN</i></div>
+<table><tr><th>Tanggal</th><th>Dokumen</th><th>Masuk</th><th>Keluar</th><th>Saldo</th></tr>
+<tr><td>01/10/2026</td><td>GRN-2610-001</td><td class="n">60</td><td class="n"></td><td class="n"><b>180</b></td></tr>
+<tr><td>02/10/2026</td><td>DO-2610-001</td><td class="n"></td><td class="n">45</td><td class="n"><b>135</b></td></tr>
+<tr><td>18/10/2026</td><td>DO-2610-015</td><td class="n"></td><td class="n">80</td><td class="n"><b>55</b></td></tr>
+<tr><td>29/10/2026</td><td>DO-2610-022</td><td class="n"></td><td class="n">30</td><td class="n"><b>25</b></td></tr></table></div>
+</div>
+<div class="foot"><span>Angka di atas adalah <b>CONTOH</b></span><span>ngertilogistik.web.id</span></div>
+</div>
+</body></html>
