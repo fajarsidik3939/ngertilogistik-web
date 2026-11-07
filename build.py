@@ -372,7 +372,7 @@ def page_about():
     write("/tentang", s)
 
 # Produk digital: isi link Lynk.id dan harga di sini, lalu jalankan build.py
-PRODUK = {"lynk": "https://lynk.id/ngertilogistik/jjm4m9w15zgj", "harga": "Rp47.000"}
+PRODUK = {"lynk": "https://lynk.id/ngertilogistik/jjm4m9w15zgj/checkout", "harga": "Rp47.000"}
 
 HALAMAN = [  # halaman statis dari content/halaman/<file>.html
     ("/toolkit-gudang-pro", "toolkit-gudang-pro.html", "Toolkit Gudang Pro: Template Excel, E-book & SOP Gudang | Ngerti Logistik",
