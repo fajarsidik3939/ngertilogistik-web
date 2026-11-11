@@ -62,6 +62,7 @@ Tips singkat:
 | L26 | Cara Packing Barang yang Benar agar Paket Tidak Penyok | 2026-11-09 | [L26-cara-packing-barang.md](L26-cara-packing-barang.md) |
 | L27 | 3PL Adalah: Arti Third Party Logistics dan Cara Kerjanya | 2026-11-12 | [L27-3pl-adalah.md](L27-3pl-adalah.md) |
 | L28 | 3 Rumus Excel untuk Admin Gudang: SUMIF, XLOOKUP, dan Pivot Table | 2026-11-13 | [L28-rumus-excel-admin-gudang.md](L28-rumus-excel-admin-gudang.md) |
+| L29 | Last Mile Delivery: Perjalanan Terakhir Paket yang Paling Mahal | 2026-11-14 | [L29-last-mile-delivery.md](L29-last-mile-delivery.md) |
 
 Catatan: L01 sampai L20 tayang di tanggal yang sama (2026-11-02). Jangan posting semuanya sekaligus. Jadwalkan satu artikel per hari (atau satu sampai dua per hari) dan hitung urutan H, H+1, dan seterusnya dari hari kamu mulai mempromosikan artikel itu.
 

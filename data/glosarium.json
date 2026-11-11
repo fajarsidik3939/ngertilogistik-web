@@ -349,6 +349,16 @@
     "artikel": "L05"
   },
   {
+    "istilah": "Last mile",
+    "alias": [
+      "last mile delivery",
+      "last-mile",
+      "pengiriman jarak terakhir"
+    ],
+    "arti": "Tahap terakhir pengiriman, dari hub atau pusat distribusi terakhir sampai ke pintu penerima. Jaraknya paling pendek, tapi biayanya besar karena banyak titik berhenti dan sedikit paket per alamat.",
+    "artikel": "L29"
+  },
+  {
     "istilah": "Layanan nilai tambah",
     "alias": [
       "value-added services",
@@ -389,6 +399,14 @@
     ],
     "arti": "Kegiatan mengatur aliran dan penyimpanan barang beserta informasinya, dari titik asal sampai ke pemakai, agar tepat jumlah, waktu, dan tempat. Cakupannya transportasi, gudang, stok, kemasan, informasi, dan retur.",
     "artikel": "L01"
+  },
+  {
+    "istilah": "Middle mile",
+    "alias": [
+      "first mile"
+    ],
+    "arti": "Bagian tengah perjalanan paket, antar hub atau antar kota, biasanya dengan kendaraan besar yang membawa banyak paket ke sedikit tujuan. Sebelumnya ada first mile (penjual ke hub awal), sesudahnya last mile.",
+    "artikel": "L29"
   },
   {
     "istilah": "Misplaced inventory",

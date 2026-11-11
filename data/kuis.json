@@ -1706,5 +1706,66 @@
         "bahas": "SUMIF hanya menjumlah baris SKU-A01: 12 + 8 + 20 = 40. Baris SKU lain tidak ikut dijumlah."
       }
     ]
+  },
+  "L29": {
+    "slug": "last-mile-delivery",
+    "judul": "Last Mile Delivery: Perjalanan Terakhir Paket yang Paling Mahal",
+    "soal": [
+      {
+        "q": "Apa yang dimaksud dengan last mile delivery?",
+        "opsi": [
+          "Pengiriman antar kota dengan truk besar",
+          "Perjalanan terakhir paket dari hub terakhir ke pintu penerima",
+          "Penjemputan paket dari gudang penjual",
+          "Pengiriman kembali barang retur ke penjual"
+        ],
+        "jawab": 1,
+        "bahas": "Last mile delivery adalah tahap terakhir pengiriman, dari hub atau pusat distribusi terakhir sampai ke tangan penerima."
+      },
+      {
+        "q": "Menurut Statista, berapa porsi last mile dari total biaya pengiriman pada 2023?",
+        "opsi": [
+          "21 persen",
+          "36 persen",
+          "41 persen",
+          "53 persen"
+        ],
+        "jawab": 3,
+        "bahas": "Statista mencatat porsi last mile 53 persen dari total biaya pengiriman pada 2023, naik dari 41 persen pada 2018."
+      },
+      {
+        "q": "Tahap perjalanan paket antar hub atau antar kota, biasanya dengan truk besar, disebut apa?",
+        "opsi": [
+          "Middle mile",
+          "First mile",
+          "Last mile",
+          "Cross-docking"
+        ],
+        "jawab": 0,
+        "bahas": "Middle mile adalah perjalanan antar hub atau antar kota. Kendaraannya besar, paketnya banyak, tujuannya sedikit."
+      },
+      {
+        "q": "Mana yang BUKAN penyebab mahalnya last mile?",
+        "opsi": [
+          "Banyak titik berhenti dengan sedikit paket per alamat",
+          "Penerima tidak ada sehingga harus antar ulang",
+          "Truk besar membawa ribuan paket ke satu tujuan",
+          "Alamat yang sulit dicari"
+        ],
+        "jawab": 2,
+        "bahas": "Truk besar ke satu tujuan adalah ciri middle mile yang justru efisien. Last mile mahal karena banyak berhenti, alamat sulit, kemacetan, dan antar ulang."
+      },
+      {
+        "q": "Apa yang bisa dilakukan penerima supaya paket sampai di percobaan pertama?",
+        "opsi": [
+          "Menulis alamat singkat tanpa RT/RW",
+          "Menonaktifkan nomor telepon",
+          "Menulis alamat lengkap dengan patokan dan nomor telepon aktif",
+          "Meminta paket dikirim lewat beberapa hub"
+        ],
+        "jawab": 2,
+        "bahas": "Alamat lengkap dengan patokan dan nomor telepon aktif membantu kurir menemukan alamat dan menghubungi penerima, sehingga mengurangi gagal kirim."
+      }
+    ]
   }
 }

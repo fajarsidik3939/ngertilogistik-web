@@ -1,0 +1,24 @@
+<style>
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.two .card{padding:18px 18px 20px}
+.two svg{display:block;width:100%;height:190px;background:#0F1930;border-radius:12px;margin-bottom:14px}
+.tag{font:700 15px 'JetBrains Mono';letter-spacing:.1em;padding:5px 10px;border-radius:7px;display:inline-block}
+.tag.ok{background:rgba(126,226,168,.14)}.tag.bad{background:rgba(255,138,122,.14)}
+.big{font:800 40px/1.1 'Plus Jakarta Sans';color:#FFC400;margin:8px 0 4px}
+</style>
+<span class="k">Contoh</span>
+<h1>Satu tujuan vs <em>banyak alamat</em></h1>
+<p class="sub">Contoh, angka fiktif: kenapa biaya per paket di last mile lebih besar.</p>
+<div class="two">
+ <div class="card"><svg viewBox="0 0 400 190">
+  <rect x="40" y="70" width="190" height="80" rx="6" fill="#CBD2DC"/><rect x="230" y="96" width="60" height="54" rx="6" fill="#9CA3AF"/>
+  <circle cx="90" cy="156" r="14" fill="#0B1220" stroke="#9CA3AF" stroke-width="6"/><circle cx="260" cy="156" r="14" fill="#0B1220" stroke="#9CA3AF" stroke-width="6"/>
+  <path d="M300 120 H340" stroke="#FFC400" stroke-width="6" stroke-linecap="round"/><circle cx="356" cy="120" r="14" fill="#FFC400"/></svg>
+  <span class="tag ok">MIDDLE MILE</span><div class="big">2.000 paket</div><div class="d">1 tujuan, cukup 1 kali bongkar.</div></div>
+ <div class="card"><svg viewBox="0 0 400 190">
+  <path d="M30 150 C90 150 80 40 150 50 S210 160 260 120 S330 30 380 60" stroke="#FFC400" stroke-width="4" stroke-dasharray="8 8" fill="none"/>
+  <g fill="#FFC400"><circle cx="30" cy="150" r="8"/><circle cx="68" cy="122" r="8"/><circle cx="96" cy="70" r="8"/><circle cx="150" cy="50" r="8"/><circle cx="196" cy="104" r="8"/><circle cx="232" cy="134" r="8"/><circle cx="270" cy="114" r="8"/><circle cx="306" cy="70" r="8"/><circle cx="342" cy="44" r="8"/><circle cx="380" cy="60" r="8"/></g>
+  <g fill="#FF8A7A"><circle cx="120" cy="150" r="8"/><circle cx="340" cy="150" r="8"/><circle cx="220" cy="30" r="8"/></g></svg>
+  <span class="tag bad">LAST MILE</span><div class="big">40 paket, 35 alamat</div><div class="d">35 kali berhenti. 3 penerima tidak ada, antar ulang besok.</div></div>
+</div>
+{{FOOT}}
