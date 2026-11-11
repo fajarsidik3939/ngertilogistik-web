@@ -1,0 +1,28 @@
+<style>
+.wrap{display:grid;grid-template-columns:1.5fr 50px 1fr;align-items:center;margin-top:26px}
+table{width:100%;border-collapse:separate;border-spacing:0 6px;font:700 20px 'JetBrains Mono'}
+th{font-size:15px;color:#9AA8C0;text-align:left;padding:0 14px;letter-spacing:.08em}
+td{background:#14203A;padding:11px 14px;color:#9AA8C0}
+td:first-child{border-radius:10px 0 0 10px}td:last-child{border-radius:0 10px 10px 0;text-align:right}
+tr.hit td{background:#2A2A1C;color:#FFC400}
+.arr{font:800 34px 'JetBrains Mono';color:#FFC400;text-align:center}
+.res{text-align:center;border-color:#FFC400}
+.big{font:800 84px/1 'Plus Jakarta Sans';color:#FFC400;margin:8px 0}
+.f{font:700 15px/1.5 'JetBrains Mono';color:#B9C4D6;background:#0F1930;border-radius:10px;padding:10px;margin-top:10px}
+</style>
+<span class="k">Contoh SUMIF</span>
+<h1>Hanya baris <em>SKU-A01</em> yang dijumlah</h1>
+<p class="sub">Contoh, data fiktif: lima baris barang keluar.</p>
+<div class="wrap">
+ <table><tr><th>KODE SKU</th><th style="text-align:right">KELUAR</th></tr>
+  <tr class="hit"><td>SKU-A01</td><td>12</td></tr>
+  <tr><td>SKU-B07</td><td>5</td></tr>
+  <tr class="hit"><td>SKU-A01</td><td>8</td></tr>
+  <tr><td>SKU-B07</td><td>15</td></tr>
+  <tr class="hit"><td>SKU-A01</td><td>20</td></tr>
+ </table>
+ <div class="arr">→</div>
+ <div class="card res"><div class="n">TOTAL SKU-A01</div><div class="big">40</div><div class="d">12 + 8 + 20</div>
+  <div class="f">=SUMIF(B2:B6,<br>"SKU-A01",D2:D6)</div></div>
+</div>
+{{FOOT}}

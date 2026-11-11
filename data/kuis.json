@@ -1645,5 +1645,66 @@
         "bahas": "3PL mengerjakan sendiri layanan yang dikontrakkan. 4PL berperan mengatur dan mengoordinasikan beberapa penyedia, sehingga disebut juga lead logistics provider."
       }
     ]
+  },
+  "L28": {
+    "slug": "rumus-excel-admin-gudang",
+    "judul": "3 Rumus Excel untuk Admin Gudang: SUMIF, XLOOKUP, dan Pivot Table",
+    "soal": [
+      {
+        "q": "Rumus Excel apa yang dipakai untuk menjumlah total barang keluar khusus satu SKU?",
+        "opsi": [
+          "VLOOKUP",
+          "SUMIF",
+          "Pivot table",
+          "COUNT"
+        ],
+        "jawab": 1,
+        "bahas": "SUMIF menjumlahkan nilai dalam rentang yang memenuhi syarat tertentu, misalnya hanya baris dengan kode SKU yang dicari."
+      },
+      {
+        "q": "Saat memakai VLOOKUP untuk mencari data SKU, argumen terakhir sebaiknya diisi apa?",
+        "opsi": [
+          "TRUE",
+          "Dikosongkan saja",
+          "Nomor baris",
+          "FALSE"
+        ],
+        "jawab": 3,
+        "bahas": "FALSE membuat VLOOKUP mencari yang sama persis. Kalau dikosongkan, Excel memakai pencocokan perkiraan dan hasilnya bisa salah tanpa terlihat."
+      },
+      {
+        "q": "Apa kelebihan XLOOKUP dibanding VLOOKUP?",
+        "opsi": [
+          "Kolom hasil boleh di kiri maupun kanan kolom kode",
+          "Bisa dipakai di semua versi Excel lama",
+          "Otomatis membuat pivot table",
+          "Hanya bisa mencari angka"
+        ],
+        "jawab": 0,
+        "bahas": "XLOOKUP memakai kolom cari dan kolom hasil yang terpisah, jadi bisa mencari ke arah mana saja. VLOOKUP hanya bisa mencari di kolom paling kiri tabel."
+      },
+      {
+        "q": "Data pivot table tidak berubah padahal data sumber sudah ditambah. Apa yang harus dilakukan?",
+        "opsi": [
+          "Hapus pivot table dan buat ulang setiap hari",
+          "Ganti semua angka jadi teks",
+          "Klik kanan di pivot table lalu pilih Refresh",
+          "Tutup dan buka ulang komputer"
+        ],
+        "jawab": 2,
+        "bahas": "Pivot table tidak memperbarui dirinya sendiri. Klik kanan di dalamnya lalu pilih Refresh setiap kali data sumber berubah."
+      },
+      {
+        "q": "Dalam contoh artikel, SKU-A01 keluar 12, 8, dan 20. Berapa hasil SUMIF untuk SKU-A01?",
+        "opsi": [
+          "20",
+          "35",
+          "40",
+          "60"
+        ],
+        "jawab": 2,
+        "bahas": "SUMIF hanya menjumlah baris SKU-A01: 12 + 8 + 20 = 40. Baris SKU lain tidak ikut dijumlah."
+      }
+    ]
   }
 }

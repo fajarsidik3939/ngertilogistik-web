@@ -521,6 +521,15 @@
     "artikel": "L22"
   },
   {
+    "istilah": "Pivot table",
+    "alias": [
+      "PivotTable",
+      "tabel pivot"
+    ],
+    "arti": "Fitur spreadsheet untuk merangkum, menghitung, dan menganalisis banyak baris data menjadi tabel ringkas, misalnya rekap barang keluar per kategori. Perlu di-Refresh setiap kali data sumber berubah.",
+    "artikel": "L28"
+  },
+  {
     "istilah": "PO",
     "alias": [
       "purchase order",
@@ -651,6 +660,14 @@
     "artikel": "L19"
   },
   {
+    "istilah": "SUMIF",
+    "alias": [
+      "rumus SUMIF"
+    ],
+    "arti": "Rumus Excel untuk menjumlahkan angka yang memenuhi satu syarat, misalnya total barang keluar untuk satu kode SKU. Untuk lebih dari satu syarat dipakai SUMIFS.",
+    "artikel": "L28"
+  },
+  {
     "istilah": "Supply chain",
     "alias": [
       "rantai pasok",
@@ -706,6 +723,15 @@
     "alias": [],
     "arti": "Metode picking yang mengelompokkan pesanan menjadi gelombang, misalnya berdasarkan jadwal truk, tujuan pengiriman, atau prioritas, lalu mengambilnya berurutan. Butuh perencanaan matang karena sulit diubah setelah dimulai.",
     "artikel": "L22"
+  },
+  {
+    "istilah": "XLOOKUP",
+    "alias": [
+      "VLOOKUP",
+      "rumus lookup"
+    ],
+    "arti": "Rumus Excel untuk mencari data dari tabel lain berdasarkan kunci, misalnya lokasi rak berdasarkan kode SKU. XLOOKUP bisa mencari ke arah mana saja; VLOOKUP hanya dari kolom paling kiri.",
+    "artikel": "L28"
   },
   {
     "istilah": "Zone picking",
