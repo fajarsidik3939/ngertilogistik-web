@@ -136,13 +136,13 @@
   },
   {
    "source": "/materi/l25-salah-kaprah-gudang-cuma-tempat-numpuk-barang",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/fungsi-gudang-dalam-logistik",
+   "permanent": true
   },
   {
    "source": "/materi/l26-packing-yang-benar-supaya-barang-aman",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/cara-packing-barang",
+   "permanent": true
   },
   {
    "source": "/materi/l27-3pl-itu-apa",
