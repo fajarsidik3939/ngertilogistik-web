@@ -1584,5 +1584,66 @@
         "bahas": "Bunyi atau gerakan berarti masih ada celah. Buka lagi paketnya dan tambahkan pengisi sampai barang tidak bergeser."
       }
     ]
+  },
+  "L27": {
+    "slug": "3pl-adalah",
+    "judul": "3PL Adalah: Arti Third Party Logistics dan Cara Kerjanya",
+    "soal": [
+      {
+        "q": "Apa arti 3PL?",
+        "opsi": [
+          "Perusahaan pihak ketiga yang mengerjakan kegiatan logistik untuk perusahaan lain",
+          "Tiga tahap proses packing di gudang",
+          "Pemasok bahan baku tingkat ketiga",
+          "Aplikasi untuk melacak paket"
+        ],
+        "jawab": 0,
+        "bahas": "3PL atau third party logistics adalah pihak ketiga yang mengerjakan kegiatan logistik, seperti menyimpan, mengemas, dan mengirim barang, untuk perusahaan lain."
+      },
+      {
+        "q": "Saat memakai 3PL, apa yang sebenarnya dialihkan ke 3PL?",
+        "opsi": [
+          "Kepemilikan barang",
+          "Pekerjaan logistiknya",
+          "Hak menjual produk",
+          "Merek dagang penjual"
+        ],
+        "jawab": 1,
+        "bahas": "Barang tetap milik penjual. Yang dititipkan ke 3PL adalah pekerjaannya, mulai dari menerima, menyimpan, mengemas, sampai mengirim."
+      },
+      {
+        "q": "Menurut artikel, mengapa biaya 3PL bisa naik cepat saat volume pesanan naik?",
+        "opsi": [
+          "Karena 3PL selalu menaikkan tarif di bulan promo",
+          "Karena biaya sewa gudang penjual ikut naik",
+          "Karena banyak layanan dihitung per aktivitas, misalnya per pesanan",
+          "Karena barang harus dikirim dengan pesawat"
+        ],
+        "jawab": 2,
+        "bahas": "Tarif 3PL biasanya dipecah per aktivitas seperti penyimpanan dan ambil-kemas per pesanan. Saat jumlah pesanan naik, biaya per aktivitas itu ikut naik."
+      },
+      {
+        "q": "Tantangan apa yang disebut artikel bisa membuat penjual baru tahu ada masalah setelah pelanggan mengeluh?",
+        "opsi": [
+          "Gudang terlalu besar",
+          "Kardus yang dipakai terlalu kecil",
+          "Kurir datang terlambat",
+          "Visibilitas atau akses data stok yang terbatas"
+        ],
+        "jawab": 3,
+        "bahas": "Kalau penjual tidak bisa melihat stok dan status pesanan sendiri, masalah baru ketahuan setelah ada keluhan. Karena itu akses data stok wajib disepakati sejak awal."
+      },
+      {
+        "q": "Apa perbedaan utama 3PL dan 4PL?",
+        "opsi": [
+          "3PL hanya untuk ekspor, 4PL hanya untuk dalam negeri",
+          "3PL mengerjakan sendiri kegiatan logistik, 4PL mengoordinasikan beberapa penyedia",
+          "4PL selalu lebih murah daripada 3PL",
+          "Tidak ada bedanya, hanya beda nama"
+        ],
+        "jawab": 1,
+        "bahas": "3PL mengerjakan sendiri layanan yang dikontrakkan. 4PL berperan mengatur dan mengoordinasikan beberapa penyedia, sehingga disebut juga lead logistics provider."
+      }
+    ]
   }
 }

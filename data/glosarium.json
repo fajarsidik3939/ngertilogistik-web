@@ -1,5 +1,23 @@
 [
   {
+    "istilah": "3PL",
+    "alias": [
+      "third party logistics",
+      "third-party logistics"
+    ],
+    "arti": "Perusahaan pihak ketiga yang mengerjakan kegiatan logistik untuk perusahaan lain, misalnya menyimpan, mengemas, dan mengirim barang. Barang tetap milik pemiliknya; yang dialihkan adalah pekerjaannya.",
+    "artikel": "L27"
+  },
+  {
+    "istilah": "4PL",
+    "alias": [
+      "fourth party logistics",
+      "lead logistics provider"
+    ],
+    "arti": "Penyedia yang mengatur dan mengoordinasikan beberapa penyedia logistik sekaligus, bukan hanya mengerjakan satu layanan sendiri.",
+    "artikel": "L27"
+  },
+  {
     "istilah": "7R",
     "alias": [
       "seven rights of logistics",
@@ -224,6 +242,14 @@
     ],
     "arti": "Alat untuk memindahkan palet dari dok ke rak, menyusun barang di rak tinggi, dan memuat palet ke truk. Di Indonesia, operator forklift wajib punya Lisensi K3.",
     "artikel": "L10"
+  },
+  {
+    "istilah": "Freight forwarder",
+    "alias": [
+      "forwarder"
+    ],
+    "arti": "Pihak yang mengatur pengiriman barang untuk pemilik barang, tetapi tidak mengangkut barangnya sendiri.",
+    "artikel": "L27"
   },
   {
     "istilah": "Fumigasi",
