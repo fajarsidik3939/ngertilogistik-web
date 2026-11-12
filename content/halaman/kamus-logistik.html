@@ -1,0 +1,165 @@
+<style>
+.pk-hero{padding:60px 0 48px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.pk-hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:640px;height:640px;background:radial-gradient(closest-side,rgba(255,196,0,.14),transparent);pointer-events:none}
+.pk-hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative}
+.pk-hero h1{font-size:clamp(36px,5.4vw,62px);font-weight:800;line-height:1.08;margin:0 0 6px}
+.pk-hero .lead{max-width:600px}
+.pk-tag{display:inline-flex;align-items:center;gap:8px;font:700 13px/1 var(--fm);letter-spacing:.06em;text-transform:uppercase;color:var(--acc);background:rgba(255,196,0,.08);border:1px solid rgba(255,196,0,.3);padding:9px 14px;border-radius:999px;margin-bottom:18px}
+.pk-checks{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:9px}
+.pk-checks li{display:flex;gap:10px;align-items:flex-start;color:var(--txt);font-size:16.5px;line-height:1.45}
+.pk-checks li:before{content:"✓";flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--acc);color:#0B1220;font:800 13px/1 var(--fs);margin-top:1px}
+.pk-buy{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.pk-buy .btn{font-size:17px;padding:16px 30px}
+.pk-price{font:800 30px/1 var(--fs);color:var(--ink)}
+.pk-price small{display:block;font:500 13px/1.4 var(--fs);color:var(--mute);margin-top:6px}
+.pk-fine{font-size:14px;color:var(--mute);margin:14px 0 0}
+.pk-stack{position:relative;height:440px}
+.pk-stack img{position:absolute;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.5);border:1px solid var(--line)}
+.pk-stack .a{width:58%;left:0;top:30px;transform:rotate(-4deg);z-index:2}
+.pk-stack .b{width:52%;right:0;top:0;transform:rotate(3deg);z-index:1}
+.pk-stack .sheet{position:absolute;left:18%;bottom:0;width:72%;z-index:3}
+.sheet{background:#F7F9FC;border-radius:12px;padding:12px;color:#0B1220;box-shadow:0 24px 60px rgba(0,0,0,.55);font-family:var(--fs)}
+.sheet-h{display:flex;justify-content:space-between;align-items:center;font:800 12px/1 var(--fs);margin-bottom:8px}
+.sheet-h i{font-style:normal;font:700 9px/1 var(--fm);background:#1F3A5F;color:#fff;padding:5px 7px;border-radius:4px}
+.sheet table{width:100%;border-collapse:collapse;font:500 10.5px/1.3 var(--fs)}
+.sheet th{background:#F28C28;color:#fff;font-weight:700;text-align:left;padding:5px 6px}
+.sheet td{padding:5px 6px;border-bottom:1px solid #E3E8F0}
+.sheet td.n{text-align:right;font-family:var(--fm)}
+.st{font:700 9px/1 var(--fm);padding:3px 6px;border-radius:4px}
+.st.g{background:#D9F2E3;color:#067647}.st.y{background:#FDEBD0;color:#B54708}.st.r{background:#FADBD8;color:#B42318}
+.pk-story{max-width:760px}
+.pk-story p{font-size:18px;color:var(--txt);margin:0 0 16px;line-height:1.7}
+.pk-story p.big{font-size:clamp(22px,2.6vw,28px);font-weight:800;color:var(--ink);line-height:1.35}
+.pk-pain{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+.pk-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.pk-card h3{font-size:19px;font-weight:800;margin:0 0 8px}
+.pk-card p{margin:0;color:var(--mute);font-size:15.5px;line-height:1.6}
+.pk-num{font:800 13px/1 var(--fm);color:var(--acc);display:block;margin-bottom:12px}
+.pk-vs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pk-vs>div{border-radius:var(--r);padding:26px;border:1px solid var(--line)}
+.pk-vs .before{background:var(--card)}
+.pk-vs .after{background:linear-gradient(160deg,rgba(255,196,0,.1),rgba(255,196,0,.02));border-color:rgba(255,196,0,.45)}
+.pk-vs h3{font-size:20px;font-weight:800;margin:0 0 14px}
+.pk-vs ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.pk-vs li{display:flex;gap:10px;color:var(--txt);font-size:16px;line-height:1.5}
+.pk-vs .before li:before{content:"✕";color:#E0453A;font-weight:800;flex:none}
+.pk-vs .after li:before{content:"✓";color:var(--acc);font-weight:800;flex:none}
+.pk-items{display:grid;gap:22px}
+.pk-item{display:grid;grid-template-columns:320px 1fr;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;align-items:start}
+.pk-item img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.pk-item h3{font-size:24px;font-weight:800;margin:4px 0 10px}
+.pk-item p{color:var(--txt);margin:0 0 12px;font-size:16px}
+.pk-item ul{margin:0;padding-left:18px;color:var(--txt);font-size:15.5px}
+.pk-item li{margin-bottom:6px}.pk-item li b{color:var(--ink)}
+.pk-mini{background:linear-gradient(160deg,#0F1A30,#0B1220);border-radius:12px;padding:14px;border:1px solid var(--line)}
+.pk-mini .sheet table{font-size:10px}.pk-mini .sheet th,.pk-mini .sheet td{padding:5px 4px}
+.pk-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s;padding:0;margin:0}
+.pk-steps li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;color:var(--txt);font-size:16px}
+.pk-steps li:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--acc);color:#0B1220;font-weight:800;margin-bottom:12px}
+.pk-fit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pk-fit h3{font-size:19px;font-weight:800;margin:0 0 10px}
+.pk-fit ul{margin:0;padding-left:18px;color:var(--txt)}
+.pk-offer{max-width:620px;margin:0 auto;background:var(--card);border:2px solid var(--acc);border-radius:24px;padding:34px 30px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.pk-offer h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;margin:0 0 6px}
+.pk-offer .sub{color:var(--mute);margin:0 0 22px}
+.pk-offer ul{list-style:none;padding:0;margin:0 0 26px;text-align:left;display:grid;gap:12px}
+.pk-offer li{display:flex;gap:12px;color:var(--txt);font-size:16px;line-height:1.45;border-bottom:1px dashed var(--line);padding-bottom:12px}
+.pk-offer li:last-child{border-bottom:0;padding-bottom:0}
+.pk-offer li:before{content:"✓";flex:none;color:var(--acc);font-weight:800}
+.pk-offer li b{color:var(--ink)}
+.pk-offer .pk-price{font-size:44px;margin-bottom:6px}
+.pk-offer .btn{width:100%;font-size:18px;padding:18px 26px;margin-top:16px}
+.pk-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:16px;font-size:14px;color:var(--mute)}
+.pk-final{text-align:center;padding:64px 0}
+.pk-final h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin:0 0 10px}
+.pk-final p{color:var(--mute);margin:0 auto 24px;max-width:560px}
+.pk-final .pk-buy{justify-content:center}
+.pk-bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(11,18,32,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .25s}
+.pk-bar.on{transform:none}
+.pk-bar b{display:block;font-size:15px}.pk-bar span{font-size:13px;color:var(--mute)}
+.pk-bar .btn{padding:12px 20px;font-size:15px}
+@media(max-width:900px){.pk-hero-in{grid-template-columns:1fr}.pk-stack{height:380px;max-width:480px}.pk-pain,.pk-steps,.pk-vs,.pk-fit{grid-template-columns:1fr}.pk-item{grid-template-columns:1fr}.pk-item img{max-width:300px}.pk-bar{display:flex}.foot{padding-bottom:80px}}
+@media(max-width:480px){.pk-stack{height:320px}.sheet table{font-size:9.5px}.pk-hero{padding-top:36px}.pk-offer{padding:28px 20px}.pk-buy .btn{width:100%}}
+.pk-cover{position:relative}.pk-cover img{width:100%;max-width:520px;display:block;margin:0 auto;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid var(--line)}
+.pk-item .vis img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.pk-item .vis.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pk-bundle li span{margin-left:auto;color:var(--mute);font-family:var(--fm);font-size:14px;white-space:nowrap}
+.pk-old{font-size:18px;color:var(--mute);text-decoration:line-through;margin-bottom:4px}
+.pk-note{font-size:13px;color:var(--mute);margin-top:10px}
+</style>
+<main id="isi">
+
+<!-- ATTENTION -->
+<section class="pk-hero"><div class="wrap pk-hero-in">
+<div>
+<span class="pk-tag">Kamus Inggris – Indonesia</span>
+<h1>Istilah logistik bahasa Inggris, <em>sekarang langsung paham.</em></h1>
+<p class="lead">250 istilah gudang, pengiriman, ekspor-impor, pengadaan, produksi, KPI, dan sistem, dijelaskan singkat dalam Bahasa Indonesia.</p>
+<ul class="pk-checks"><li>250 istilah dalam 8 bidang</li><li>Padanan/kepanjangan + arti singkat</li><li>Indeks A–Z untuk cari cepat</li></ul>
+<div class="pk-buy"><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="hero">Ambil kamusnya</a><div class="pk-price">{{HARGA}}<small>Sekali bayar · unduh lewat Lynk.id</small></div></div>
+</div>
+<div class="pk-cover"><img src="/img/produk/kamus-logistik-cover.webp" alt="Kamus Logistik" width="720" height="720" loading="eager"></div>
+</div></section>
+
+<!-- INTEREST -->
+<section class="sec"><div class="wrap">
+<div class="pk-story">
+<span class="eyebrow">Kenal situasi ini?</span>
+<p class="big">Di briefing pagi, atasan bilang "cek dulu IRA-nya, lalu follow up POD yang belum balik." Kamu mengangguk, lalu diam-diam mencari artinya di Google.</p>
+<p>Di gudang, di dokumen ekspor-impor, dan di sistem, istilah bahasa Inggris dipakai setiap hari. Penjelasan yang singkat dan berbahasa Indonesia jarang ada di satu tempat.</p>
+</div>
+<div class="pk-pain"><div class="pk-card"><span class="pk-num">01</span><h3>Istilah campur aduk</h3><p>FIFO, FEFO, cycle count, W/M, demurrage dipakai tanpa dijelaskan.</p></div><div class="pk-card"><span class="pk-num">02</span><h3>Dokumen bahasa Inggris</h3><p>B/L, packing list, dan invoice penuh singkatan.</p></div><div class="pk-card"><span class="pk-num">03</span><h3>Penjelasan tersebar</h3><p>Mencari arti satu per satu memakan waktu.</p></div></div>
+<p class="pk-story" style="font-size:18px;color:var(--txt);margin:0">Kamu tidak perlu menghafal semuanya. Cukup punya <b style="color:var(--ink)">rujukan yang cepat dibuka.</b></p>
+</div></section>
+
+<!-- DESIRE -->
+<section class="sec alt"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Bayangkan kalau</span><h2>Belajar istilah <em>sebelum dan sesudah</em></h2></div>
+<div class="pk-vs">
+<div class="before"><h3>Sebelum</h3><ul><li>Mencari arti istilah satu per satu</li><li>Penjelasan dalam bahasa Inggris lagi</li><li>Istilah gudang dan ekspor-impor bercampur</li><li>Bingung singkatan di dokumen</li></ul></div>
+<div class="after"><h3>Dengan Kamus Logistik</h3><ul><li>250 istilah dalam satu PDF</li><li>Arti singkat dalam Bahasa Indonesia</li><li>Dikelompokkan per bidang dan diurutkan A–Z</li><li>Indeks A–Z dan bisa dicari dengan Ctrl+F</li></ul></div>
+</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Isi paket</span><h2>250 istilah, <em>8 bidang</em></h2></div>
+<div class="pk-items"><div class="pk-item"><div class="vis"><img src="/img/produk/kamus-isi.webp" alt="Isi kamus" loading="lazy"></div><div><span class="kick">PDF A5</span><h3>Isi kamus</h3><p>Setiap istilah: istilah asli, padanan atau kepanjangan, dan arti singkat.</p><ul><li>Gudang &amp; Inventory (68 istilah)</li><li>Transportasi &amp; Pengiriman (45)</li><li>Ekspor-Impor &amp; Kepabeanan (49)</li><li>Pengadaan &amp; Supply Chain (26)</li><li>Produksi &amp; PPIC (17)</li><li>KPI, Biaya &amp; Analisis (18) · Teknologi &amp; Sistem (13) · Kemasan, K3 &amp; Handling (14)</li><li>Indeks A–Z</li></ul></div></div></div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Cara pakai</span><h2>Bisa dipakai <em>hari ini juga</em></h2></div>
+<ol class="pk-steps"><li>Bayar lewat Lynk.id, lalu unduh file ZIP.</li><li>Buka file dan ikuti panduan singkat di dalamnya.</li><li>Simpan PDF di HP, buka saat ketemu istilah baru.</li></ol>
+<div class="pk-fit" style="margin-top:22px">
+<div class="pk-card"><h3>Cocok untuk kamu yang</h3><ul><li>Staf baru di gudang, ekspedisi, PPIC, atau purchasing</li><li>Mahasiswa logistik dan supply chain</li><li>Sedang persiapan interview atau membaca dokumen berbahasa Inggris</li></ul></div>
+<div class="pk-card"><h3>Biar jelas dari awal</h3><ul><li>Ini kamus ringkas, bukan buku teks. Setiap istilah dijelaskan singkat.</li><li>Untuk aturan resmi (misalnya kepabeanan), tetap cek ketentuan terbaru dari instansi terkait.</li></ul></div>
+</div>
+</div></section>
+
+<!-- ACTION -->
+<section class="sec" id="beli"><div class="wrap">
+<div class="pk-offer">
+<span class="eyebrow">Semua yang kamu dapat</span>
+<h2>Kamus <em>Logistik</em></h2>
+<p class="sub">Rujukan istilah logistik yang cepat dibuka.</p>
+<ul><li><span><b>250 istilah</b> · Inggris → Indonesia</span></li><li><span><b>8 bidang</b> · gudang sampai sistem</span></li><li><span><b>Indeks A–Z</b> · bisa Ctrl+F</span></li></ul>
+<div class="pk-price">{{HARGA}}</div>
+<a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="offer">Ambil Kamus Logistik</a>
+<div class="pk-trust"><span>Sekali bayar</span><span>PDF A5</span><span>Pembayaran lewat Lynk.id</span></div>
+</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap narrow">
+<div class="faq" style="margin-top:0"><h2>Masih ragu? Ini jawabannya</h2><details><summary>Formatnya apa?</summary><div><p>PDF ukuran A5, nyaman dibaca di HP dan bisa dicari dengan Ctrl+F.</p></div></details><details><summary>Bedanya dengan glosarium gratis di situs ini?</summary><div><p>Kamus ini berisi 250 istilah dalam satu PDF yang bisa disimpan dan dibuka tanpa internet, dikelompokkan per bidang dengan indeks A–Z.</p></div></details>
+<details><summary>Boleh dibagikan ke teman atau dijual lagi?</summary><div><p>Tidak. File untuk dipakai pribadi atau di tempat kerja/usaha pembeli, tidak untuk dijual ulang atau dibagikan ulang.</p></div></details>
+<details><summary>Bagaimana cara menerima filenya?</summary><div><p>Pembayaran dan pengiriman file dilakukan lewat Lynk.id. Kalau file tidak bisa dibuka, kirim DM ke @ngertilogistik.</p></div></details>
+</div>
+</div></section>
+
+<section class="pk-final"><div class="wrap">
+<h2>Istilah berikutnya, <em>tidak perlu googling lagi.</em></h2>
+<p>250 istilah logistik dalam Bahasa Indonesia, satu PDF.</p>
+<div class="pk-buy"><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="final">Ambil kamusnya</a><div class="pk-price">{{HARGA}}<small>Sekali bayar · unduh lewat Lynk.id</small></div></div>
+</div></section>
+</main>
+<div class="pk-bar" id="pkBar"><div><b>Kamus Logistik</b><span>{{HARGA}} · sekali bayar</span></div><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="bar">Ambil sekarang</a></div>
+<script>(function(){var bar=document.getElementById('pkBar'),hero=document.querySelector('.pk-hero'),offer=document.getElementById('beli');if(!bar||!('IntersectionObserver' in window))return;var hv=true,ov=false;function u(){bar.classList.toggle('on',!hv&&!ov)}new IntersectionObserver(function(e){hv=e[0].isIntersecting;u()}).observe(hero);new IntersectionObserver(function(e){ov=e[0].isIntersecting;u()}).observe(offer)})();</script>

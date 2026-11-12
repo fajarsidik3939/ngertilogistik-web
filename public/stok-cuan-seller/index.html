@@ -1,0 +1,182 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stok &amp; Cuan: Template Excel Stok &amp; Laba Online Seller | Ngerti Logistik</title><meta name="description" content="Template Excel untuk online seller: laba bersih per channel setelah potongan marketplace, stok multi-gudang, produk laris &amp; lambat, kalkulator harga jual dan ongkir.">
+<link rel="canonical" href="https://ngertilogistik.web.id/stok-cuan-seller"><meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:locale" content="id_ID"><meta property="og:type" content="website"><meta property="og:site_name" content="Ngerti Logistik">
+<meta property="og:title" content="Stok &amp; Cuan: Template Excel Stok &amp; Laba Online Seller | Ngerti Logistik"><meta property="og:description" content="Template Excel untuk online seller: laba bersih per channel setelah potongan marketplace, stok multi-gudang, produk laris &amp; lambat, kalkulator harga jual dan ongkir.">
+<meta property="og:url" content="https://ngertilogistik.web.id/stok-cuan-seller"><meta property="og:image" content="https://ngertilogistik.web.id/img/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Ngerti Logistik" href="/feed.xml">
+<link rel="preload" href="/fonts/jakarta-800.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/serif-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css"></head><body><header class="nav"><div class="wrap nav-in">
+<span class="brand"><img src="/img/logo-256.png" alt="" width="34" height="34"><span>Ngerti <b>Logistik</b></span></span>
+<a class="btn-sm" href="#beli">Lihat penawaran</a></div></header><style>
+.pk-hero{padding:60px 0 48px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.pk-hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:640px;height:640px;background:radial-gradient(closest-side,rgba(255,196,0,.14),transparent);pointer-events:none}
+.pk-hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative}
+.pk-hero h1{font-size:clamp(36px,5.4vw,62px);font-weight:800;line-height:1.08;margin:0 0 6px}
+.pk-hero .lead{max-width:600px}
+.pk-tag{display:inline-flex;align-items:center;gap:8px;font:700 13px/1 var(--fm);letter-spacing:.06em;text-transform:uppercase;color:var(--acc);background:rgba(255,196,0,.08);border:1px solid rgba(255,196,0,.3);padding:9px 14px;border-radius:999px;margin-bottom:18px}
+.pk-checks{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:9px}
+.pk-checks li{display:flex;gap:10px;align-items:flex-start;color:var(--txt);font-size:16.5px;line-height:1.45}
+.pk-checks li:before{content:"✓";flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--acc);color:#0B1220;font:800 13px/1 var(--fs);margin-top:1px}
+.pk-buy{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.pk-buy .btn{font-size:17px;padding:16px 30px}
+.pk-price{font:800 30px/1 var(--fs);color:var(--ink)}
+.pk-price small{display:block;font:500 13px/1.4 var(--fs);color:var(--mute);margin-top:6px}
+.pk-fine{font-size:14px;color:var(--mute);margin:14px 0 0}
+.pk-stack{position:relative;height:440px}
+.pk-stack img{position:absolute;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.5);border:1px solid var(--line)}
+.pk-stack .a{width:58%;left:0;top:30px;transform:rotate(-4deg);z-index:2}
+.pk-stack .b{width:52%;right:0;top:0;transform:rotate(3deg);z-index:1}
+.pk-stack .sheet{position:absolute;left:18%;bottom:0;width:72%;z-index:3}
+.sheet{background:#F7F9FC;border-radius:12px;padding:12px;color:#0B1220;box-shadow:0 24px 60px rgba(0,0,0,.55);font-family:var(--fs)}
+.sheet-h{display:flex;justify-content:space-between;align-items:center;font:800 12px/1 var(--fs);margin-bottom:8px}
+.sheet-h i{font-style:normal;font:700 9px/1 var(--fm);background:#1F3A5F;color:#fff;padding:5px 7px;border-radius:4px}
+.sheet table{width:100%;border-collapse:collapse;font:500 10.5px/1.3 var(--fs)}
+.sheet th{background:#F28C28;color:#fff;font-weight:700;text-align:left;padding:5px 6px}
+.sheet td{padding:5px 6px;border-bottom:1px solid #E3E8F0}
+.sheet td.n{text-align:right;font-family:var(--fm)}
+.st{font:700 9px/1 var(--fm);padding:3px 6px;border-radius:4px}
+.st.g{background:#D9F2E3;color:#067647}.st.y{background:#FDEBD0;color:#B54708}.st.r{background:#FADBD8;color:#B42318}
+.pk-story{max-width:760px}
+.pk-story p{font-size:18px;color:var(--txt);margin:0 0 16px;line-height:1.7}
+.pk-story p.big{font-size:clamp(22px,2.6vw,28px);font-weight:800;color:var(--ink);line-height:1.35}
+.pk-pain{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+.pk-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.pk-card h3{font-size:19px;font-weight:800;margin:0 0 8px}
+.pk-card p{margin:0;color:var(--mute);font-size:15.5px;line-height:1.6}
+.pk-num{font:800 13px/1 var(--fm);color:var(--acc);display:block;margin-bottom:12px}
+.pk-vs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pk-vs>div{border-radius:var(--r);padding:26px;border:1px solid var(--line)}
+.pk-vs .before{background:var(--card)}
+.pk-vs .after{background:linear-gradient(160deg,rgba(255,196,0,.1),rgba(255,196,0,.02));border-color:rgba(255,196,0,.45)}
+.pk-vs h3{font-size:20px;font-weight:800;margin:0 0 14px}
+.pk-vs ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.pk-vs li{display:flex;gap:10px;color:var(--txt);font-size:16px;line-height:1.5}
+.pk-vs .before li:before{content:"✕";color:#E0453A;font-weight:800;flex:none}
+.pk-vs .after li:before{content:"✓";color:var(--acc);font-weight:800;flex:none}
+.pk-items{display:grid;gap:22px}
+.pk-item{display:grid;grid-template-columns:320px 1fr;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;align-items:start}
+.pk-item img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.pk-item h3{font-size:24px;font-weight:800;margin:4px 0 10px}
+.pk-item p{color:var(--txt);margin:0 0 12px;font-size:16px}
+.pk-item ul{margin:0;padding-left:18px;color:var(--txt);font-size:15.5px}
+.pk-item li{margin-bottom:6px}.pk-item li b{color:var(--ink)}
+.pk-mini{background:linear-gradient(160deg,#0F1A30,#0B1220);border-radius:12px;padding:14px;border:1px solid var(--line)}
+.pk-mini .sheet table{font-size:10px}.pk-mini .sheet th,.pk-mini .sheet td{padding:5px 4px}
+.pk-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s;padding:0;margin:0}
+.pk-steps li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;color:var(--txt);font-size:16px}
+.pk-steps li:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--acc);color:#0B1220;font-weight:800;margin-bottom:12px}
+.pk-fit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pk-fit h3{font-size:19px;font-weight:800;margin:0 0 10px}
+.pk-fit ul{margin:0;padding-left:18px;color:var(--txt)}
+.pk-offer{max-width:620px;margin:0 auto;background:var(--card);border:2px solid var(--acc);border-radius:24px;padding:34px 30px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.pk-offer h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;margin:0 0 6px}
+.pk-offer .sub{color:var(--mute);margin:0 0 22px}
+.pk-offer ul{list-style:none;padding:0;margin:0 0 26px;text-align:left;display:grid;gap:12px}
+.pk-offer li{display:flex;gap:12px;color:var(--txt);font-size:16px;line-height:1.45;border-bottom:1px dashed var(--line);padding-bottom:12px}
+.pk-offer li:last-child{border-bottom:0;padding-bottom:0}
+.pk-offer li:before{content:"✓";flex:none;color:var(--acc);font-weight:800}
+.pk-offer li b{color:var(--ink)}
+.pk-offer .pk-price{font-size:44px;margin-bottom:6px}
+.pk-offer .btn{width:100%;font-size:18px;padding:18px 26px;margin-top:16px}
+.pk-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:16px;font-size:14px;color:var(--mute)}
+.pk-final{text-align:center;padding:64px 0}
+.pk-final h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin:0 0 10px}
+.pk-final p{color:var(--mute);margin:0 auto 24px;max-width:560px}
+.pk-final .pk-buy{justify-content:center}
+.pk-bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(11,18,32,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .25s}
+.pk-bar.on{transform:none}
+.pk-bar b{display:block;font-size:15px}.pk-bar span{font-size:13px;color:var(--mute)}
+.pk-bar .btn{padding:12px 20px;font-size:15px}
+@media(max-width:900px){.pk-hero-in{grid-template-columns:1fr}.pk-stack{height:380px;max-width:480px}.pk-pain,.pk-steps,.pk-vs,.pk-fit{grid-template-columns:1fr}.pk-item{grid-template-columns:1fr}.pk-item img{max-width:300px}.pk-bar{display:flex}.foot{padding-bottom:80px}}
+@media(max-width:480px){.pk-stack{height:320px}.sheet table{font-size:9.5px}.pk-hero{padding-top:36px}.pk-offer{padding:28px 20px}.pk-buy .btn{width:100%}}
+.pk-cover{position:relative}.pk-cover img{width:100%;max-width:520px;display:block;margin:0 auto;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid var(--line)}
+.pk-item .vis img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.pk-item .vis.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pk-bundle li span{margin-left:auto;color:var(--mute);font-family:var(--fm);font-size:14px;white-space:nowrap}
+.pk-old{font-size:18px;color:var(--mute);text-decoration:line-through;margin-bottom:4px}
+.pk-note{font-size:13px;color:var(--mute);margin-top:10px}
+</style>
+<main id="isi">
+
+<!-- ATTENTION -->
+<section class="pk-hero"><div class="wrap pk-hero-in">
+<div>
+<span class="pk-tag">Untuk online seller &amp; UMKM</span>
+<h1>Omzet naik, tapi <em>untungnya ke mana?</em></h1>
+<p class="lead">Catat restock dan penjualan sekali saja. Potongan marketplace, modal, dan laba bersih tiap channel langsung terhitung, lengkap dengan stok per gudang.</p>
+<ul class="pk-checks"><li>Template Excel 10 sheet yang saling terhubung</li><li>Laba bersih per channel: Shopee, TikTok Shop, Tokopedia, dan lainnya</li><li>Kalkulator harga jual sesuai target laba</li></ul>
+<div class="pk-buy"><a class="btn" href="https://lynk.id/ngertilogistik" target="_blank" rel="noopener" data-cta="hero">Ambil template-nya</a><div class="pk-price">Rp39.000<small>Sekali bayar · unduh lewat Lynk.id</small></div></div>
+</div>
+<div class="pk-cover"><img src="/img/produk/stok-cuan-seller-cover.webp" alt="Stok & Cuan" width="720" height="720" loading="eager"></div>
+</div></section>
+
+<!-- INTEREST -->
+<section class="sec"><div class="wrap">
+<div class="pk-story">
+<span class="eyebrow">Kenal situasi ini?</span>
+<p class="big">Akhir bulan, saldo di aplikasi terlihat besar. Tapi setelah dipotong biaya admin, voucher, subsidi ongkir, dan modal barang, sisanya ternyata tipis.</p>
+<p>Belum lagi stok: di gudang tinggal sedikit, padahal di etalase toko masih banyak. Barang yang paling laku malah habis duluan.</p><p>Tanpa catatan yang rapi, sulit tahu channel mana yang benar-benar menguntungkan.</p>
+</div>
+<div class="pk-pain"><div class="pk-card"><span class="pk-num">01</span><h3>Untung tidak jelas</h3><p>Omzet tercatat, tapi potongan marketplace dan modal tidak dihitung per pesanan.</p></div><div class="pk-card"><span class="pk-num">02</span><h3>Stok tersebar</h3><p>Barang ada di gudang, toko, dan rumah. Total stok dihitung manual.</p></div><div class="pk-card"><span class="pk-num">03</span><h3>Harga asal pasang</h3><p>Harga jual ditentukan tanpa menghitung potongan channel, jadi margin tergerus.</p></div></div>
+<p class="pk-story" style="font-size:18px;color:var(--txt);margin:0">Masalahnya bukan jualanmu kurang laku. Masalahnya, <b style="color:var(--ink)">hitungannya belum ada.</b></p>
+</div></section>
+
+<!-- DESIRE -->
+<section class="sec alt"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Bayangkan kalau</span><h2>Jualan online <em>sebelum dan sesudah</em></h2></div>
+<div class="pk-vs">
+<div class="before"><h3>Sebelum</h3><ul><li>Untung dikira dari saldo yang masuk</li><li>Potongan marketplace dihitung kira-kira</li><li>Stok per lokasi dicek satu per satu</li><li>Tahu barang habis setelah pembeli komplain</li><li>Harga jual sama untuk semua channel</li></ul></div>
+<div class="after"><h3>Dengan Stok & Cuan</h3><ul><li>Laba bersih per pesanan dan per channel terhitung otomatis</li><li>Biaya admin, layanan, dan biaya tetap channel bisa kamu atur sendiri</li><li>Stok gudang, toko, dan lokasi lain terlihat dalam satu tabel</li><li>Status RESTOCK/HABIS muncul sendiri</li><li>Harga minimal per channel sesuai target laba</li></ul></div>
+</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Isi paket</span><h2>10 sheet, <em>saling terhubung</em></h2></div>
+<div class="pk-items"><div class="pk-item"><div class="vis"><img src="/img/produk/seller-dashboard.webp" alt="Laporan per channel otomatis" loading="lazy"></div><div><span class="kick">Dashboard</span><h3>Laporan per channel otomatis</h3><p>Ganti bulan di pengaturan, semua angka menyesuaikan.</p><ul><li>Omzet, laba bersih, margin, jumlah pesanan, nilai stok</li><li>Tabel per channel: biaya marketplace, HPP, subsidi ongkir, laba</li><li>Tren omzet dan laba per bulan + grafik</li></ul></div></div><div class="pk-item"><div class="pk-mini"><div class="sheet"><div class="sheet-h">Stok <i>MULTI-GUDANG</i></div><table><tr><th>SKU</th><th>Gudang</th><th>Toko</th><th>Status</th></tr><tr><td>KAOS-M</td><td class="n">22</td><td class="n">25</td><td><span class="st y">RESTOCK</span></td></tr><tr><td>CASE-CLR</td><td class="n">92</td><td class="n">26</td><td><span class="st g">AMAN</span></td></tr><tr><td>MADU-500</td><td class="n">11</td><td class="n">3</td><td><span class="st g">AMAN</span></td></tr></table></div></div><div><span class="kick">Stok</span><h3>Stok per gudang &amp; produk laris/lambat</h3><p>Stok bergerak otomatis dari restock, penjualan, dan pindah gudang.</p><ul><li>Sampai 3 lokasi stok (gudang, toko, cadangan)</li><li>Status RESTOCK/HABIS dan nilai stok</li><li>10 produk terlaris dan 10 paling lambat per periode</li></ul></div></div><div class="pk-item"><div class="pk-mini"><div class="sheet"><div class="sheet-h">Kalkulator Harga <i>TARGET LABA</i></div><table><tr><th>Channel</th><th>Harga min.</th></tr><tr><td>Shopee</td><td class="n">49.000</td></tr><tr><td>TikTok Shop</td><td class="n">48.500</td></tr><tr><td>Offline</td><td class="n">39.500</td></tr></table></div></div><div><span class="kick">Kalkulator</span><h3>Harga jual &amp; ongkir</h3><p>Hitung sebelum pasang harga, bukan sesudah rugi.</p><ul><li>Harga jual minimal per channel dari modal, kemasan, subsidi ongkir, dan target laba</li><li>Cek laba di harga yang sudah kamu pasang</li><li>Berat volumetrik dan estimasi ongkir per ukuran paket</li></ul></div></div></div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Cara pakai</span><h2>Bisa dipakai <em>hari ini juga</em></h2></div>
+<ol class="pk-steps"><li>Bayar lewat Lynk.id, lalu unduh file ZIP.</li><li>Buka file dan ikuti panduan singkat di dalamnya.</li><li>Isi biaya tiap channel dan produkmu, lalu catat restock &amp; penjualan.</li></ol>
+<div class="pk-fit" style="margin-top:22px">
+<div class="pk-card"><h3>Cocok untuk kamu yang</h3><ul><li>Jualan di Shopee, TikTok Shop, Tokopedia, atau Lazada</li><li>Punya toko offline sekaligus online</li><li>Reseller yang menyimpan stok sendiri</li></ul></div>
+<div class="pk-card"><h3>Biar jelas dari awal</h3><ul><li>Ini template Excel, bukan aplikasi yang terhubung otomatis ke marketplace. Data penjualan diisi atau ditempel sendiri.</li><li>Persentase biaya marketplace di file adalah contoh. Isi sesuai tarif tokomu.</li><li>Laba di sini belum termasuk biaya iklan, gaji, dan sewa.</li><li>Kapasitas 300 SKU dan 2.000 baris penjualan, bisa diperpanjang.</li></ul></div>
+</div>
+</div></section>
+
+<!-- ACTION -->
+<section class="sec" id="beli"><div class="wrap">
+<div class="pk-offer">
+<span class="eyebrow">Semua yang kamu dapat</span>
+<h2>Stok &amp; <em>Cuan</em></h2>
+<p class="sub">Template Excel untuk tahu stok dan untung yang sebenarnya.</p>
+<ul><li><span><b>Dashboard</b> · omzet, laba, margin, pesanan, nilai stok, tren bulanan</span></li><li><span><b>Penjualan → laba otomatis</b> · biaya marketplace, HPP, subsidi ongkir</span></li><li><span><b>Stok multi-gudang</b> · status RESTOCK/HABIS, laris &amp; lambat</span></li><li><span><b>Kalkulator</b> · harga jual sesuai target laba, ongkir &amp; volumetrik</span></li></ul>
+<div class="pk-price">Rp39.000</div>
+<a class="btn" href="https://lynk.id/ngertilogistik" target="_blank" rel="noopener" data-cta="offer">Ambil Stok &amp; Cuan</a>
+<div class="pk-trust"><span>Sekali bayar</span><span>Excel (.xlsx)</span><span>Pembayaran lewat Lynk.id</span></div>
+</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap narrow">
+<div class="faq" style="margin-top:0"><h2>Masih ragu? Ini jawabannya</h2><details><summary>Saya tidak jago Excel, bisa pakai?</summary><div><p>Bisa. Kamu hanya mengisi kolom kuning; kolom lain berisi rumus yang bekerja sendiri. Ada sheet <b>Mulai Di Sini</b> berisi langkah pemakaian, dan file sudah berisi data contoh supaya kamu lihat hasilnya dulu.</p></div></details><details><summary>Apakah terhubung otomatis ke Shopee atau TikTok Shop?</summary><div><p>Tidak. Ini file Excel; pesanan dicatat atau ditempel dari laporan marketplace. Keuntungannya: semua channel bisa digabung di satu file.</p></div></details><details><summary>Bisa untuk lebih dari satu gudang?</summary><div><p>Bisa, sampai 3 lokasi stok. Nama lokasinya bisa kamu ganti di sheet Pengaturan.</p></div></details>
+<details><summary>Boleh dibagikan ke teman atau dijual lagi?</summary><div><p>Tidak. File untuk dipakai pribadi atau di tempat kerja/usaha pembeli, tidak untuk dijual ulang atau dibagikan ulang.</p></div></details>
+<details><summary>Bagaimana cara menerima filenya?</summary><div><p>Pembayaran dan pengiriman file dilakukan lewat Lynk.id. Kalau file tidak bisa dibuka, kirim DM ke @ngertilogistik.</p></div></details>
+</div>
+</div></section>
+
+<section class="pk-final"><div class="wrap">
+<h2>Jualan tetap jalan, <em>untungnya sekarang kelihatan.</em></h2>
+<p>Template Excel 10 sheet: laba per channel, stok multi-gudang, dan kalkulator harga.</p>
+<div class="pk-buy"><a class="btn" href="https://lynk.id/ngertilogistik" target="_blank" rel="noopener" data-cta="final">Ambil template-nya</a><div class="pk-price">Rp39.000<small>Sekali bayar · unduh lewat Lynk.id</small></div></div>
+</div></section>
+</main>
+<div class="pk-bar" id="pkBar"><div><b>Stok & Cuan</b><span>Rp39.000 · sekali bayar</span></div><a class="btn" href="https://lynk.id/ngertilogistik" target="_blank" rel="noopener" data-cta="bar">Ambil sekarang</a></div>
+<script>(function(){var bar=document.getElementById('pkBar'),hero=document.querySelector('.pk-hero'),offer=document.getElementById('beli');if(!bar||!('IntersectionObserver' in window))return;var hv=true,ov=false;function u(){bar.classList.toggle('on',!hv&&!ov)}new IntersectionObserver(function(e){hv=e[0].isIntersecting;u()}).observe(hero);new IntersectionObserver(function(e){ov=e[0].isIntersecting;u()}).observe(offer)})();</script>
+<footer class="foot"><div class="wrap fine" style="text-align:center">© 2026 Ngerti Logistik. Data di dalam file produk adalah CONTOH, bukan data nyata. File untuk dipakai pribadi atau di tempat kerja pembeli, tidak untuk dijual ulang.</div></footer>
+</body></html>
