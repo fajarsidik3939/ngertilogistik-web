@@ -1767,5 +1767,127 @@
         "bahas": "Alamat lengkap dengan patokan dan nomor telepon aktif membantu kurir menemukan alamat dan menghubungi penerima, sehingga mengurangi gagal kirim."
       }
     ]
+  },
+  "L30": {
+    "slug": "asuransi-pengiriman",
+    "judul": "Asuransi Pengiriman: Kapan Perlu dan Kapan Bisa Dilewatkan?",
+    "soal": [
+      {
+        "q": "Apa yang dimaksud dengan asuransi pengiriman?",
+        "opsi": [
+          "Jaminan paket pasti tiba tepat waktu",
+          "Perlindungan tambahan yang memberi ganti rugi bila paket rusak atau hilang",
+          "Potongan ongkos kirim untuk pelanggan tetap",
+          "Biaya penjemputan paket dari rumah penjual"
+        ],
+        "jawab": 1,
+        "bahas": "Asuransi pengiriman memberi jaminan ganti rugi sesuai nilai barang bila paket rusak, tertukar, atau hilang. Ia tidak menjamin ketepatan waktu."
+      },
+      {
+        "q": "Premi asuransi pengiriman umumnya dihitung dari apa?",
+        "opsi": [
+          "Berat paket saja",
+          "Jumlah kurir yang terlibat",
+          "Persentase dari nilai barang",
+          "Jarak antar kota"
+        ],
+        "jawab": 2,
+        "bahas": "Premi umumnya berupa persentase dari nilai barang, dalam perbandingan Cermati sekitar 0,2 sampai 1 persen, kadang plus biaya admin atau ongkir."
+      },
+      {
+        "q": "Kapan asuransi pengiriman paling masuk akal dipakai?",
+        "opsi": [
+          "Saat barang murah dan mudah dibeli ulang",
+          "Saat barang bernilai tinggi, seperti elektronik",
+          "Hanya saat paket dikirim ke luar negeri",
+          "Saat paket ringan"
+        ],
+        "jawab": 1,
+        "bahas": "Asuransi paling berguna untuk barang bernilai tinggi atau pengiriman dalam jumlah besar. Untuk barang murah, premi mungkin tidak sebanding."
+      },
+      {
+        "q": "Kenapa nilai barang harus diisi dengan jujur saat membeli asuransi?",
+        "opsi": [
+          "Supaya premi menjadi lebih mahal",
+          "Karena ganti rugi mengikuti nilai yang diasuransikan",
+          "Karena kurir menghitung ongkir dari nilai itu saja",
+          "Supaya paket diantar lebih cepat"
+        ],
+        "jawab": 1,
+        "bahas": "Ganti rugi mengikuti nilai yang diasuransikan, sehingga nilai yang diisi terlalu rendah membuat ganti rugi ikut kecil."
+      },
+      {
+        "q": "Mana yang sebaiknya disiapkan sebelum paket berangkat untuk memudahkan klaim?",
+        "opsi": [
+          "Hanya nomor telepon kurir",
+          "Faktur, foto barang dan kemasan, serta resi",
+          "Salinan KTP penerima",
+          "Surat pernyataan dari tetangga penerima"
+        ],
+        "jawab": 1,
+        "bahas": "Bukti klaim yang umum diminta antara lain resi, faktur, foto barang dan kemasan, serta kronologi. Catat juga batas waktu klaim, yang berbeda tiap penyedia."
+      }
+    ]
+  },
+  "L31": {
+    "slug": "pod-adalah",
+    "judul": "POD Adalah Bukti Serah Terima: Arti Proof of Delivery dan Fungsinya",
+    "soal": [
+      {
+        "q": "POD adalah singkatan dari apa?",
+        "opsi": [
+          "Point of Distribution",
+          "Proof of Delivery",
+          "Process of Dispatch",
+          "Package on Duty"
+        ],
+        "jawab": 1,
+        "bahas": "POD adalah proof of delivery, yaitu bukti serah terima bahwa barang sudah diterima oleh penerima yang dituju."
+      },
+      {
+        "q": "Mana yang termasuk bentuk POD?",
+        "opsi": [
+          "Hanya dokumen kertas",
+          "Dokumen kertas, tanda tangan digital, dan foto paket",
+          "Hanya nomor resi",
+          "Hanya pesan singkat dari penjual"
+        ],
+        "jawab": 1,
+        "bahas": "POD bisa berbentuk dokumen fisik bertanda tangan, tanda tangan elektronik di tablet atau ponsel, atau foto paket saat diserahkan."
+      },
+      {
+        "q": "Apakah nomor resi saja cukup sebagai POD?",
+        "opsi": [
+          "Cukup, selama statusnya terkirim",
+          "Cukup untuk barang murah",
+          "Tidak cukup, POD perlu memuat penerima, tanggal, lokasi, dan konfirmasi pesanan",
+          "Cukup bila ada foto kemasan"
+        ],
+        "jawab": 2,
+        "bahas": "Nomor pelacakan saja tidak memenuhi syarat sebagai POD. POD yang sah memuat nama dan tanda tangan penerima, tanggal dan lokasi, serta konfirmasi pesanan yang benar."
+      },
+      {
+        "q": "Kapan POD paling sering diperiksa?",
+        "opsi": [
+          "Saat paket baru dikemas",
+          "Saat ada sengketa atau klaim, misalnya penerima mengaku belum menerima",
+          "Saat memilih warna kardus",
+          "Saat membuat label alamat"
+        ],
+        "jawab": 1,
+        "bahas": "POD menjadi dokumen pertama yang diperiksa saat ada sengketa atau klaim, karena mencatat siapa menerima, kapan, dan di mana."
+      },
+      {
+        "q": "Berapa lama sebaiknya POD disimpan?",
+        "opsi": [
+          "Satu hari setelah paket sampai",
+          "Sampai paket dibuka",
+          "Selama jendela retur, garansi, atau sengketa masih terbuka",
+          "Selamanya tanpa pengecualian"
+        ],
+        "jawab": 2,
+        "bahas": "POD sebaiknya disimpan selama jendela retur, garansi, atau sengketa masih terbuka, di satu lokasi terpusat dengan nama file yang seragam."
+      }
+    ]
   }
 }

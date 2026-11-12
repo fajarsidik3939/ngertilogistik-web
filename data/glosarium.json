@@ -53,6 +53,15 @@
     "artikel": "L06"
   },
   {
+    "istilah": "Asuransi pengiriman",
+    "alias": [
+      "asuransi paket",
+      "asuransi kargo"
+    ],
+    "arti": "Perlindungan tambahan berbayar yang memberi ganti rugi sesuai nilai barang bila paket rusak, tertukar, atau hilang. Premi umumnya berupa persentase dari nilai barang.",
+    "artikel": "L30"
+  },
+  {
     "istilah": "Bahan pengisi",
     "alias": [
       "void fill",
@@ -555,6 +564,23 @@
     ],
     "arti": "Dokumen yang dibuat pembeli berisi daftar barang atau jasa yang ingin dibeli dari pemasok. Bagi gudang, PO menjadi patokan saat barang datang.",
     "artikel": "L20"
+  },
+  {
+    "istilah": "POD",
+    "alias": [
+      "proof of delivery",
+      "bukti serah terima"
+    ],
+    "arti": "Proof of delivery, bukti serah terima bahwa barang sudah diterima penerima yang dituju. Memuat antara lain penerima, tanggal dan waktu, lokasi, serta kondisi barang, bisa berupa tanda tangan atau foto.",
+    "artikel": "L31"
+  },
+  {
+    "istilah": "Premi",
+    "alias": [
+      "premi asuransi"
+    ],
+    "arti": "Biaya yang dibayar untuk mendapat perlindungan asuransi. Pada asuransi pengiriman, premi umumnya dihitung dari persentase nilai barang.",
+    "artikel": "L30"
   },
   {
     "istilah": "Pusat distribusi",

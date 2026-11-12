@@ -63,6 +63,8 @@ Tips singkat:
 | L27 | 3PL Adalah: Arti Third Party Logistics dan Cara Kerjanya | 2026-11-12 | [L27-3pl-adalah.md](L27-3pl-adalah.md) |
 | L28 | 3 Rumus Excel untuk Admin Gudang: SUMIF, XLOOKUP, dan Pivot Table | 2026-11-13 | [L28-rumus-excel-admin-gudang.md](L28-rumus-excel-admin-gudang.md) |
 | L29 | Last Mile Delivery: Perjalanan Terakhir Paket yang Paling Mahal | 2026-11-14 | [L29-last-mile-delivery.md](L29-last-mile-delivery.md) |
+| L30 | Asuransi Pengiriman: Kapan Perlu dan Kapan Bisa Dilewatkan? | 2026-11-15 | [L30-asuransi-pengiriman.md](L30-asuransi-pengiriman.md) |
+| L31 | POD Adalah Bukti Serah Terima: Arti Proof of Delivery dan Fungsinya | 2026-11-16 | [L31-pod-adalah.md](L31-pod-adalah.md) |
 
 Catatan: L01 sampai L20 tayang di tanggal yang sama (2026-11-02). Jangan posting semuanya sekaligus. Jadwalkan satu artikel per hari (atau satu sampai dua per hari) dan hitung urutan H, H+1, dan seterusnya dari hari kamu mulai mempromosikan artikel itu.
 
