@@ -146,13 +146,13 @@
   },
   {
    "source": "/materi/l27-3pl-itu-apa",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/3pl-adalah",
+   "permanent": true
   },
   {
    "source": "/materi/l28-skill-excel-dasar-untuk-admin-gudang",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/rumus-excel-admin-gudang",
+   "permanent": true
   },
   {
    "source": "/materi/l29-last-mile-delivery",
