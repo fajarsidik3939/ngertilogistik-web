@@ -156,8 +156,8 @@
   },
   {
    "source": "/materi/l29-last-mile-delivery",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/last-mile-delivery",
+   "permanent": true
   },
   {
    "source": "/materi/l30-asuransi-pengiriman-kapan-perlu",
