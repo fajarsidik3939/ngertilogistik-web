@@ -383,6 +383,8 @@ PRODUK = {
     "/kamus-logistik": {"lynk": TOKO, "harga": "Rp29.000"},
     "/cheat-sheet-logistik": {"lynk": TOKO, "harga": "Rp19.000"},
     "/mega-bundle-logistik": {"lynk": TOKO, "harga": "Rp149.000"},
+    "/simulasi-admin-gudang": {"lynk": TOKO, "harga": "Rp39.000"},
+    "/briefing-pagi-gudang": {"lynk": TOKO, "harga": "Rp35.000"},
 }
 
 HALAMAN = [  # halaman statis dari content/halaman/<file>.html
@@ -400,6 +402,10 @@ HALAMAN = [  # halaman statis dari content/halaman/<file>.html
      "10 lembar ringkasan logistik: Incoterms 2020, kontainer, simbol kemasan, dokumen ekspor-impor, jalur impor, rumus, barang berbahaya, armada, satuan, KPI."),
     ("/mega-bundle-logistik", "mega-bundle-logistik.html", "Mega Bundle Ngerti Logistik: 6 Produk Digital | Ngerti Logistik",
      "Semua produk digital Ngerti Logistik dalam satu paket: Toolkit Gudang Pro, Toolkit Ekspedisi, Stok & Cuan, Paket Lolos Kerja, Kamus, dan Cheat Sheet."),
+    ("/simulasi-admin-gudang", "simulasi-admin-gudang.html", "Simulasi Kerja Admin Gudang: 20 Kasus Nyata + Pembahasan | Ngerti Logistik",
+     "Simulasi interaktif 5 hari kerja admin gudang: 20 kasus penerimaan, penyimpanan, picking, pengiriman, dan stock opname dengan pembahasan. Main di HP tanpa internet."),
+    ("/briefing-pagi-gudang", "briefing-pagi-gudang.html", "30 Materi Briefing Pagi Gudang: Naskah Toolbox Meeting | Ngerti Logistik",
+     "30 naskah briefing pagi 5 menit untuk supervisor dan leader gudang: K3, operasional, dan kerja tim, plus daftar hadir, jadwal, dan form near miss."),
     ("/toolkit-gudang-pro", "toolkit-gudang-pro.html", "Toolkit Gudang Pro: Template Excel, E-book & SOP Gudang | Ngerti Logistik",
      "Template Excel 9-in-1 untuk stok, kartu stok, opname, ABC, ROP, dan kubikasi, plus e-book panduan admin gudang serta 8 SOP dan 8 form siap print."),
     ("/template", "template.html", "Template Spreadsheet Logistik Gratis (Excel) | Ngerti Logistik",

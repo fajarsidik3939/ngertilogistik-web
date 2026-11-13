@@ -1,0 +1,165 @@
+<style>
+.pk-hero{padding:60px 0 48px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.pk-hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:640px;height:640px;background:radial-gradient(closest-side,rgba(255,196,0,.14),transparent);pointer-events:none}
+.pk-hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative}
+.pk-hero h1{font-size:clamp(36px,5.4vw,62px);font-weight:800;line-height:1.08;margin:0 0 6px}
+.pk-hero .lead{max-width:600px}
+.pk-tag{display:inline-flex;align-items:center;gap:8px;font:700 13px/1 var(--fm);letter-spacing:.06em;text-transform:uppercase;color:var(--acc);background:rgba(255,196,0,.08);border:1px solid rgba(255,196,0,.3);padding:9px 14px;border-radius:999px;margin-bottom:18px}
+.pk-checks{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:9px}
+.pk-checks li{display:flex;gap:10px;align-items:flex-start;color:var(--txt);font-size:16.5px;line-height:1.45}
+.pk-checks li:before{content:"✓";flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--acc);color:#0B1220;font:800 13px/1 var(--fs);margin-top:1px}
+.pk-buy{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.pk-buy .btn{font-size:17px;padding:16px 30px}
+.pk-price{font:800 30px/1 var(--fs);color:var(--ink)}
+.pk-price small{display:block;font:500 13px/1.4 var(--fs);color:var(--mute);margin-top:6px}
+.pk-fine{font-size:14px;color:var(--mute);margin:14px 0 0}
+.pk-stack{position:relative;height:440px}
+.pk-stack img{position:absolute;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.5);border:1px solid var(--line)}
+.pk-stack .a{width:58%;left:0;top:30px;transform:rotate(-4deg);z-index:2}
+.pk-stack .b{width:52%;right:0;top:0;transform:rotate(3deg);z-index:1}
+.pk-stack .sheet{position:absolute;left:18%;bottom:0;width:72%;z-index:3}
+.sheet{background:#F7F9FC;border-radius:12px;padding:12px;color:#0B1220;box-shadow:0 24px 60px rgba(0,0,0,.55);font-family:var(--fs)}
+.sheet-h{display:flex;justify-content:space-between;align-items:center;font:800 12px/1 var(--fs);margin-bottom:8px}
+.sheet-h i{font-style:normal;font:700 9px/1 var(--fm);background:#1F3A5F;color:#fff;padding:5px 7px;border-radius:4px}
+.sheet table{width:100%;border-collapse:collapse;font:500 10.5px/1.3 var(--fs)}
+.sheet th{background:#F28C28;color:#fff;font-weight:700;text-align:left;padding:5px 6px}
+.sheet td{padding:5px 6px;border-bottom:1px solid #E3E8F0}
+.sheet td.n{text-align:right;font-family:var(--fm)}
+.st{font:700 9px/1 var(--fm);padding:3px 6px;border-radius:4px}
+.st.g{background:#D9F2E3;color:#067647}.st.y{background:#FDEBD0;color:#B54708}.st.r{background:#FADBD8;color:#B42318}
+.pk-story{max-width:760px}
+.pk-story p{font-size:18px;color:var(--txt);margin:0 0 16px;line-height:1.7}
+.pk-story p.big{font-size:clamp(22px,2.6vw,28px);font-weight:800;color:var(--ink);line-height:1.35}
+.pk-pain{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+.pk-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.pk-card h3{font-size:19px;font-weight:800;margin:0 0 8px}
+.pk-card p{margin:0;color:var(--mute);font-size:15.5px;line-height:1.6}
+.pk-num{font:800 13px/1 var(--fm);color:var(--acc);display:block;margin-bottom:12px}
+.pk-vs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pk-vs>div{border-radius:var(--r);padding:26px;border:1px solid var(--line)}
+.pk-vs .before{background:var(--card)}
+.pk-vs .after{background:linear-gradient(160deg,rgba(255,196,0,.1),rgba(255,196,0,.02));border-color:rgba(255,196,0,.45)}
+.pk-vs h3{font-size:20px;font-weight:800;margin:0 0 14px}
+.pk-vs ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.pk-vs li{display:flex;gap:10px;color:var(--txt);font-size:16px;line-height:1.5}
+.pk-vs .before li:before{content:"✕";color:#E0453A;font-weight:800;flex:none}
+.pk-vs .after li:before{content:"✓";color:var(--acc);font-weight:800;flex:none}
+.pk-items{display:grid;gap:22px}
+.pk-item{display:grid;grid-template-columns:320px 1fr;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;align-items:start}
+.pk-item img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.pk-item h3{font-size:24px;font-weight:800;margin:4px 0 10px}
+.pk-item p{color:var(--txt);margin:0 0 12px;font-size:16px}
+.pk-item ul{margin:0;padding-left:18px;color:var(--txt);font-size:15.5px}
+.pk-item li{margin-bottom:6px}.pk-item li b{color:var(--ink)}
+.pk-mini{background:linear-gradient(160deg,#0F1A30,#0B1220);border-radius:12px;padding:14px;border:1px solid var(--line)}
+.pk-mini .sheet table{font-size:10px}.pk-mini .sheet th,.pk-mini .sheet td{padding:5px 4px}
+.pk-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s;padding:0;margin:0}
+.pk-steps li{list-style:none;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;color:var(--txt);font-size:16px}
+.pk-steps li:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--acc);color:#0B1220;font-weight:800;margin-bottom:12px}
+.pk-fit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pk-fit h3{font-size:19px;font-weight:800;margin:0 0 10px}
+.pk-fit ul{margin:0;padding-left:18px;color:var(--txt)}
+.pk-offer{max-width:620px;margin:0 auto;background:var(--card);border:2px solid var(--acc);border-radius:24px;padding:34px 30px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.pk-offer h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;margin:0 0 6px}
+.pk-offer .sub{color:var(--mute);margin:0 0 22px}
+.pk-offer ul{list-style:none;padding:0;margin:0 0 26px;text-align:left;display:grid;gap:12px}
+.pk-offer li{display:flex;gap:12px;color:var(--txt);font-size:16px;line-height:1.45;border-bottom:1px dashed var(--line);padding-bottom:12px}
+.pk-offer li:last-child{border-bottom:0;padding-bottom:0}
+.pk-offer li:before{content:"✓";flex:none;color:var(--acc);font-weight:800}
+.pk-offer li b{color:var(--ink)}
+.pk-offer .pk-price{font-size:44px;margin-bottom:6px}
+.pk-offer .btn{width:100%;font-size:18px;padding:18px 26px;margin-top:16px}
+.pk-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:16px;font-size:14px;color:var(--mute)}
+.pk-final{text-align:center;padding:64px 0}
+.pk-final h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin:0 0 10px}
+.pk-final p{color:var(--mute);margin:0 auto 24px;max-width:560px}
+.pk-final .pk-buy{justify-content:center}
+.pk-bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(11,18,32,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .25s}
+.pk-bar.on{transform:none}
+.pk-bar b{display:block;font-size:15px}.pk-bar span{font-size:13px;color:var(--mute)}
+.pk-bar .btn{padding:12px 20px;font-size:15px}
+@media(max-width:900px){.pk-hero-in{grid-template-columns:1fr}.pk-stack{height:380px;max-width:480px}.pk-pain,.pk-steps,.pk-vs,.pk-fit{grid-template-columns:1fr}.pk-item{grid-template-columns:1fr}.pk-item img{max-width:300px}.pk-bar{display:flex}.foot{padding-bottom:80px}}
+@media(max-width:480px){.pk-stack{height:320px}.sheet table{font-size:9.5px}.pk-hero{padding-top:36px}.pk-offer{padding:28px 20px}.pk-buy .btn{width:100%}}
+.pk-cover{position:relative}.pk-cover img{width:100%;max-width:520px;display:block;margin:0 auto;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid var(--line)}
+.pk-item .vis img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.pk-item .vis.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pk-bundle li span{margin-left:auto;color:var(--mute);font-family:var(--fm);font-size:14px;white-space:nowrap}
+.pk-old{font-size:18px;color:var(--mute);text-decoration:line-through;margin-bottom:4px}
+.pk-note{font-size:13px;color:var(--mute);margin-top:10px}
+</style>
+<main id="isi">
+
+<!-- ATTENTION -->
+<section class="pk-hero"><div class="wrap pk-hero-in">
+<div>
+<span class="pk-tag">Simulasi interaktif</span>
+<h1>Rasakan seminggu jadi admin gudang <em>sebelum hari pertama kerja.</em></h1>
+<p class="lead">20 kasus nyata dalam 5 hari kerja: surat jalan tidak sesuai, stok selisih, kiriman terlambat, dan hitungan yang harus cepat. Pilih tindakanmu, lalu lihat pembahasannya.</p>
+<ul class="pk-checks"><li>5 hari kerja · 20 kasus · ada pembahasan</li><li>Main di HP atau laptop, tanpa internet</li><li>Skor, predikat, dan daftar materi yang perlu diulang</li></ul>
+<div class="pk-buy"><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="hero">Coba jadi admin gudang</a><div class="pk-price">{{HARGA}}<small>Sekali bayar · unduh lewat Lynk.id</small></div></div>
+</div>
+<div class="pk-cover"><img src="/img/produk/simulasi-admin-gudang-cover.webp" alt="Simulasi Admin Gudang" width="720" height="720" loading="eager"></div>
+</div></section>
+
+<!-- INTEREST -->
+<section class="sec"><div class="wrap">
+<div class="pk-story">
+<span class="eyebrow">Kenal situasi ini?</span>
+<p class="big">Kamu sudah baca soal FIFO, stock opname, dan surat jalan. Tapi saat sopir minta tanda tangan cepat dan jumlah barang kurang 2 dus, apa yang sebenarnya harus kamu lakukan?</p>
+<p>Teori gudang mudah ditemukan. Yang jarang ada adalah latihan mengambil keputusan di situasi nyata, lengkap dengan alasan kenapa satu tindakan lebih tepat dari yang lain.</p>
+</div>
+<div class="pk-pain"><div class="pk-card"><span class="pk-num">01</span><h3>Paham teori, bingung praktik</h3><p>Tahu istilahnya, tapi ragu saat harus memutuskan di lapangan.</p></div><div class="pk-card"><span class="pk-num">02</span><h3>Kesalahan mahal</h3><p>Salah tanda tangan surat jalan atau salah hitung stok bisa jadi kerugian perusahaan.</p></div><div class="pk-card"><span class="pk-num">03</span><h3>Belajar dari video saja</h3><p>Menonton tidak sama dengan mencoba menjawab sendiri.</p></div></div>
+<p class="pk-story" style="font-size:18px;color:var(--txt);margin:0">Cara tercepat paham pekerjaan gudang adalah <b style="color:var(--ink)">mencoba memutuskan, lalu melihat pembahasannya.</b></p>
+</div></section>
+
+<!-- DESIRE -->
+<section class="sec alt"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Bayangkan kalau</span><h2>Belajar gudang <em>sebelum dan sesudah</em></h2></div>
+<div class="pk-vs">
+<div class="before"><h3>Sebelum</h3><ul><li>Membaca teori tanpa latihan</li><li>Tidak tahu bagian mana yang masih lemah</li><li>Kaget saat menghadapi masalah pertama di tempat kerja</li><li>Hitungan CBM dan akurasi stok terasa asing</li></ul></div>
+<div class="after"><h3>Dengan Simulasi Admin Gudang</h3><ul><li>20 keputusan kerja yang kamu jawab sendiri</li><li>Skor per hari kerja dan daftar materi yang perlu diulang</li><li>Sudah pernah "mengalami" kasus yang umum terjadi</li><li>Latihan hitung karton, kubikasi, berat volumetrik, dan akurasi stok</li></ul></div>
+</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Isi paket</span><h2>Satu minggu kerja, <em>dalam satu file</em></h2></div>
+<div class="pk-items"><div class="pk-item"><div class="vis duo"><img src="/img/produk/sim-case.webp" alt="5 hari kerja, 20 kasus" loading="lazy"><img src="/img/produk/sim-map.webp" alt="5 hari kerja, 20 kasus" loading="lazy"></div><div><span class="kick">Kasus</span><h3>5 hari kerja, 20 kasus</h3><p>Setiap hari punya tema sendiri. Hari berikutnya terbuka setelah hari sebelumnya selesai.</p><ul><li>Hari 1 · Penerimaan barang: surat jalan, kelebihan kirim, ED, hitung per lapis</li><li>Hari 2 · Penyimpanan: slotting, FEFO, kode lokasi, kubikasi</li><li>Hari 3 · Picking &amp; packing: short pick, barang mirip, berat volumetrik</li><li>Hari 4 · Pengiriman: muat truk, keterlambatan, POD</li><li>Hari 5 · Stock opname &amp; selisih: akurasi stok dan penelusuran selisih</li></ul></div></div><div class="pk-item"><div class="vis duo"><img src="/img/produk/sim-result.webp" alt="Pembahasan, skor, dan kartu hasil" loading="lazy"><img src="/img/produk/sim-start.webp" alt="Pembahasan, skor, dan kartu hasil" loading="lazy"></div><div><span class="kick">Hasil</span><h3>Pembahasan, skor, dan kartu hasil</h3><p>Setelah menjawab, kamu langsung tahu benar atau belum, dan kenapa.</p><ul><li>Pembahasan singkat di setiap kasus</li><li>Skor per hari dan predikat akhir</li><li>Daftar materi yang perlu diulang</li><li>Kartu hasil yang bisa dicetak (kartu latihan, bukan sertifikat resmi)</li><li>Progres tersimpan otomatis di browser</li></ul></div></div></div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+<div class="sec-h"><span class="eyebrow">Cara pakai</span><h2>Bisa dipakai <em>hari ini juga</em></h2></div>
+<ol class="pk-steps"><li>Bayar lewat Lynk.id, lalu unduh file ZIP.</li><li>Buka file dan ikuti panduan singkat di dalamnya.</li><li>Isi nama, mulai hari pertama, dan selesaikan 5 hari kerja.</li></ol>
+<div class="pk-fit" style="margin-top:22px">
+<div class="pk-card"><h3>Cocok untuk kamu yang</h3><ul><li>Pelamar atau calon admin gudang</li><li>Staf gudang baru yang ingin cepat paham alur kerja</li><li>Leader atau HR yang butuh bahan latihan staf baru</li><li>Mahasiswa logistik</li></ul></div>
+<div class="pk-card"><h3>Biar jelas dari awal</h3><ul><li>Kasus dan angka adalah ilustrasi untuk latihan; prosedur tiap perusahaan bisa berbeda.</li><li>Kartu hasil adalah kartu latihan, bukan sertifikat resmi.</li><li>Ini file HTML yang dibuka di browser, bukan aplikasi dari Play Store/App Store.</li></ul></div>
+</div>
+</div></section>
+
+<!-- ACTION -->
+<section class="sec" id="beli"><div class="wrap">
+<div class="pk-offer">
+<span class="eyebrow">Semua yang kamu dapat</span>
+<h2>Simulasi <em>Admin Gudang</em></h2>
+<p class="sub">Latihan mengambil keputusan kerja gudang.</p>
+<ul><li><span><b>Simulasi 5 hari kerja</b> · 20 kasus pilihan &amp; hitungan</span></li><li><span><b>Pembahasan setiap kasus</b> · langsung setelah menjawab</span></li><li><span><b>Skor, predikat &amp; materi ulang</b> · tahu bagian yang masih lemah</span></li><li><span><b>Kartu hasil siap print</b> · kartu latihan</span></li></ul>
+<div class="pk-price">{{HARGA}}</div>
+<a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="offer">Ambil Simulasinya</a>
+<div class="pk-trust"><span>Sekali bayar</span><span>File HTML (offline)</span><span>Pembayaran lewat Lynk.id</span></div>
+</div>
+</div></section>
+
+<section class="sec alt"><div class="wrap narrow">
+<div class="faq" style="margin-top:0"><h2>Masih ragu? Ini jawabannya</h2><details><summary>Bagaimana cara membukanya?</summary><div><p>Unduh dan ekstrak ZIP, lalu buka file .html di Chrome, Edge, Safari, atau browser lain. Bisa di HP maupun laptop, dan tidak perlu internet.</p></div></details><details><summary>Apakah perlu install aplikasi?</summary><div><p>Tidak. Simulasi berjalan di browser yang sudah ada di HP atau laptopmu.</p></div></details><details><summary>Kalau berhenti di tengah, progresnya hilang?</summary><div><p>Tidak, progres tersimpan otomatis di browser yang sama. Kalau pindah HP atau browser, mulai lagi dari awal.</p></div></details><details><summary>Bisa dipakai untuk melatih staf?</summary><div><p>Bisa, untuk staf di tempat kerja pembeli. File tidak boleh dijual ulang atau dibagikan ke luar.</p></div></details>
+<details><summary>Boleh dibagikan ke teman atau dijual lagi?</summary><div><p>Tidak. File untuk dipakai pribadi atau di tempat kerja/usaha pembeli, tidak untuk dijual ulang atau dibagikan ulang.</p></div></details>
+<details><summary>Bagaimana cara menerima filenya?</summary><div><p>Pembayaran dan pengiriman file dilakukan lewat Lynk.id. Kalau file tidak bisa dibuka, kirim DM ke @ngertilogistik.</p></div></details>
+</div>
+</div></section>
+
+<section class="pk-final"><div class="wrap">
+<h2>Hari pertama kerja, <em>rasanya sudah pernah.</em></h2>
+<p>20 kasus nyata admin gudang dengan pembahasan, bisa dimainkan di HP.</p>
+<div class="pk-buy"><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="final">Coba jadi admin gudang</a><div class="pk-price">{{HARGA}}<small>Sekali bayar · unduh lewat Lynk.id</small></div></div>
+</div></section>
+</main>
+<div class="pk-bar" id="pkBar"><div><b>Simulasi Admin Gudang</b><span>{{HARGA}} · sekali bayar</span></div><a class="btn" href="{{LYNK}}" target="_blank" rel="noopener" data-cta="bar">Ambil sekarang</a></div>
+<script>(function(){var bar=document.getElementById('pkBar'),hero=document.querySelector('.pk-hero'),offer=document.getElementById('beli');if(!bar||!('IntersectionObserver' in window))return;var hv=true,ov=false;function u(){bar.classList.toggle('on',!hv&&!ov)}new IntersectionObserver(function(e){hv=e[0].isIntersecting;u()}).observe(hero);new IntersectionObserver(function(e){ov=e[0].isIntersecting;u()}).observe(offer)})();</script>

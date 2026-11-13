@@ -289,6 +289,62 @@ P.append(dict(slug="mega-bundle-logistik", name="Mega Bundle", name_html='Mega <
   faq=[("Apakah isinya sama dengan produk satuan?", "Sama persis. Bundle berisi keenam produk lengkap dengan bonusnya."), ("Saya sudah membeli salah satu produk, bagaimana?", "Bundle tetap berisi semua produk. Kalau ingin menyesuaikan, kirim DM ke @ngertilogistik sebelum membeli.")],
   final_h2="Semua alat kerja logistik, <em>sekali bayar.</em>", final_p="6 produk untuk gudang, ekspedisi, online seller, dan karier dalam satu paket."))
 
+# ------------------------------------------------------------------ SIMULASI ADMIN GUDANG
+P.append(dict(slug="simulasi-admin-gudang", name="Simulasi Admin Gudang", name_html='Simulasi <em>Admin Gudang</em>', tag="Simulasi interaktif",
+  h1="Rasakan seminggu jadi admin gudang <em>sebelum hari pertama kerja.</em>",
+  lead="20 kasus nyata dalam 5 hari kerja: surat jalan tidak sesuai, stok selisih, kiriman terlambat, dan hitungan yang harus cepat. Pilih tindakanmu, lalu lihat pembahasannya.",
+  checks=["5 hari kerja · 20 kasus · ada pembahasan", "Main di HP atau laptop, tanpa internet", "Skor, predikat, dan daftar materi yang perlu diulang"],
+  cta="Coba jadi admin gudang", cta_offer="Ambil Simulasinya",
+  story_big="Kamu sudah baca soal FIFO, stock opname, dan surat jalan. Tapi saat sopir minta tanda tangan cepat dan jumlah barang kurang 2 dus, apa yang sebenarnya harus kamu lakukan?",
+  story=["Teori gudang mudah ditemukan. Yang jarang ada adalah latihan mengambil keputusan di situasi nyata, lengkap dengan alasan kenapa satu tindakan lebih tepat dari yang lain."],
+  pains=[("Paham teori, bingung praktik", "Tahu istilahnya, tapi ragu saat harus memutuskan di lapangan."), ("Kesalahan mahal", "Salah tanda tangan surat jalan atau salah hitung stok bisa jadi kerugian perusahaan."), ("Belajar dari video saja", "Menonton tidak sama dengan mencoba menjawab sendiri.")],
+  turn='Cara tercepat paham pekerjaan gudang adalah <b style="color:var(--ink)">mencoba memutuskan, lalu melihat pembahasannya.</b>',
+  vs_h2="Belajar gudang <em>sebelum dan sesudah</em>",
+  before=["Membaca teori tanpa latihan", "Tidak tahu bagian mana yang masih lemah", "Kaget saat menghadapi masalah pertama di tempat kerja", "Hitungan CBM dan akurasi stok terasa asing"],
+  after=["20 keputusan kerja yang kamu jawab sendiri", "Skor per hari kerja dan daftar materi yang perlu diulang", "Sudah pernah \"mengalami\" kasus yang umum terjadi", "Latihan hitung karton, kubikasi, berat volumetrik, dan akurasi stok"],
+  items_h2="Satu minggu kerja, <em>dalam satu file</em>",
+  items=[dict(vis=["sim-case", "sim-map"], kick="Kasus", h3="5 hari kerja, 20 kasus", p="Setiap hari punya tema sendiri. Hari berikutnya terbuka setelah hari sebelumnya selesai.",
+              ul=["Hari 1 · Penerimaan barang: surat jalan, kelebihan kirim, ED, hitung per lapis", "Hari 2 · Penyimpanan: slotting, FEFO, kode lokasi, kubikasi", "Hari 3 · Picking &amp; packing: short pick, barang mirip, berat volumetrik", "Hari 4 · Pengiriman: muat truk, keterlambatan, POD", "Hari 5 · Stock opname &amp; selisih: akurasi stok dan penelusuran selisih"]),
+         dict(vis=["sim-result", "sim-start"], kick="Hasil", h3="Pembahasan, skor, dan kartu hasil", p="Setelah menjawab, kamu langsung tahu benar atau belum, dan kenapa.",
+              ul=["Pembahasan singkat di setiap kasus", "Skor per hari dan predikat akhir", "Daftar materi yang perlu diulang", "Kartu hasil yang bisa dicetak (kartu latihan, bukan sertifikat resmi)", "Progres tersimpan otomatis di browser"])],
+  steps=STEPS("Isi nama, mulai hari pertama, dan selesaikan 5 hari kerja."),
+  fit=["Pelamar atau calon admin gudang", "Staf gudang baru yang ingin cepat paham alur kerja", "Leader atau HR yang butuh bahan latihan staf baru", "Mahasiswa logistik"],
+  honest=["Kasus dan angka adalah ilustrasi untuk latihan; prosedur tiap perusahaan bisa berbeda.", "Kartu hasil adalah kartu latihan, bukan sertifikat resmi.", "Ini file HTML yang dibuka di browser, bukan aplikasi dari Play Store/App Store."],
+  offer_sub="Latihan mengambil keputusan kerja gudang.",
+  offer=["<span><b>Simulasi 5 hari kerja</b> · 20 kasus pilihan &amp; hitungan</span>", "<span><b>Pembahasan setiap kasus</b> · langsung setelah menjawab</span>", "<span><b>Skor, predikat &amp; materi ulang</b> · tahu bagian yang masih lemah</span>", "<span><b>Kartu hasil siap print</b> · kartu latihan</span>"],
+  format="File HTML (offline)",
+  faq=[("Bagaimana cara membukanya?", "Unduh dan ekstrak ZIP, lalu buka file .html di Chrome, Edge, Safari, atau browser lain. Bisa di HP maupun laptop, dan tidak perlu internet."), ("Apakah perlu install aplikasi?", "Tidak. Simulasi berjalan di browser yang sudah ada di HP atau laptopmu."), ("Kalau berhenti di tengah, progresnya hilang?", "Tidak, progres tersimpan otomatis di browser yang sama. Kalau pindah HP atau browser, mulai lagi dari awal."), ("Bisa dipakai untuk melatih staf?", "Bisa, untuk staf di tempat kerja pembeli. File tidak boleh dijual ulang atau dibagikan ke luar.")],
+  final_h2="Hari pertama kerja, <em>rasanya sudah pernah.</em>", final_p="20 kasus nyata admin gudang dengan pembahasan, bisa dimainkan di HP."))
+
+# ------------------------------------------------------------------ BRIEFING PAGI
+P.append(dict(slug="briefing-pagi-gudang", name="Briefing Pagi Gudang", name_html='Briefing Pagi <em>Gudang</em>', tag="Untuk supervisor &amp; leader",
+  h1="Briefing pagi 5 menit, <em>tanpa bingung mau bahas apa.</em>",
+  lead="30 naskah toolbox meeting siap baca: K3, operasional, dan kerja tim. Setiap topik sudah ada pembuka, poin bicara, contoh kasus, pertanyaan untuk tim, dan aksi hari ini.",
+  checks=["30 topik, satu halaman per topik", "± 5 menit, tinggal dibacakan", "Plus daftar hadir, jadwal bulanan, dan form near miss"],
+  cta="Ambil 30 naskahnya", cta_offer="Ambil Materi Briefing",
+  story_big="Jam 07.55. Tim sudah berbaris, kamu yang harus bicara. Kemarin sudah bahas APD, kemarin lusa juga. Hari ini mau bahas apa lagi?",
+  story=["Briefing pagi seharusnya jadi waktu terbaik untuk mengingatkan tim soal keselamatan dan kualitas kerja. Tapi menyiapkan materi baru setiap hari itu melelahkan, sehingga isinya sering berulang dan tim berhenti mendengarkan."],
+  pains=[("Materi itu-itu saja", "Tim hafal isinya, lalu tidak lagi memperhatikan."), ("Tidak sempat menyiapkan", "Pekerjaan sudah menunggu sebelum briefing dimulai."), ("Satu arah", "Leader bicara, tim diam, tidak ada tindak lanjut.")],
+  turn='Briefing yang baik itu <b style="color:var(--ink)">singkat, ada contohnya, dan berakhir dengan aksi.</b>',
+  vs_h2="Briefing pagi <em>sebelum dan sesudah</em>",
+  before=["Topik dipikirkan dadakan", "Isi berulang setiap minggu", "Tim hanya mendengar", "Tidak ada catatan kehadiran dan tindak lanjut"],
+  after=["30 topik terjadwal untuk satu bulan kerja lebih", "K3, operasional, tim, dan musiman bergantian", "2 pertanyaan untuk mengajak tim bicara", "Daftar hadir, kolom catatan, dan form near miss"],
+  items_h2="30 topik, <em>siap dibacakan</em>",
+  items=[dict(vis=["br-topik"], kick="Naskah", h3="Satu topik, satu halaman", p="Alurnya sama di setiap topik sehingga mudah dibawakan siapa saja.",
+              ul=["Tujuan dan kalimat pembuka untuk dibacakan", "4 poin bicara", "Contoh kasus di gudang", "2 pertanyaan untuk tim dan 3 aksi hari ini", "Kolom catatan leader dan tindak lanjut"]),
+         dict(vis=["br-daftar"], kick="Topik", h3="K3, operasional, tim, dan musiman", p="Bisa dipakai berurutan atau dipilih sesuai kejadian di gudang.",
+              ul=["10 topik K3: APD, angkat manual, forklift, APAR &amp; evakuasi, rak, tumpahan, barang berbahaya, kelelahan, near miss, listrik", "12 topik operasional: receiving, FIFO/FEFO, dokumen, picking, packing, label, lokasi, retur, barang rusak, muat truk, opname, serah terima shift", "6 topik tim + 2 topik musiman (musim sibuk dan musim hujan)"]),
+         dict(vis=["br-nearmiss"], kick="Form", h3="3 form siap print", p="Supaya briefing tercatat dan ada tindak lanjutnya.",
+              ul=["Daftar hadir briefing pagi", "Jadwal topik briefing bulanan", "Form laporan near miss"])],
+  steps=STEPS("Print atau buka di HP, pilih topik hari ini, dan bacakan."),
+  fit=["Supervisor, leader, dan kepala gudang", "Petugas K3 atau HSE di gudang dan pusat distribusi", "Leader baru yang belum terbiasa memimpin briefing"],
+  honest=["Materi K3 bersifat umum. Sesuaikan dengan prosedur dan aturan K3 di perusahaanmu.", "Contoh kasus adalah ilustrasi; lebih baik lagi bila diganti dengan kejadian di gudangmu sendiri."],
+  offer_sub="Bahan briefing pagi untuk lebih dari satu bulan kerja.",
+  offer=["<span><b>30 naskah briefing</b> · ± 5 menit per topik</span>", "<span><b>Panduan alur briefing 5 menit</b> · dan tips untuk leader</span>", "<span><b>3 form siap print</b> · daftar hadir, jadwal, near miss</span>"],
+  format="PDF A4 (35 halaman)",
+  faq=[("Formatnya apa?", "PDF A4 35 halaman. Bisa dibaca dari HP atau dicetak."), ("Boleh diperbanyak untuk tim?", "Form boleh diperbanyak untuk internal perusahaan pembeli. File tidak boleh dijual ulang atau dibagikan ke luar."), ("Apakah sesuai aturan K3 resmi?", "Isinya praktik K3 umum di gudang, bukan pengganti prosedur atau aturan resmi. Tetap ikuti ketentuan di perusahaanmu.")],
+  final_h2="Besok pagi, <em>tinggal buka topik berikutnya.</em>", final_p="30 naskah briefing pagi gudang plus 3 form siap print."))
+
 for p in P:
     open(os.path.join(ROOT, "content/halaman", p["slug"] + ".html"), "w", encoding="utf-8").write(page(p))
     print("ok", p["slug"])
