@@ -1889,5 +1889,66 @@
         "bahas": "POD sebaiknya disimpan selama jendela retur, garansi, atau sengketa masih terbuka, di satu lokasi terpusat dengan nama file yang seragam."
       }
     ]
+  },
+  "L32": {
+    "slug": "kode-lokasi-rak-gudang",
+    "judul": "Kode Lokasi Rak Gudang: Cara Menyusun Alamat Barang yang Mudah Dibaca",
+    "soal": [
+      {
+        "q": "Apa fungsi utama kode lokasi rak di gudang?",
+        "opsi": [
+          "Menunjukkan harga barang",
+          "Menjadi alamat unik tempat barang disimpan",
+          "Menandai tanggal kedaluwarsa",
+          "Menghitung berat barang"
+        ],
+        "jawab": 1,
+        "bahas": "Kode lokasi rak adalah alamat unik yang menunjukkan di mana sebuah barang disimpan, sehingga petugas bisa menemukannya tanpa menghafal gudang."
+      },
+      {
+        "q": "Pada kode A-03-02-B di artikel, apa arti angka 03?",
+        "opsi": [
+          "Tingkat rak",
+          "Zona",
+          "Lorong",
+          "Nomor bin"
+        ],
+        "jawab": 2,
+        "bahas": "Pada contoh itu, A adalah zona, 03 adalah lorong, 02 adalah rak, dan B adalah tingkat."
+      },
+      {
+        "q": "Mana aturan penyusunan kode yang disarankan?",
+        "opsi": [
+          "Ganti format di tiap lorong sesuai selera petugas",
+          "Pakai format konsisten dengan pemisah yang jelas",
+          "Hindari angka nol di depan",
+          "Buat kode sepanjang mungkin"
+        ],
+        "jawab": 1,
+        "bahas": "Konsistensi dan pemisah yang jelas membuat kode mudah dibaca. Kode juga sebaiknya singkat dan memakai nol di depan."
+      },
+      {
+        "q": "Mengapa tingkat rak disarankan dinomori dari bawah ke atas?",
+        "opsi": [
+          "Supaya tingkat bawah selalu kosong",
+          "Agar label lama tidak perlu diganti bila rak ditinggikan",
+          "Karena barang berat harus di atas",
+          "Agar kode lebih panjang"
+        ],
+        "jawab": 1,
+        "bahas": "Bila penomoran dari bawah dan rak kelak ditambah tingkatnya, label yang sudah ada tetap berlaku."
+      },
+      {
+        "q": "Barang dipindah ke rak lain tetapi catatan sistem tidak diubah. Apa risikonya?",
+        "opsi": [
+          "Tidak ada, sistem akan menyesuaikan sendiri",
+          "Petugas tidak menemukan barang di rak yang tercatat",
+          "Barang jadi lebih cepat diambil",
+          "Nomor lorong otomatis berubah"
+        ],
+        "jawab": 1,
+        "bahas": "Kode di sistem harus selalu cocok dengan kondisi fisik. Bila tidak, barang sulit ditemukan dan bisa dikira habis."
+      }
+    ]
   }
 }

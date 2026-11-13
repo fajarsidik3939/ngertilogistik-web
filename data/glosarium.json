@@ -352,6 +352,15 @@
     "artikel": "L12"
   },
   {
+    "istilah": "Kode lokasi rak",
+    "alias": [
+      "alamat rak",
+      "penomoran lokasi gudang"
+    ],
+    "arti": "Alamat unik tempat sebuah barang disimpan di gudang, biasanya tersusun dari zona, lorong, rak, dan tingkat, misalnya A-03-02-B. Kode ini harus konsisten dan cocok dengan label di rak.",
+    "artikel": "L32"
+  },
+  {
     "istilah": "Kurir",
     "alias": [],
     "arti": "Bagian logistik di transportasi dan pengantaran barang ke penerima. Kurir adalah ujung yang paling terlihat, sedangkan pekerjaan logistik lain terjadi sebelumnya.",
@@ -644,6 +653,14 @@
     ],
     "arti": "Perbedaan antara jumlah barang di sistem dan jumlah di rak. Penyebabnya kebanyakan pencatatan, bukan barang hilang.",
     "artikel": "L14"
+  },
+  {
+    "istilah": "Serpentine (pelabelan)",
+    "alias": [
+      "pola zigzag"
+    ],
+    "arti": "Pola penomoran lokasi yang mengikuti jalur zigzag: petugas menyusuri satu sisi lorong lalu kembali lewat sisi lainnya. Dianggap efisien untuk wave picking tetapi lebih rumit dipelajari staf.",
+    "artikel": "L32"
   },
   {
     "istilah": "Shrinkage",
