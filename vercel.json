@@ -161,8 +161,8 @@
   },
   {
    "source": "/materi/l30-asuransi-pengiriman-kapan-perlu",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/asuransi-pengiriman",
+   "permanent": true
   },
   {
    "source": "/materi/l31-pod-proof-of-delivery",
