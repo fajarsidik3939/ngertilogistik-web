@@ -66,6 +66,8 @@ Tips singkat:
 | L30 | Asuransi Pengiriman: Kapan Perlu dan Kapan Bisa Dilewatkan? | 2026-11-15 | [L30-asuransi-pengiriman.md](L30-asuransi-pengiriman.md) |
 | L31 | POD Adalah Bukti Serah Terima: Arti Proof of Delivery dan Fungsinya | 2026-11-16 | [L31-pod-adalah.md](L31-pod-adalah.md) |
 | L32 | Kode Lokasi Rak Gudang: Cara Menyusun Alamat Barang yang Mudah Dibaca | 2026-11-17 | [L32-kode-lokasi-rak-gudang.md](L32-kode-lokasi-rak-gudang.md) |
+| L33 | Apakah Sistem Gudang Pasti Benar? Akurasi Data Inventori dan Cek Fisik | 2026-11-18 | [L33-akurasi-data-inventori.md](L33-akurasi-data-inventori.md) |
+| L34 | Barang Berbahaya dalam Pengiriman: Kenapa Parfum dan Power Bank Tidak Boleh Sembarangan | 2026-11-19 | [L34-barang-berbahaya-pengiriman.md](L34-barang-berbahaya-pengiriman.md) |
 
 Catatan: L01 sampai L20 tayang di tanggal yang sama (2026-11-02). Jangan posting semuanya sekaligus. Jadwalkan satu artikel per hari (atau satu sampai dua per hari) dan hitung urutan H, H+1, dan seterusnya dari hari kamu mulai mempromosikan artikel itu.
 

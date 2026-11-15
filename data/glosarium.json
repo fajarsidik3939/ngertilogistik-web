@@ -35,6 +35,15 @@
     "artikel": "L10"
   },
   {
+    "istilah": "Akurasi inventori",
+    "alias": [
+      "akurasi data inventori",
+      "akurasi stok"
+    ],
+    "arti": "Seberapa cocok angka stok di sistem dengan barang yang benar-benar ada di rak. Dijaga lewat pencatatan yang disiplin dan cek fisik rutin.",
+    "artikel": "L33"
+  },
+  {
     "istilah": "Analisis ABC",
     "alias": [
       "pengelompokan ABC",
@@ -71,6 +80,15 @@
     "artikel": "L26"
   },
   {
+    "istilah": "Barang berbahaya",
+    "alias": [
+      "dangerous goods",
+      "DG"
+    ],
+    "arti": "Barang yang dapat membahayakan kesehatan, keselamatan, properti, atau lingkungan saat diangkut. Punya aturan khusus kemasan, label, dokumen, dan angkutan.",
+    "artikel": "L34"
+  },
+  {
     "istilah": "Barcode",
     "alias": [],
     "arti": "Gambar garis yang bisa dipindai mesin. Pada produk ritel, angka di bawah barcode umumnya adalah GTIN.",
@@ -91,6 +109,15 @@
     "alias": [],
     "arti": "Metode picking yang mengambil barang untuk beberapa pesanan sekaligus dalam satu putaran, lalu memilahnya ke tiap pesanan. Perjalanan lebih hemat, tetapi tahap pemilahan harus teliti.",
     "artikel": "L22"
+  },
+  {
+    "istilah": "Baterai lithium (Kelas 9)",
+    "alias": [
+      "baterai lithium",
+      "Kelas 9"
+    ],
+    "arti": "Baterai yang dalam panduan angkutan udara termasuk barang berbahaya Kelas 9, yaitu barang lain-lain. Power bank diperlakukan sebagai baterai.",
+    "artikel": "L34"
   },
   {
     "istilah": "Berat aktual",

@@ -1950,5 +1950,127 @@
         "bahas": "Kode di sistem harus selalu cocok dengan kondisi fisik. Bila tidak, barang sulit ditemukan dan bisa dikira habis."
       }
     ]
+  },
+  "L33": {
+    "slug": "akurasi-data-inventori",
+    "judul": "Apakah Sistem Gudang Pasti Benar? Akurasi Data Inventori dan Cek Fisik",
+    "soal": [
+      {
+        "q": "Kenapa stok di sistem bisa berbeda dari stok di rak?",
+        "opsi": [
+          "Karena sistem selalu rusak",
+          "Karena sistem hanya mencatat apa yang dimasukkan ke dalamnya",
+          "Karena rak selalu salah hitung",
+          "Karena barang menguap dengan sendirinya"
+        ],
+        "jawab": 1,
+        "bahas": "Sistem tidak melihat rak. Ia hanya menghitung dari data yang diinput, sehingga kekeliruan input ikut terbawa ke layar."
+      },
+      {
+        "q": "Mana yang termasuk penyebab selisih stok?",
+        "opsi": [
+          "Barang rusak yang belum dikeluarkan dari stok",
+          "Warna kardus yang terlalu terang",
+          "Jam kerja yang terlalu pendek",
+          "Nama gudang yang terlalu panjang"
+        ],
+        "jawab": 0,
+        "bahas": "Barang rusak yang belum dikeluarkan dari stok tetap tampil tersedia di sistem, padahal tidak layak jual."
+      },
+      {
+        "q": "Cara paling jelas untuk membuktikan angka sistem cocok dengan rak adalah...",
+        "opsi": [
+          "Menambah jumlah petugas",
+          "Mengganti warna layar",
+          "Cek fisik rutin, misalnya cycle count atau stock opname",
+          "Menunggu pelanggan komplain"
+        ],
+        "jawab": 2,
+        "bahas": "Membandingkan angka sistem dengan hitungan fisik adalah satu-satunya cara tahu di mana data bisa dipercaya."
+      },
+      {
+        "q": "Saat menemukan selisih, apa langkah yang disarankan?",
+        "opsi": [
+          "Langsung ubah angka di sistem agar sama dengan rak",
+          "Abaikan selama selisihnya kecil",
+          "Cari dulu penyebabnya, baru sesuaikan catatan",
+          "Hapus semua catatan lama"
+        ],
+        "jawab": 2,
+        "bahas": "Menyesuaikan angka tanpa mencari sebab hanya menutupi masalah, sehingga selisih yang sama akan terulang."
+      },
+      {
+        "q": "Apa peran sistem dalam inventori menurut artikel ini?",
+        "opsi": [
+          "Alat bantu; disiplin pencatatan yang membuatnya benar",
+          "Pengganti semua cek fisik",
+          "Sumber kebenaran yang tidak perlu diperiksa",
+          "Pengganti petugas gudang"
+        ],
+        "jawab": 0,
+        "bahas": "Sistem adalah alat bantu. Kebenarannya bergantung pada disiplin pencatatan dan pengecekan fisik."
+      }
+    ]
+  },
+  "L34": {
+    "slug": "barang-berbahaya-pengiriman",
+    "judul": "Barang Berbahaya dalam Pengiriman: Kenapa Parfum dan Power Bank Tidak Boleh Sembarangan",
+    "soal": [
+      {
+        "q": "Kenapa parfum bisa termasuk barang berbahaya?",
+        "opsi": [
+          "Karena harganya mahal",
+          "Karena mengandung alkohol dan minyak aromatik sehingga mudah terbakar",
+          "Karena botolnya berat",
+          "Karena baunya kuat"
+        ],
+        "jawab": 1,
+        "bahas": "Parfum mengandung alkohol dan minyak aromatik dalam kadar tinggi, sehingga dikategorikan sebagai cairan mudah terbakar."
+      },
+      {
+        "q": "Power bank masuk kelas barang berbahaya yang mana dalam panduan angkutan udara?",
+        "opsi": [
+          "Kelas 1",
+          "Kelas 3",
+          "Kelas 5",
+          "Kelas 9"
+        ],
+        "jawab": 3,
+        "bahas": "Baterai lithium termasuk Kelas 9 (barang berbahaya lain-lain), dan power bank diperlakukan sebagai baterai."
+      },
+      {
+        "q": "Berapa jumlah kelas barang berbahaya yang disebut dalam panduan?",
+        "opsi": [
+          "Tiga",
+          "Sembilan",
+          "Dua belas",
+          "Dua puluh"
+        ],
+        "jawab": 1,
+        "bahas": "Ada sembilan kelas, dari Kelas 1 (bahan peledak) sampai Kelas 9 (barang lain-lain)."
+      },
+      {
+        "q": "Apakah semua barang berbahaya diterima oleh penyedia layanan pengiriman?",
+        "opsi": [
+          "Ya, selama dibayar",
+          "Ya, asal tanpa label",
+          "Tidak, tidak semua diterima dan perlu persetujuan awal",
+          "Ya, bila lewat darat saja"
+        ],
+        "jawab": 2,
+        "bahas": "Tidak semua barang berbahaya diterima. Pengirim perlu persetujuan awal dan memberi tahu sebelum mengirim."
+      },
+      {
+        "q": "Apa yang sebaiknya dilakukan terhadap isi paket yang tergolong berbahaya?",
+        "opsi": [
+          "Menulis isi umum agar cepat lolos",
+          "Menyatakan isi dengan jujur dan lengkap, serta mengikuti aturan",
+          "Memecah paket jadi banyak",
+          "Mengirim tanpa label"
+        ],
+        "jawab": 1,
+        "bahas": "Salah klasifikasi dapat membuat paket ditahan atau disita, dan barang mudah terbakar berisiko kebakaran selama perjalanan."
+      }
+    ]
   }
 }
