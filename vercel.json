@@ -166,8 +166,8 @@
   },
   {
    "source": "/materi/l31-pod-proof-of-delivery",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/pod-adalah",
+   "permanent": true
   },
   {
    "source": "/materi/l32-kode-lokasi-rak-bin-location",
