@@ -171,8 +171,8 @@
   },
   {
    "source": "/materi/l32-kode-lokasi-rak-bin-location",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/kode-lokasi-rak-gudang",
+   "permanent": true
   },
   {
    "source": "/materi/l33-salah-kaprah-sistem-pasti-benar",
