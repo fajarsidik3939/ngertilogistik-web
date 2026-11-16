@@ -1,0 +1,19 @@
+<style>
+.row{display:grid;gap:12px;margin-top:26px}
+.c2{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:repeat(3,1fr)}.c4{grid-template-columns:repeat(4,1fr)}.c5{grid-template-columns:repeat(5,1fr)}
+.row .card{padding:12px 12px 16px}
+.ic{display:block;width:100%;height:110px;margin-bottom:10px;background:#0F1930;border-radius:12px}
+.big{display:block;width:100%;background:#0F1930;border-radius:14px}
+.hl{border-color:#FFC400;background:#1A2540}
+.row .t{font-size:22px}
+.tag{font:700 15px 'JetBrains Mono';letter-spacing:.1em;padding:5px 10px;border-radius:7px;display:inline-block}
+.tag.bad{background:rgba(255,138,122,.14)}.tag.ok{background:rgba(126,226,168,.14)}.tag.ex{background:rgba(255,196,0,.14);color:#FFC400}
+.panel{margin-top:26px;padding:18px}
+</style>
+<span class="k">Kamus Logistik</span><h1>Barang kembali, lalu <em>diputuskan</em></h1><p class="sub">Cek dulu kondisinya, baru pilih jalurnya.</p>
+<div class="row c4"><div class="card"><svg class="ic" viewBox="0 0 200 130"><path d="M50 70l30 30 70-60" stroke="#7EE2A8" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="n">01</div><div class="t">Jual lagi</div></div>
+<div class="card"><svg class="ic" viewBox="0 0 200 130"><path d="M60 100L120 40" stroke="#E5E7EB" stroke-width="12" stroke-linecap="round"/><circle cx="132" cy="30" r="20" fill="none" stroke="#FFC400" stroke-width="10"/></svg><div class="n">02</div><div class="t">Perbaiki</div></div>
+<div class="card"><svg class="ic" viewBox="0 0 200 130"><path d="M60 50a46 46 0 0 1 84-4" stroke="#FFC400" stroke-width="10" fill="none"/><polygon points="146,24 150,56 120,48" fill="#FFC400"/><path d="M140 82a46 46 0 0 1-84 4" stroke="#FFC400" stroke-width="10" fill="none"/><polygon points="54,106 50,74 80,82" fill="#FFC400"/></svg><div class="n">03</div><div class="t">Daur ulang</div></div>
+<div class="card"><svg class="ic" viewBox="0 0 200 130"><path d="M70 40H130L124 110H76Z" fill="#CBD2DC"/><rect x="62" y="30" width="76" height="10" rx="3" fill="#E5E7EB"/><path d="M90 52V98M110 52V98" stroke="#FF8A7A" stroke-width="6"/></svg><div class="n">04</div><div class="t">Musnahkan</div></div></div>
+<div class="row c1" style="grid-template-columns:1fr"><div class="card hl"><div class="t">Periksa dulu kondisinya, lalu pilih satu keputusan</div></div></div>
+{{FOOT}}

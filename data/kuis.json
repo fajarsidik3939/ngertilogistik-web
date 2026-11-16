@@ -2072,5 +2072,66 @@
         "bahas": "Salah klasifikasi dapat membuat paket ditahan atau disita, dan barang mudah terbakar berisiko kebakaran selama perjalanan."
       }
     ]
+  },
+  "L35": {
+    "slug": "reverse-logistics",
+    "judul": "Reverse Logistics Adalah Logistik Balik: Alur Retur dari Pembeli ke Gudang",
+    "soal": [
+      {
+        "q": "Apa yang dimaksud dengan reverse logistics?",
+        "opsi": [
+          "Aliran barang dari pembeli kembali ke penjual",
+          "Pengiriman barang dengan kendaraan yang berjalan mundur",
+          "Penyimpanan barang di bagian belakang gudang",
+          "Pengiriman barang ke luar negeri"
+        ],
+        "jawab": 0,
+        "bahas": "Reverse logistics adalah aliran produk berlawanan arah dengan rantai pasok biasa, yaitu dari pembeli kembali ke penjual atau fasilitas pengolahan."
+      },
+      {
+        "q": "Mana yang termasuk contoh reverse logistics?",
+        "opsi": [
+          "Menata barang baru di rak",
+          "Retur pesanan toko daring yang barangnya rusak",
+          "Menghitung stok setiap akhir bulan",
+          "Membuat label alamat paket"
+        ],
+        "jawab": 1,
+        "bahas": "Retur pesanan karena barang salah atau rusak adalah contoh paling umum dari aliran balik barang."
+      },
+      {
+        "q": "Tahap mana yang paling menentukan nasib barang retur?",
+        "opsi": [
+          "Pengiriman balik",
+          "Pemeriksaan dan pemilahan kondisi barang",
+          "Pencatatan di akhir tahun",
+          "Penjualan ulang tanpa cek"
+        ],
+        "jawab": 1,
+        "bahas": "Tanpa pemeriksaan kondisi yang jelas, keputusan di tahap berikutnya hanya tebakan."
+      },
+      {
+        "q": "Mana yang BUKAN keputusan yang tepat untuk barang retur?",
+        "opsi": [
+          "Jual lagi",
+          "Perbaiki",
+          "Daur ulang",
+          "Biarkan menumpuk di pojok gudang"
+        ],
+        "jawab": 3,
+        "bahas": "Membiarkan barang menumpuk bukan keputusan, melainkan kesalahan umum yang membuat nilai barang makin kecil."
+      },
+      {
+        "q": "Apa tiga hal sederhana untuk merencanakan alur retur?",
+        "opsi": [
+          "Area retur khusus, catatan, dan batas waktu keputusan",
+          "Diskon, iklan, dan kurir cepat",
+          "Rak baru, forklift, dan sistem besar",
+          "Gudang kedua, stok ekstra, dan kardus"
+        ],
+        "jawab": 0,
+        "bahas": "Area khusus memisahkan barang retur, catatan menjaga data tetap sesuai, dan batas waktu mencegah barang mengendap."
+      }
+    ]
   }
 }

@@ -644,6 +644,14 @@
     "artikel": "L08"
   },
   {
+    "istilah": "Refurbish",
+    "alias": [
+      "refurbishment"
+    ],
+    "arti": "Memperbaiki atau memulihkan barang bekas atau retur agar bisa dipakai atau dijual lagi.",
+    "artikel": "L35"
+  },
+  {
     "istilah": "Reorder point",
     "alias": [
       "ROP",
@@ -661,6 +669,15 @@
     ],
     "arti": "Aliran balik barang yang dikembalikan, misalnya karena salah kirim atau rusak. Barang retur diterima, dicek, lalu diputuskan untuk dijual lagi, diperbaiki, atau dimusnahkan.",
     "artikel": "L05"
+  },
+  {
+    "istilah": "Reverse logistics",
+    "alias": [
+      "logistik balik",
+      "alur retur"
+    ],
+    "arti": "Aliran barang berlawanan arah dengan logistik biasa: dari pembeli kembali ke penjual atau fasilitas pengolahan, untuk retur, perbaikan, daur ulang, atau pemusnahan.",
+    "artikel": "L35"
   },
   {
     "istilah": "Safety stock",
