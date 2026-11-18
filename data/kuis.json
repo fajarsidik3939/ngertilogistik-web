@@ -2133,5 +2133,66 @@
         "bahas": "Area khusus memisahkan barang retur, catatan menjaga data tetap sesuai, dan batas waktu mencegah barang mengendap."
       }
     ]
+  },
+  "L36": {
+    "slug": "barcode-vs-qr-code",
+    "judul": "Barcode vs QR Code di Gudang: Beda Isi, Kapasitas, dan Cara Memilihnya",
+    "soal": [
+      {
+        "q": "Apa perbedaan utama barcode 1D dan QR code 2D?",
+        "opsi": [
+          "Barcode 1D menyimpan data horizontal, QR code menyimpan horizontal dan vertikal",
+          "Barcode 1D selalu lebih mahal dicetak",
+          "QR code hanya bisa dipakai di toko online",
+          "Barcode 1D hanya untuk barang impor"
+        ],
+        "jawab": 0,
+        "bahas": "Kode 1D menyimpan data hanya secara horizontal, sedangkan kode 2D memakai dua arah sehingga muat lebih banyak data."
+      },
+      {
+        "q": "Untuk label yang hanya perlu membawa nomor SKU, kode mana yang biasanya sudah cukup?",
+        "opsi": [
+          "QR code berukuran besar",
+          "Barcode 1D",
+          "Tidak perlu kode apa pun",
+          "Dua QR code sekaligus"
+        ],
+        "jawab": 1,
+        "bahas": "Kode singkat seperti nomor SKU cukup dibawa barcode 1D yang cepat dipindai."
+      },
+      {
+        "q": "Menurut GS1 Singapore, berapa kira-kira karakter yang bisa dimuat barcode 1D?",
+        "opsi": [
+          "Ribuan karakter",
+          "Sekitar 20 sampai 25 karakter",
+          "Tepat satu karakter",
+          "Tidak terbatas"
+        ],
+        "jawab": 1,
+        "bahas": "Barcode 1D hanya memuat sekitar 20 sampai 25 karakter, sedangkan kode 2D memuat ribuan karakter."
+      },
+      {
+        "q": "Kapan QR code lebih tepat dipakai di gudang?",
+        "opsi": [
+          "Saat label perlu membawa batch, tanggal kedaluwarsa, atau tautan",
+          "Saat label cukup berisi satu nomor pendek",
+          "Saat tidak ada pemindai sama sekali",
+          "Saat label sengaja dibuat sekecil mungkin"
+        ],
+        "jawab": 0,
+        "bahas": "Data tambahan seperti batch, kedaluwarsa, dan tautan muat di kode 2D, sehingga cocok untuk label palet atau dokumen."
+      },
+      {
+        "q": "Apa yang perlu dicek sebelum mengganti label barcode menjadi QR code?",
+        "opsi": [
+          "Warna kardus",
+          "Apakah pemindai dan sistem mendukung jenis kode itu",
+          "Jumlah rak di gudang",
+          "Nama kurir yang dipakai"
+        ],
+        "jawab": 1,
+        "bahas": "Pemindai garis lama dirancang untuk kode 1D, dan data tambahan hanya berguna bila sistem bisa membaca dan menyimpannya."
+      }
+    ]
   }
 }

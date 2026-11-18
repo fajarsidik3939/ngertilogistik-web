@@ -95,6 +95,15 @@
     "artikel": "L03"
   },
   {
+    "istilah": "Barcode 1D",
+    "alias": [
+      "barcode linear",
+      "kode satu dimensi"
+    ],
+    "arti": "Kode berbentuk garis-garis yang menyimpan data hanya secara horizontal dan biasanya memuat kode singkat, seperti nomor SKU.",
+    "artikel": "L36"
+  },
+  {
     "istilah": "Batch",
     "alias": [
       "nomor batch",
@@ -634,6 +643,15 @@
     ],
     "arti": "Proses memindahkan barang yang sudah diterima dari area penerimaan ke lokasi simpan, lalu mencatat lokasinya di sistem. Putaway terjadi setelah penerimaan dan sebelum picking.",
     "artikel": "L16"
+  },
+  {
+    "istilah": "QR code",
+    "alias": [
+      "kode QR",
+      "quick response code"
+    ],
+    "arti": "Kode dua dimensi berbentuk kotak-kotak yang menyimpan data secara horizontal dan vertikal, sehingga bisa memuat lebih banyak data daripada barcode garis, misalnya nomor batch, tanggal kedaluwarsa, atau tautan.",
+    "artikel": "L36"
   },
   {
     "istilah": "Receiving",
