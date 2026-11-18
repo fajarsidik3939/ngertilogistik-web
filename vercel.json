@@ -176,13 +176,13 @@
   },
   {
    "source": "/materi/l33-salah-kaprah-sistem-pasti-benar",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/akurasi-data-inventori",
+   "permanent": true
   },
   {
    "source": "/materi/l34-barang-berbahaya-dangerous-goods",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/barang-berbahaya-pengiriman",
+   "permanent": true
   },
   {
    "source": "/materi/l35-reverse-logistics-alur-retur",
