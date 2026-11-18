@@ -2194,5 +2194,66 @@
         "bahas": "Pemindai garis lama dirancang untuk kode 1D, dan data tambahan hanya berguna bila sistem bisa membaca dan menyimpannya."
       }
     ]
+  },
+  "L37": {
+    "slug": "incoterms-adalah",
+    "judul": "Incoterms Adalah Aturan Pembagian Tugas Penjual dan Pembeli: Dari EXW sampai DDP",
+    "soal": [
+      {
+        "q": "Siapa yang menerbitkan Incoterms?",
+        "opsi": [
+          "Kamar Dagang Internasional (ICC)",
+          "Perusahaan kurir tertentu",
+          "Organisasi kesehatan dunia",
+          "Bank sentral tiap negara"
+        ],
+        "jawab": 0,
+        "bahas": "Incoterms diterbitkan oleh Kamar Dagang Internasional (ICC). Versi yang berlaku saat ini adalah Incoterms 2020."
+      },
+      {
+        "q": "Tiga hal apa yang diatur setiap aturan Incoterms?",
+        "opsi": [
+          "Warna, ukuran, dan berat barang",
+          "Biaya, perpindahan risiko, dan tugas serta dokumen",
+          "Harga jual, diskon, dan bunga",
+          "Merek, jenis kemasan, dan nama gudang"
+        ],
+        "jawab": 1,
+        "bahas": "Incoterms menjelaskan siapa menanggung biaya, kapan risiko berpindah, dan siapa mengurus dokumen serta formalitas ekspor dan impor."
+      },
+      {
+        "q": "Ada berapa aturan dalam Incoterms 2020?",
+        "opsi": [
+          "4",
+          "7",
+          "11",
+          "20"
+        ],
+        "jawab": 2,
+        "bahas": "Ada 11 aturan: tujuh untuk semua moda pengangkutan dan empat khusus laut dan perairan pedalaman."
+      },
+      {
+        "q": "Pada aturan EXW, apa kewajiban penjual?",
+        "opsi": [
+          "Mengantar barang sampai pintu pembeli dan mengurus impor",
+          "Menyediakan barang di lokasi yang disepakati, sisanya urusan pembeli",
+          "Menyediakan kapal dan asuransi",
+          "Membayar semua bea di negara pembeli"
+        ],
+        "jawab": 1,
+        "bahas": "EXW adalah ujung paling ringan bagi penjual. Pemuatan, pengangkutan, dan formalitas ekspor serta impor diurus pembeli."
+      },
+      {
+        "q": "Mana yang TIDAK diatur oleh Incoterms?",
+        "opsi": [
+          "Titik perpindahan risiko",
+          "Pembagian biaya pengangkutan",
+          "Harga barang dan metode pembayaran",
+          "Siapa mengurus dokumen ekspor"
+        ],
+        "jawab": 2,
+        "bahas": "Incoterms tidak menentukan harga, pembayaran, perpindahan kepemilikan, atau akibat pelanggaran kontrak. Hal itu diatur di kontrak atau hukum yang berlaku."
+      }
+    ]
   }
 }

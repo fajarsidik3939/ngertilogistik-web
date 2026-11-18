@@ -220,6 +220,14 @@
     "artikel": "L04"
   },
   {
+    "istilah": "DDP",
+    "alias": [
+      "Delivered Duty Paid"
+    ],
+    "arti": "Aturan Incoterms yang paling berat bagi penjual: penjual menanggung biaya dan risiko sampai barang tiba di tujuan, termasuk mengurus ekspor dan impor.",
+    "artikel": "L37"
+  },
+  {
     "istilah": "Dead stock",
     "alias": [],
     "arti": "Barang yang tidak bergerak sama sekali di gudang. Kelompok ini termasuk tanda kelebihan stok yang perlu diperhatikan.",
@@ -247,6 +255,14 @@
     "alias": [],
     "arti": "Pengiriman surat atau barang, atau perusahaan pengangkutan barang. Fokusnya pengangkutan, sehingga ekspedisi adalah salah satu pelaku di dalam logistik.",
     "artikel": "L05"
+  },
+  {
+    "istilah": "EXW",
+    "alias": [
+      "Ex Works"
+    ],
+    "arti": "Aturan Incoterms yang paling ringan bagi penjual: penjual hanya menyediakan barang di lokasi yang disepakati, biasanya tempat penjual, dan sisanya diurus pembeli.",
+    "artikel": "L37"
   },
   {
     "istilah": "Fast-moving",
@@ -372,6 +388,15 @@
     "alias": [],
     "arti": "Di level perusahaan, aliran bahan atau barang dari pemasok masuk ke perusahaan. Cakupannya lebih luas dari gudang karena termasuk transportasi.",
     "artikel": "L07"
+  },
+  {
+    "istilah": "Incoterms",
+    "alias": [
+      "International Commercial Terms",
+      "aturan Incoterms"
+    ],
+    "arti": "Aturan dari Kamar Dagang Internasional (ICC) yang membagi biaya, risiko, dan tugas antara penjual dan pembeli dalam pengiriman barang. Versi yang berlaku saat ini adalah Incoterms 2020 dengan 11 aturan.",
+    "artikel": "L37"
   },
   {
     "istilah": "ISPM 15",
