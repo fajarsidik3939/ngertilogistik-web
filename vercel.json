@@ -186,8 +186,8 @@
   },
   {
    "source": "/materi/l35-reverse-logistics-alur-retur",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/reverse-logistics",
+   "permanent": true
   },
   {
    "source": "/materi/l36-barcode-vs-qr-code-di-gudang",
