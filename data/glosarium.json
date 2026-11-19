@@ -242,6 +242,14 @@
     "artikel": "L20"
   },
   {
+    "istilah": "Dock-to-stock time",
+    "alias": [
+      "dock to stock"
+    ],
+    "arti": "Waktu dari barang tiba di dock sampai barang tercatat dan tersedia di lokasi ambil. Menunjukkan kecepatan proses penerimaan dan penyimpanan.",
+    "artikel": "L38"
+  },
+  {
     "istilah": "Dok",
     "alias": [
       "dock",
@@ -422,6 +430,15 @@
     "artikel": "L32"
   },
   {
+    "istilah": "KPI gudang",
+    "alias": [
+      "key performance indicator gudang",
+      "indikator kinerja gudang"
+    ],
+    "arti": "Angka terukur untuk menilai kinerja gudang, misalnya akurasi stok, ketepatan pesanan, waktu proses, dan produktivitas. Dipantau berkala untuk melihat bagian proses yang perlu diperbaiki.",
+    "artikel": "L38"
+  },
+  {
     "istilah": "Kurir",
     "alias": [],
     "arti": "Bagian logistik di transportasi dan pengantaran barang ke penerima. Kurir adalah ujung yang paling terlihat, sedangkan pekerjaan logistik lain terjadi sebelumnya.",
@@ -586,6 +603,14 @@
     ],
     "arti": "Langkah terakhir alur gudang: barang diserahkan ke kurir atau dimuat ke truk, biasanya dengan dokumen serah terima atau surat jalan, lalu status di sistem diperbarui.",
     "artikel": "L04"
+  },
+  {
+    "istilah": "Perfect order rate",
+    "alias": [
+      "pesanan sempurna"
+    ],
+    "arti": "Persentase pesanan yang terkirim tanpa kegagalan di semua aspek: barang benar, tepat waktu, tanpa kerusakan, serta dokumen dan label benar.",
+    "artikel": "L38"
   },
   {
     "istilah": "Phantom inventory",

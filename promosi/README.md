@@ -71,6 +71,7 @@ Tips singkat:
 | L35 | Reverse Logistics Adalah Logistik Balik: Alur Retur dari Pembeli ke Gudang | 2026-11-20 | [L35-reverse-logistics.md](L35-reverse-logistics.md) |
 | L36 | Barcode vs QR Code di Gudang: Beda Isi, Kapasitas, dan Cara Memilihnya | 2026-11-21 | [L36-barcode-vs-qr-code.md](L36-barcode-vs-qr-code.md) |
 | L37 | Incoterms Adalah Aturan Pembagian Tugas Penjual dan Pembeli: Dari EXW sampai DDP | 2026-11-22 | [L37-incoterms-adalah.md](L37-incoterms-adalah.md) |
+| L38 | KPI Gudang: 4 Ukuran Utama untuk Menilai Kinerja Gudang | 2026-11-23 | [L38-kpi-gudang.md](L38-kpi-gudang.md) |
 
 Catatan: L01 sampai L20 tayang di tanggal yang sama (2026-11-02). Jangan posting semuanya sekaligus. Jadwalkan satu artikel per hari (atau satu sampai dua per hari) dan hitung urutan H, H+1, dan seterusnya dari hari kamu mulai mempromosikan artikel itu.
 

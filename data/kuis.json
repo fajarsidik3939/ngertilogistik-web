@@ -2255,5 +2255,66 @@
         "bahas": "Incoterms tidak menentukan harga, pembayaran, perpindahan kepemilikan, atau akibat pelanggaran kontrak. Hal itu diatur di kontrak atau hukum yang berlaku."
       }
     ]
+  },
+  "L38": {
+    "slug": "kpi-gudang",
+    "judul": "KPI Gudang: 4 Ukuran Utama untuk Menilai Kinerja Gudang",
+    "soal": [
+      {
+        "q": "Apa yang diukur oleh akurasi stok?",
+        "opsi": [
+          "Seberapa cepat pesanan dikirim",
+          "Kesesuaian data stok di sistem dengan jumlah fisik di rak",
+          "Jumlah picker yang bekerja per hari",
+          "Biaya sewa gudang per bulan"
+        ],
+        "jawab": 1,
+        "bahas": "Akurasi stok membandingkan stok di sistem dengan hitungan fisik di rak. Rumusnya: item yang cocok dibagi total item yang dicek, dikali 100%."
+      },
+      {
+        "q": "Dalam contoh, 194 dari 200 pesanan dikirim tanpa kesalahan. Berapa ketepatan pesanannya?",
+        "opsi": [
+          "94%",
+          "95%",
+          "96%",
+          "97%"
+        ],
+        "jawab": 3,
+        "bahas": "194 ÷ 200 × 100% = 97%. Angka ini hanya contoh ilustrasi."
+      },
+      {
+        "q": "Dock-to-stock time adalah waktu dari...",
+        "opsi": [
+          "Pesanan dibuat sampai pesanan dikirim",
+          "Barang tiba di dock sampai tercatat dan tersedia di lokasi ambil",
+          "Picker mulai bekerja sampai pulang",
+          "Barang dikirim sampai diterima pelanggan"
+        ],
+        "jawab": 1,
+        "bahas": "Dock-to-stock time mengukur kecepatan proses penerimaan sampai barang siap diambil. Order cycle time adalah yang dihitung dari pesanan dibuat sampai dikirim."
+      },
+      {
+        "q": "Bagaimana sikap yang tepat terhadap angka target KPI dari gudang lain?",
+        "opsi": [
+          "Disalin langsung agar sama",
+          "Dipakai sebagai rentang acuan lalu disesuaikan dengan gudang sendiri",
+          "Diabaikan sepenuhnya tanpa mengukur apa pun",
+          "Dijadikan alasan untuk menyalahkan tim"
+        ],
+        "jawab": 1,
+        "bahas": "Angka pembanding publik hanya rentang acuan, bukan kebenaran universal. Jenis barang, layanan, dan kemampuan tiap gudang berbeda."
+      },
+      {
+        "q": "Perfect order rate dihitung sebagai persentase pesanan yang...",
+        "opsi": [
+          "Dikirim paling cepat",
+          "Terkirim tanpa kegagalan di semua aspek: barang benar, tepat waktu, tanpa kerusakan, dokumen dan label benar",
+          "Dipesan ulang oleh pelanggan",
+          "Diambil oleh picker paling produktif"
+        ],
+        "jawab": 1,
+        "bahas": "Satu pesanan yang gagal di salah satu aspek tidak dihitung sempurna, sehingga KPI ini lebih ketat."
+      }
+    ]
   }
 }
