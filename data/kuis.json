@@ -2316,5 +2316,66 @@
         "bahas": "Satu pesanan yang gagal di salah satu aspek tidak dihitung sempurna, sehingga KPI ini lebih ketat."
       }
     ]
+  },
+  "L39": {
+    "slug": "dead-stock-slow-moving",
+    "judul": "Dead Stock dan Slow Moving: Kenali Barang Diam Sebelum Nilainya Habis",
+    "soal": [
+      {
+        "q": "Apa ciri utama barang slow moving?",
+        "opsi": [
+          "Sudah tidak mungkin terjual lagi",
+          "Masih terjual, tetapi jauh lebih lambat dibanding barang lain",
+          "Selalu keluar lebih cepat dari barang lain",
+          "Hanya ada di gudang berpendingin"
+        ],
+        "jawab": 1,
+        "bahas": "Slow moving masih terjual, hanya lambat. Yang sudah sangat lama tidak terjual dan kecil peluangnya laku disebut dead stock."
+      },
+      {
+        "q": "Apa yang membedakan dead stock dari slow moving?",
+        "opsi": [
+          "Dead stock selalu barang mahal",
+          "Dead stock sangat lama tidak terjual dan kecil peluang lakunya",
+          "Dead stock hanya terjadi di toko online",
+          "Dead stock pasti sudah kedaluwarsa"
+        ],
+        "jawab": 1,
+        "bahas": "Dead stock atau stok mati adalah barang yang sudah lama tersimpan dan kecil peluangnya terjual lagi, sedangkan slow moving masih terjual walau pelan."
+      },
+      {
+        "q": "Berapa batas waktu yang tepat untuk menyebut barang dead stock?",
+        "opsi": [
+          "Selalu 30 hari",
+          "Selalu 90 hari",
+          "Tidak ada batas tunggal, tiap perusahaan menetapkan sendiri menurut jenis barang",
+          "Selalu 5 tahun"
+        ],
+        "jawab": 2,
+        "bahas": "Sumber berbeda menyebut batas berbeda, dan makanan jelas berbeda dengan suku cadang. Karena itu batasnya ditetapkan sendiri."
+      },
+      {
+        "q": "Alat apa yang membantu mengenali barang diam lebih awal?",
+        "opsi": [
+          "Laporan umur stok yang ditinjau rutin",
+          "Hanya menunggu keluhan pelanggan",
+          "Menambah jumlah SKU",
+          "Menunda semua pembelian"
+        ],
+        "jawab": 0,
+        "bahas": "Laporan umur stok mengelompokkan barang menurut lama tidak bergerak sehingga barang yang menua bisa diputuskan lebih cepat."
+      },
+      {
+        "q": "Mana yang termasuk pilihan menangani barang diam?",
+        "opsi": [
+          "Membiarkannya sampai rusak",
+          "Membeli lebih banyak supaya murah per unit",
+          "Promo atau bundling, retur ke pemasok sesuai perjanjian, pindah kanal, atau hapus sebagai jalan terakhir",
+          "Menyembunyikannya dari laporan"
+        ],
+        "jawab": 2,
+        "bahas": "Putuskan sebelum nilainya habis, lalu cari penyebabnya agar pembelian berikutnya tidak berlebihan."
+      }
+    ]
   }
 }

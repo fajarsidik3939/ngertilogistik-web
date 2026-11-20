@@ -445,6 +445,15 @@
     "artikel": "L05"
   },
   {
+    "istilah": "Laporan umur stok",
+    "alias": [
+      "aging stok",
+      "aging report"
+    ],
+    "arti": "Laporan yang mengelompokkan barang menurut lama tidak bergerak, misalnya 0 sampai 90 hari atau lebih dari 365 hari, untuk menemukan barang slow moving dan calon dead stock sebelum terlambat.",
+    "artikel": "L39"
+  },
+  {
     "istilah": "Last mile",
     "alias": [
       "last mile delivery",
@@ -823,6 +832,14 @@
     ],
     "arti": "Kegiatan menghitung fisik seluruh persediaan dalam satu waktu untuk dicocokkan dengan catatan, termasuk mengecek kondisi barang. Biasanya aktivitas gudang dihentikan sementara dan sering dilakukan tahunan.",
     "artikel": "L23"
+  },
+  {
+    "istilah": "Stok mati",
+    "alias": [
+      "barang lambat laku"
+    ],
+    "arti": "Sebutan lain untuk dead stock: barang yang sangat lama tidak terjual dan kecil peluangnya laku. Berbeda dengan slow moving yang masih terjual walau pelan.",
+    "artikel": "L39"
   },
   {
     "istilah": "Stok siklus",

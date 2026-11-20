@@ -1,0 +1,17 @@
+<style>
+.bars{margin-top:26px;display:grid;gap:12px}
+.b{display:grid;grid-template-columns:200px 1fr 130px;align-items:center;gap:16px}
+.lbl{font:700 22px 'Plus Jakarta Sans'}
+.bar{height:30px;border-radius:8px}
+.v{font:700 20px 'JetBrains Mono';color:#B9C4D6;text-align:right}
+</style>
+<span class="k">Contoh</span>
+<h1>Laporan <em>umur stok</em></h1>
+<p class="sub">Kelompokkan barang menurut lama tidak bergerak</p>
+<div class="bars">
+ <div class="b"><span class="lbl">0-90 hari</span><div class="bar" style="width:92%;background:#7EE2A8"></div><span class="v">Aman</span></div>
+ <div class="b"><span class="lbl">91-180 hari</span><div class="bar" style="width:55%;background:#FFC400"></div><span class="v">Pantau</span></div>
+ <div class="b"><span class="lbl">181-365 hari</span><div class="bar" style="width:32%;background:#FF9F4A"></div><span class="v">Putuskan</span></div>
+ <div class="b"><span class="lbl">&gt;365 hari</span><div class="bar" style="width:18%;background:#FF8A7A"></div><span class="v">Dead stock?</span></div>
+</div>
+{{FOOT}}
