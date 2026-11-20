@@ -191,8 +191,8 @@
   },
   {
    "source": "/materi/l36-barcode-vs-qr-code-di-gudang",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/barcode-vs-qr-code",
+   "permanent": true
   },
   {
    "source": "/materi/l37-incoterms-siapa-tanggung-apa",
