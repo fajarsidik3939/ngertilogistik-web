@@ -2377,5 +2377,66 @@
         "bahas": "Putuskan sebelum nilainya habis, lalu cari penyebabnya agar pembelian berikutnya tidak berlebihan."
       }
     ]
+  },
+  "L40": {
+    "slug": "alur-retur-paket",
+    "judul": "Alur Retur Paket: Dari Pengajuan sampai Barang Diputuskan",
+    "soal": [
+      {
+        "q": "Apa urutan empat langkah alur retur paket?",
+        "opsi": [
+          "Ajukan, kirim balik, cek kondisi, putuskan",
+          "Cek kondisi, ajukan, putuskan, kirim balik",
+          "Putuskan, ajukan, kirim balik, cek kondisi",
+          "Kirim balik, putuskan, ajukan, cek kondisi"
+        ],
+        "jawab": 0,
+        "bahas": "Pembeli mengajukan dulu, paket dikirim balik, barang dicek kondisinya, lalu penjual memutuskan tindakannya."
+      },
+      {
+        "q": "Bukti mana yang paling disarankan saat mengajukan retur?",
+        "opsi": [
+          "Foto atau video saat paket dibuka",
+          "Hanya ucapan lisan ke kurir",
+          "Struk belanja bulan lalu",
+          "Tangkapan layar iklan toko lain"
+        ],
+        "jawab": 0,
+        "bahas": "Foto atau video saat paket dibuka dan bukti pengiriman membantu penjual memverifikasi keluhan."
+      },
+      {
+        "q": "Apa yang sebaiknya dilakukan penjual pada barang retur yang baru tiba?",
+        "opsi": [
+          "Langsung dimasukkan ke rak stok siap jual",
+          "Diberi status menunggu pemeriksaan sampai dicek",
+          "Dibuang tanpa dicek",
+          "Dikirim ke pembeli lain"
+        ],
+        "jawab": 1,
+        "bahas": "Kondisi barang retur belum diketahui, jadi belum boleh terjual sebelum diperiksa."
+      },
+      {
+        "q": "Barang retur yang cacat fungsi dan terlihat dipakai paling tepat diputuskan...",
+        "opsi": [
+          "Kembali ke stok sebagai barang baru",
+          "Dilikuidasi, didaur ulang, atau dibuang sesuai aturan",
+          "Dijual dengan harga normal",
+          "Disimpan tanpa batas waktu"
+        ],
+        "jawab": 1,
+        "bahas": "Barang pada kondisi terburuk tidak layak dijual normal, sehingga dilikuidasi, didaur ulang, atau dibuang."
+      },
+      {
+        "q": "Undang-undang mana yang menjadi dasar hak konsumen atas barang yang sesuai perjanjian?",
+        "opsi": [
+          "UU Nomor 8 Tahun 1999 tentang Perlindungan Konsumen",
+          "UU tentang Kepabeanan",
+          "UU tentang Penerbangan",
+          "UU tentang Perseroan Terbatas"
+        ],
+        "jawab": 0,
+        "bahas": "UU Perlindungan Konsumen memberi hak atas barang sesuai kondisi dan jaminan yang dijanjikan, serta kewajiban penggantian bila tidak sesuai."
+      }
+    ]
   }
 }

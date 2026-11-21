@@ -73,6 +73,7 @@ Tips singkat:
 | L37 | Incoterms Adalah Aturan Pembagian Tugas Penjual dan Pembeli: Dari EXW sampai DDP | 2026-11-22 | [L37-incoterms-adalah.md](L37-incoterms-adalah.md) |
 | L38 | KPI Gudang: 4 Ukuran Utama untuk Menilai Kinerja Gudang | 2026-11-23 | [L38-kpi-gudang.md](L38-kpi-gudang.md) |
 | L39 | Dead Stock dan Slow Moving: Kenali Barang Diam Sebelum Nilainya Habis | 2026-11-24 | [L39-dead-stock-slow-moving.md](L39-dead-stock-slow-moving.md) |
+| L40 | Alur Retur Paket: Dari Pengajuan sampai Barang Diputuskan | 2026-11-25 | [L40-alur-retur-paket.md](L40-alur-retur-paket.md) |
 
 Catatan: L01 sampai L20 tayang di tanggal yang sama (2026-11-02). Jangan posting semuanya sekaligus. Jadwalkan satu artikel per hari (atau satu sampai dua per hari) dan hitung urutan H, H+1, dan seterusnya dari hari kamu mulai mempromosikan artikel itu.
 

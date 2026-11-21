@@ -340,6 +340,14 @@
     "artikel": "L08"
   },
   {
+    "istilah": "Grading retur",
+    "alias": [
+      "grade barang retur"
+    ],
+    "arti": "Penilaian kondisi barang retur dalam beberapa tingkat, misalnya utuh, dibuka tetapi tidak dipakai, dan cacat atau terpakai, sebagai dasar memutuskan restock, perbaikan, likuidasi, atau pembuangan.",
+    "artikel": "L40"
+  },
+  {
     "istilah": "GTIN",
     "alias": [
       "Global Trade Item Number",
@@ -755,6 +763,15 @@
     ],
     "arti": "Aliran barang berlawanan arah dengan logistik biasa: dari pembeli kembali ke penjual atau fasilitas pengolahan, untuk retur, perbaikan, daur ulang, atau pemusnahan.",
     "artikel": "L35"
+  },
+  {
+    "istilah": "RMA",
+    "alias": [
+      "return merchandise authorization",
+      "return material authorization"
+    ],
+    "arti": "Persetujuan atau nomor otorisasi untuk pengembalian barang. Dengan RMA, penjual tahu paket retur mana yang sah dan bisa mencocokkannya saat barang tiba.",
+    "artikel": "L40"
   },
   {
     "istilah": "Safety stock",
