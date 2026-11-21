@@ -196,8 +196,8 @@
   },
   {
    "source": "/materi/l37-incoterms-siapa-tanggung-apa",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/incoterms-adalah",
+   "permanent": true
   },
   {
    "source": "/materi/l38-kpi-gudang-yang-sering-dipakai",
