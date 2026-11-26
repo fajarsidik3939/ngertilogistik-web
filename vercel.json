@@ -201,18 +201,18 @@
   },
   {
    "source": "/materi/l38-kpi-gudang-yang-sering-dipakai",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/kpi-gudang",
+   "permanent": true
   },
   {
    "source": "/materi/l39-dead-stock-slow-moving",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/dead-stock-slow-moving",
+   "permanent": true
   },
   {
    "source": "/materi/l40-alur-retur-paket",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/alur-retur-paket",
+   "permanent": true
   },
   {
    "source": "/materi/l41-fill-rate-vs-otif",
