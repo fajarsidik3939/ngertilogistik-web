@@ -297,6 +297,14 @@
     "artikel": "L09"
   },
   {
+    "istilah": "Fill rate",
+    "alias": [
+      "tingkat pemenuhan"
+    ],
+    "arti": "Bagian dari permintaan yang berhasil dipenuhi, dalam teori persediaan langsung dari stok yang tersedia. Bisa dihitung per unit, baris, atau pesanan, jadi definisinya perlu disebutkan.",
+    "artikel": "L41"
+  },
+  {
     "istilah": "FMCG",
     "alias": [
       "barang konsumsi cepat laku"

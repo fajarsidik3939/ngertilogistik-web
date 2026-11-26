@@ -2438,5 +2438,66 @@
         "bahas": "UU Perlindungan Konsumen memberi hak atas barang sesuai kondisi dan jaminan yang dijanjikan, serta kewajiban penggantian bila tidak sesuai."
       }
     ]
+  },
+  "L41": {
+    "slug": "otif-adalah",
+    "judul": "OTIF Adalah Tepat Waktu dan Lengkap: Bedanya dengan Fill Rate",
+    "soal": [
+      {
+        "q": "Apa dua syarat yang harus lolos bersamaan dalam OTIF?",
+        "opsi": [
+          "Murah dan cepat",
+          "Tepat waktu dan lengkap",
+          "Rapi dan terlacak",
+          "Dekat dan ringan"
+        ],
+        "jawab": 1,
+        "bahas": "OTIF adalah on time in full: barang tiba sesuai jadwal dan jumlahnya sesuai pesanan."
+      },
+      {
+        "q": "Dalam teori persediaan, fill rate adalah bagian dari permintaan yang...",
+        "opsi": [
+          "bisa langsung dipenuhi dari stok yang tersedia",
+          "dibatalkan oleh pelanggan",
+          "dikembalikan setelah diterima",
+          "dipesan ulang ke pemasok"
+        ],
+        "jawab": 0,
+        "bahas": "Fill rate melihat berapa banyak permintaan yang bisa langsung dipenuhi dari stok."
+      },
+      {
+        "q": "Dalam contoh 5 pesanan di artikel, berapa OTIF per pesanannya?",
+        "opsi": [
+          "99,6%",
+          "80%",
+          "79,6%",
+          "60%"
+        ],
+        "jawab": 3,
+        "bahas": "Hanya pesanan A, D, dan E yang tepat waktu dan lengkap, jadi 3 dari 5 atau 60%."
+      },
+      {
+        "q": "Kapan OTIF tidak mungkin lebih tinggi daripada persentase yang lengkap?",
+        "opsi": [
+          "Selalu, apa pun satuan hitungnya",
+          "Saat data, satuan, dan arti lengkapnya sama",
+          "Saat stok di gudang berlebih",
+          "Saat toleransi waktu dihapus dari fill rate saja"
+        ],
+        "jawab": 1,
+        "bahas": "Pada data dan satuan yang sama, OTIF menambah syarat tepat waktu sehingga tidak bisa melebihi persentase yang lengkap."
+      },
+      {
+        "q": "Mana yang perlu disepakati sebelum menghitung OTIF?",
+        "opsi": [
+          "Warna label karton",
+          "Satuan hitung, tanggal acuan, dan toleransi waktu",
+          "Merek kendaraan pengiriman",
+          "Jumlah rak di gudang"
+        ],
+        "jawab": 1,
+        "bahas": "Definisi OTIF tidak baku, jadi satuan, acuan tanggal, dan toleransi perlu ditulis."
+      }
+    ]
   }
 }

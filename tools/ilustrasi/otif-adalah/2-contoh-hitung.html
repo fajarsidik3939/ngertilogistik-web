@@ -1,0 +1,27 @@
+<style>
+.ord{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px}
+.ord .card{padding:14px 12px 16px;text-align:center}
+.ord .t{font-size:26px;margin:6px 0 2px}
+.ord .d{font-size:18px}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.row .card{padding:18px 16px 20px}
+.big{font:700 48px 'JetBrains Mono';color:#FFC400;margin:6px 0}
+.row .t{font-size:22px}
+.row .d{font-size:19px}
+</style>
+<span class="k">Contoh</span>
+<h1>5 pesanan, <em>3 angka berbeda</em></h1>
+<p class="sub">Angka fiktif. Tiap pesanan 100 karton.</p>
+<div class="ord">
+ <div class="card"><div class="n">A</div><div class="t">100</div><div class="d ok">Tepat waktu</div></div>
+ <div class="card"><div class="n">B</div><div class="t">98</div><div class="d bad">Kurang</div></div>
+ <div class="card"><div class="n">C</div><div class="t">100</div><div class="d bad">Terlambat</div></div>
+ <div class="card"><div class="n">D</div><div class="t">100</div><div class="d ok">Tepat waktu</div></div>
+ <div class="card"><div class="n">E</div><div class="t">100</div><div class="d ok">Tepat waktu</div></div>
+</div>
+<div class="row">
+ <div class="card"><div class="t">Fill rate per karton</div><div class="big">99,6%</div><div class="d">498 ÷ 500 karton</div></div>
+ <div class="card"><div class="t">Fill rate per pesanan</div><div class="big">80%</div><div class="d">4 ÷ 5 lengkap</div></div>
+ <div class="card"><div class="t">OTIF per pesanan</div><div class="big">60%</div><div class="d">A, D, E: 3 ÷ 5</div></div>
+</div>
+{{FOOT}}
