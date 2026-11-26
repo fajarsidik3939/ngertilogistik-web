@@ -2499,5 +2499,66 @@
         "bahas": "Definisi OTIF tidak baku, jadi satuan, acuan tanggal, dan toleransi perlu ditulis."
       }
     ]
+  },
+  "L42": {
+    "slug": "slotting-gudang",
+    "judul": "Slotting Gudang: Kenapa Barang Paling Laris Ditaruh Dekat Pintu?",
+    "soal": [
+      {
+        "q": "Apa tujuan utama slotting?",
+        "opsi": [
+          "Mengisi semua rak sepenuh mungkin",
+          "Mengatur posisi barang agar yang sering diambil mudah dicapai",
+          "Menghitung ulang seluruh stok setiap hari",
+          "Menentukan harga jual barang"
+        ],
+        "jawab": 1,
+        "bahas": "Slotting menempatkan barang yang sering diambil di lokasi yang mudah dicapai untuk memangkas jarak jalan."
+      },
+      {
+        "q": "Apa beda slotting dengan putaway?",
+        "opsi": [
+          "Slotting menentukan lokasi yang seharusnya dipakai, putaway memindahkan barang diterima ke lokasi simpan",
+          "Slotting hanya untuk barang retur, putaway untuk barang baru",
+          "Slotting dilakukan kurir, putaway oleh pembeli",
+          "Keduanya sama persis"
+        ],
+        "jawab": 0,
+        "bahas": "Putaway adalah pemindahan barang yang baru diterima, sedangkan slotting menjawab lokasi mana yang semestinya dipakai."
+      },
+      {
+        "q": "Menurut panduan keselamatan kerja yang dikutip, di mana stok berat dan sering dipakai sebaiknya ditata?",
+        "opsi": [
+          "Di rak paling atas",
+          "Di lantai lorong",
+          "Antara tengah paha dan bahu",
+          "Di atas kepala"
+        ],
+        "jawab": 2,
+        "bahas": "Stok yang lebih berat dan sering dipakai ditata antara tengah paha dan bahu."
+      },
+      {
+        "q": "Apa risiko jika semua barang laris dikumpulkan di satu area kecil?",
+        "opsi": [
+          "Petugas saling menghalangi dan menunggu",
+          "Barang otomatis kedaluwarsa",
+          "Kode barang berubah",
+          "Pesanan berhenti masuk"
+        ],
+        "jawab": 0,
+        "bahas": "Kondisi ini disebut picker blocking: petugas harus menunggu karena saling menghalangi."
+      },
+      {
+        "q": "Data apa yang paling tepat dikumpulkan pada langkah pertama slotting?",
+        "opsi": [
+          "Warna kemasan",
+          "Seberapa sering tiap barang diambil",
+          "Nama pemasok kardus",
+          "Jumlah petugas keamanan"
+        ],
+        "jawab": 1,
+        "bahas": "Frekuensi ambil menunjukkan seberapa sering petugas harus datang ke lokasi barang."
+      }
+    ]
   }
 }

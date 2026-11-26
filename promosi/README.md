@@ -75,6 +75,7 @@ Tips singkat:
 | L39 | Dead Stock dan Slow Moving: Kenali Barang Diam Sebelum Nilainya Habis | 2026-11-24 | [L39-dead-stock-slow-moving.md](L39-dead-stock-slow-moving.md) |
 | L40 | Alur Retur Paket: Dari Pengajuan sampai Barang Diputuskan | 2026-11-25 | [L40-alur-retur-paket.md](L40-alur-retur-paket.md) |
 | L41 | OTIF Adalah Tepat Waktu dan Lengkap: Bedanya dengan Fill Rate | 2026-11-28 | [L41-otif-adalah.md](L41-otif-adalah.md) |
+| L42 | Slotting Gudang: Kenapa Barang Paling Laris Ditaruh Dekat Pintu? | 2026-11-29 | [L42-slotting-gudang.md](L42-slotting-gudang.md) |
 
 Catatan: L01 sampai L20 tayang di tanggal yang sama (2026-11-02). Jangan posting semuanya sekaligus. Jadwalkan satu artikel per hari (atau satu sampai dua per hari) dan hitung urutan H, H+1, dan seterusnya dari hari kamu mulai mempromosikan artikel itu.
 

@@ -650,6 +650,14 @@
     "artikel": "L10"
   },
   {
+    "istilah": "Picker blocking",
+    "alias": [
+      "petugas saling menghalangi"
+    ],
+    "arti": "Kondisi petugas pengambil barang harus menunggu karena akses ke rak atau lorong terhalang petugas lain.",
+    "artikel": "L42"
+  },
+  {
     "istilah": "Picking",
     "alias": [
       "order picking",
@@ -822,6 +830,15 @@
     ],
     "arti": "Kode untuk satu varian barang yang dihitung, disimpan, dan dijual terpisah. Beda isi, warna, ukuran, atau kemasan jual biasanya berarti beda SKU.",
     "artikel": "L03"
+  },
+  {
+    "istilah": "Slotting",
+    "alias": [
+      "storage assignment",
+      "penempatan lokasi simpan"
+    ],
+    "arti": "Menentukan lokasi simpan tiap barang secara terencana, misalnya barang yang sering diambil dekat area kirim dan pada ketinggian yang mudah dijangkau.",
+    "artikel": "L42"
   },
   {
     "istilah": "Slow-moving",
