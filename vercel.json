@@ -216,8 +216,8 @@
   },
   {
    "source": "/materi/l41-fill-rate-vs-otif",
-   "destination": "/blog",
-   "permanent": false
+   "destination": "/blog/otif-adalah",
+   "permanent": true
   },
   {
    "source": "/materi/l42-layout-gudang-barang-laris-dekat-pintu",
