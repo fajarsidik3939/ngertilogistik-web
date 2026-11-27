@@ -2621,5 +2621,66 @@
         "bahas": "90.000 dibagi 2.000 sama dengan 45 paket."
       }
     ]
+  },
+  "L44": {
+    "slug": "ftl-vs-ltl",
+    "judul": "FTL vs LTL: Perbedaan Truk Penuh dan Muatan Gabungan",
+    "soal": [
+      {
+        "q": "Apa perbedaan pokok FTL dan LTL?",
+        "opsi": [
+          "FTL memakai truk untuk satu pengirim, LTL menggabungkan muatan beberapa pengirim",
+          "FTL lewat laut, LTL lewat udara",
+          "FTL untuk dokumen, LTL untuk barang berat",
+          "FTL selalu lebih murah daripada LTL"
+        ],
+        "jawab": 0,
+        "bahas": "Bedanya ada pada pemakaian truk: satu pengirim atau muatan gabungan."
+      },
+      {
+        "q": "Bagaimana alur umum pengiriman LTL?",
+        "opsi": [
+          "Truk berangkat dari asal langsung ke satu penerima tanpa sortir",
+          "Penerima mengambil barang di pabrik",
+          "Dijemput, digabung di terminal, dibawa ke terminal tujuan, lalu diantar",
+          "Barang disimpan lama sebelum dikirim"
+        ],
+        "jawab": 2,
+        "bahas": "Kiriman kecil dikumpulkan, digabung di terminal, diangkut ke terminal tujuan, lalu diantar armada lokal."
+      },
+      {
+        "q": "Mengapa kemasan sangat penting pada muatan gabungan?",
+        "opsi": [
+          "Karena truknya selalu terbuka",
+          "Karena barang bisa berpindah kendaraan beberapa kali",
+          "Karena tarifnya dihitung dari warna kardus",
+          "Karena tidak ada dokumen serah terima"
+        ],
+        "jawab": 1,
+        "bahas": "Makin sering barang dipindahkan, makin penting kemasan, label, dan hitungan koli."
+      },
+      {
+        "q": "Contoh fiktif: sewa truk Rp1.800.000 dan layanan gabungan Rp1.500 per kg tanpa biaya lain. Berapa titik impasnya?",
+        "opsi": [
+          "600 kg",
+          "900 kg",
+          "1.500 kg",
+          "1.200 kg"
+        ],
+        "jawab": 3,
+        "bahas": "Rp1.800.000 dibagi Rp1.500 sama dengan 1.200 kg."
+      },
+      {
+        "q": "Kondisi mana yang paling mendukung pilihan FTL?",
+        "opsi": [
+          "Muatan sangat kecil dengan tenggat longgar",
+          "Muatan besar, tenggat ketat, dan barang tidak ingin sering dipindahkan",
+          "Kiriman satu amplop",
+          "Anda belum tahu berat barang"
+        ],
+        "jawab": 1,
+        "bahas": "FTL layak dipertimbangkan untuk muatan besar, jadwal ketat, dan barang yang rawan rusak bila sering dipindahkan."
+      }
+    ]
   }
 }

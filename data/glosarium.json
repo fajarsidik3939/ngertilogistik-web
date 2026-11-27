@@ -329,6 +329,16 @@
     "artikel": "L27"
   },
   {
+    "istilah": "FTL",
+    "alias": [
+      "full truck load",
+      "truckload",
+      "TL"
+    ],
+    "arti": "Pengiriman yang memakai satu truk untuk muatan satu pengirim, umumnya berjalan langsung dari asal ke tujuan.",
+    "artikel": "L44"
+  },
+  {
     "istilah": "Fumigasi",
     "alias": [
       "fumigasi metil bromida",
@@ -520,6 +530,15 @@
     ],
     "arti": "Kegiatan mengatur aliran dan penyimpanan barang beserta informasinya, dari titik asal sampai ke pemakai, agar tepat jumlah, waktu, dan tempat. Cakupannya transportasi, gudang, stok, kemasan, informasi, dan retur.",
     "artikel": "L01"
+  },
+  {
+    "istilah": "LTL",
+    "alias": [
+      "less than truckload",
+      "less-than-truckload"
+    ],
+    "arti": "Pengiriman untuk muatan yang tidak memenuhi satu truk. Kiriman beberapa pengirim digabung lewat terminal sebelum diantar ke penerima.",
+    "artikel": "L44"
   },
   {
     "istilah": "Middle mile",
