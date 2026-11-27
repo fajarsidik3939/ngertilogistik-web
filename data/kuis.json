@@ -2560,5 +2560,66 @@
         "bahas": "Frekuensi ambil menunjukkan seberapa sering petugas harus datang ke lokasi barang."
       }
     ]
+  },
+  "L43": {
+    "slug": "total-biaya-pengiriman",
+    "judul": "Ongkir Murah Pasti Untung? Hitung Total Biaya Pengiriman",
+    "soal": [
+      {
+        "q": "Apa yang dimaksud total biaya pengiriman?",
+        "opsi": [
+          "Hanya tarif per kilogram yang tertera di tagihan",
+          "Ongkir dan biaya lain akibat kiriman itu, dikurangi ganti rugi yang diterima",
+          "Harga jual barang ditambah ongkir",
+          "Premi asuransi saja"
+        ],
+        "jawab": 1,
+        "bahas": "Selain ongkir, rusak, kirim ulang, retur, pembatalan, dan komplain ikut dihitung, lalu dikurangi ganti rugi yang benar-benar diterima."
+      },
+      {
+        "q": "Kapan ganti rugi dikurangkan dari total biaya?",
+        "opsi": [
+          "Saat klaim diajukan",
+          "Saat paket diserahkan ke kurir",
+          "Setelah uangnya benar-benar diterima",
+          "Tidak pernah dikurangkan"
+        ],
+        "jawab": 2,
+        "bahas": "Klaim yang diajukan belum tentu dibayar, jadi hanya uang yang sudah diterima yang dikurangkan."
+      },
+      {
+        "q": "Total biaya dibagi dengan apa untuk mendapat biaya per pesanan selesai?",
+        "opsi": [
+          "Jumlah pesanan yang diterima pembeli dan tidak dibatalkan",
+          "Semua paket yang pernah dikirim, termasuk yang gagal",
+          "Jumlah komplain",
+          "Berat total paket"
+        ],
+        "jawab": 0,
+        "bahas": "Pesanan gagal tidak boleh dianggap berhasil dalam pembagi."
+      },
+      {
+        "q": "Apa langkah pertama saat membandingkan layanan pengiriman?",
+        "opsi": [
+          "Memilih tarif termurah",
+          "Memindahkan semua kiriman ke layanan baru",
+          "Menghitung komplain saja",
+          "Menetapkan syarat layanan, seperti batas waktu dan jenis barang"
+        ],
+        "jawab": 3,
+        "bahas": "Layanan yang tidak memenuhi syarat tidak perlu dibandingkan harganya."
+      },
+      {
+        "q": "Contoh fiktif: selisih ongkir Rp2.000 per paket, satu paket rusak berbiaya Rp90.000. Penghematan berapa paket habis untuk satu kejadian itu?",
+        "opsi": [
+          "18 paket",
+          "45 paket",
+          "90 paket",
+          "180 paket"
+        ],
+        "jawab": 1,
+        "bahas": "90.000 dibagi 2.000 sama dengan 45 paket."
+      }
+    ]
   }
 }

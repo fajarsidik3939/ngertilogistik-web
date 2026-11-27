@@ -613,6 +613,15 @@
     "artikel": "L24"
   },
   {
+    "istilah": "Pendekatan total biaya",
+    "alias": [
+      "total cost approach",
+      "total cost concept"
+    ],
+    "arti": "Cara menilai keputusan logistik dengan melihat semua biaya kegiatan yang terkait sebagai satu kesatuan, bukan satu pos biaya saja, sambil tetap memenuhi kebutuhan layanan.",
+    "artikel": "L43"
+  },
+  {
     "istilah": "Pengadaan",
     "alias": [
       "sourcing",
@@ -919,6 +928,14 @@
     "alias": [],
     "arti": "Tanda kemasan atau kiriman pernah dibuka atau diubah. Termasuk hal yang diperiksa saat penerimaan barang.",
     "artikel": "L08"
+  },
+  {
+    "istilah": "Total biaya pengiriman",
+    "alias": [
+      "biaya pengiriman total"
+    ],
+    "arti": "Ongkir ditambah biaya lain yang timbul dari kiriman, seperti kemasan, barang rusak, kirim ulang, retur, dan komplain, dikurangi ganti rugi yang diterima.",
+    "artikel": "L43"
   },
   {
     "istilah": "Transaction errors",
